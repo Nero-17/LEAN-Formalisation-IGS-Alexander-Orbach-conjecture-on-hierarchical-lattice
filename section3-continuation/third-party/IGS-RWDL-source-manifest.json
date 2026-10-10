@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/Nero-17/LEAN-Formalisation-IGS-RWDL",
+  "commit": "7f93c64184dcbfa7a1c35080cde713933104deab",
+  "license": "Apache-2.0",
+  "upstreamLean": "4.28.0",
+  "portedLean": "4.32.1",
+  "adaptations": [
+    {
+      "source": "third-party\\IGS-RWDL\\section3-diffusion\\RequestProject\\Section3\\SpectralDimension.lean",
+      "sourceSha256": "9a0dc86387f3dea98d87986c591d8d32dcbd9f115a96d2d35818ff6d43f07300",
+      "target": "IGSIII34\\Spectral\\LogCorrectedDimension.lean",
+      "targetSha256": "b4683a8507bce0e5a9cd0f788e7279ffd5e4ceec5e9f778ee3f2b1ef2f34ee2b",
+      "changes": "Precise imports and namespace only; original analytic proof retained."
+    }
+  ],
+  "limitations": "Upstream deep process and resistance-form results may be explicit hypotheses; not imported as discharged III model results."
+}

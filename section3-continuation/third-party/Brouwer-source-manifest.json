@@ -1,0 +1,47 @@
+{
+  "commit": "770940ddf9878cf61952ed53d910b92bca841838",
+  "license": "MIT",
+  "files": [
+    {
+      "sourceFile": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-07\\new-chat\\work\\section4-round5-topology-sources\\harfe-770940d\\FixedPointTheorems\\cubical_sperner_prep.lean",
+      "originalSha256": "dbc747f080b54b79ffc77f1adacec7c964daf56dc5210c0ddff1350b42343f43",
+      "localFile": "IGSIII34\\Topology\\VendorSpernerPrep.lean",
+      "importedSha256": "c650da3ae34edd8bd3dc97fcb416c946aceffc6e1c116014d350e1768ba1153a",
+      "verifiedLocalSha256": "36538970593f0459d48245eec4d9246768e79611f2e85b71842d879b409480a7"
+    },
+    {
+      "sourceFile": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-07\\new-chat\\work\\section4-round5-topology-sources\\harfe-770940d\\FixedPointTheorems\\cubical_sperner.lean",
+      "originalSha256": "edd0295e8f0ae1e572d82705e89594f7069796877572563c9750a3d82ab0b005",
+      "localFile": "IGSIII34\\Topology\\VendorSperner.lean",
+      "importedSha256": "f5d3c5b7f0c7dbc81abfc9dc174bb68cdbe5e0de8c4f6f4e5db1821378578015",
+      "verifiedLocalSha256": "f5d3c5b7f0c7dbc81abfc9dc174bb68cdbe5e0de8c4f6f4e5db1821378578015"
+    },
+    {
+      "sourceFile": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-07\\new-chat\\work\\section4-round5-topology-sources\\harfe-770940d\\FixedPointTheorems\\apply_cubical_sperner.lean",
+      "originalSha256": "d059b34aa7ad20cd07020eed07fa7a217f67fe7c2c6324e94345ab85d68b50ee",
+      "localFile": "IGSIII34\\Topology\\VendorSpernerApplication.lean",
+      "importedSha256": "a7270a633e2a1edfdc760d85711bc6db06a23f8a319f4e00e83c51376cc589b2",
+      "verifiedLocalSha256": "a7270a633e2a1edfdc760d85711bc6db06a23f8a319f4e00e83c51376cc589b2"
+    },
+    {
+      "sourceFile": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-07\\new-chat\\work\\section4-round5-topology-sources\\harfe-770940d\\FixedPointTheorems\\convex_homeos.lean",
+      "originalSha256": "c9ee9d5b6ce22a8d84d1b391f7a77de2e12a5a13c5cb12f723b61e287436269a",
+      "localFile": "IGSIII34\\Topology\\VendorConvexHomeomorphisms.lean",
+      "importedSha256": "60bbe5a867928fb80c4dc918f9c9377d380fbc10509fa5d0c1fe6d8e69380db3",
+      "verifiedLocalSha256": "60bbe5a867928fb80c4dc918f9c9377d380fbc10509fa5d0c1fe6d8e69380db3"
+    },
+    {
+      "sourceFile": "C:\\Users\\lzysh\\Documents\\Codex\\2026-09-07\\new-chat\\work\\section4-round5-topology-sources\\harfe-770940d\\FixedPointTheorems\\brouwer.lean",
+      "originalSha256": "b014d761a559abbb87eebe4299191571c85de37f2d967ef0ee16e1ec2148d7de",
+      "localFile": "IGSIII34\\Topology\\VendorBrouwer.lean",
+      "importedSha256": "693bb8b4e47f9098012dcc6e43a0b4a405c0fad701b36c963fb2b8ef793f43e1",
+      "verifiedLocalSha256": "693bb8b4e47f9098012dcc6e43a0b4a405c0fad701b36c963fb2b8ef793f43e1"
+    }
+  ],
+  "upstreamLean": "leanprover/lean4:v4.32.0",
+  "locallyRecompiled": true,
+  "purpose": "Verified finite-dimensional foundation. The project Schauder and probability-law fixed-point theorems and the positive electrical eigenlaw with all real moments are proved. Natural same-tree growth and L2/AS amplitudes are proved separately in this project. The final all-order assembly, eigenlaw uniqueness, resistance forms, diffusion and spectral limits remain incomplete.",
+  "verifiedLean": "leanprover/lean4:v4.32.1",
+  "verifiedMathlib": "520045ab14e26149ee970e2e617ca04b09bde5d6",
+  "completedAuditManifestSha256": "f8bdf27efee4fc8c5e94d7a36c24228a7402cee3ee454fb3e6d16c980517fcb6"
+}

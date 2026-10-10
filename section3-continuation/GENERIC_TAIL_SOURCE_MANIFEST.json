@@ -1,0 +1,23 @@
+[
+  {
+    "source": "C:\\Users\\lzysh\\Documents\\Codex\\2026-10-09\\new-chat\\outputs\\igs-iii-lean\\IGSIII\\Chemical\\SmallBall.lean",
+    "sourceSha256": "f79ee77f46c09f6b355013f95f7dc96ddcf1ce8275895cf29c7b6044317c0b71",
+    "local": "IGSIII34/Probability/ScalarSmallBall.lean",
+    "localSha256": "341c972c5da954b65cb7a908ab9367a19545b9e5f79988999ed92dba825bf5c8",
+    "changes": "Import paths and namespace only; unused finite-thinning import omitted; proof bodies unchanged."
+  },
+  {
+    "source": "C:\\Users\\lzysh\\Documents\\Codex\\2026-10-09\\new-chat\\outputs\\igs-iii-lean\\IGSIII\\Chemical\\SmallBall\\NetworkMap.lean",
+    "sourceSha256": "7e4c02d3fd1a94fdabb2474aec564bba87133a10d8f20646cd6a796a71a088bc",
+    "local": "IGSIII34/Probability/ReliabilityTail.lean",
+    "localSha256": "b53c6f8f1a4ef03f83f25b3b10efa17dd13c9fc74539145a862794329b0b62e7",
+    "changes": "Import paths and namespace only; unused finite-thinning import omitted; proof bodies unchanged."
+  },
+  {
+    "source": "C:\\Users\\lzysh\\Documents\\Codex\\2026-10-09\\new-chat\\outputs\\igs-iii-lean\\IGSIII\\Chemical\\SmallBall\\InverseMoments.lean",
+    "sourceSha256": "018b493634aeec57d535b1cdef4a6d635ac49fbe742027a54091137dd147136a",
+    "local": "IGSIII34/Probability/InverseMoments.lean",
+    "localSha256": "d9a6185c824a8675f082cf9b99c12424a338070267103286aa46eb29cdfb82d3",
+    "changes": "Import paths and namespace only; unused finite-thinning import omitted; proof bodies unchanged."
+  }
+]

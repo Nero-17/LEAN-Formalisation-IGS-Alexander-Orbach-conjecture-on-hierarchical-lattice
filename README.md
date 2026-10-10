@@ -1,3 +1,24 @@
+# Paused Lean snapshot — 2026-10-10
+
+The user paused formalisation and requested preservation of all existing Lean code.
+The original Sections 2–4 package below is preserved. The newer independent
+Section 3 project is included in **section3-continuation/**, with its pinned
+dependencies, vendored sources, verification scripts and all working drafts.
+
+**Section 3 remains incomplete.** Its last successful aggregate audit covers
+5,646 declarations; the exact source hashes and scope are recorded in
+section3-continuation/verification/manifest.json. Additional individually
+compiled modules and unverified drafts are also preserved. A file being
+present in this snapshot does not mean it compiled or belongs to the audit.
+See section3-continuation/COVERAGE.md and PAUSED_SNAPSHOT.json.
+
+To check the audited continuation closure, from section3-continuation/ run
+`python scripts/verify.py --imported-only` after installing the pinned Lean
+toolchain and fetching dependencies. This snapshot is a packaging operation;
+it does not claim a fresh combined build or completed Section 3 proof.
+
+---
+
 # IGS: Alexander–Orbach conjecture on hierarchical lattices
 
 This repository packages the existing Lean formalisation of Sections 2, 3 and 4

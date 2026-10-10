@@ -1,0 +1,7 @@
+.lake/
+lean_packages/
+*.olean
+*.ilean
+*.trace
+*.hash
+*.o

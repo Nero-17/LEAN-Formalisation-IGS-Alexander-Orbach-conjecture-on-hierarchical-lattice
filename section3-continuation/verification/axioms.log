@@ -1377,6 +1377,32 @@ IMPORTED IGSIII34.ResistanceLimit.StationaryBlockBoundaryEnergy
 IMPORTED IGSIII34.Topology.CompletionInverseDistance
 IMPORTED IGSIII34.Topology.CompletionClosedImage
 IMPORTED IGSIII34.Topology.DenseClosedImage
+IMPORTED IGSIII34.ResistanceLimit.ActualChemicalCellBornClosure
+IMPORTED IGSIII34.ResistanceLimit.ElectricalComponentBlockBirth
+IMPORTED IGSIII34.ResistanceLimit.ActualElectricalChemicalCellRange
+IMPORTED IGSIII34.ResistanceLimit.CellResistanceLocalisation
+IMPORTED IGSIII34.ResistanceLimit.DanglingCellIsometry
+IMPORTED IGSIII34.ResistanceLimit.ActualCellLocalisation
+IMPORTED IGSIII34.Diffusion.ActualBlockComponentResistance
+IMPORTED IGSIII34.Diffusion.ActualStationaryComponentInverseBound
+IMPORTED IGSIII34.Diffusion.ActualElectricalComponentInjectivity
+IMPORTED IGSIII34.ResistanceLimit.ActualElectricalChemicalCellIdentification
+IMPORTED IGSIII34.ResistanceLimit.BlockZeroSupport
+IMPORTED IGSIII34.ResistanceLimit.CompletionCellZeroSupport
+IMPORTED IGSIII34.ResistanceLimit.ActualElectricalZeroSupport
+IMPORTED IGSIII34.ResistanceLimit.ActualElectricalChemicalZeroExtension
+IMPORTED IGSIII34.Forms.ComponentBlockVertex
+IMPORTED IGSIII34.Forms.ActualComponentEnergyBound
+IMPORTED IGSIII34.ResistanceLimit.ActualComponentIntrinsicEnergyBridge
+IMPORTED IGSIII34.ResistanceLimit.ActualNaturalComponentEnergyEvent
+IMPORTED IGSIII34.Diffusion.ActualNaturalComponentFormWitness
+IMPORTED IGSIII34.Spectral.Collars.FivefoldDiamondGraph
+IMPORTED IGSIII34.Spectral.Collars.FivefoldDiamondResistance
+IMPORTED IGSIII34.AO.MassGrowthEdgeBound
+IMPORTED IGSIII34.AO.SubdividedDiamondBound
+IMPORTED IGSIII34.Spectral.Collars.FivefoldDiamondSpectralBound
+IMPORTED IGSIII34.Spectral.Collars.FivefoldDiamondSubdivision
+IMPORTED IGSIII34.Spectral.Collars.DiscreteDeterministicOriginalClock
 IMPORTED IGSIII34
 AUDITED IGSIII.Geometry.CriticalComponentGHP IGSIII.Geometry.exists_actual_critical_component_marked_ghp: [propext,
  Classical.choice,
@@ -1721,6 +1747,7 @@ AUDITED IGSIII.Chemical.PathCounting.BinaryCode IGSIII.Chemical.PathCounting.bou
 AUDITED IGSIII34.Percolation.Continuation.ElectricalBoundaryL1Convergence IGSIII34.Percolation.electrical_same_law_uniformIntegrable_one: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondDistanceCertificate._proof_2: [propext]
 AUDITED IGSIII34.Spectral.BoundaryLocalEvaluationCompletion20261011 IGSIII34.Spectral.boundary_local_evaluation_global_integral_bound_completion20261011: [propext,
  Classical.choice,
  Quot.sound]
@@ -1863,6 +1890,8 @@ AUDITED IGSIII34.Percolation.Continuation.ElectricalBoundaryTree IGSIII34.Percol
 AUDITED IGSIII34.Diffusion.ReversibleWalk IGSIII34.Diffusion.transitionKernel.eq_1: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondUpperWalk._proof_8: [propext,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualDiscreteSkorokhodWholeWeakCompletion20261011 IGSIII34.Diffusion.actual_discrete_skorokhod_whole_weak_convergence_completion20261011: [propext,
  Classical.choice,
  Quot.sound]
@@ -1879,6 +1908,9 @@ AUDITED IGSIII34.Diffusion.ActualCommonChemicalCadlagWholeWeakCompletion20261011
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualEnergyLiminfCompletion20261011 IGSIII34.Diffusion.actualOriginalPotential_sharp_energy_lower_completion20261011: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualComponentIntrinsicEnergyBridge IGSIII34.ResistanceLimit.actualComponentEnergyMarks: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Topology.VendorSpernerPrep IGSIII34.Topology.Vendor.case_B: [propext]
@@ -2137,6 +2169,9 @@ AUDITED IGSIII34.Spectral.Collars.ActualAtomlessMass IGSIII34.Spectral.actualAto
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Percolation.Network IGSIII34.Percolation.connected_of_crosses: [propext, Classical.choice, Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ElectricalComponentBlockBirth IGSIII34.ResistanceLimit.actualElectricalComponentBlockVertex_val: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.ElectricalDegreeProjectionCompletion20261011 IGSIII34.Diffusion.electricalDegreeCarrierBorelCompletion20261011: [propext,
  Classical.choice,
  Quot.sound]
@@ -2233,6 +2268,7 @@ AUDITED IGSIII34.ResistanceLimit.HarmonicTower IGSIII34.ResistanceLimit.harmonic
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Diffusion.FiniteClocks IGSIII34.Diffusion.exact_degree_clock._simp_1_7: [propext]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondUpperWalk: [propext, Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualResolventUniformCompletion20261011 IGSIII34.Diffusion.ActualResolventUniformCompletion20261011Borel: [propext,
  Classical.choice,
  Quot.sound]
@@ -2449,6 +2485,9 @@ AUDITED IGSIII.Chemical.SmallBall.ActualGoodCylinderPopulation IGSIII.Chemical.S
 AUDITED IGSIII34.Diffusion.FiniteResolventExitCompletion20261011 IGSIII34.Diffusion.finiteGraphResolvent_natural_exit_bound_completion20261011: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Diffusion.ActualBlockComponentResistance IGSIII.Geometry.generationBlockCellEmbedding.eq_1: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII.Chemical.ChemicalOmega IGSIII.Chemical.Substitution.chemicalOrbit._proof_1: [propext,
  Classical.choice,
  Quot.sound]
@@ -2474,6 +2513,9 @@ AUDITED IGSIII34.Diffusion.ActualElectricalComponentZeroStages IGSIII34.Diffusio
 AUDITED IGSIII.Mass.HistoryPathLaw _private.IGSIII.Mass.HistoryPathLaw.0.Universality.Rule.ConfigurationHistory.truncate.match_1.eq_2: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.AO.SubdividedDiamondBound IGSIII34.subdivided_diamond_logarithmic_bound_identity: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Resistance.IntegralConductance IGSIII34.Resistance.FiniteNetwork.conductanceFunctional_integral_jensen: [propext,
  Classical.choice,
  Quot.sound]
@@ -2484,6 +2526,9 @@ AUDITED IGSIII34.Diffusion.IntervalTimeChangeRestriction IGSIII34.Diffusion.inte
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII.Probability.FiniteProductTensorization IGSIII.Probability.coordinateVarianceEnergy._unsafe_rec: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Diffusion.ActualElectricalComponentInjectivity IGSIII34.Diffusion.actualElectricalComponentSkeletonInclusion_inverse_bound: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.ResistanceLimit.GenerationBlockEnergyCompletion20261011 IGSIII34.ResistanceLimit.marked_generation_block_configuration: [propext,
@@ -3077,10 +3122,16 @@ AUDITED IGSIII.Geometry.CellLocalisationSimilarity IGSIII.Geometry.completionSim
 AUDITED IGSIII34.Diffusion.DivergingHoldingClocks IGSIII34.Diffusion.holdingJumpClock_uniform_of_divergence: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualComponentIntrinsicEnergyBridge IGSIII34.ResistanceLimit.actualComponentGlobalEnergyExtension_born: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Spectral.NoncollarPathSuffixCompletion20261011 IGSIII34.Spectral.nested_path_uncast_block_decomposition_completion20261011: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII.Mass.OrientedPrimitivity _private.IGSIII.Mass.OrientedPrimitivity.0.Universality.FiniteNetwork.MassLiveState.oriented.match_1.eq_2: []
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondTerminalSymmetry: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Spectral.AnchoredResolventCompletion20261011 IGSIII34.Spectral.anchoredL2Resolvent_kernel_zero_completion20261011: [propext,
  Classical.choice,
  Quot.sound]
@@ -3097,6 +3148,7 @@ AUDITED IGSIII34.Spectral.ParameterFormHilbertCompletion20261011 IGSIII34.Spectr
 AUDITED IGSIII34.Diffusion.DiscreteCadlagWeakCompletion20261011 IGSIII34.Diffusion.discreteCadlagProbability_common_embedding_weak_completion20261011: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondSubdivision IGSIII34.Spectral.fivefoldDiamondSubdivisionPath: [propext]
 AUDITED IGSIII34.Percolation.GrowthCompactResistance IGSIII34.Percolation.markedGrowthScaledResistanceFamily_compact_closure._simp_1_3: [propext]
 AUDITED IGSIII.Geometry.CellLocalisationLaw IGSIII.Geometry.chemicalMetricCodeMeasurableSpace: [propext,
  Classical.choice,
@@ -3348,6 +3400,9 @@ AUDITED IGSIII.Chemical.SmallBall.PairedPathBarrier IGSIII.Chemical.SmallBall.fi
 AUDITED IGSIII34.Percolation.Continuation.ElectricalBoundaryTransferLimit IGSIII34.Percolation.electricalBoundaryNormalizedTransfer_fixed_of_raw_L1_limit: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualComponentIntrinsicEnergyBridge IGSIII34.ResistanceLimit.actualComponentGlobalEnergyExtension._proof_1: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualNaturalWeightedClockRescaleCompletion20261011 IGSIII34.Diffusion.rawNaturalClockRescaleContinuousMeasurableCompletion20261011: [propext,
  Classical.choice,
  Quot.sound]
@@ -3437,6 +3492,9 @@ AUDITED IGSIII34.ResistanceLimit.ActualStationaryCompletion IGSIII34.ResistanceL
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Forms.ActualEnergyHilbert IGSIII34.Forms.actualEnergyExtension_resistance: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualChemicalCellBornClosure IGSIII34.ResistanceLimit.actualChemicalCellInclusion_range_eq_closure_born: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.ResistanceLimit.EnergyVariational IGSIII34.ResistanceLimit.limitingEnergy_add_identity: [propext,
@@ -3816,6 +3874,7 @@ AUDITED IGSIII34.Percolation.ElectricalNormalization IGSIII34.Percolation.normal
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Percolation.ElectricalRealMoments _private.IGSIII34.Percolation.ElectricalRealMoments.0.IGSIII34.Percolation._aux_IGSIII34_Percolation_ElectricalRealMoments___unexpand_IGSIII34_Percolation_normalizedElectricalTransferLp_1: []
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondNetwork: [propext]
 AUDITED IGSIII.Mass.RetainedCylinderWeights IGSIII.Chemical.Substitution.retainedAddressState_append_singleton: [propext,
  Classical.choice,
  Quot.sound]
@@ -3882,6 +3941,9 @@ AUDITED IGSIII34.Probability.FiniteProductTensorization IGSIII34.Probability.coo
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII.Geometry.ChemicalMetricCodeFaithfulness IGSIII.Geometry.chemicalRetainedLabelVertex.eq_1: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualComponentIntrinsicEnergyBridge IGSIII34.ResistanceLimit.actualComponentEnergyMarks._proof_1: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII.Chemical.SubstitutionPaths.ConditionalLaw IGSIII.Chemical.Substitution.conditional_substitution_distance_observable: [propext,
@@ -4399,6 +4461,9 @@ AUDITED IGSIII34.Spectral.ActualScalarSpeedKernelCompletion20261011 IGSIII34.Spe
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Spectral.GeometricResolventPowersCompletion20261011 IGSIII34.Spectral.clock_slack_upper_to_power_completion20261011._simp_1_1: [propext]
+AUDITED IGSIII34.ResistanceLimit.ActualComponentIntrinsicEnergyBridge IGSIII34.ResistanceLimit.actualComponentGlobalEnergyExtension._proof_7: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Spectral.ActualVariationalBoundsCompletion20261011 IGSIII34.Spectral.actualDiagonalVariationalResolventCompletion20261011._proof_2: [propext]
 AUDITED IGSIII.Chemical.SubstitutionPaths.IndependentInnovations IGSIII.Chemical.Substitution.markedGenerationConfiguration: [propext,
  Classical.choice,
@@ -4817,6 +4882,9 @@ AUDITED IGSIII34.Percolation.Continuation.ElectricalLpAllOrder _private.IGSIII34
 AUDITED IGSIII34.Diffusion.ActualElectricalComponentZeroExtension IGSIII34.Diffusion.actualElectricalComponent_completed_zero_extension: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualChemicalCellBornClosure IGSIII34.ResistanceLimit.actualChemicalCellInclusion_born: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Spectral.KernelSeriesOperatorCompletion20261011 IGSIII34.Spectral.spectral_kernel_operator_identification_completion20261011: [propext,
  Classical.choice,
  Quot.sound]
@@ -4902,6 +4970,8 @@ AUDITED IGSIII34.Probability.MixedMoments IGSIII34.Probability.iid_sum_power_mom
 AUDITED IGSIII.Geometry.ActualComponentBoundary IGSIII.Geometry.actualComponentWordPoint.congr_simp: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondDistanceCertificate._proof_4: [propext,
+ Quot.sound]
 AUDITED IGSIII34.Percolation.PositiveEigenlaw IGSIII34.Percolation.meanOneLaw_zero_mass_ne_one: [propext,
  Classical.choice,
  Quot.sound]
@@ -4940,6 +5010,9 @@ AUDITED IGSIII34.Diffusion.ActualPaperDiscreteDeterministicLawCompletion20261011
  Quot.sound]
 AUDITED IGSIII34.Percolation.Continuation.ElectricalBoundaryTree _private.IGSIII34.Percolation.Continuation.ElectricalBoundaryTree.0.IGSIII34.Percolation.electricalBoundaryRootTailIndex.match_1: []
 AUDITED IGSIII34.Diffusion.RewardTransportConvergence IGSIII34.Diffusion.normalized_reward_ratio._simp_1_4: [propext]
+AUDITED IGSIII34.AO.MassGrowthEdgeBound IGSIII34.AO.conditionalResponse_le_edges_mul_bound: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualChemicalCadlagLawCompletion20261011 IGSIII34.Diffusion.electricalChemicalCadlagCarrierBorelCompletion20261011: [propext,
  Classical.choice,
  Quot.sound]
@@ -5016,6 +5089,9 @@ AUDITED IGSIII34.Diffusion.ActualNaturalContinuousGlobalSkorokhodCompletion20261
 AUDITED IGSIII34.Probability.MeanContinuity IGSIII34.Probability.truncatedFirstMomentTest: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Diffusion.ActualNaturalComponentFormWitness IGSIII34.Diffusion.ae_actual_natural_component_form_fields: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Spectral.ActualResolventPositivityCompletion20261011 IGSIII34.Spectral.actualEnergyNegativePartCompletion20261011._proof_3: [propext,
  Classical.choice,
  Quot.sound]
@@ -5039,6 +5115,9 @@ AUDITED IGSIII34.Diffusion.ActualVertexSpeedCadlagLawCompletion20261011 IGSIII34
  Quot.sound]
 AUDITED IGSIII34.Diffusion.ReversibleWalk IGSIII34.Diffusion.detailed_balance._simp_1_4: [propext]
 AUDITED IGSIII34.Diffusion.ActualNaturalAdditiveClockCompletion20261011 IGSIII34.Diffusion.ActualNaturalAdditiveClockCompletion20261011PhysicalMeasurable: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualComponentIntrinsicEnergyBridge IGSIII34.ResistanceLimit.actualComponentGlobalEnergyExtension._proof_4: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Diffusion.ClockWindowTransferCompletion20261011 IGSIII34.Diffusion.holdingTimePath_modulus_transfer_completion20261011: [propext,
@@ -5065,6 +5144,9 @@ AUDITED IGSIII34.Diffusion.ElectricalCountingProjectionCompletion20261011 IGSIII
 AUDITED IGSIII34.Diffusion.ScaledContinuousIntervalSampleCompletion20261011 IGSIII34.Diffusion.countableScaledContinuousIntervalSampleCompletion20261011._proof_2: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Diffusion.ActualBlockComponentResistance IGSIII34.Diffusion.actualBlock_component_resistance_lower_bound: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualVertexSpeedGlobalWeakCompletion20261011 IGSIII34.Diffusion.actualWeightedGlobalJ1CompleteCompletion20261011: [propext,
  Classical.choice,
  Quot.sound]
@@ -5074,6 +5156,7 @@ AUDITED IGSIII34.Diffusion.SkorokhodGlobalContinuousSampleCompletion20261011 IGS
 AUDITED IGSIII34.Diffusion.ActualDegreeMassWitnessCompletion20261011 IGSIII34.Diffusion.exists_ae_actual_degree_electrical_mass_fixed_cluster_completion20261011: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Diffusion.ActualElectricalComponentInjectivity IGSIII34.Diffusion.actualElectricalComponentInverseConstant._proof_2: [propext]
 AUDITED IGSIII34.Diffusion.ActualDiscreteGlobalWholeWeakCompletion20261011 IGSIII34.Diffusion.actualWholeGlobalJ1CarrierMeasurableCompletion20261011._proof_1: [propext,
  Classical.choice,
  Quot.sound]
@@ -5356,6 +5439,9 @@ AUDITED IGSIII34.Diffusion.SkorokhodGlobalContinuousSampleCompletion20261011 IGS
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Spectral.ContinuousSpectralKernelCompletion20261011 IGSIII34.Spectral.continuousResolventEigenfunctions_weight_identity_completion20261011._simp_1_2: [propext]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondSubdivision IGSIII34.Spectral.fivefoldDiamond_actual_subdivision: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Topology.VendorSpernerPrep IGSIII34.Topology.Vendor.delete_vertex_ccc_fun_match._simp_1_3: [propext]
 AUDITED IGSIII34.Diffusion.FiniteResolventCompletion20261011 IGSIII34.Diffusion.finiteGraphResolvent_equation: [propext,
  Classical.choice,
@@ -5467,6 +5553,12 @@ AUDITED IGSIII34.Diffusion.CountablePathExtensionCompletion20261011 IGSIII34.Dif
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Diffusion.EigenEulerLimitCompletion20261011 IGSIII34.Diffusion.eigenEuler_log_scale_completion20261011._simp_1_1: [propext]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamond_critical_exists: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondSpectralBound IGSIII34.Spectral.exists_fivefoldDiamond_strict_non_AO: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Topology.VendorSpernerPrep IGSIII34.Topology.Vendor.ccc_pos._simp_1_3: [propext, Quot.sound]
 AUDITED IGSIII34.Spectral.TerminalCollarCountingCompletion20261011 IGSIII34.Spectral.actual_terminal_socket_count_bound_completion20261011._proof_1_1: [propext,
  Quot.sound]
@@ -5616,6 +5708,8 @@ AUDITED IGSIII34.Spectral.ActualHarmonicAnchoredCompletion20261011 IGSIII34.Spec
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII.Chemical.PathCounting.OrderedForest IGSIII.Chemical.PathCounting.orderedForest_roots: [propext]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondUpperWalk._proof_10: [propext,
+ Quot.sound]
 AUDITED IGSIII.Geometry.CellLocalisationAddressScaling IGSIII.Geometry.chemicalAddressBlockLimitLength_shift_scale._simp_1_3: [propext]
 AUDITED IGSIII.Chemical.TerminalEnvelope IGSIII.Chemical.Substitution.chemicalTerminalEnvelope: [propext,
  Classical.choice,
@@ -6007,6 +6101,8 @@ AUDITED IGSIII34.Percolation.Continuation.ElectricalBoundaryTreeGraft IGSIII34.P
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Diffusion.FiniteResolventStoppingCoverCompletion20261011 IGSIII34.Diffusion.finiteGraphResolvent_stopping_cover_exit_completion20261011._simp_1_7: [propext]
+AUDITED IGSIII34.ResistanceLimit.ActualElectricalZeroSupport IGSIII34.ResistanceLimit.actualElectricalComponent_zero_outside_chemical_cell._proof_1_1: [propext,
+ Quot.sound]
 AUDITED IGSIII34.Spectral.ActualScalarSpeedProcessCompletion20261011 IGSIII34.Spectral.actualScalarSpeedProcessTopologyCompletion20261011: [propext,
  Classical.choice,
  Quot.sound]
@@ -6217,6 +6313,8 @@ AUDITED IGSIII34.Diffusion.ActualContinuousGlobalSkorokhodConvergenceCompletion2
  Quot.sound]
 AUDITED IGSIII34.Percolation.SubstitutionTrace IGSIII34.Percolation.exists_cellTraceEnergy_minimizer: [propext,
  Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondUpperWalk._proof_9: [propext,
  Quot.sound]
 AUDITED IGSIII34.Resistance.Dirichlet IGSIII34.Resistance.FiniteNetwork.effectiveConductance_eq_reciprocalResistance._simp_1_6: [propext]
 AUDITED IGSIII.Geometry.CellLocalisationSplitSeparation IGSIII.Geometry.signedComponentBoundaryDistance_source: [propext,
@@ -6665,6 +6763,9 @@ AUDITED IGSIII34.Spectral.ComponentResolvent IGSIII34.Spectral.evaluation_quotie
 AUDITED IGSIII.Mass.FourStateMassLimit Universality.FiniteNetwork.orientedMeanVertexReward_erase: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualElectricalChemicalCellRange IGSIII34.ResistanceLimit.actualElectricalComponent_chemical_cell_range: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Spectral.ActualMassContinuationCompletion20261011 IGSIII34.Spectral.ActualMassContinuationCompletion20261011._sizeOf_1: [propext,
  Classical.choice,
  Quot.sound]
@@ -7093,6 +7194,8 @@ AUDITED IGSIII.Chemical.TransferContinuity IGSIII.Chemical.Substitution.chemical
 AUDITED IGSIII.Geometry.UniformComponentMesh IGSIII.Geometry.ae_uniform_actual_component_mesh._simp_1_6: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondLowerWalk._proof_3: [propext,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.RootedElectricalSkeleton IGSIII34.Diffusion.rootedElectricalSpaceMetricSpace._proof_3: [propext,
  Classical.choice,
  Quot.sound]
@@ -7145,6 +7248,7 @@ AUDITED IGSIII34.Diffusion.GreedyModulusParameterSelectionCompletion20261011 IGS
 AUDITED IGSIII34.Diffusion.ActualDiscreteObservationCompatibilityCompletion20261011 IGSIII34.Diffusion.actualPaperDiscreteObservation_eq_completion20261011: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondNetwork._proof_3: [propext]
 AUDITED IGSIII34.Diffusion.NormalizedAnchoredResolventCompletion20261011 IGSIII34.Diffusion.normalizedAnchoredResolventSolution_L2_bound_completion20261011: [propext,
  Classical.choice,
  Quot.sound]
@@ -7203,6 +7307,9 @@ AUDITED IGSIII34.Percolation.ElectricalTransferBounds IGSIII34.Percolation.norma
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Diffusion.SkorokhodEndpointJumpGridCompletion20261011 IGSIII34.Diffusion.finiteEndpointJump_grid_identity_completion20261011: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualElectricalZeroSupport IGSIII34.ResistanceLimit.actualElectricalComponent_zero_outside_chemical_cell: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Spectral.MaskedMassExpectationCompletion20261011 IGSIII34.Spectral.retainedComponentState_prefix_factor_completion20261011: [propext,
@@ -7493,6 +7600,9 @@ AUDITED IGSIII.Geometry.ChemicalMetricCodeFaithfulness IGSIII.Geometry.actualChe
  Quot.sound]
 AUDITED IGSIII.Chemical.SmallBall.Thinning IGSIII.Chemical.SmallBall.originalConfiguration: []
 AUDITED IGSIII34.Diffusion.ActualPaperDeterministicClocksCompletion20261011 IGSIII34.Diffusion.paper_deterministic_clock_ratio_completion20261011._simp_1_4: [propext]
+AUDITED IGSIII34.ResistanceLimit.BlockZeroSupport IGSIII34.ResistanceLimit.actualBlockZeroExtension_nonzero_birth: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.SkorokhodFiniteJumpAlignmentCompletion20261011 IGSIII34.Diffusion.finiteJumpIntervalPath_J1_bound_completion20261011: [propext,
  Classical.choice,
  Quot.sound]
@@ -8079,6 +8189,9 @@ AUDITED IGSIII34.Spectral.ActualMassContinuationCompletion20261011 IGSIII34.Spec
 AUDITED IGSIII.Chemical.SmallBall.MarkedSkeletonDistortion IGSIII.Chemical.SmallBall.anchorRetraction_preserves_mesh: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualComponentIntrinsicEnergyBridge IGSIII34.ResistanceLimit.actualComponentIntrinsicRestriction: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII.Geometry.ChemicalMetricCodeFaithfulness IGSIII.Geometry.actualChemicalLabelPoint_of_retained: [propext,
  Classical.choice,
  Quot.sound]
@@ -8283,6 +8396,8 @@ AUDITED IGSIII.Chemical.SmallBall.FiniteComponentOwnership IGSIII.Geometry.finit
  Quot.sound]
 AUDITED IGSIII.Mass.ConnectedPositivity Universality.Rule.Classical.internal_connected_mass_positive: [propext,
  Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondLowerWalk._proof_7: [propext,
  Quot.sound]
 AUDITED IGSIII34.Spectral.ContinuousKernelProbabilityCompletion20261011 IGSIII34.Spectral.continuousTransitionKernelCompletion20261011._proof_1: [propext,
  Classical.choice,
@@ -8858,6 +8973,9 @@ AUDITED IGSIII34.Diffusion.ActualContinuousGlobalWholeWeakCompletion20261011 IGS
 AUDITED IGSIII34.Diffusion.UsualLocalJ1SequenceTopology IGSIII34.Diffusion.usualLocalJ1SequenceTopology: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondRule_classical: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII.Mass.ComponentFinitePartition IGSIII.Chemical.Substitution.markedComponentVertexMass: [propext,
  Classical.choice,
  Quot.sound]
@@ -8979,6 +9097,9 @@ AUDITED IGSIII34.Diffusion.FiniteWeightedCommonEmbeddingCompletion20261011 IGSII
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Percolation.Continuation.ElectricalBoundaryMartingale IGSIII34.Percolation.electricalBoundaryTreeIteration_normalized_condExp_marks_prefix._simp_1_3: [propext]
+AUDITED IGSIII34.ResistanceLimit.ActualComponentIntrinsicEnergyBridge IGSIII34.ResistanceLimit.actualRetainedComponentEnergy_eq_intrinsic_restriction: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.ContinuousWalkConstruction IGSIII34.Diffusion.finiteContinuousWalkSampleLaw_independent: [propext,
  Classical.choice,
  Quot.sound]
@@ -9257,6 +9378,9 @@ AUDITED IGSIII.Geometry.RootedComponentSkeleton IGSIII.Geometry.rootedComponentS
 AUDITED IGSIII.Mass.FullComponentEmpiricalWeights IGSIII.Chemical.Substitution.fullComponentEmpiricalWordWeight.eq_1: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Diffusion.ActualElectricalComponentInjectivity IGSIII34.Diffusion.actualElectricalComponentInverseConstant_nonnegative: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII.Chemical.SmallBall.Laplace IGSIII.Chemical.SmallBall.exists_uniform_laplace_bound._simp_1_5: [propext]
 AUDITED IGSIII.Mass.CompatibleCylinders IGSIII.Chemical.Substitution.marked_mass_limit_compatible: [propext,
  Classical.choice,
@@ -9356,6 +9480,7 @@ AUDITED IGSIII34.Resistance.FiniteNetwork IGSIII34.Resistance.FiniteNetwork.endp
 AUDITED IGSIII34.Diffusion.ActualCutoffResolventApproximationCompletion20261011 IGSIII34.Diffusion.cutoffApproximationCarrierMeasurableCompletion20261011: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondNetwork._proof_1: [propext]
 AUDITED IGSIII34.Spectral.ActualBoundaryTypicalMassCompletion20261011 IGSIII34.Spectral.actual_boundary_vertex_ratio_typical_lower_completion20261011: [propext,
  Classical.choice,
  Quot.sound]
@@ -9428,6 +9553,9 @@ AUDITED IGSIII34.Topology.VendorSpernerPrep IGSIII34.Topology.Vendor.case_D_pare
  Quot.sound]
 AUDITED IGSIII34.Resistance.DescendingPotentialPathsCompletion20261011 IGSIII34.Resistance.FiniteNetwork.descendingPotentialReachable_path_through_edge_completion20261011._simp_1_2: [propext]
 AUDITED IGSIII.Mass.CylinderBoundaryLaw IGSIII.Chemical.Substitution.cylinderWordTransitionWeight_step._simp_1_6: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ElectricalComponentBlockBirth IGSIII34.ResistanceLimit.actualElectricalComponentBlockVertex._proof_1: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII.Chemical.SubstitutionPaths.IndependentInnovations IGSIII.Chemical.Substitution.markedGenerationConfiguration_topCells: [propext,
@@ -9666,6 +9794,8 @@ AUDITED IGSIII34.Spectral.Collars.CarrierPlacedMass IGSIII34.Spectral.carrierPla
 AUDITED IGSIII34.Spectral.LogCorrectedDimension IGSIII34.Spectral.tendsto_log_abs_div_atBot._simp_1_7: [propext]
 AUDITED IGSIII34.Spectral.ActualResolventCompletion20261011 IGSIII34.Spectral.actualResolventUniformCompletion20261011: [propext,
  Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondLowerWalk._proof_4: [propext,
  Quot.sound]
 AUDITED IGSIII34.Diffusion.WeightedExponentialNoiseCompletion20261011 IGSIII34.Diffusion.exponentialCoordinate_memLp_two_completion20261011: [propext,
  Classical.choice,
@@ -9938,6 +10068,9 @@ AUDITED IGSIII34.Resistance.Dirichlet IGSIII34.Resistance.FiniteNetwork.weighted
 AUDITED IGSIII34.Spectral.ActualCompactEmbeddingCompletion20261011 IGSIII34.Spectral.actualEnergyL2EmbeddingCompletion20261011._proof_1: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Diffusion.ActualElectricalComponentInjectivity IGSIII34.Diffusion.actualElectricalComponentInverseConstant._proof_1: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualNaturalVertexSpeedCadlagCompletion20261011 IGSIII34.Diffusion.rawVertexCadlagCompletionBorelCompletion20261011: [propext,
  Classical.choice,
  Quot.sound]
@@ -10079,10 +10212,16 @@ AUDITED IGSIII34.Probability.FiniteProductTensorization _private.IGSIII34.Probab
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Probability.ReliabilityTail IGSIII34.Probability.thinningMap_iterate._simp_1_3: [propext]
+AUDITED IGSIII34.Diffusion.ActualStationaryComponentInverseBound IGSIII34.Diffusion.stationaryBlockBoundaryEnergyConstant: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII.Probability.CountableInvariantFamily _private.IGSIII.Probability.CountableInvariantFamily.0.IGSIII.Probability.twoSidedWords: [propext]
 AUDITED IGSIII.Chemical.SmallBall.PathCountMoments IGSIII.Chemical.SmallBall.path_sum_le_geometric_tail._proof_1_3: [propext,
  Quot.sound]
 AUDITED IGSIII34.Spectral.ActualCutoffNormLowerCompletion20261011 IGSIII34.Spectral.actual_supported_completion_cutoff_quotient_lower_completion20261011: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ElectricalComponentBlockBirth IGSIII34.ResistanceLimit.actualElectricalComponentFiniteInclusion_block_birth: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII.Chemical.SubstitutionPaths.RetentionLaw IGSIII.Chemical.Substitution.connectedRetentionProbability.eq_1: [propext,
@@ -10826,6 +10965,7 @@ AUDITED IGSIII34.Percolation.ElectricalAlmostSure IGSIII34.Percolation.electrica
 AUDITED IGSIII34.Diffusion.CountingClockDensityCompletion20261011 IGSIII34.Diffusion.finiteCountingClockDensityCompletion20261011: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondSubdivision IGSIII34.Spectral.fivefoldDiamondPlantedVertex._proof_1: [propext]
 AUDITED IGSIII34.Diffusion.WalkQuadraticVariationCompletion20261011 IGSIII34.Diffusion.finiteDiscreteWalkLaw_stationary_compensated_oscillation_bound_completion20261011: [propext,
  Classical.choice,
  Quot.sound]
@@ -11043,6 +11183,7 @@ AUDITED IGSIII34.ResistanceLimit.PairTriangle IGSIII34.ResistanceLimit.component
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII.Mass.RootLevel IGSIII.Mass.tendsto_prepend_normalized: [propext, Classical.choice, Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondDistanceCertificate._proof_1: [propext]
 AUDITED IGSIII34.Spectral.PhysicalSocketMassCompletion20261011 IGSIII34.Spectral.physical_socket_cylinder_mass_bound_completion20261011: [propext,
  Classical.choice,
  Quot.sound]
@@ -11301,6 +11442,9 @@ AUDITED IGSIII34.Diffusion.ActualNaturalConstructedDiffusion IGSIII34.Diffusion.
  Quot.sound]
 AUDITED IGSIII34.Diffusion.CountingClockDensityCompletion20261011 IGSIII34.Diffusion.finiteCountingClockDensity_weight_completion20261011._simp_1_1: [propext]
 AUDITED IGSIII.Chemical.SubstitutionPaths.FiveCycleActual IGSIII.Chemical.FiveCycle.network._proof_3: [propext]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondResistance IGSIII34.Spectral.fivefoldDiamond_configuration_resistance_lower: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.SkorokhodGlobalContinuousLimitCompletion20261011 IGSIII34.Diffusion.skorokhodGlobal_continuous_limit_all_horizons_completion20261011: [propext,
  Classical.choice,
  Quot.sound]
@@ -11505,6 +11649,8 @@ AUDITED IGSIII34.Diffusion.SkorokhodGlobalRegularGridCompletion20261011 IGSIII34
 AUDITED IGSIII.Geometry.CellLocalisationActualSimilarity IGSIII.Geometry.actualChemicalCellSimilarity._proof_1: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondLowerWalk._proof_6: [propext,
+ Quot.sound]
 AUDITED IGSIII.Mass.PopulationVectorLimit Universality.Rule.Classical.population_vector_limit_from_perron._simp_1_1: [propext]
 AUDITED IGSIII34.Percolation.ElectricalIterateMeanComparison IGSIII34.Percolation.normalized_electrical_iterate_positive_part_mean_le: [propext,
  Classical.choice,
@@ -11591,6 +11737,9 @@ AUDITED IGSIII34.Diffusion.SkorokhodCadlagSampleCompletion20261011 IGSIII34.Diff
  Quot.sound]
 AUDITED IGSIII.Mass.OrientedLeftEigenvector _private.IGSIII.Mass.OrientedLeftEigenvector.0.Universality.FiniteNetwork.orientedLeftLift.match_1.splitter: []
 AUDITED IGSIII34.Topology.VendorSpernerPrep IGSIII34.Topology.Vendor.case_D_iff_not_end_2._simp_1_1: [propext]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondSpectralBound IGSIII34.Spectral.fivefoldDiamond_actual_spectral_dimension_bound: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.AcceleratedWalkLaws IGSIII34.Diffusion.acceleratedFiniteVariableSpeedWalkSampleLaw_generator: [propext,
  Classical.choice,
  Quot.sound]
@@ -11734,6 +11883,9 @@ AUDITED IGSIII34.Percolation.Continuation.NaturalResistanceCompletion20261011 IG
 AUDITED IGSIII34.Topology.CommonTargetMetricAmalgamationCompletion20261011 IGSIII34.Topology.CommonTargetGluingStageCompletion20261011.casesOn: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Diffusion.ActualElectricalComponentInjectivity IGSIII34.ResistanceLimit.actualElectricalComponentBlockVertex.congr_simp: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualElectricalPathTightnessCompletion20261011 IGSIII34.Diffusion.ActualPathTightnessCompletion20261011Borel: [propext,
  Classical.choice,
  Quot.sound]
@@ -11796,6 +11948,9 @@ AUDITED IGSIII34.Diffusion.ActualDiscreteCadlagWholeWeakCompletion20261011 IGSII
  Quot.sound]
 AUDITED IGSIII.Chemical.GraphPaths IGSIII.Chemical.graphPathSets_nonempty: [propext, Classical.choice, Quot.sound]
 AUDITED IGSIII34.Diffusion.FiniteVertexResolventCompletion20261011 IGSIII34.Diffusion.finiteRegularized_natural_generator_completion20261011._simp_1_4: [propext]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondResistance IGSIII34.Spectral.fivefoldDiamond_full_open_resistance: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualNaturalVertexSpeedChemicalCommonCompletion20261011 IGSIII34.Diffusion.rawNaturalVertexChemicalCompletionBorelCompletion20261011: [propext,
  Classical.choice,
  Quot.sound]
@@ -12057,6 +12212,8 @@ AUDITED IGSIII34.ResistanceLimit.ActualHarmonicDensity IGSIII34.ResistanceLimit.
 AUDITED IGSIII.Mass.ComponentCylinderWeights IGSIII.Chemical.Substitution.componentCylinderWeight: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondUpperWalk._proof_1: [propext,
+ Quot.sound]
 AUDITED IGSIII34.ResistanceLimit.SourcePairHarmonic IGSIII34.ResistanceLimit.exists_source_pair_minimizer: [propext,
  Classical.choice,
  Quot.sound]
@@ -12300,6 +12457,7 @@ AUDITED IGSIII34.ResistanceLimit.ActualBlockZeroPersistence IGSIII34.ResistanceL
 AUDITED IGSIII34.ResistanceLimit.CellPreservedEnergy IGSIII34.ResistanceLimit.exists_cell_preserving_energy_extension: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondRule: [propext]
 AUDITED IGSIII.Chemical.PathFunctional IGSIII.Chemical.PathFamily.mk.inj: [propext, Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualClassicalPaperLocalJ1LawWitness IGSIII34.Diffusion.exists_actual_classical_paper_localJ1_law_spectral_witness: [propext,
  Classical.choice,
@@ -12441,6 +12599,9 @@ AUDITED IGSIII34.Diffusion.ActualDegreeRewards IGSIII34.Diffusion.actual_joint_e
 AUDITED IGSIII34.Spectral.RationalClockPushforwardCompletion20261011 IGSIII34.Spectral.rational_clock_bounds_measurable_completion20261011._simp_1_1: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualChemicalCellBornClosure IGSIII34.ResistanceLimit.actualChemicalCellVertex_dense: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.UsualLocalJ1PathLaw IGSIII34.Diffusion.usualLocalJ1PathProbability: [propext,
  Classical.choice,
  Quot.sound]
@@ -12489,6 +12650,9 @@ AUDITED IGSIII34.Spectral.NaturalPhysicalCylinderMeshCompletion20261011 IGSIII34
 AUDITED IGSIII34.ResistanceLimit.SideSourceTrace IGSIII34.ResistanceLimit.swapNetworkTerminals: []
 AUDITED IGSIII.Geometry.ComponentWordMetric IGSIII.Geometry.generationComponentWordEmbedding_planted._proof_1: [propext,
  Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamond_terminal_distance: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII.Geometry.ActualChemicalSkeleton IGSIII.Geometry.actualChemicalVertex_old: [propext,
  Classical.choice,
  Quot.sound]
@@ -12506,6 +12670,9 @@ AUDITED IGSIII34.Diffusion.ContinuousWalkConstruction IGSIII34.Diffusion.finiteC
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII.Chemical.ChemicalOmegaMean IGSIII.Chemical.Substitution.chemicalOrbit_mean._simp_1_1: []
+AUDITED IGSIII34.ResistanceLimit.ElectricalComponentBlockBirth IGSIII34.ResistanceLimit.actualElectricalComponentBlockVertex._proof_3: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Probability.ConditionalLp2 IGSIII34.Probability.conditionalLp2_norm_le: [propext,
  Classical.choice,
  Quot.sound]
@@ -12568,6 +12735,9 @@ AUDITED IGSIII.Geometry.ChemicalMetricMeasureCode IGSIII.Geometry.chemicalMetric
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII.Chemical.SmallBall.PositiveMoments IGSIII.Chemical.SmallBall.finite_product_nonconstant_assignment_moment_le_sublinear: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondResistance IGSIII34.Spectral.fivefoldDiamond_electrical_iteration_lower: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII.Geometry.CellLocalisationMarkedCompletionLaw IGSIII.Geometry.markedChemicalCompletionCode_measurable: [propext,
@@ -12771,6 +12941,9 @@ AUDITED IGSIII34.Spectral.GeometricResolventPowersCompletion20261011 IGSIII34.Sp
 AUDITED IGSIII34.Diffusion.ActualWeightedClockRescaleCompletion20261011 IGSIII34.Diffusion.actualRescaledWeightedGlobalJ1CutoffApproximationCompletion20261011: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Diffusion.ActualStationaryComponentInverseBound IGSIII34.Diffusion.stationary_actual_block_component_inverse_bound: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII.Chemical.SubstitutionPaths.Recursion IGSIII.Chemical.Substitution.innovationPathFamily: [propext,
  Classical.choice,
  Quot.sound]
@@ -12811,6 +12984,8 @@ AUDITED IGSIII34.Percolation.ResistanceExponent IGSIII34.Percolation.normalizedP
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Topology.VendorSperner IGSIII34.Topology.Vendor.handshake_2: [propext, Classical.choice, Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondLowerWalk._proof_2: [propext,
+ Quot.sound]
 AUDITED IGSIII.Chemical.GeodesicSensitivity IGSIII.Chemical.PathFamily.minimizingPath: [propext,
  Classical.choice,
  Quot.sound]
@@ -12936,6 +13111,8 @@ AUDITED IGSIII.Geometry.BoxDimensionActualUpper IGSIII.Geometry.exists_admissibl
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Topology.VendorSperner IGSIII34.Topology.Vendor.incomplete_childs._simp_1_3: [propext, Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondUpperWalk._proof_4: [propext,
+ Quot.sound]
 AUDITED IGSIII.Mass.PopulationVector Universality.Rule.ConfigurationHistory.populationVector_eigenbasis_reconstruction._simp_1_5: [propext]
 AUDITED IGSIII34.Percolation.CompactResistanceFamily IGSIII34.Percolation.markedNormalizedResistanceFamily: [propext,
  Classical.choice,
@@ -13814,6 +13991,9 @@ AUDITED IGSIII34.Spectral.ActualEnergyFellerCompletion20261011 IGSIII34.Spectral
 AUDITED IGSIII34.Spectral.ActualSocketCutoffBoundaryCompletion20261011 IGSIII34.Spectral.actual_physical_root_cutoff_realization_one_completion20261011: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Diffusion.ActualBlockComponentResistance IGSIII34.Diffusion.actualBlockComponentResistance_positive: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII.Mass.OrientedSpectralGap Universality.Rule.Classical.oriented_mass_gap: [propext,
  Classical.choice,
  Quot.sound]
@@ -14185,6 +14365,8 @@ AUDITED IGSIII.Probability.FiniteTensorization IGSIII.Probability.finiteMean_swa
 AUDITED IGSIII.Geometry.ActualChemicalSkeleton IGSIII.Geometry.actualChemicalSpaceMetricSpace: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondDistanceCertificate: [propext,
+ Quot.sound]
 AUDITED IGSIII34.Topology.CommonTargetMetricAmalgamationCompletion20261011 IGSIII34.Topology.commonTargetGluingStageCompletion20261011._proof_1: [propext,
  Classical.choice,
  Quot.sound]
@@ -14374,6 +14556,9 @@ AUDITED IGSIII.Chemical.GeodesicOneSided IGSIII.Chemical.shortest_variance_le_ge
  Quot.sound]
 AUDITED IGSIII34.Diffusion.ComponentEdgeOwnership IGSIII34.Diffusion.componentWordEdgeConsEquiv._proof_1: [propext]
 AUDITED IGSIII34.Diffusion.FiniteWeightedHoldingPathsCompletion20261011 IGSIII34.Diffusion.weightedHoldingSampleMeasurableEquivCompletion20261011._simp_7: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Diffusion.ActualStationaryComponentInverseBound IGSIII34.Diffusion.stationaryBlockBoundaryEnergyConstant_nonnegative: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII.Chemical.SubstitutionPaths.MinimalConfigurations IGSIII.Chemical.Substitution.substitute_pivotal_factor: [propext,
@@ -14668,6 +14853,9 @@ AUDITED IGSIII.Chemical.SubstitutionPaths.ConnectedProductLaw IGSIII.Chemical.Su
 AUDITED IGSIII34.Diffusion.CountablePathMeasurableExtensionCompletion20261011 IGSIII34.Diffusion.countableTimeApproximatingIndexCompletion20261011._proof_1: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Forms.ActualComponentEnergyBound IGSIII34.Forms.actualRetainedComponent_trace_bddAbove: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Percolation.SubstitutionTrace IGSIII34.Percolation.cellTraceEnergy: [propext,
  Classical.choice,
  Quot.sound]
@@ -14906,6 +15094,9 @@ AUDITED IGSIII34.Diffusion.OriginalEnergyMeshOscillationCompletion20261011 IGSII
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Diffusion.WeightedClockRateIdentificationCompletion20261011 IGSIII34.Diffusion.finiteCountingClockDensity_vertex_clock_identity_completion20261011._simp_1_1: [propext]
+AUDITED IGSIII34.ResistanceLimit.ActualComponentIntrinsicEnergyBridge IGSIII34.ResistanceLimit.actualComponentGlobalEnergyExtension: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Topology.VendorSpernerPrep IGSIII34.Topology.Vendor.insert_index_strict_mono._simp_1_2: [propext]
 AUDITED IGSIII.Chemical.SubstitutionPaths.CompactChemicalFamily IGSIII.Chemical.Substitution.markedPrefixApproximationSet_compact: [propext,
  Classical.choice,
@@ -15234,6 +15425,7 @@ AUDITED IGSIII34.Diffusion.ActualElectricalPathTightnessCompletion20261011 IGSII
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII.Mass.OrientedSpectralGap _private.IGSIII.Mass.OrientedSpectralGap.0.Universality.FiniteNetwork.MassLiveState.oriented.match_1.eq_1: []
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondLowerWalk: [propext, Quot.sound]
 AUDITED IGSIII.Geometry.UniformRadiusBound IGSIII.Geometry.marked_radius_uniform_bound_of_terminal_envelope: [propext,
  Classical.choice,
  Quot.sound]
@@ -15320,6 +15512,9 @@ AUDITED IGSIII34.ResistanceLimit.PairResistance IGSIII34.ResistanceLimit.pairRes
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Spectral.TerminalCollarCountingCompletion20261011 _private.IGSIII34.Spectral.TerminalCollarCountingCompletion20261011.0.IGSIII34.Spectral.terminalPortWeightCompletion20261011.match_1.eq_1: []
+AUDITED IGSIII34.Diffusion.ActualBlockComponentResistance Universality.FiniteNetwork.cellNetworkEmbedding.eq_1: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Percolation.Continuation.ElectricalBoundaryMartingale IGSIII34.Percolation.electricalBoundaryMeanProcess_stronglyAdapted: [propext,
  Classical.choice,
  Quot.sound]
@@ -15482,6 +15677,9 @@ AUDITED IGSIII.Chemical.SmallBall.ComponentWordOwnership IGSIII.Geometry.selecte
 AUDITED IGSIII34.Spectral.ActualSemigroupMarkovCompletion20261011 IGSIII34.Spectral.actual_spectral_semigroup_interval_completion20261011: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Diffusion.ActualElectricalComponentInjectivity IGSIII34.Diffusion.actualElectricalComponentCompletionInclusion_closed_range: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Percolation.ElectricalBlockOrdering IGSIII34.Percolation.generationElectricalBlockMean_pairwise_le._simp_1_5: [propext]
 AUDITED IGSIII.Chemical.EndogenousEnvelopeBarrier IGSIII.Chemical.Substitution.exists_unit_value_paired_barrier_of_omega_lower_bound._simp_1_4: [propext]
 AUDITED IGSIII34.Probability.InvariantBounds IGSIII34.Probability.exists_invariant_powerMoment_bound: [propext,
@@ -15524,6 +15722,7 @@ AUDITED IGSIII.Mass.PopulationVector Universality.Rule.ConfigurationHistory.popu
 AUDITED IGSIII.Chemical.BoundaryDistance IGSIII.Chemical.Substitution.componentBoundaryDistance_adj_le: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ElectricalComponentBlockBirth IGSIII34.ResistanceLimit.actualElectricalComponentBlockVertex._proof_2: [propext]
 AUDITED IGSIII34.Spectral.AnchoredResolventCompletion20261011 IGSIII34.Spectral.anchoredResolventOperatorCompletion20261011._proof_11: [propext,
  Classical.choice,
  Quot.sound]
@@ -15711,6 +15910,9 @@ AUDITED IGSIII.Geometry.CellLocalisationLaw IGSIII.Geometry.chemicalMetricCodeMe
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Spectral.GroupedSocketMassCompletion20261011 IGSIII34.Spectral.grouped_component_socket_mass_completion20261011: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualComponentIntrinsicEnergyBridge IGSIII34.ResistanceLimit.actualComponentIntrinsicRestriction_finite_trace._proof_1_2: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Diffusion.DenseObservationFiniteTimesCompletion20261011 IGSIII34.Diffusion.finiteFlooredTimeLaw_weak_of_dense_observations_completion20261011: [propext,
@@ -16080,6 +16282,7 @@ AUDITED IGSIII34.Diffusion.ActualChemicalCadlagWholeWeakCompletion20261011 IGSII
 AUDITED IGSIII34.Diffusion.ActualCountableWholeWeakCompletion20261011 IGSIII34.Diffusion.ActualCountableWholeWeakCompletion20261011Borel: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Diffusion.ActualStationaryComponentInverseBound IGSIII34.Diffusion.stationary_actual_block_component_inverse_bound._simp_1_2: []
 AUDITED IGSIII34.Topology.VendorSperner IGSIII34.Topology.Vendor.incomplete_childs._simp_1_4: [propext, Quot.sound]
 AUDITED IGSIII34.Percolation.ElectricalFixedLaw IGSIII34.Percolation.electricalFixedLaw_all_real_moments: [propext,
  Classical.choice,
@@ -16142,6 +16345,9 @@ AUDITED IGSIII34.Probability.MomentConstraints IGSIII34.Probability.firstMoment_
 AUDITED IGSIII34.Spectral.ActualHarmonicAnchoredCompletion20261011 IGSIII34.Spectral.actualHarmonicAnchoredNormCompletion20261011._proof_2: [propext]
 AUDITED IGSIII34.Topology.VendorSpernerApplication IGSIII34.Topology.Vendor.sperner_cube_of_function._proof_1: [propext]
 AUDITED IGSIII34.Diffusion.ActualNaturalConstructedDiffusionWitness IGSIII34.Diffusion.actualNaturalConstructedDiffusionWitnessInnerCompletion20261011: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualCellLocalisation IGSIII34.ResistanceLimit.actual_substituted_cell_resistance_lower_bound: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualDiscreteClockRescaleCompletion20261011 IGSIII34.Diffusion.actualRescaledDiscreteGlobalJ1CarrierMeasurableCompletion20261011: [propext,
@@ -16270,6 +16476,15 @@ AUDITED IGSIII34.Diffusion.ActualElectricalComponentInclusion IGSIII34.Resistanc
 AUDITED IGSIII.Chemical.SmallBall.FiniteDepthSmallBall IGSIII.Chemical.SmallBall.normalizedDistanceTail_atMostOne: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.AO.SubdividedDiamondBound IGSIII34.subdivided_diamond_logarithmic_bound_lt_four_thirds: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Diffusion.ActualBlockComponentResistance IGSIII34.Diffusion.actualBlock_pairResistance_transport: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.DiscreteDeterministicOriginalClock IGSIII34.Diffusion.actualPaperDiscreteDeterministicPlacedCadlagLaw_original_clock: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII.Chemical.SubstitutionPaths.FiveCycleInverseMoments IGSIII.Chemical.FiveCycle.actual_inverse_third_moment_recursion._simp_1_6: [propext,
  Classical.choice,
  Quot.sound]
@@ -16278,6 +16493,8 @@ AUDITED IGSIII34.Resistance.Minimizer IGSIII34.Resistance.FiniteNetwork.edges_no
  Quot.sound]
 AUDITED IGSIII.Geometry.RetainedComponentDiameter IGSIII.Geometry.selected_component_distance_le_twice_radius._simp_1_1: [propext,
  Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondUpperWalk._proof_5: [propext,
  Quot.sound]
 AUDITED IGSIII34.Percolation.SubstitutionTrace IGSIII34.Percolation.coarsePotentialEnergy: [propext,
  Classical.choice,
@@ -16705,6 +16922,9 @@ AUDITED IGSIII34.Forms.CompletionLocalityCompletion20261011 IGSIII34.Forms.compl
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Percolation.PhysicalOrbit IGSIII34.Percolation.electricalOrbitScale.match_1: []
+AUDITED IGSIII34.Diffusion.ActualElectricalComponentInjectivity IGSIII34.Diffusion.actualElectricalComponentSkeletonInclusion.congr_simp: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualWalkSpectralMomentsCompletion20261011 IGSIII34.Diffusion.actualWalkIdentificationCarrierMeasurableCompletion20261011._proof_2: [propext]
 AUDITED IGSIII34.Topology.VendorSpernerPrep IGSIII34.Topology.Vendor.is_insert_index_of_strict_mono: [propext,
  Classical.choice,
@@ -16884,6 +17104,9 @@ AUDITED IGSIII34.Spectral.ActualVariationalBoundsCompletion20261011 IGSIII34.Spe
 AUDITED IGSIII.Chemical.SubstitutionPaths.InnovationTree IGSIII.Chemical.Substitution.configurationChildSequence_coherent: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.CellResistanceLocalisation IGSIII34.ResistanceLimit.substituted_cell_resistance_lower_bound: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualNaturalDiscreteCadlagCompletion20261011 IGSIII34.Diffusion.ActualNaturalDiscreteCadlagCompletion20261011Local5: [propext,
  Classical.choice,
  Quot.sound]
@@ -16898,6 +17121,9 @@ AUDITED IGSIII34.ResistanceLimit.ElectricalRadius IGSIII34.ResistanceLimit.termi
  Quot.sound]
 AUDITED IGSIII34.Resistance.SmallEdges IGSIII34.Resistance.FiniteNetwork.weighted_cauchy_schwarz_of_nonnegative._simp_1_4: [propext]
 AUDITED IGSIII34.Spectral.ActualResolventCompletion20261011 IGSIII34.Spectral.actualResolventBilinear_self_completion20261011: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Diffusion.ActualElectricalComponentInjectivity IGSIII34.Diffusion.actualElectricalComponentCompletionInclusion_injective: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Diffusion.FiniteWeightedHoldingPathsCompletion20261011 IGSIII34.Diffusion.weightedHoldingSampleMeasurableEquivCompletion20261011._proof_2: [propext,
@@ -17007,6 +17233,8 @@ AUDITED IGSIII34.Diffusion.ActualVertexSpeedGlobalWeakCompletion20261011 IGSIII3
  Quot.sound]
 AUDITED IGSIII34.Percolation.BernoulliThinning IGSIII34.Percolation.bernoulliPairWeight: [propext,
  Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondUpperWalk._proof_2: [propext,
  Quot.sound]
 AUDITED IGSIII.Chemical.SmallBall.FiniteDepthGrowth IGSIII.Chemical.SmallBall.conditionedDistanceMean_graph_bounds: [propext,
  Classical.choice,
@@ -17309,6 +17537,8 @@ AUDITED IGSIII34.Probability.MeanContinuity IGSIII34.Probability.isCompact_meanO
 AUDITED IGSIII34.Percolation.ElectricalLp IGSIII34.Percolation.nonnegativeElectricalTransfer_memLp: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondLowerWalk._proof_8: [propext,
+ Quot.sound]
 AUDITED IGSIII.Chemical.PathBounds IGSIII.Chemical.PathFamily.commonEdges_cost_le_shortest: [propext,
  Classical.choice,
  Quot.sound]
@@ -17553,6 +17783,9 @@ AUDITED IGSIII34.Percolation.ElectricalGrowthResidual IGSIII34.Percolation.marke
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII.Probability.FiniteResampling IGSIII.Probability.finite_product_variance_le_resampling: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Diffusion.ActualElectricalComponentInjectivity IGSIII34.Diffusion.actualElectricalComponentFiniteInclusion_inverse_bound: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualNaturalPaperDiscreteDeterministicWitnessCompletion20261011 IGSIII34.Diffusion.ActualNaturalPaperDiscreteDeterministicWitnessCompletion20261011Local2: [propext,
@@ -18734,6 +18967,7 @@ AUDITED IGSIII.Chemical.SmallBall.Thinning IGSIII.Chemical.SmallBall.pairedConfi
 AUDITED IGSIII34.Percolation.NormalizedLaw IGSIII34.Percolation.normalizedElectricalLaw_continuous_on_family: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondDistanceCertificate._proof_3: [propext]
 AUDITED IGSIII.Mass.OrientedResponse Universality.FiniteNetwork.OrientedState.massValue: [propext,
  Classical.choice,
  Quot.sound]
@@ -19051,6 +19285,9 @@ AUDITED IGSIII34.Resistance.WeightedPathTrial IGSIII34.Resistance.FiniteNetwork.
 AUDITED IGSIII34.Diffusion.ActualContinuousGlobalSkorokhodConvergenceCompletion20261011 IGSIII34.Diffusion.actualContinuousGlobalJ1CarrierBorelCompletion20261011: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualComponentIntrinsicEnergyBridge IGSIII34.ResistanceLimit.actualComponentIntrinsicRestriction_completed: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII.Chemical.SubstitutionPaths.WeightedRelabelling IGSIII.Chemical.Substitution.networkEquivalence_openEdges_pathCost: [propext,
  Classical.choice,
  Quot.sound]
@@ -19078,10 +19315,15 @@ AUDITED IGSIII34.Spectral.NaturalPhysicalCylinderMeshCompletion20261011 IGSIII34
 AUDITED IGSIII34.ResistanceLimit.ElectricalSkeleton IGSIII34.ResistanceLimit.electricalSpaceMetricSpace._proof_8: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondResistance IGSIII34.Spectral.fivefoldDiamond_natural_resistance_growth_lower: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII.Geometry.ActualFiniteMass IGSIII.Geometry.selectedRootInteriorEmbedding: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.AO.Dimension IGSIII34.typicalSpectralDimension_eq_dimensionRatio._simp_1_3: [propext]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondCanonicalWalk: [propext,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualSelectedUniformCompletion20261011 IGSIII34.Diffusion.actualOriginal_selected_uniform_completion20261011: [propext,
  Classical.choice,
  Quot.sound]
@@ -19217,6 +19459,9 @@ AUDITED IGSIII34.Spectral.ParameterFormSpectrumCompletion20261011 IGSIII34.Spect
 AUDITED IGSIII34.Spectral.ParameterFormHilbertCompletion20261011 IGSIII34.Spectral.parameterFormHilbertBasisCompletion20261011._proof_1: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualComponentIntrinsicEnergyBridge IGSIII34.ResistanceLimit.actualComponentIntrinsicRestriction_finite_trace._proof_1_1: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII4.AcceptedSectionThree IGSIII4.AcceptedElectricalSectionThree.noConfusion: [propext,
  Classical.choice,
  Quot.sound]
@@ -19241,6 +19486,8 @@ AUDITED IGSIII.Chemical.SmallBall.ActualChemicalTerminalField IGSIII.Chemical.Sm
 AUDITED IGSIII34.Diffusion.DegreeTransport IGSIII34.Diffusion.halfWeight.eq_1: [propext, Classical.choice, Quot.sound]
 AUDITED IGSIII.Chemical.SubstitutionPaths.IndependentInnovations IGSIII.Chemical.Substitution.independentInnovationLaw_marginal: [propext,
  Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondUpperWalk._proof_3: [propext,
  Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualDiscreteGlobalWholeWeakCompletion20261011 IGSIII34.Diffusion.actualPaperDiscreteElectricalGlobalJ1LawCompletion20261011: [propext,
  Classical.choice,
@@ -19679,6 +19926,9 @@ AUDITED IGSIII.Geometry.CellLocalisationScaledCompletion IGSIII.Geometry.rootedC
 AUDITED IGSIII34.Percolation.ElectricalStationaryField IGSIII34.Percolation.electricalField_measurable: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualChemicalCellBornClosure IGSIII34.ResistanceLimit.actualChemicalWordComponent_eq_closure_born: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Spectral.ActualContinuousPastKernelCompletion20261011 IGSIII34.Spectral.actualContinuousPastNormCompletion20261011: [propext,
  Classical.choice,
  Quot.sound]
@@ -19987,6 +20237,7 @@ AUDITED IGSIII.Geometry.ActualComponentRadius IGSIII.Geometry.terminalComponentR
 AUDITED IGSIII.Chemical.SubstitutionPaths.Erasure IGSIII.Chemical.Substitution.erase_noncrossing_cells_preserves_distance: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Diffusion.ActualBlockComponentResistance Universality.FiniteNetwork.NetworkEmbedding.ofEquivalence.eq_1: [Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualBoundedHarmonicLiftCompletion20261011 IGSIII34.Diffusion.actualMicroscopicHarmonicLiftCompletion20261011._proof_1: [propext,
  Classical.choice,
  Quot.sound]
@@ -20285,6 +20536,9 @@ AUDITED IGSIII34.Probability.MomentConstraints IGSIII34.Probability.firstMoment_
 AUDITED IGSIII34.Diffusion.ActualOriginalVertexObjectivePassageCompletion20261011 IGSIII34.Diffusion.vertexCopyoriginalObjectiveCarrierBorelCompletion20261011: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Diffusion.ActualElectricalComponentInjectivity IGSIII34.Diffusion.actualElectricalComponentCompletionInclusion_antilipschitz: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualChemicalCadlagLawCompletion20261011 IGSIII34.Diffusion.actualPaperContinuousChemicalCadlagLawCompletion20261011._proof_1: [propext,
  Classical.choice,
  Quot.sound]
@@ -20308,6 +20562,9 @@ AUDITED IGSIII34.Diffusion.ActualContinuousCadlagWholeWeakCompletion20261011 IGS
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII.Chemical.SubstitutionPaths.PathTrie IGSIII.Chemical.Substitution.configurationSupportForest: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Diffusion.ActualElectricalComponentInjectivity IGSIII.Geometry.retainedBlockComponentEmbedding.eq_1: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualNaturalContinuousCadlagCompletion20261011 IGSIII34.Diffusion.ActualNaturalContinuousCadlagCompletion20261011Local2: [propext,
@@ -20410,6 +20667,9 @@ AUDITED IGSIII34.Diffusion.ActualChemicalCadlagLawCompletion20261011 IGSIII34.Di
 AUDITED IGSIII34.Topology.VendorSpernerPrep IGSIII34.Topology.Vendor.case_D_iff_not_end_1: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ElectricalComponentBlockBirth IGSIII34.ResistanceLimit.actualElectricalComponentBlockVertex: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Topology.VendorSpernerPrep IGSIII34.Topology.Vendor.case_AC_ex_unique._proof_1_11: [propext,
  Quot.sound]
 AUDITED IGSIII34.Spectral.ActualFormSemigroupSupNormCompletion20261011 IGSIII34.Spectral.actualFellerSupNormNormCompletion20261011._proof_1: [propext,
@@ -20498,6 +20758,9 @@ AUDITED IGSIII.Geometry.ChemicalMeasureCodeFaithfulness IGSIII.Geometry.actualCo
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualFiniteStoppingMarkovCompletion20261011 IGSIII34.Diffusion.ActualFiniteStoppingCompletion20261011Measurable: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondSubdivision IGSIII34.Spectral.fivefoldDiamondPlantedVertex: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII.Mass.ComponentCylinderWeights _private.IGSIII.Mass.ComponentCylinderWeights.0.IGSIII.Chemical.Substitution.retainedComponentStateFrom.match_1.splitter: []
@@ -20630,6 +20893,9 @@ AUDITED IGSIII34.ResistanceLimit.ChemicalElectricalCompletionMapCompletion202610
  Quot.sound]
 AUDITED IGSIII.Geometry.CellLocalisationGH IGSIII.Geometry.markedRootedFiniteGH: [propext, Classical.choice, Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualPaperDeterministicWalkIdentityCompletion20261011 IGSIII34.Diffusion.deterministicWalkIdentityMeasurableCompletion20261011: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondResistance IGSIII34.Spectral.fivefoldDiamond_unit_current: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Percolation.ElectricalFutureMean _private.IGSIII34.Percolation.ElectricalFutureMean.0.IGSIII34.Percolation.termμ: []
@@ -21020,6 +21286,9 @@ AUDITED IGSIII34.Resistance.FiniteNetwork IGSIII34.Resistance.FiniteNetwork.ener
 AUDITED IGSIII.Chemical.SubstitutionPaths.IndexedPaths IGSIII.Chemical.Substitution.edgePathFamily.eq_1: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.AO.SubdividedDiamondBound IGSIII34.spectral_bound_of_twenty_edges_five_resistance: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualDiscreteCadlagWholeWeakCompletion20261011 IGSIII34.Diffusion.actualPaperDiscreteElectricalCadlagLawCompletion20261011._proof_5: [propext,
  Classical.choice,
  Quot.sound]
@@ -21292,6 +21561,9 @@ AUDITED IGSIII34.Diffusion.DiscreteObservedInitialCompletion20261011 IGSIII34.Di
 AUDITED IGSIII34.Spectral.Collars.PhysicalComponentLogMass IGSIII34.Spectral.selectedContainingComponentLabel_measurable: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondSubdivision IGSIII34.Spectral.fivefoldDiamondSubedge: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.DegreeTransport IGSIII34.Diffusion.halfWeight._proof_1: [propext]
 AUDITED IGSIII34.Diffusion.SkorokhodJ1TopologyCompletion20261011 IGSIII34.Diffusion.skorokhodJ1EDist_le_uniform_completion20261011: [propext,
  Classical.choice,
@@ -21427,6 +21699,8 @@ AUDITED IGSIII34.Percolation.Continuation.ElectricalBoundaryMartingale IGSIII34.
 AUDITED IGSIII34.ResistanceLimit.ActualStrongLocality IGSIII34.ResistanceLimit.ActualCompletionStrongLocality: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondLowerWalk._proof_1: [propext,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualMeasureComparison IGSIII34.Diffusion.actual_degree_counting_comparison_bound: [propext,
  Classical.choice,
  Quot.sound]
@@ -21501,6 +21775,7 @@ AUDITED IGSIII.Mass.StableRecursion IGSIII.Mass.tendsto_stable_recursion: [prope
 AUDITED IGSIII.Chemical.SubstitutionPaths.History IGSIII.Chemical.Substitution.historyRootConfiguration: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamond_edges: [propext]
 AUDITED IGSIII34.Spectral.OrientedMassMoments IGSIII34.Spectral.nonconnected_history_mass_moment_bound: [propext,
  Classical.choice,
  Quot.sound]
@@ -21670,6 +21945,8 @@ AUDITED IGSIII34.Percolation.GenerationRealMoments IGSIII34.Percolation.generati
 AUDITED IGSIII34.Percolation.ElectricalGrowthResidual IGSIII34.Percolation.markedGrowthScaledResistance_eq_mean_scaled._simp_1_2: [propext]
 AUDITED IGSIII.Geometry.CellLocalisationBoundaryLimit IGSIII.Geometry.persistentNormalizedBoundaryDistance: [propext,
  Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondLowerWalk._proof_10: [propext,
  Quot.sound]
 AUDITED IGSIII34.Topology.VendorSpernerPrep IGSIII34.Topology.Vendor.almost_surjective_of_insert_index._simp_1_4: [propext]
 AUDITED IGSIII34.Topology.VendorSpernerPrep IGSIII34.Topology.Vendor.insert_index_strict_mono._proof_1_5: [propext,
@@ -22769,6 +23046,9 @@ AUDITED IGSIII.Geometry.CellLocalisationAddressCompletion IGSIII.Geometry.chemic
 AUDITED IGSIII.Geometry.ActualComponentOwnershipMetric IGSIII.Geometry.actualComponentVertexOwnership_distance_le: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.DiscreteDeterministicOriginalClock IGSIII34.Diffusion.actualPaperDiscreteDeterministicPlacedCadlagLaw.eq_1: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII.Mass.CompatibleCylinders IGSIII.Chemical.Substitution.compatible_retained_component_cylinder_limits._simp_1_7: [propext]
 AUDITED IGSIII34.Spectral.Collars.ActualSameMasterAllClocks IGSIII34.ResistanceLimit.sectionThreeAllClocks_actualNaturalConstructedDiffusionWitnessCarrierMeasurableCompletion20261011: [propext,
  Classical.choice,
@@ -22780,6 +23060,9 @@ AUDITED IGSIII.Geometry.ChemicalMetricCodeFaithfulness IGSIII.Geometry.actualChe
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII.Mass.OrientedMatrix Universality.FiniteNetwork.MassLiveState.sourceSelected.eq_4: []
+AUDITED IGSIII34.Diffusion.ActualBlockComponentResistance IGSIII34.Diffusion.actualBlock_dangling_component_pairResistance_eq: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII.Chemical.SmallBall.Thinning IGSIII.Chemical.SmallBall.finite_product_bool_fiber: [propext,
  Classical.choice,
  Quot.sound]
@@ -23004,6 +23287,9 @@ AUDITED IGSIII.Geometry.CriticalComponentBoundary IGSIII.Geometry.exists_actual_
 AUDITED IGSIII.Geometry.ActualChemicalSkeleton IGSIII.Geometry.retainedPersistentVertexEmbedding._proof_2: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualComponentIntrinsicEnergyBridge IGSIII34.ResistanceLimit.actualComponentGlobalEnergyExtension._proof_2: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.ResistanceLimit.ActualHarmonicDensity IGSIII34.ResistanceLimit.actualHarmonicInterpolation._proof_4: [propext,
  Classical.choice,
  Quot.sound]
@@ -23039,6 +23325,8 @@ AUDITED IGSIII34.Diffusion.WeightedCumulativeClockCompletion20261011 IGSIII34.Di
  Quot.sound]
 AUDITED IGSIII34.Percolation.Continuation.ElectricalFiniteLawVariance IGSIII34.Percolation.finite_probability_pi_integral_eq_finiteMean: [propext,
  Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondLowerWalk._proof_9: [propext,
  Quot.sound]
 AUDITED IGSIII.Chemical.SmallBall.ComponentWordOwnership IGSIII.Geometry.componentWordInteriorEmbeddingStep.congr_simp: [propext,
  Classical.choice,
@@ -23235,6 +23523,9 @@ AUDITED IGSIII34.Diffusion.ActualClassicalPaperLocalJ1LawWitness IGSIII34.Diffus
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualClassicalVertexSpeedChemicalCommonCompletion20261011 IGSIII34.Diffusion.ActualClassicalVertexSpeedChemicalCommonCompletion20261011Local2: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualComponentIntrinsicEnergyBridge IGSIII34.ResistanceLimit.actualComponentGlobalEnergyExtension._proof_6: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Percolation.Continuation.ElectricalReciprocal IGSIII34.Percolation.conditional_inverse_cauchy_schwarz: [propext,
@@ -23723,6 +24014,9 @@ AUDITED IGSIII.Mass.OrientedResponse Universality.FiniteNetwork.orientedLiveCoun
 AUDITED IGSIII.Chemical.SubstitutionPaths.Bounds IGSIII.Chemical.Substitution.innovation_path_card_bounds: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualCellLocalisation IGSIII34.ResistanceLimit.actual_substituted_dangling_cell_pairResistance_eq: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.DiscreteWalkProcess IGSIII34.Diffusion.finiteWalkKernel_markov: [propext,
  Classical.choice,
  Quot.sound]
@@ -23839,6 +24133,9 @@ AUDITED IGSIII34.Diffusion.ActualNaturalConstructedDiffusion IGSIII34.Diffusion.
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.ResistanceLimit.ActualChemicalCommonRealisationCompletion20261011 IGSIII34.ResistanceLimit.exists_actual_chemical_common_isometric_realisation_completion20261011: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondResistance IGSIII34.Spectral.fivefoldDiamond_full_open_IGSII_resistance: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Diffusion.WeightedInverseClockProbabilityCompletion20261011 IGSIII34.Diffusion.weighted_inverse_clock_uniform_probability_completion20261011: [propext,
@@ -24456,6 +24753,9 @@ AUDITED IGSIII34.Percolation.LawMap IGSIII34.Percolation.scaledProbabilityLaw: [
 AUDITED IGSIII34.Diffusion.ActualDiscreteGlobalWholeWeakCompletion20261011 IGSIII34.Diffusion.actualWholeGlobalJ1CompleteCompletion20261011: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondTerminalSymmetry._proof_1: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Spectral.EulerSemigroupCompletion20261011 IGSIII34.Spectral.eulerSpectralCoefficient_bound_completion20261011: [propext,
  Classical.choice,
  Quot.sound]
@@ -24486,6 +24786,8 @@ AUDITED IGSIII34.ResistanceLimit.ActualNaturalChemicalCarrier IGSIII34.Resistanc
  Quot.sound]
 AUDITED IGSIII34.Diffusion.RootedElectricalStagePotential IGSIII34.Diffusion.rootedElectricalSkeletonPoint_old: [propext,
  Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ElectricalComponentBlockBirth IGSIII34.ResistanceLimit.actualElectricalComponentFiniteInclusion_block_birth._proof_1_1: [propext,
  Quot.sound]
 AUDITED IGSIII.Mass.ComponentCylinderWeights IGSIII.Chemical.Substitution.componentChildState.eq_1: [propext]
 AUDITED IGSIII.Mass.ComponentEmpiricalLaw IGSIII.Chemical.Substitution.componentFrontierVertexMass_ratio_tendsto_zero: [propext,
@@ -24547,6 +24849,7 @@ AUDITED IGSIII.Mass.OrientedLeftEigenvector Universality.FiniteNetwork.orientedL
 AUDITED IGSIII.Chemical.SmallBall.Probability IGSIII.Chemical.SmallBall.conditioned_crossing_probability: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualComponentIntrinsicEnergyBridge IGSIII34.ResistanceLimit.actualComponentEnergyMarks._proof_2: [propext]
 AUDITED IGSIII.Chemical.SubstitutionPaths.ExponentialContinuity IGSIII.Chemical.Substitution.exponential_integral_difference_le_lp2: [propext,
  Classical.choice,
  Quot.sound]
@@ -24853,6 +25156,9 @@ AUDITED IGSIII34.Diffusion.ActualCommonChemicalCadlagWholeWeakCompletion20261011
 AUDITED IGSIII34.ResistanceLimit.WeightedSplitAnchorCompletion20261011 IGSIII34.ResistanceLimit.signedWeightedCellBoundaryPotentialCompletion20261011: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Diffusion.ActualElectricalComponentInjectivity IGSIII34.Diffusion.actualElectricalComponentInverseConstant: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualDiscreteClockRescaleCompletion20261011 IGSIII34.Diffusion.actualRescaledDiscreteGlobalJ1CarrierMeasurableCompletion20261011._proof_2: [propext]
 AUDITED IGSIII34.Probability.MomentFamily IGSIII34.Probability.isCompact_meanOneMomentFamily: [propext,
  Classical.choice,
@@ -24905,6 +25211,9 @@ AUDITED IGSIII34.Resistance.CurrentMoments IGSIII34.Resistance.FiniteNetwork.fin
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Probability.UniformRealMoments IGSIII34.Probability.positive_natural_moment_of_lintegral_bound: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondTerminalSymmetry._proof_3: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII.Geometry.ActualFiniteCluster IGSIII.Geometry.actualFiniteClusterFinite._proof_1: [propext,
@@ -24961,6 +25270,9 @@ AUDITED IGSIII.Mass.PopulationAlmostSure IGSIII.Mass.ae_normalized_sum_zero_of_g
 AUDITED IGSIII34.Diffusion.ActualDiscreteGlobalWholeWeakCompletion20261011 IGSIII34.Diffusion.actualWholeGlobalJ1NormCompletion20261011: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.DanglingCellIsometry IGSIII34.ResistanceLimit.substituted_dangling_cell_pairResistance_eq: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII.Geometry.CellLocalisationCone IGSIII.Geometry.weightedBoundaryCone_root_difference: [propext,
  Classical.choice,
  Quot.sound]
@@ -24990,6 +25302,9 @@ AUDITED IGSIII.Mass.ComponentCylinderWeights IGSIII.Chemical.Substitution.retain
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Diffusion.SkorokhodGlobalJumpMeasurabilityCompletion20261011 IGSIII34.Diffusion.skorokhodGlobalMesh_tendsto_of_finite_jumps_completion20261011._proof_1_1: [propext,
+ Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondSubdivision IGSIII34.Spectral.fivefoldDiamondPlantedVertex._proof_2: [propext,
+ Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Diffusion.SkorokhodGlobalCarrierTransportCompletion20261011 IGSIII34.Diffusion.skorokhodGlobalCarrierMapCompletion20261011.eq_1: [propext,
  Classical.choice,
@@ -25433,6 +25748,9 @@ AUDITED IGSIII34.ResistanceLimit.SourceEnergy IGSIII34.ResistanceLimit.sourceCom
 AUDITED IGSIII34.Spectral.ActualBoundaryHarmonicCompletion20261011 IGSIII34.Spectral.actual_harmonic_completion_prefix_anchor_value_completion20261011: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualComponentIntrinsicEnergyBridge IGSIII34.ResistanceLimit.actual_completed_component_resistance_bound: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII.Geometry.ChemicalMetricMeasureCode IGSIII.Geometry.chemicalMetricMeasureCode._proof_1: [propext,
  Classical.choice,
  Quot.sound]
@@ -25707,6 +26025,9 @@ AUDITED IGSIII34.Diffusion.ActualNaturalConstructedDiffusionWitness IGSIII34.Dif
 AUDITED IGSIII34.Diffusion.NaturalTimeChange IGSIII34.Diffusion.degree_deterministic_clock_ratio: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Diffusion.ActualStationaryComponentInverseBound IGSIII34.Diffusion.stationaryBlockComponentInverseConstant.eq_1: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII.Mass.CompatibleCylinders IGSIII.Chemical.Substitution.marked_mass_limit_compatible._simp_1_7: [propext]
 AUDITED IGSIII34.ResistanceLimit.ActualTraceUniqueness IGSIII34.ResistanceLimit.actualTraceVertex: [propext,
  Classical.choice,
@@ -25891,6 +26212,9 @@ AUDITED IGSIII34.ResistanceLimit.ActualStationaryCompletion IGSIII34.ResistanceL
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII.Chemical.SmallBall.FiniteDepthSmallBall IGSIII.Chemical.SmallBall.exists_uniform_generation_laplace_decay._simp_1_3: [propext]
+AUDITED IGSIII34.Diffusion.ActualStationaryComponentInverseBound IGSIII34.Diffusion.stationaryBlockComponentInverseConstant: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.SkorokhodJ1TopologyCompletion20261011 IGSIII34.Diffusion.SkorokhodIntervalPathCompletion20261011.mk.injEq: [propext,
  Classical.choice,
  Quot.sound]
@@ -26003,6 +26327,8 @@ AUDITED IGSIII34.Diffusion.DiscreteCadlagWeakCompletion20261011 IGSIII34.Diffusi
  Quot.sound]
 AUDITED IGSIII34.Diffusion.StoppingCeilingApproximationCompletion20261011 IGSIII34.Diffusion.stoppingCeilingCell_measurable_completion20261011: [propext,
  Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondUpperWalk._proof_7: [propext,
  Quot.sound]
 AUDITED IGSIII34.Diffusion.FiniteWalkPairedEulerCompletion20261011 IGSIII34.Diffusion.finite_walk_paired_transition_completion20261011: [propext,
  Classical.choice,
@@ -26134,6 +26460,9 @@ AUDITED IGSIII34.Diffusion.ActualVertexResolventLimitIdentificationCompletion202
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Percolation.NetworkEquivalence IGSIII34.Percolation.networkEquivalence_conductance: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.CompletionCellZeroSupport IGSIII34.ResistanceLimit.continuous_zero_outside_closed_cell_of_dense: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII.Mass.OrientedResponse _private.IGSIII.Mass.OrientedResponse.0.Universality.FiniteNetwork.MassLiveState.oriented.match_1.eq_4: []
@@ -26328,6 +26657,9 @@ AUDITED IGSIII.Geometry.CellLocalisationAddressScaling IGSIII.Geometry.chemicalA
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Spectral.LogCorrectedDimension IGSIII34.Spectral.tendsto_log_abs_div_atBot._simp_1_3: [propext]
+AUDITED IGSIII34.ResistanceLimit.BlockZeroSupport IGSIII34.ResistanceLimit.sourceProjection_fixed_nonzero_reachable: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualNaturalVertexSpeedChemicalCommonCompletion20261011 IGSIII34.Diffusion.ae_actual_natural_vertex_speed_chemical_common_completion20261011: [propext,
  Classical.choice,
  Quot.sound]
@@ -26408,6 +26740,9 @@ AUDITED IGSIII34.ResistanceLimit.SkeletonEnergy IGSIII34.ResistanceLimit.skeleto
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Diffusion.ExactEdgeOwnership IGSIII34.Diffusion.actualComponentEdgeEmbedding.congr_simp: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualComponentIntrinsicEnergyBridge IGSIII34.ResistanceLimit.actualComponentIntrinsicRestriction_finite: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.ResistanceLimit.StationaryBlockResponseCompletion20261011 IGSIII34.ResistanceLimit.stationary_field_normalized_block_response: [propext,
@@ -26640,6 +26975,8 @@ AUDITED IGSIII34.Spectral.Collars.AllDeterministicSameAmbient IGSIII34.Diffusion
 AUDITED IGSIII34.ResistanceLimit.RetainedEnergy IGSIII34.ResistanceLimit.retainedEnergy_nonnegative: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Forms.ComponentBlockVertex IGSIII34.Forms.generationComponentWordEmbedding_block_vertex._proof_1: [propext,
+ Quot.sound]
 AUDITED IGSIII34.ResistanceLimit.ElectricalTraceRootLaw IGSIII34.ResistanceLimit.electricalTraceRootLawCodeMeasurableSpace._proof_5: [propext,
  Classical.choice,
  Quot.sound]
@@ -26792,6 +27129,9 @@ AUDITED IGSIII34.Percolation.Continuation.ElectricalBoundaryTree IGSIII34.Percol
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII.Mass.VertexRewardAlmostSure Universality.Rule.Classical.vertex_reward_compensation_ae_zero: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondResistance IGSIII34.Spectral.fivefoldDiamond_integer_divergence: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII.Mass.ComponentCylinderWeights IGSIII.Chemical.Substitution.retainedComponentStateFrom_ne_both: [propext,
@@ -26988,6 +27328,9 @@ AUDITED IGSIII.Chemical.SmallBall.MeasureThinning IGSIII.Chemical.SmallBall.meas
 AUDITED IGSIII.Chemical.SmallBall.SigmaSubtypeCoordinates IGSIII.Geometry.consSubtypeEquiv_word: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualElectricalChemicalZeroExtension IGSIII34.ResistanceLimit.actualElectricalComponent_completed_zero_extension_in_chemical_cell: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.FiniteClocks IGSIII34.Diffusion.transition: [propext, Classical.choice, Quot.sound]
 AUDITED IGSIII34.Diffusion.VariableSpeedWalkGenerator IGSIII34.Diffusion.finiteVariableSpeedWalkSampleLaw_generator_bounded._simp_1_7: [propext]
 AUDITED IGSIII34.Spectral.ActualMassContinuationCompletion20261011 IGSIII34.Spectral.ActualMassContinuationCompletion20261011.mk: [propext,
@@ -27072,6 +27415,9 @@ AUDITED IGSIII.Geometry.ComponentWordMetric IGSIII.Geometry.generationComponentW
 AUDITED IGSIII34.Percolation.ElectricalTree IGSIII34.Percolation.unitConfigurationResistance: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualComponentIntrinsicEnergyBridge IGSIII34.ResistanceLimit.actualComponentIntrinsicRestriction_finite_trace: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Percolation.CompactResistanceFamily IGSIII34.Percolation.markedNormalizedResistanceFamily._proof_2: [propext]
 AUDITED IGSIII34.Resistance.Pivotal IGSIII34.Resistance.FiniteNetwork.pivotal_edge_current_sq_eq_one: [propext,
  Classical.choice,
@@ -27084,6 +27430,8 @@ AUDITED IGSIII.Probability.FiniteFactorCompact IGSIII.Probability.factorLinearMa
  Quot.sound]
 AUDITED IGSIII34.Percolation.ElectricalMeasurability IGSIII.Chemical.Substitution.independentInnovationLaw.congr_simp: [propext,
  Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondUpperWalk._proof_6: [propext,
  Quot.sound]
 AUDITED IGSIII34.ResistanceLimit.ActualBlockZeroTower IGSIII34.ResistanceLimit.actualBlockZeroTowerStage_next._proof_1_2: [propext,
  Quot.sound]
@@ -27165,6 +27513,9 @@ AUDITED IGSIII34.Diffusion.ActualWholeContinuousResolventCompletion20261011 IGSI
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Spectral.ActualMassContinuationCompletion20261011 IGSIII34.Spectral.ActualMassContinuationCompletion20261011._sizeOf_inst: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualElectricalChemicalCellIdentification IGSIII34.ResistanceLimit.actualElectricalComponent_chemical_cell_identification: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Spectral.ActualContinuousKernelCompletion20261011 IGSIII34.Spectral.exists_actual_continuous_spectral_kernel_completion20261011: [propext,
@@ -27315,6 +27666,9 @@ AUDITED IGSIII.Geometry.CellLocalisationAddressScaling IGSIII.Geometry.chemicalA
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Spectral.ActualEnergyFellerCompletion20261011 IGSIII34.Spectral.actualFellerEnergyNormCompletion20261011._proof_2: [propext]
+AUDITED IGSIII34.AO.MassGrowthEdgeBound IGSIII34.AO.classical_mass_spectralRadius_le_edges: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualClockCorrectorZeroCompletion20261011 IGSIII34.Diffusion.actualElectricalCountingMeasureCompletion20261011.congr_simp: [propext,
  Classical.choice,
  Quot.sound]
@@ -27765,6 +28119,9 @@ AUDITED IGSIII.Probability.FiniteFactorCompact IGSIII.Probability.factorBall: [p
 AUDITED IGSIII.Geometry.CellLocalisationSplitSeparation IGSIII.Geometry.open_noncrossing_sides_boundary_separation: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Forms.ComponentBlockVertex IGSIII34.Forms.generationComponentWordEmbedding_block_vertex: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Topology.VendorSpernerPrep IGSIII34.Topology.Vendor.delete_vertex_ccc_fun_match._simp_1_4: [propext]
 AUDITED IGSIII34.Diffusion.NormalizedAnchoredResolventCompletion20261011 IGSIII34.Diffusion.parameterAnchoredResolventBilinearCompletion20261011._proof_9: [propext,
  Classical.choice,
@@ -27861,6 +28218,9 @@ AUDITED IGSIII34.Diffusion.DenseObservationReobserveCompletion20261011 IGSIII34.
  Quot.sound]
 AUDITED IGSIII.Geometry.CellLocalisationAddressScaling IGSIII.Geometry.chemicalAddressBlockLimitLength_shift_scale._simp_1_1: [propext]
 AUDITED IGSIII34.Spectral.ActualSemigroupOccupationCompletion20261011 IGSIII34.Spectral.actual_feller_unit_occupation_diverges_completion20261011: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualNaturalComponentEnergyEvent IGSIII34.ResistanceLimit.ae_actual_natural_component_energy_event: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Spectral.ActualBoundaryHarmonicCompletion20261011 IGSIII34.Spectral.actualHarmonicCompletionFunctionCompletion20261011._proof_3: [propext,
@@ -28066,6 +28426,7 @@ AUDITED IGSIII34.Percolation.ElectricalBlockOrdering IGSIII34.Percolation.genera
 AUDITED IGSIII34.Spectral.CoerciveFormHilbertCompletion20261011 IGSIII34.Spectral.coerciveFormModuleCompletion20261011._aux_1: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondNetwork._proof_2: [propext]
 AUDITED IGSIII.Chemical.SubstitutionPaths.CoherentHistory IGSIII.Chemical.Substitution.generationRootConfiguration_zero: [propext,
  Classical.choice,
  Quot.sound]
@@ -28210,6 +28571,9 @@ AUDITED IGSIII.Chemical.SubstitutionPaths.InnovationTree IGSIII.Chemical.Substit
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII.Mass.RootLevel Universality.Rule.ConfigurationHistory.rootLevelVertexCount: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondTerminalSymmetry._proof_2: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Resistance.FiniteNetwork IGSIII34.Resistance.FiniteNetwork.target: []
@@ -28446,6 +28810,9 @@ AUDITED IGSIII34.Diffusion.ActualElectricalComponentCompletion IGSIII34.Diffusio
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Diffusion.SkorokhodCadlagSampleCompletion20261011 IGSIII34.Diffusion.holdingCadlagSample_aemeasurable_completion20261011: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Diffusion.ActualBlockComponentResistance IGSIII34.Diffusion.networkEquivalence_pairResistance_weighted: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Diffusion.SkorokhodGlobalContinuousLimitCompletion20261011 IGSIII34.Diffusion.skorokhodHorizonRestrictionCompletion20261011: [propext,
@@ -28893,6 +29260,8 @@ AUDITED IGSIII34.Percolation.Continuation.NaturalResistanceCompletion20261011 IG
  Quot.sound]
 AUDITED IGSIII34.Spectral.TerminalCollarCountingCompletion20261011 IGSIII34.Spectral.actual_terminal_socket_count_bound_completion20261011._proof_1_2: [propext,
  Quot.sound]
+AUDITED IGSIII34.Spectral.Collars.FivefoldDiamondGraph IGSIII34.Spectral.fivefoldDiamondLowerWalk._proof_5: [propext,
+ Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualCommonVertexSpeedChemicalCadlagCompletion20261011 IGSIII34.Diffusion.commonVertexChemicalCadlagCarrierBorelCompletion20261011: [propext,
  Classical.choice,
  Quot.sound]
@@ -28992,6 +29361,9 @@ AUDITED IGSIII.Geometry.ChemicalMetricCodeFaithfulness IGSIII.Geometry.chemicalR
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Probability.FiniteProduct IGSIII34.Probability.insertCoordinate.eq_1: []
+AUDITED IGSIII34.ResistanceLimit.ElectricalComponentBlockBirth IGSIII34.ResistanceLimit.actualElectricalComponentConfiguration_block: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII.Chemical.SmallBall.FiniteDepthExponential IGSIII.Chemical.SmallBall.generation_normalizedDistanceMoment_product_law._simp_1_1: [propext]
 AUDITED IGSIII34.ResistanceLimit.RawElectricalJointAnchor IGSIII34.ResistanceLimit.actual_raw_electrical_joint_anchor._proof_1_3: [propext,
  Classical.choice,
@@ -29081,6 +29453,9 @@ AUDITED IGSIII.Geometry.ActualSkeletonPersistence IGSIII.Geometry.blockOldVertex
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Diffusion.FiniteResolventGreedyClockCompletion20261011 IGSIII34.Diffusion.finiteGraphResolvent_two_cover_clock_modulus_completion20261011._simp_1_2: [propext]
+AUDITED IGSIII34.ResistanceLimit.ActualComponentIntrinsicEnergyBridge IGSIII34.ResistanceLimit.actualComponentGlobalEnergyExtension._proof_3: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII.Geometry.ActualCellLocalisation IGSIII.Geometry.ActualChemicalCellSpace: [propext,
  Classical.choice,
  Quot.sound]
@@ -29296,6 +29671,9 @@ AUDITED IGSIII34.Percolation.Continuation.ElectricalBoundaryMean IGSIII34.Percol
 AUDITED IGSIII.Chemical.SubstitutionPaths.FiveCycleActual IGSIII.Chemical.FiveCycle.crosses_iff_branches: [propext,
  Classical.choice,
  Quot.sound]
+AUDITED IGSIII34.ResistanceLimit.ActualComponentIntrinsicEnergyBridge IGSIII34.ResistanceLimit.actualComponentGlobalEnergyExtension._proof_5: [propext,
+ Classical.choice,
+ Quot.sound]
 AUDITED IGSIII34.Spectral.ScalarSpectralDimensionCompletion20261011 IGSIII34.Spectral.scalar_speed_spectral_dimension_completion20261011._simp_1_6: [propext,
  Classical.choice,
  Quot.sound]
@@ -29321,6 +29699,9 @@ AUDITED IGSIII34.Diffusion.ReversibleWalk IGSIII34.Diffusion.edgeMultiplicity_sy
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII34.Diffusion.ActualPaperDiscreteDeterministicLawCompletion20261011 IGSIII34.Diffusion.actualPaperDiscreteDeterministicCadlagLawCompletion20261011: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDITED IGSIII34.Diffusion.ActualElectricalComponentInjectivity IGSIII34.Diffusion.actualElectricalComponentCompletionInclusion_isClosedEmbedding: [propext,
  Classical.choice,
  Quot.sound]
 AUDITED IGSIII.Chemical.SubstitutionPaths.MinimalConfigurations IGSIII.Chemical.Substitution.minimal_substitute_coarse: [propext,
@@ -29629,4 +30010,4 @@ AUDITED IGSIII34.Diffusion.DenseObservationFiniteTimesCompletion20261011 IGSIII3
 AUDITED IGSIII.Chemical.SubstitutionPaths.ConnectedTree IGSIII.Chemical.Substitution.configurationBondChildSequence: [propext,
  Classical.choice,
  Quot.sound]
-AUDIT_TOTAL 11092
+AUDIT_TOTAL 11231

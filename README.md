@@ -1,8 +1,8 @@
-# IGS III Lean formalisation — active Section 3 continuation
+# IGS III Lean formalisation — saved Section 3 continuation
 
-Work resumed on October 11, 2026. The latest saved Section 3 work is in
+Work was saved and paused on October 11, 2026 at the user’s request. The latest Section 3 work is in
 **[section3-continuation/](section3-continuation/)**, including compiled modules
-and clearly identified working drafts. **Section 3 is still being completed.**
+and clearly identified working drafts. **Section 3 remains incomplete.** See [the handoff](section3-continuation/RESUME.md) for verified results and the remaining annealed joint-law bridge.
 
 The root Lake package preserves the earlier verified Sections 2–4 baseline.
 Its audit and the continuation audit have different scopes. For the current

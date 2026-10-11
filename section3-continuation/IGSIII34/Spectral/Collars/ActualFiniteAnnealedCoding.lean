@@ -196,8 +196,10 @@ theorem actualFiniteAnnealedEnvironmentProbability_borel_measurable
       (actualFiniteAnnealedEnvironmentProbability rule scale scalePositive depth times clock kind) := by
   have finiteResponse : @Measurable _ _ inferInstance (borel (ProbabilityMeasure (ActualAnnealedFiniteCode rule))) (fun configuration : Configuration (rule.generation depth).edges =>
       (⟨actualFiniteAnnealedConditionalResponse rule scale scalePositive depth times clock kind configuration,
-        inferInstance⟩ : ProbabilityMeasure (ActualAnnealedFiniteCode rule))) := measurable_of_finite _
-  exact finiteResponse.comp (markedGenerationConfiguration_measurable rule depth [] true)
+        inferInstance⟩ : ProbabilityMeasure (ActualAnnealedFiniteCode rule))) :=
+    @measurable_of_finite _ _ inferInstance (borel (ProbabilityMeasure (ActualAnnealedFiniteCode rule))) inferInstance inferInstance _
+  exact @Measurable.comp _ _ _ inferInstance inferInstance (borel (ProbabilityMeasure (ActualAnnealedFiniteCode rule))) _ _
+    finiteResponse (markedGenerationConfiguration_measurable rule depth [] true)
 
 /-- Actual population clocks: twice retained edge count for the simple/rate-one
 walk, and retained vertex count for the inverse-degree holding-time walk. -/

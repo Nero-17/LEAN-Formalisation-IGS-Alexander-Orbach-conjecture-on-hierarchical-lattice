@@ -1,6 +1,7 @@
-# Section 3 work in progress
+# Section 3 saved progress
 
 This is the saved continuation snapshot for round 2026-10-11-101342.
+Research is paused for the requested upload. See `RESUME.md` for the exact handoff.
 It contains compiled proofs and working drafts. **Section 3 is not yet complete.**
 The root package preserves the earlier verified baseline; the current Section 3
 continuation is this directory.
@@ -12,7 +13,8 @@ masses, and completed-form retained-component energy decomposition.
 Completed-domain zero extension, its canonical closed-cell support and intrinsic
 energy identification are compiled, as is the actual fivefold-diamond strict
 non-AO example. The annealed joint-law coding and measurability bridge remains
-in progress, followed by the final combined audit.
+unfinished. The latest successful combined audit covers 11,231 declarations;
+newer helpers and drafts remain outside that certificate unless its hashes list them.
 
 `PROGRESS_SNAPSHOT.json` records every copied Lean source hash.
 `verification/manifest.json` is the last successful aggregate audit; its claims

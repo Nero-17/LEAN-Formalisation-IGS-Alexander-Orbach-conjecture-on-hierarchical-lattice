@@ -41,7 +41,17 @@ theorem sourceComponentEnergy_reindex
       simpa only [forwardValues] using reachable.map forward
   unfold sourceComponentEnergy finiteEnergy
   rw [← edges.sum_comp]
-  simp only [Equiv.symm_apply_apply, endpoint, reachability]
+  apply Finset.sum_congr rfl
+  intro edge _
+  have retained : other.graph.Reachable other.source (other.endpoint (edges edge)).1 ↔
+      network.graph.Reachable network.source (network.endpoint edge).1 := by
+    rw [endpoint]
+    exact reachability _
+  by_cases first : network.graph.Reachable network.source (network.endpoint edge).1
+  · have second := retained.mpr first
+    simp only [Equiv.symm_apply_apply, if_pos first, if_pos second, endpoint]
+  · have second := mt retained.mp first
+    simp only [Equiv.symm_apply_apply, if_neg first, if_neg second, endpoint]
 
 end
 end IGSIII34.ResistanceLimit

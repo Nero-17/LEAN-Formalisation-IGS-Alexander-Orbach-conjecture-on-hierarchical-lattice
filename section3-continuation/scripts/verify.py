@@ -6,6 +6,7 @@ import re
 import os
 import subprocess
 import sys
+from lean_slots import compiler_slot
 from datetime import datetime, timezone
 
 sys.stdout.reconfigure(encoding='utf-8')
@@ -76,10 +77,11 @@ def run(arguments, echo=True):
         environment['GIT_CONFIG_COUNT'] = '1'
         environment['GIT_CONFIG_KEY_0'] = 'safe.directory'
         environment['GIT_CONFIG_VALUE_0'] = '*'
-    process = subprocess.run([LAKE, 'env', 'lean', *arguments], cwd=ROOT,
-                             env=environment,
-                             stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
-                             text=True, encoding='utf-8', errors='replace')
+    with compiler_slot():
+        process = subprocess.run([LAKE, 'env', 'lean', *arguments], cwd=ROOT,
+                                 env=environment,
+                                 stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                                 text=True, encoding='utf-8', errors='replace')
     if echo:
         print(process.stdout, end='', flush=True)
     if process.returncode:
@@ -89,7 +91,7 @@ def run(arguments, echo=True):
 
 def main():
     STATUS.write_text('Verification running; this is not a completed manuscript formalisation.\n', encoding='utf-8')
-    source_paths = sorted((ROOT / 'IGSIII34').rglob('*.lean')) + sorted((ROOT / 'IGSIII').rglob('*.lean'))
+    source_paths = sorted((ROOT / 'IGSIII34').rglob('*.lean')) + sorted((ROOT / 'IGSIII').rglob('*.lean')) + sorted((ROOT / 'IGSIII4').rglob('*.lean'))
     modules = {'.'.join(path.relative_to(ROOT).with_suffix('').parts): path for path in source_paths}
     modules['IGSIII34'] = ROOT / 'IGSIII34.lean'
     modules['IGSIII'] = ROOT / 'IGSIII.lean'
@@ -154,12 +156,18 @@ def main():
         # This cache records successful compilation only, never a completed axiom audit.
         if sha256(path) != before[str(relative)]:
             raise RuntimeError(f'Source changed during compilation: {relative}')
-        cache_path.write_text(json.dumps({
-            'sourceSha256': {str(modules[done].relative_to(ROOT)): before[str(modules[done].relative_to(ROOT))]
-                             for done in order[:order.index(module) + 1]},
-            'objectSha256': objects,
+        cached_sources = dict(previous_sources)
+        cached_objects = dict(previous_objects)
+        cached_sources.update({str(modules[done].relative_to(ROOT)): before[str(modules[done].relative_to(ROOT))]
+                               for done in order[:order.index(module) + 1]})
+        cached_objects.update(objects)
+        pending_cache = cache_path.with_suffix('.json.tmp')
+        pending_cache.write_text(json.dumps({
+            'sourceSha256': cached_sources,
+            'objectSha256': cached_objects,
             'completedAxiomAudit': False,
         }, indent=2), encoding='utf-8')
+        os.replace(pending_cache, cache_path)
         names.extend(declarations(source))
     (VERIFY / 'build.log').write_text('\n'.join(log), encoding='utf-8')
     audit = ROOT / 'AxiomAudit.lean'
@@ -171,12 +179,12 @@ run_cmd do
   let environment ← getEnv
   let mut audited : Nat := 0
   for moduleName in environment.allImportedModuleNames do
-    if (`IGSIII34).isPrefixOf moduleName || (`IGSIII).isPrefixOf moduleName then
+    if (`IGSIII34).isPrefixOf moduleName || (`IGSIII).isPrefixOf moduleName || (`IGSIII4).isPrefixOf moduleName then
       logInfo m!"IMPORTED {moduleName}"
   for (declaration, _) in environment.constants do
     if let some moduleIndex := environment.getModuleIdxFor? declaration then
       let moduleName := environment.allImportedModuleNames[moduleIndex.toNat]!
-      if (`IGSIII34).isPrefixOf moduleName || (`IGSIII).isPrefixOf moduleName then
+      if (`IGSIII34).isPrefixOf moduleName || (`IGSIII).isPrefixOf moduleName || (`IGSIII4).isPrefixOf moduleName then
         let axioms ← collectAxioms declaration
         for axiomName in axioms do
           unless axiomName == `propext || axiomName == `Classical.choice || axiomName == `Quot.sound do
@@ -199,7 +207,7 @@ run_cmd do
     allowed = {'propext', 'Classical.choice', 'Quot.sound'}
     # Lean itself rejects every unexpected transitive axiom. The module-origin
     # enumeration includes private declarations and generated recursors/equations.
-    current_paths = list(modules.values()) if imported_only else sorted((ROOT / 'IGSIII34').rglob('*.lean')) + sorted((ROOT / 'IGSIII').rglob('*.lean')) + [ROOT / 'IGSIII34.lean', ROOT / 'IGSIII.lean']
+    current_paths = list(modules.values()) if imported_only else source_paths + [ROOT / 'IGSIII34.lean', ROOT / 'IGSIII.lean']
     after = {str(path.relative_to(ROOT)): sha256(path) for path in current_paths}
     if before != after:
         raise RuntimeError('Sources changed during verification')
@@ -210,7 +218,7 @@ run_cmd do
         'leanToolchain': (ROOT / 'lean-toolchain').read_text().strip(),
         'mathlibRevision': '520045ab14e26149ee970e2e617ca04b09bde5d6',
         'auditedDeclarations': names,
-        'auditEnumeration': 'all environment declarations owned by imported IGSIII/IGSIII34 modules',
+        'auditEnumeration': 'all environment declarations owned by imported IGSIII/IGSIII34/IGSIII4 modules',
         'auditedDeclarationCount': len(names),
         'auditedModules': sorted({module for module, declaration, axioms in audited}),
         'importedProjectModules': sorted(imported_names),

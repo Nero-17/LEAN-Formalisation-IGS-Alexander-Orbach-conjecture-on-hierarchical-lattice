@@ -35,7 +35,10 @@ theorem electrical_eigenlaw_generation_boundary_variance_geometric (rule : Rule)
         (Real.sqrt_eq_rpow _).symm
       _ = Real.sqrt ((growth:ℝ)^(2*(depth+1)))*Real.sqrt (∫ value : ℝ≥0, (value:ℝ)^2 ∂(law:Measure ℝ≥0)) :=
         Real.sqrt_mul (pow_nonneg growth.property (2*(depth+1))) _
-      _ = _ := by rw [powerEquality, Real.sqrt_sq_eq_abs, abs_of_nonneg (pow_nonneg growth.property (depth+1))]
+      _ = _ := by
+        rw [powerEquality, Real.sqrt_sq_eq_abs]
+        congr 1
+        exact abs_of_nonneg (pow_nonneg (show (0:ℝ) ≤ (growth:ℝ) from growth.property) _)
   have bound := electrical_eigenlaw_generation_boundary_variance_bound rule p positive belowOne fixedPoint law lawPositive
     moments growth eigenlaw powerAtLeastTwo depth
   rw [rootEquality, rule.generation_edges, Nat.cast_pow,

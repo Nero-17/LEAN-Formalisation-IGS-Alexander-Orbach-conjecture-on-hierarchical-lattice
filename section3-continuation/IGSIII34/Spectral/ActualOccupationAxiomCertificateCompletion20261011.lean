@@ -1,0 +1,6 @@
+import IGSIII34.Spectral.ActualSemigroupOccupationCompletion20261011
+import IGSIII34.Forms.ActualFormRecurrenceCompletion20261011
+
+#print axioms IGSIII34.Forms.actual_form_recurrence_approximation_completion20261011
+#print axioms IGSIII34.Spectral.actual_feller_unit_occupation_integral_completion20261011
+#print axioms IGSIII34.Spectral.actual_feller_unit_occupation_diverges_completion20261011

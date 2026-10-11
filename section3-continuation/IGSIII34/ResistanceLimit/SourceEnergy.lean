@@ -49,6 +49,17 @@ theorem sourceComponentEnergy_nonnegative (network : Resistance.FiniteNetwork Ve
   rw [sourceComponentEnergy_eq_projectedEnergy]
   exact network.potentialEnergy_nonnegative positive _
 
+theorem sourceComponentEnergy_le_potentialEnergy (network : Resistance.FiniteNetwork Vertex Edge)
+    (resistance : Edge → ℝ) (positive : ∀ edge, 0 < resistance edge) (potential : Vertex → ℝ) :
+    sourceComponentEnergy network resistance potential ≤ network.potentialEnergy resistance potential := by
+  unfold sourceComponentEnergy finiteEnergy Resistance.FiniteNetwork.potentialEnergy
+  apply Finset.sum_le_sum
+  intro edge _
+  by_cases retained : network.graph.Reachable network.source (network.endpoint edge).1
+  · simp only [if_pos retained, div_eq_mul_inv, mul_comm, le_refl]
+  · simp only [if_neg retained, zero_mul]
+    exact div_nonneg (sq_nonneg _) (positive edge).le
+
 /-- Every source-component oscillation is controlled by the genuine finite
 effective resistance and the energy of that component alone. -/
 theorem sourceComponentEnergy_resistance_bound (network : Resistance.FiniteNetwork Vertex Edge)

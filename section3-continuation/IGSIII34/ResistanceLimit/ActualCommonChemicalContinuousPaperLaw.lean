@@ -1,0 +1,76 @@
+import IGSIII34.ResistanceLimit.ActualCommonChemicalPaperLaw
+import IGSIII34.Diffusion.FiniteContinuousCommonEmbeddingCompletion20261011
+
+set_option autoImplicit false
+set_option maxHeartbeats 2400000
+set_option backward.isDefEq.respectTransparency false
+namespace IGSIII34.ResistanceLimit
+noncomputable section
+open Universality Universality.FiniteNetwork IGSIII34.Percolation IGSIII34.Forms IGSIII34.Diffusion
+open IGSIII.Chemical.Substitution IGSIII.Geometry MeasureTheory Filter
+open scoped _root_.Topology NNReal
+
+variable (rule : Rule) (p : ℝ) (positive : 0 < p) (belowOne : p < 1)
+  (fixedPoint : rule.network.reliability p = p) (growth : ℝ)
+  (value : Lp ℝ 2 (independentInnovationLaw rule p positive belowOne fixedPoint))
+  (growthPositive : 0 < growth)
+  (marks : {marks // StationaryHarmonicTypical rule p positive belowOne fixedPoint growth value marks})
+  (chemicalScale : ℝ) (chemicalScalePositive : 0 < chemicalScale)
+variable {Ambient : Type*} [MetricSpace Ambient] [CompactSpace Ambient]
+  [MeasurableSpace Ambient] [BorelSpace Ambient]
+
+/-- The original exponential-holding simple walk at the paper clock,
+placed in the fixed actual common realization. -/
+def actualPaperPlacedContinuousCadlagLaw
+    (initial : ∀ depth, ProbabilityMeasure (ActualFiniteCluster rule (stationaryConfiguration rule marks.val)
+      chemicalScale chemicalScalePositive depth))
+    (sources : ∀ depth, ActualFiniteCluster rule (stationaryConfiguration rule marks.val)
+      chemicalScale chemicalScalePositive depth → Ambient) (depth : ℕ) :
+    ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 Ambient) :=
+  finiteContinuousCadlagProbabilityCompletion20261011
+    (Vertex := ActualFiniteCluster rule (stationaryConfiguration rule marks.val) chemicalScale chemicalScalePositive depth)
+    (clusterRetainedEndpoint (rule.generation depth).network (stationaryConfiguration rule marks.val depth))
+    (cluster_degree_positive _ _ (markedGenerationConfiguration_crosses rule marks.val marks.property.1.1.2.1 depth [] true))
+    (initial depth)
+    (actualPaperDiscreteClockCompletion20261011 rule p positive belowOne fixedPoint growth value ⟨marks.val,marks.property.1.1⟩ depth)
+    (actualPaperDiscreteClock_positive_completion20261011 rule p positive belowOne fixedPoint growth value growthPositive
+      ⟨marks.val,marks.property.1.1⟩ depth)
+    (sources depth)
+
+local instance actualCommonContinuousPaperElectricalMeasurable : MeasurableSpace
+    (ActualStationaryElectricalSpace rule p positive belowOne fixedPoint growth value growthPositive ⟨marks.val,marks.property.1.1⟩) := borel _
+local instance actualCommonContinuousPaperElectricalBorel : BorelSpace
+    (ActualStationaryElectricalSpace rule p positive belowOne fixedPoint growth value growthPositive ⟨marks.val,marks.property.1.1⟩) := ⟨rfl⟩
+variable [CompactSpace (ActualStationaryElectricalSpace rule p positive belowOne fixedPoint growth value growthPositive ⟨marks.val,marks.property.1.1⟩)]
+
+theorem actualPaperPlacedContinuousCadlagLaw_tendsto
+    (initial : ∀ depth, ProbabilityMeasure (ActualFiniteCluster rule (stationaryConfiguration rule marks.val)
+      chemicalScale chemicalScalePositive depth))
+    (sources : ∀ depth, ActualFiniteCluster rule (stationaryConfiguration rule marks.val)
+      chemicalScale chemicalScalePositive depth → Ambient)
+    (targetEmbedding : ActualStationaryElectricalSpace rule p positive belowOne fixedPoint growth value growthPositive
+      ⟨marks.val,marks.property.1.1⟩ → Ambient) (continuous : Continuous targetEmbedding)
+    (placementClose : ∀ tolerance : ℝ, 0 < tolerance → ∀ᶠ depth in atTop, ∀ point,
+      dist (sources depth point) (targetEmbedding (actualStationaryElectricalVertex rule p positive belowOne fixedPoint
+        growth value growthPositive ⟨marks.val,marks.property.1.1⟩ depth point)) < tolerance)
+    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011
+      (ActualStationaryElectricalSpace rule p positive belowOne fixedPoint growth value growthPositive ⟨marks.val,marks.property.1.1⟩)))
+    (weak : Tendsto (fun depth => actualPaperContinuousElectricalCadlagLawCompletion20261011 rule p positive belowOne fixedPoint
+      growth value growthPositive marks chemicalScale chemicalScalePositive initial depth) atTop (𝓝 law)) :
+    Tendsto (fun depth => actualPaperPlacedContinuousCadlagLaw rule p positive belowOne fixedPoint growth value growthPositive
+      marks chemicalScale chemicalScalePositive initial sources depth) atTop
+      (𝓝 (law.map (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011 targetEmbedding continuous).measurable.aemeasurable)) := by
+  exact finiteContinuousCadlagProbability_common_embedding_weak_completion20261011
+    (fun depth => ActualFiniteCluster rule (stationaryConfiguration rule marks.val) chemicalScale chemicalScalePositive depth)
+    (fun depth => ClusterEdge (rule.generation depth).network (stationaryConfiguration rule marks.val depth))
+    (fun depth => clusterRetainedEndpoint (rule.generation depth).network (stationaryConfiguration rule marks.val depth))
+    (fun depth => cluster_degree_positive _ _ (markedGenerationConfiguration_crosses rule marks.val marks.property.1.1.2.1 depth [] true))
+    initial
+    (actualPaperDiscreteClockCompletion20261011 rule p positive belowOne fixedPoint growth value ⟨marks.val,marks.property.1.1⟩)
+    (actualPaperDiscreteClock_positive_completion20261011 rule p positive belowOne fixedPoint growth value growthPositive ⟨marks.val,marks.property.1.1⟩)
+    targetEmbedding continuous
+    (fun depth => actualStationaryElectricalVertex rule p positive belowOne fixedPoint growth value growthPositive ⟨marks.val,marks.property.1.1⟩ depth)
+    sources law weak placementClose
+
+end
+end IGSIII34.ResistanceLimit

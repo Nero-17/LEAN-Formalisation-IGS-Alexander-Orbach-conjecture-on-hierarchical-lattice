@@ -6,12 +6,12 @@ run_cmd do
   let environment ← getEnv
   let mut audited : Nat := 0
   for moduleName in environment.allImportedModuleNames do
-    if (`IGSIII34).isPrefixOf moduleName || (`IGSIII).isPrefixOf moduleName then
+    if (`IGSIII34).isPrefixOf moduleName || (`IGSIII).isPrefixOf moduleName || (`IGSIII4).isPrefixOf moduleName then
       logInfo m!"IMPORTED {moduleName}"
   for (declaration, _) in environment.constants do
     if let some moduleIndex := environment.getModuleIdxFor? declaration then
       let moduleName := environment.allImportedModuleNames[moduleIndex.toNat]!
-      if (`IGSIII34).isPrefixOf moduleName || (`IGSIII).isPrefixOf moduleName then
+      if (`IGSIII34).isPrefixOf moduleName || (`IGSIII).isPrefixOf moduleName || (`IGSIII4).isPrefixOf moduleName then
         let axioms ← collectAxioms declaration
         for axiomName in axioms do
           unless axiomName == `propext || axiomName == `Classical.choice || axiomName == `Quot.sound do

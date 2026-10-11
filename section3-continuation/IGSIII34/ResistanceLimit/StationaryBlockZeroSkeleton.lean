@@ -37,6 +37,7 @@ variable (rule : Rule) (marks : (List (Fin rule.edges) × Bool) → Configuratio
       (markedGenerationConfiguration rule marks coarse [] true)).Reachable
       (rule.generation coarse).network.source (coarseCellPlantedVertex rule coarse chosen sourceSide))
 
+include growthPositive fieldPositive in
 theorem stationaryBlockZeroPositive (depth : ℕ)
     (edge : {edge : Fin (rule.generation depth).edges // markedGenerationConfiguration rule marks depth [] true edge = true}) :
     0 < stationaryGenerationResistance rule field growth depth [] edge.val :=

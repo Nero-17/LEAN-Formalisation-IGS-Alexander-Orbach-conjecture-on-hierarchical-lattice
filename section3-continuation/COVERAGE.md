@@ -1,5 +1,17 @@
 # Section 3 coverage — active round 2026-10-11-101342
 
+## Current checkpoint, 2026-10-11 12:32 CST
+
+Update12:56CST: third aggregate passed10,921 declarations at04:46:09UTC. The stronger ActualSameMasterAllClocks and completed intrinsic-function zero restriction now compile; the full selected root-energy law and its axiom audit compile. Actual canonical chemical-cell range identification compiles with an intermediate closed-range premise being discharged by the actual inverse-metric proof. Explicit zero outside that physical cell is also being assembled. The required Section3 worked example (fivefold subdivided diamond) was found missing in the literal audit: its actual graph/resistance certificate is being added; generic Perron≤edges and the exact log20/log10<4/3 arithmetic already compile. AppendixB's auxiliary resolvent identity is presently certified for s≥1, sufficient for Section3's small-time result; a broader all-s>0 statement is not claimed.
+
+This checkpoint supersedes pending-status entries in the earlier table below. The second aggregate audit passed at 04:21:30 UTC for 10,685 declarations. A third audit now incorporates the completed energy decomposition, intrinsic component witnesses, amplitude bounds and same-carrier mass helpers. It is still running.
+
+The common-chemical process master, true usual-local J1 law bridge, same actual natural and deterministic clocks, raw electrical marked GHP, chemical marked GHP, exact physical cell masses, actual full-form uniqueness, completed-form retained-component energy decomposition and intrinsic local-energy resistance inequality have all compiled. Generic stationary boundary-zero extension into the actual global completed form has compiled; the direct actual local-function restriction adapter is in progress. The final combined GHP/mass/process wrapper is compiling.
+
+The precise outstanding mathematical items are canonical identification of intrinsic electrical components with the same actual closed physical cells, the associated exact completed zero-extension restriction, and final root-energy-law transport. A Lipschitz map alone is not counted as an injective identification. Electrical trace-code and completed-energy measurability/root marginal laws have compiled; the final scaled retained-component law corollary is being assembled. All final leaves still need inclusion in the aggregate audit.
+
+GitHub progress snapshot `85cfb8bbe971d2d3e0c18c771301e0be40206e61` was pushed and verified by remote readback. It preserves the current saved Lean work in `section3-continuation/`, explicitly including working drafts; the separately verified root package is unchanged. No Section 3 completion claim is made. The single local round archive remains **尚未上传** to Drive.
+
 Manuscript: db2cbd8163ef90cc70ebd4d97f282993fd3311b6. Current report: RESEARCH_RECORD.md; original start 2026-10-11 02:13:42 UTC. Existing Drive archive inaccessible (404), local record not uploaded. Prior chat reports remain preserved in their own round archives.
 
 ## Verification baseline
@@ -29,3 +41,12 @@ All proof source is saved on disk. Each worker maintains one handoff file. Compl
 The Section 3 prose after the resistance-form theorem asserts full energy decomposition into retained components, the intrinsic resistance inequality with local energy, zero extension from a component with zero planted-boundary data, and root-law scaling. Existing finite-network component energy identities do not alone certify the completed-domain assertions. Agent actual_form is assigned this precise remaining item after its master compilation. This gap must be closed or explicitly left unresolved; it cannot be hidden by successful aggregate compilation.
 
 Raw full finite electrical distortion and compact common isometric realization now compile. Raw electrical marked GHP and its actual natural same-mass counting/degree wrapper are compiling. The chemical same-mass GHP, fixed-Ambient measure transfer and full master cellmass wrappers remain in progress.
+
+
+## Current semantic checkpoint — 2026-10-11T05:23:55.845255+00:00
+
+The component energy/form obligations are now individually compiled: exact intrinsic restriction energy, canonical physical closed-cell identification, completed zero extension including its support, same-natural AE hypotheses, and the root/inactive component cases. The actual fivefold subdivided diamond example is also compiled through the exact critical-parameter existence and strict spectral bound log(20)/log(10)<4/3.
+
+The fourth combined audit passed at 2026-10-11T05:17:46Z for 11,092 declarations. A fifth audit incorporates the newer frozen component and example leaves. Neither certificate alone asserts manuscript completeness.
+
+One newly isolated prose obligation remains: main.tex line1049 states annealed joint convergence after integrating environments. The existing master proves quenched convergence with environment-dependent existential carriers and laws; it does not by itself prove measurable dependence of the joint path/geometry/mass law on the environment. Active work is constructing an actual common countable code, measurable finite and limit kernels, and joint weak integration. This is not being treated as an automatic corollary. Section3Complete remains false pending that bridge and final audit.

@@ -16,7 +16,7 @@ namespace IGSIII34.ResistanceLimit
 noncomputable section
 open IGSIII34.Spectral IGSIII34.Diffusion
 open Universality Universality.FiniteNetwork IGSIII34.Percolation
-open IGSIII34.ResistanceLimit IGSIII34.Forms IGSIII.Chemical.Substitution IGSIII.Geometry MeasureTheory Filter
+open IGSIII34.ResistanceLimit IGSIII34.Forms IGSIII.Chemical.Substitution IGSIII.Chemical.SmallBall IGSIII.Geometry MeasureTheory Filter
 open scoped _root_.Topology NNReal
 
 local instance sectionThree_ActualNaturalConstructedDiffusionWitnessLocal1 {Carrier : Type*} [UniformSpace Carrier] :
@@ -536,7 +536,7 @@ theorem exists_ae_actual_natural_common_section_three
       Tendsto (fun depth : ℕ => Real.log (weight (List.ofFn (path (depth + 1))) marks) / (depth + 1 : ℝ)) atTop
         (𝓝 (-Real.log ((spectralRadius ℂ ((rule.network.massMatrix p).map Complex.ofReal)).toReal))) := by
     filter_upwards [logMarks boundary atoms] with path limits
-    simpa only [Function.comp_apply, Nat.cast_add, Nat.cast_one] using limits.2.comp (tendsto_add_atTop_nat 1)
+    simpa only [Function.comp_def, Nat.cast_add, Nat.cast_one] using limits.2.comp (tendsto_add_atTop_nat 1)
   have physicalLog := pushforward_closed_component_log_mass boundary (homeomorph.symm ∘ realization)
     (homeomorph.symm.measurable.comp measurable)
     (fun depth word => actualChemicalWordComponent rule classicalRule p positive belowOne fixedPoint chemicalGrowth amplitude

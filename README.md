@@ -1,21 +1,30 @@
-# Paused Lean snapshot — 2026-10-10
+# IGS III Lean formalisation — active Section 3 continuation
 
-The user paused formalisation and requested preservation of all existing Lean code.
-The original Sections 2–4 package below is preserved. The newer independent
-Section 3 project is included in **section3-continuation/**, with its pinned
-dependencies, vendored sources, verification scripts and all working drafts.
+Work resumed on October 11, 2026. The latest saved Section 3 work is in
+**[section3-continuation/](section3-continuation/)**, including compiled modules
+and clearly identified working drafts. **Section 3 is still being completed.**
 
-**Section 3 remains incomplete.** Its last successful aggregate audit covers
-5,646 declarations; the exact source hashes and scope are recorded in
-section3-continuation/verification/manifest.json. Additional individually
-compiled modules and unverified drafts are also preserved. A file being
-present in this snapshot does not mean it compiled or belongs to the audit.
-See section3-continuation/COVERAGE.md and PAUSED_SNAPSHOT.json.
+The root Lake package preserves the earlier verified Sections 2–4 baseline.
+Its audit and the continuation audit have different scopes. For the current
+continuation, consult [the result index](section3-continuation/SECTION3_RESULT_INDEX.md),
+[coverage](section3-continuation/COVERAGE.md), and the exact source hashes in
+[the latest successful audit](section3-continuation/verification/manifest.json).
+A saved file or working draft is not certified merely by being present.
+`PAUSED_SNAPSHOT.json` documents the earlier preservation snapshot, not the
+current work status.
 
-To check the audited continuation closure, from section3-continuation/ run
-`python scripts/verify.py --imported-only` after installing the pinned Lean
-toolchain and fetching dependencies. This snapshot is a packaging operation;
-it does not claim a fresh combined build or completed Section 3 proof.
+To reproduce the continuation audit, change to `section3-continuation/`, then run:
+
+```sh
+lake update
+lake exe cache get
+lake build Universality
+python scripts/verify.py --imported-only
+```
+
+This is an incremental import-closure audit with pinned dependencies. The
+recorded audit alone does not certify full manuscript coverage or a clean
+rebuild of every saved draft.
 
 ---
 

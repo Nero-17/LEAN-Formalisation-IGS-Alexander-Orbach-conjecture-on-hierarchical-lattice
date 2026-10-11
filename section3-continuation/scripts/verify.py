@@ -6,6 +6,7 @@ import re
 import os
 import subprocess
 import sys
+import time
 from lean_slots import compiler_slot
 from datetime import datetime, timezone
 
@@ -16,6 +17,7 @@ LAKE = str(Path.home() / '.elan/bin/lake.exe') if sys.platform == 'win32' else '
 VERIFY = ROOT / 'verification'
 VERIFY.mkdir(exist_ok=True)
 STATUS = VERIFY / 'status.txt'
+FROZEN_PAPER_SHA256 = '207204ef8eaffc8240324349e3b94929ede9a7a129b0e1d63298f1ff49af5d51'
 
 
 def sha256(path):
@@ -90,6 +92,9 @@ def run(arguments, echo=True):
 
 
 def main():
+    manuscript = ROOT / 'paper/main.tex'
+    if manuscript.exists() and sha256(manuscript) != FROZEN_PAPER_SHA256:
+        raise RuntimeError('Manuscript differs from the frozen Section 3 source')
     STATUS.write_text('Verification running; this is not a completed manuscript formalisation.\n', encoding='utf-8')
     source_paths = sorted((ROOT / 'IGSIII34').rglob('*.lean')) + sorted((ROOT / 'IGSIII').rglob('*.lean')) + sorted((ROOT / 'IGSIII4').rglob('*.lean'))
     modules = {'.'.join(path.relative_to(ROOT).with_suffix('').parts): path for path in source_paths}
@@ -161,13 +166,23 @@ def main():
         cached_sources.update({str(modules[done].relative_to(ROOT)): before[str(modules[done].relative_to(ROOT))]
                                for done in order[:order.index(module) + 1]})
         cached_objects.update(objects)
-        pending_cache = cache_path.with_suffix('.json.tmp')
+        pending_cache = cache_path.with_suffix(f'.{os.getpid()}.json.tmp')
         pending_cache.write_text(json.dumps({
             'sourceSha256': cached_sources,
             'objectSha256': cached_objects,
             'completedAxiomAudit': False,
         }, indent=2), encoding='utf-8')
-        os.replace(pending_cache, cache_path)
+        # Windows indexers/readers may briefly hold a file without delete sharing.
+        # Preserve the previous cache and retry the atomic replacement; never
+        # treat a failed write as a completed build or axiom certificate.
+        for attempt in range(21):
+            try:
+                os.replace(pending_cache, cache_path)
+                break
+            except PermissionError:
+                if attempt == 20:
+                    raise
+                time.sleep(0.1)
         names.extend(declarations(source))
     (VERIFY / 'build.log').write_text('\n'.join(log), encoding='utf-8')
     audit = ROOT / 'AxiomAudit.lean'
@@ -214,7 +229,8 @@ run_cmd do
     manifest = {
         'verifiedUtc': datetime.now(timezone.utc).isoformat(),
         'sourcePaperCommit': 'db2cbd8163ef90cc70ebd4d97f282993fd3311b6',
-        'sourcePaperSha256': sha256(ROOT / 'paper/main.tex'),
+        'sourcePaperSha256': FROZEN_PAPER_SHA256,
+        'sourcePaperLocallyAvailable': manuscript.exists(),
         'leanToolchain': (ROOT / 'lean-toolchain').read_text().strip(),
         'mathlibRevision': '520045ab14e26149ee970e2e617ca04b09bde5d6',
         'auditedDeclarations': names,

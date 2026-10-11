@@ -1,0 +1,1157 @@
+{
+  "reusedNotRebuilt": true,
+  "modules": [
+    "Universality.Analysis.DiscountedIteration",
+    "Universality.Analysis.GeometricRecursionLimit",
+    "Universality.Analysis.GeometricRecursionUpper",
+    "Universality.Analysis.NormalizedGeometricSum",
+    "Universality.Analysis.ZeroDerivativeIteration",
+    "Universality.Arithmetic.GraphAlgebraicHelpers",
+    "Universality.Arithmetic.GraphAlgebraicity",
+    "Universality.Examples.Diamond",
+    "Universality.Examples.DiamondClassical",
+    "Universality.Examples.DiamondCritical",
+    "Universality.Examples.DiamondOpenGeodesic",
+    "Universality.Examples.DiamondRadiusGeometry",
+    "Universality.Geometry.CellBoundaryPotential",
+    "Universality.Geometry.FiniteCoverHausdorffBound",
+    "Universality.Geometry.GenerationCellBoundary",
+    "Universality.Geometry.GenerationCellMetric",
+    "Universality.Geometry.GenerationCompactness",
+    "Universality.Geometry.GenerationCompletion",
+    "Universality.Geometry.GenerationHausdorffUpperBound",
+    "Universality.Geometry.GenerationMetricCells",
+    "Universality.Geometry.GenerationMetricSpace",
+    "Universality.Geometry.GenerationNet",
+    "Universality.Geometry.GeometricCovers",
+    "Universality.Geometry.GeometricNets",
+    "Universality.Geometry.IsometricSequence",
+    "Universality.Geometry.MetricDirectLimit",
+    "Universality.Geometry.PercolationClusterVertices",
+    "Universality.Geometry.ScaledGenerationMetric",
+    "Universality.Geometry.SequenceSimilarity",
+    "Universality.Graph.AncestralInterior",
+    "Universality.Graph.BirthAddress",
+    "Universality.Graph.BirthAgeCounting",
+    "Universality.Graph.BirthAgeFiber",
+    "Universality.Graph.CanonicalPivotal",
+    "Universality.Graph.CellIsometry",
+    "Universality.Graph.ClassicalRule",
+    "Universality.Graph.ClassicalSubstitution",
+    "Universality.Graph.CoarseDistance",
+    "Universality.Graph.CrossingOpenCount",
+    "Universality.Graph.DirichletEnergy",
+    "Universality.Graph.DistanceCertificate",
+    "Universality.Graph.EdgeOpening",
+    "Universality.Graph.FiberCounting",
+    "Universality.Graph.FiniteVolume",
+    "Universality.Graph.GenerationCellEmbedding",
+    "Universality.Graph.GenerationInternalNeighborhood",
+    "Universality.Graph.GenerationReassociation",
+    "Universality.Graph.GeodesicEdgeLevels",
+    "Universality.Graph.IncidentDegree",
+    "Universality.Graph.InteriorDecomposition",
+    "Universality.Graph.InternalCellConnectivity",
+    "Universality.Graph.InternalCellNeighborhood",
+    "Universality.Graph.Iteration",
+    "Universality.Graph.NetworkEmbedding",
+    "Universality.Graph.NetworkEquivalence",
+    "Universality.Graph.NetworkSymmetry",
+    "Universality.Graph.PathEdgeMinimality",
+    "Universality.Graph.Reachability",
+    "Universality.Graph.Rule",
+    "Universality.Graph.Substitution",
+    "Universality.Graph.SubstitutionAssociativity",
+    "Universality.Graph.SubstitutionAssociator",
+    "Universality.Graph.SubstitutionConnectivity",
+    "Universality.Graph.SubstitutionDistance",
+    "Universality.Graph.SubstitutionEquivalence",
+    "Universality.Graph.SubstitutionFullConnectivity",
+    "Universality.Graph.SubstitutionInvolution",
+    "Universality.Graph.SubstitutionNetwork",
+    "Universality.Graph.SubstitutionPivotal",
+    "Universality.Graph.SubstitutionPotential",
+    "Universality.Graph.SubstitutionRadius",
+    "Universality.Graph.SubstitutionSimple",
+    "Universality.Graph.SubstitutionStates",
+    "Universality.Graph.SubstitutionSymmetry",
+    "Universality.Graph.TerminalSymmetricRule",
+    "Universality.Graph.VolumeLimit",
+    "Universality.Matrix.AffineGrowth",
+    "Universality.Matrix.ColumnGrowth",
+    "Universality.Matrix.CommonPositiveVector",
+    "Universality.Matrix.CriticalBlockDecomposition",
+    "Universality.Matrix.CriticalCharacteristic",
+    "Universality.Matrix.InhomogeneousGrowth",
+    "Universality.Matrix.MassPlane",
+    "Universality.Matrix.MassPlaneLimit",
+    "Universality.Matrix.PerronPowerLimit",
+    "Universality.Matrix.PerronProjection",
+    "Universality.Matrix.PivotalRightVector",
+    "Universality.Matrix.PopulationGrowth",
+    "Universality.Matrix.PositiveEigenvector",
+    "Universality.Matrix.PositiveTwoByTwo",
+    "Universality.Matrix.PrimitiveThreeState",
+    "Universality.Matrix.RealDiagonalization",
+    "Universality.Matrix.ResponseDominance",
+    "Universality.Matrix.SpectralSeparation",
+    "Universality.Matrix.StrictRowBound",
+    "Universality.Matrix.TwoByTwo",
+    "Universality.Matrix.TwoByTwoExpansion",
+    "Universality.Matrix.UniversalPivotalVector",
+    "Universality.Matrix.WheatstoneSpectrum",
+    "Universality.Percolation.AnnealedBirthFirstMoment",
+    "Universality.Percolation.AnnealedBirthMomentLower",
+    "Universality.Percolation.AnnealedBirthMomentSeries",
+    "Universality.Percolation.AnnealedFiniteBirthMoments",
+    "Universality.Percolation.Bernoulli",
+    "Universality.Percolation.BernoulliMonotonicity",
+    "Universality.Percolation.BernoulliVariance",
+    "Universality.Percolation.BirthClusters",
+    "Universality.Percolation.BirthExpectations",
+    "Universality.Percolation.BirthMassPathwise",
+    "Universality.Percolation.BirthMomentUpper",
+    "Universality.Percolation.BirthSeries",
+    "Universality.Percolation.BoundaryMassDensity",
+    "Universality.Percolation.BoundaryMassMoments",
+    "Universality.Percolation.ClassicalClusterNumber",
+    "Universality.Percolation.ClassicalCriticalPoint",
+    "Universality.Percolation.ClusterEquivalence",
+    "Universality.Percolation.ClusterMass",
+    "Universality.Percolation.ClusterMassSizeSums",
+    "Universality.Percolation.ClusterNumberBoundary",
+    "Universality.Percolation.ClusterNumberIteration",
+    "Universality.Percolation.ClusterNumberNormalization",
+    "Universality.Percolation.ClusterNumberRecursion",
+    "Universality.Percolation.ClusterNumberSeries",
+    "Universality.Percolation.ClusterNumberVolumeLimit",
+    "Universality.Percolation.ClusterSizeDensity",
+    "Universality.Percolation.CoarseClusterCounting",
+    "Universality.Percolation.CoarseRootLaw",
+    "Universality.Percolation.CoarseRootMass",
+    "Universality.Percolation.CoarseRootMoments",
+    "Universality.Percolation.ConditionalMassAtomOrientation",
+    "Universality.Percolation.ConditionalMassCharacteristic",
+    "Universality.Percolation.ConditionalMassInversion",
+    "Universality.Percolation.ConditionalPivotal",
+    "Universality.Percolation.ConditionalSubstitutionLaw",
+    "Universality.Percolation.CountingPolynomials",
+    "Universality.Percolation.CriticalBirthMass",
+    "Universality.Percolation.CriticalField",
+    "Universality.Percolation.CriticalSizeTotalVariation",
+    "Universality.Percolation.DistanceWindowPairs",
+    "Universality.Percolation.EdgeResampling",
+    "Universality.Percolation.EdgeScoreIdentities",
+    "Universality.Percolation.ExactMassExpansion",
+    "Universality.Percolation.FarConnectedPairs",
+    "Universality.Percolation.FiniteClusterDensity",
+    "Universality.Percolation.FiniteClusters",
+    "Universality.Percolation.FiniteCore",
+    "Universality.Percolation.FiniteMassDimension",
+    "Universality.Percolation.FiniteNetwork",
+    "Universality.Percolation.FirstMoments",
+    "Universality.Percolation.FixedPointCutCriterion",
+    "Universality.Percolation.GenerationMassCharacteristic",
+    "Universality.Percolation.GenerationMomentRecursion",
+    "Universality.Percolation.GeometricMassPositivity",
+    "Universality.Percolation.GeometricPrimitivity",
+    "Universality.Percolation.HistoryConditionalExpectation",
+    "Universality.Percolation.HistoryTransition",
+    "Universality.Percolation.InfiniteConfigurationLaw",
+    "Universality.Percolation.InfiniteMassMoments",
+    "Universality.Percolation.InfiniteObservables",
+    "Universality.Percolation.InteriorFixedPoint",
+    "Universality.Percolation.InternalClusterChoices",
+    "Universality.Percolation.InternalClusterDecomposition",
+    "Universality.Percolation.InternalClusterEmbedding",
+    "Universality.Percolation.InternalClusterMass",
+    "Universality.Percolation.InternalClusterMassLimit",
+    "Universality.Percolation.InternalMassLaw",
+    "Universality.Percolation.InternalMassMoments",
+    "Universality.Percolation.InternalMassSymmetry",
+    "Universality.Percolation.InternalVertexMass",
+    "Universality.Percolation.JointDisintegration",
+    "Universality.Percolation.LocalLabelLaw",
+    "Universality.Percolation.LocalMassResponse",
+    "Universality.Percolation.LocalPopulationBounds",
+    "Universality.Percolation.MassDistributionSmoothing",
+    "Universality.Percolation.MassEquivalence",
+    "Universality.Percolation.MassPositivity",
+    "Universality.Percolation.MassRowBounds",
+    "Universality.Percolation.MassRowLowerBounds",
+    "Universality.Percolation.MassSpectralUpperBound",
+    "Universality.Percolation.MultilevelLaw",
+    "Universality.Percolation.OrientedStates",
+    "Universality.Percolation.PivotalDimension",
+    "Universality.Percolation.PivotalResponseBound",
+    "Universality.Percolation.PopulationConvergence",
+    "Universality.Percolation.PopulationInnovation",
+    "Universality.Percolation.PopulationLimitMean",
+    "Universality.Percolation.PopulationMartingale",
+    "Universality.Percolation.PopulationSquareBound",
+    "Universality.Percolation.PositivePopulationLimit",
+    "Universality.Percolation.ProbabilityEndpoints",
+    "Universality.Percolation.ProductDisintegration",
+    "Universality.Percolation.RandomEIGS",
+    "Universality.Percolation.RefinementMean",
+    "Universality.Percolation.RefinementPopulationVariance",
+    "Universality.Percolation.RefinementVertexMean",
+    "Universality.Percolation.RefinementVertexVariance",
+    "Universality.Percolation.ReliabilityDerivative",
+    "Universality.Percolation.ReliabilityPolynomial",
+    "Universality.Percolation.RenormalisationLimits",
+    "Universality.Percolation.RootEdgeResponse",
+    "Universality.Percolation.RootedLimitSizeLaw",
+    "Universality.Percolation.Russo",
+    "Universality.Percolation.SimpleConfigurations",
+    "Universality.Percolation.SingleTerminalCellMass",
+    "Universality.Percolation.SingleTerminalGenerationMean",
+    "Universality.Percolation.SingleTerminalMeanRecursion",
+    "Universality.Percolation.SingleTerminalMomentPathwise",
+    "Universality.Percolation.SingleTerminalMomentRecursion",
+    "Universality.Percolation.StateRowIdentities",
+    "Universality.Percolation.StrictInstability",
+    "Universality.Percolation.StrictReliability",
+    "Universality.Percolation.SubcriticalBoundaryMomentBound",
+    "Universality.Percolation.SubcriticalCrossingSummability",
+    "Universality.Percolation.SubcriticalPopulation",
+    "Universality.Percolation.SubcriticalPopulationSum",
+    "Universality.Percolation.SubcriticalSourceMeanLimit",
+    "Universality.Percolation.SubcriticalSourceMomentBound",
+    "Universality.Percolation.SubstitutionLaw",
+    "Universality.Percolation.SubstitutionMass",
+    "Universality.Percolation.SupercriticalFailureSummability",
+    "Universality.Percolation.TerminalSymmetry",
+    "Universality.Percolation.UniformGenerationVolume",
+    "Universality.Percolation.UniqueFixedPoint",
+    "Universality.Percolation.VertexInnovation",
+    "Universality.Percolation.VertexMassCharacteristicLimit",
+    "Universality.Percolation.VertexMassConvergence",
+    "Universality.Percolation.VertexMassGrowth",
+    "Universality.Percolation.VertexMassIteration",
+    "Universality.Percolation.VertexMassMoments",
+    "Universality.Percolation.VertexMassNonnegativeLimit",
+    "Universality.Percolation.VertexMassPerronApproximation",
+    "Universality.Percolation.VertexMassPlane",
+    "Universality.Percolation.VertexMassPositivity",
+    "Universality.Percolation.VertexMassResponse",
+    "Universality.Percolation.VertexMassSmoothing",
+    "Universality.Percolation.VertexMeanLimit",
+    "Universality.Percolation.VertexMomentGrowth",
+    "Universality.Percolation.VertexMomentRecursion",
+    "Universality.Percolation.VertexNoiseLimit",
+    "Universality.Percolation.VertexRewardCompensation",
+    "Universality.Percolation.VertexRewardSpectralSplit",
+    "Universality.Percolation.Wheatstone",
+    "Universality.Percolation.WheatstoneKernels",
+    "Universality.Percolation.WheatstoneReliability",
+    "Universality.Percolation.WindowNetworkEquivalence",
+    "Universality.Probability.BranchingMomentBounds",
+    "Universality.Probability.BranchingMomentGrowth",
+    "Universality.Probability.BranchingMoments",
+    "Universality.Probability.DiscreteTotalVariation",
+    "Universality.Probability.FiniteLatticeInversion",
+    "Universality.Probability.FiniteProductMoments",
+    "Universality.Probability.FiniteProductVariance",
+    "Universality.Probability.FiniteRandomFamilyMoment",
+    "Universality.Probability.FiniteWeightMeasure",
+    "Universality.Probability.FiniteWeightSquare",
+    "Universality.Probability.FourthMomentConvergence",
+    "Universality.Probability.GeometricL2Sum",
+    "Universality.Probability.IndependentSumLaw",
+    "Universality.Probability.L2Characteristic",
+    "Universality.Probability.L2LimitOperations",
+    "Universality.Probability.MarkovTrajectory",
+    "Universality.Probability.MomentAssignments",
+    "Universality.Probability.MomentLinearPart",
+    "Universality.Probability.NonnegativeL2Limit",
+    "Universality.Probability.PerronL2Sum",
+    "Universality.Probability.SubcriticalL2Recursion",
+    "Universality.Probability.TrajectoryConditionalExpectation"
+  ],
+  "objectsSha256": {
+    ".lake\\build\\lib\\lean\\Universality\\Arithmetic\\GraphAlgebraicHelpers.olean": "62380ef2c67db20942d3fb91b46ed2452623919d42a0f499ab59e2cbaafdc3ab",
+    ".lake\\build\\lib\\lean\\Universality\\Arithmetic\\GraphAlgebraicity.olean": "c45b212f40a26395d9f865cb1784d3a918fc47e0406228fdbd3faf03f395ca89",
+    ".lake\\build\\lib\\lean\\Universality\\Graph\\ClassicalRule.olean": "545cdd09b5d7524373d72e610281be79e43b9baabf48d85ad87fb8410454f2cc",
+    ".lake\\build\\lib\\lean\\Universality\\Graph\\DirichletEnergy.olean": "77bb04c8d6a3a18a7b33a7f50d2080a4eafcb7d6dd6304776da5495a2ae69dd2",
+    ".lake\\build\\lib\\lean\\Universality\\Graph\\DistanceCertificate.olean": "e9edf5c5f98c8bfe0e57375e7ca6883ce76cd51ed834856dd9170d4dd9f6e8e9",
+    ".lake\\build\\lib\\lean\\Universality\\Graph\\EdgeOpening.olean": "8fd69804888615cb62f20adb3ca8f3bd2a2a4588771b0fc097694dbb66318c82",
+    ".lake\\build\\lib\\lean\\Universality\\Graph\\Iteration.olean": "b036db44762875c7697a269b519958ce185ac619516b13aae1cf28e738e673ea",
+    ".lake\\build\\lib\\lean\\Universality\\Graph\\NetworkSymmetry.olean": "aa69e10a78c565211221cd9a9fbea0f99aba2aa909c387f10325944ded0e326c",
+    ".lake\\build\\lib\\lean\\Universality\\Graph\\Reachability.olean": "10e6ddd6f57b8285ae7872c1a62c0366b161216f3d573b6cdcb5db22eec6dd9f",
+    ".lake\\build\\lib\\lean\\Universality\\Graph\\Rule.olean": "1e4f29bc7a72da8160a4e911f1d43cc1e9d108278301d41d6758bb961530ac64",
+    ".lake\\build\\lib\\lean\\Universality\\Graph\\Substitution.olean": "1be16ce2273067828ee21e26f0c708d337ff9c27d9605b95cba18fd2ddd3d79e",
+    ".lake\\build\\lib\\lean\\Universality\\Graph\\SubstitutionConnectivity.olean": "a7200c32c6b3d630a1c8c86e213ffc8312c05267ed01fa41641fef3c43b4de13",
+    ".lake\\build\\lib\\lean\\Universality\\Graph\\SubstitutionDistance.olean": "36baef250d662b306c9288c7d97dfd69608399408b24d88133d9db46eee66d5e",
+    ".lake\\build\\lib\\lean\\Universality\\Graph\\SubstitutionNetwork.olean": "d04cebb30b6521e718898ec9c3f3d39962a35b6486b8981ad5ef3694a53bfe36",
+    ".lake\\build\\lib\\lean\\Universality\\Graph\\SubstitutionStates.olean": "4b631752561cec2b117ce04e221622aa0dddebe2183e490c41fac844166e7e17",
+    ".lake\\build\\lib\\lean\\Universality\\Graph\\SubstitutionSymmetry.olean": "e33e174b7ea3e1b7c1e5d783d5cea28f99144a03647a758b8be135457d78d79c",
+    ".lake\\build\\lib\\lean\\Universality\\Graph\\TerminalSymmetricRule.olean": "c4f59c2a83736fa36bc65676a319042f0097b4a6a2df8203fd42e67f13e5f300",
+    ".lake\\build\\lib\\lean\\Universality\\Matrix\\ColumnGrowth.olean": "0704bcbe4a78d5921d16f56cccc250018195122e4d108e26e896ff7de0fbe0c3",
+    ".lake\\build\\lib\\lean\\Universality\\Matrix\\CommonPositiveVector.olean": "5c0d08d71292156977c2c65818baa576058534fe9fa9976bfa354c6628f6ce7c",
+    ".lake\\build\\lib\\lean\\Universality\\Matrix\\CriticalBlockDecomposition.olean": "c1179ec680d6ca6851b13515ab93463d7a5794facfda867a6984f32bc555e04d",
+    ".lake\\build\\lib\\lean\\Universality\\Matrix\\MassPlane.olean": "e054a86a45a9b875d7170428609329a7dd9c8e6b7b822f4b21a98ca3c9c05655",
+    ".lake\\build\\lib\\lean\\Universality\\Matrix\\PivotalRightVector.olean": "ae47f1fb5a262d2a534063b8240d0e26b16e7d81026a8113962fe6a45e1872f6",
+    ".lake\\build\\lib\\lean\\Universality\\Matrix\\PopulationGrowth.olean": "b3703854097e8e06d49f95fa5ebdaea86077fff1b9ae427d0210e5a06c871755",
+    ".lake\\build\\lib\\lean\\Universality\\Matrix\\PositiveEigenvector.olean": "ed9ba8ead42153d4b33a0e6934f36bf2b71501ce9a740cc54dc3840f436c612e",
+    ".lake\\build\\lib\\lean\\Universality\\Matrix\\PositiveTwoByTwo.olean": "99974d09524a75bcf854c0e4f6868c5d763f549c61d6887a03f5358cc42360ae",
+    ".lake\\build\\lib\\lean\\Universality\\Matrix\\RealDiagonalization.olean": "c9c2b829c7fecea2ad0f07e0f9a19f1a2e8da8634f6a53fd200398e9620dbbd2",
+    ".lake\\build\\lib\\lean\\Universality\\Matrix\\ResponseDominance.olean": "495c34bf6aeabfa4866583162690a1b569d6815282669c8e00d8f8440e710fec",
+    ".lake\\build\\lib\\lean\\Universality\\Matrix\\SpectralSeparation.olean": "2bfb019694ba7f45cf66457d7b1905f72969ee2bf62bbe18451e141fb908cbbf",
+    ".lake\\build\\lib\\lean\\Universality\\Matrix\\TwoByTwo.olean": "dcd784c02914bc63174c920249e622e3d28e42861477ab8d5f101ccaec792a53",
+    ".lake\\build\\lib\\lean\\Universality\\Matrix\\TwoByTwoExpansion.olean": "d657b14efbf334ef6da508b0642ce4f8d328fba23d6c7e9ca96e13c7bd4ba1d8",
+    ".lake\\build\\lib\\lean\\Universality\\Matrix\\UniversalPivotalVector.olean": "b827f1ce9a0f0a0f490aa05b235f7b8cc49b810c5fbbd511f4c2e45abd9eee7b",
+    ".lake\\build\\lib\\lean\\Universality\\Matrix\\WheatstoneSpectrum.olean": "1a41140baf5fd16d3ac159f9351e324f89437eebaf35fcf7774d5f4870da04ba",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\Bernoulli.olean": "05ca0be41631aef2665a3228d17bdc5982693328a2a7eae7355b82c64af9f01d",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\BernoulliVariance.olean": "259683b7d8ec7a20296e8e304de4c76afbe37c33275f0c09acdbad7c7ed222ca",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\ClassicalCriticalPoint.olean": "d29deb7352787d2fa77784116b1b39c712733564decaaeaeb2b0b3d1664d2a98",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\ClusterMass.olean": "749f9fb3732c82373bdce7c3492e3cce4956c3de6f4b912036752ac0e1353751",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\ConditionalPivotal.olean": "74a14d32ec19ccd8558cb231de8fb3d68da5309ff11523cafea2e2d97a8e8ce7",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\CriticalField.olean": "9d18ae2d97fb9904796218ee733030a797e1fbd362b5fff0e74df7001f5c04df",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\EdgeResampling.olean": "ec13dc14b2fb47d3d6098f3dcdeae9640ec4d1c80906a335d0566baae18798d2",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\EdgeScoreIdentities.olean": "783754f2a61fedbb2e273d565d18a63a963ea90d7ad7e794ad49b7346a7f0ae1",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\ExactMassExpansion.olean": "9430232698749789566d0f4e0ea3f0d313fa1f9093767d1f61a757d56da0e938",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\FiniteCore.olean": "70c8584332979472868a9ec9b9672abae44139250fbc24d365477a08264fa1aa",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\FiniteMassDimension.olean": "b8147627e45cf430cdbc40dcf4b10387c1cb272aae1575dc2a54cb2ac98c1fb0",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\FiniteNetwork.olean": "a2895be0a75d6fe50f9fe884ba8f68f9b242ef8ca685bb482b7c868e37fad045",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\FirstMoments.olean": "592d2b36dbf0f136a22690f9c43d22815e00d34e63ea00bf45056ded9803c2df",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\FixedPointCutCriterion.olean": "bd6e5b3ec42649d17b556d18558f46ca65295addaa7b6c1b2525a3eab8c0deae",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\GeometricMassPositivity.olean": "99de396657ef9d6b22b129b9eeb491f170b4b4307db519ece7b8e4d411fbdc2e",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\InteriorFixedPoint.olean": "c3ffc2eec14a05ded6bbdac14e76480c75e5f9c2ba201996f4724f9669ab8a75",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\LocalMassResponse.olean": "fe4eaec279b367f1f26b3e14c0451e0b4021aa3f124a9a2d111b9ea7355f54fb",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\MassPositivity.olean": "4b3e2d9b7ed1769b09b18030e22c70b5825f76cd18d8a6673e5b7fb4d0b059ee",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\PivotalDimension.olean": "ca40385aaeb1a5f3fdb2b805a4a1030d9d111bc98ebcad91745195f1368f83b4",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\ProbabilityEndpoints.olean": "a037b31ddbf7c220e8092b5501a7efd5be8a1369c95462862e783fb46aa53f9d",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\ProductDisintegration.olean": "16e1ea0c9eee8ce26079d88e262c2d18ba316e9b0dcb2358ac7d120a7cd3227d",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\ReliabilityDerivative.olean": "703493f7288291b465a8b2a96834d09ba7a7023a5171b913e8011ba8fdabfa22",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\ReliabilityPolynomial.olean": "ee79cb0f8a0a37ff6bf72bb60022b22ee4f994e143bf90fb55e655b761f30717",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\RenormalisationLimits.olean": "b58942ddce66a30e04d2d68e81315609efbf6b1303de3ab3c3a9d55f98751a1c",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\RootEdgeResponse.olean": "67ecfcc3e08e206c20388fb6ad1e938e46eb46d9189afaeb6832d7f12e02dafc",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\Russo.olean": "56eb24a34b725c6fd25761138def25463baeb383a9dd68177626aafe3eb70222",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\SimpleConfigurations.olean": "d421d7010d1bbc2ecb148688807b7c029b3d21a6c5af390221154790167059bf",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\StateRowIdentities.olean": "29d5702e210d38a4a20bcc0d5d4d8483fb1f4c07fc9cb48cc50b6e254671c9c8",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\StrictInstability.olean": "ca74322996a6028902938fc15c4fb2463036d1bd6b19b9205b931a2d158a7af4",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\StrictReliability.olean": "eba14689a4cc864ce5562e6ab3f705be59f57309da9164be1f866821e548dbf9",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\SubstitutionLaw.olean": "e0a6b27c38bd09cd345a9dbb760e07e0c2af45461a8ab5e5ad37d8a48f046b2c",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\SubstitutionMass.olean": "820a2841052540c1a0e530312c5715aa05caaffa7ab118baa96cfbe40336160e",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\TerminalSymmetry.olean": "3896e53348614602dcb817d590708dab669b28791c5f14c14288052455b3afe4",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\UniqueFixedPoint.olean": "eb6384dc54293418ab437e3f23699f7bd18d12e2b73c4507e6190d80f084a5e3",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\Wheatstone.olean": "5d0d7ecfd288c1c944b683955f7eb18b84a39fc2542fe450049f313fbf749d26",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\WheatstoneKernels.olean": "69a0448652c26d87538a527d37b7aab5ab1a4cef1475f9b85c78cf8b5887e19e",
+    ".lake\\build\\lib\\lean\\Universality\\Percolation\\WheatstoneReliability.olean": "1ca1762fcc8e9814f2fdf532f66ad7796b6732f3101c52befde33bc0601ab083"
+  },
+  "extensions": [
+    {
+      "sourceProjectUnmodified": true,
+      "copiedArtifacts": [
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Probability\\FiniteProductMoments.olean",
+          "sha256": "8b1441ec70b8573f506675da39d5ea94061321f7c0646175d5e75eba4910c74d"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\NetworkEquivalence.olean",
+          "sha256": "523e6394acf3e8e4de0d41ca39cbe8515828a4561364d9d7769f15fa6711196a"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\JointDisintegration.olean",
+          "sha256": "d8d52e83b54f3e040546bf9b0e7b267f94e2df4f74b48dc2818155b7320f3f8a"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\MultilevelLaw.olean",
+          "sha256": "f9f37f5997686db3f5d0035750f3d812b51efcd9ccb28f29224fc6cc341b69ae"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\OrientedStates.olean",
+          "sha256": "73d26b9fe4d4e743d91cd27eda1a66e692f6d0ff19a321ba5ee6dc0be30e90aa"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\InternalVertexMass.olean",
+          "sha256": "c3fd7baaa924ce50154ae7ab11dfea11bfbe64b857c8bba83dc6f889e18900f4"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\ConditionalSubstitutionLaw.olean",
+          "sha256": "a5660123fdc01c09559be0bff8554a647a742177b257ba2511b34bc848dc8d69"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\InternalMassLaw.olean",
+          "sha256": "08e89b36bbc23d546b50ce96503446ce96b91f7f725df29d22dd59205b117dd3"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\InternalMassSymmetry.olean",
+          "sha256": "af8382f647219b39bbef2e4b819ca67b57e8baaa08cf48b4969c42e42f0dca8c"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\InternalMassMoments.olean",
+          "sha256": "2a98adff1b0e0e23044ea2eb13383722375b87114d6e7b8fb50701cf48ca74d7"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\MassEquivalence.olean",
+          "sha256": "b5650eba868b26567589261bddf939dba1d1ff940e90913b9e39ed5712cd477a"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\InternalCellConnectivity.olean",
+          "sha256": "b2df584420dfeed5ec180eebf5cea121f81bbc31e642461c81119c250c9e1ce4"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\SubstitutionEquivalence.olean",
+          "sha256": "25b0be5bfe816f7882a87e28095b8af6b319d10625ce2008071b602e46f88663"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\SubstitutionAssociator.olean",
+          "sha256": "c349d9f4f7efb6a07212cdf3d6c5d2e5d6d4d5499f7ed67628b17ebf89fccb7f"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\SubstitutionAssociativity.olean",
+          "sha256": "cfc250c9932fa2b2fc06d4feb2b0ac8c5f3be7523293f3bf59d971c8d7fab65b"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\GenerationReassociation.olean",
+          "sha256": "76ea989b12c5155d3a23cc563db512eaadbd0ffa352c021cde5e69946dcefd5b"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Probability\\FiniteWeightMeasure.olean",
+          "sha256": "d89527656d1eea6c8c8f77d98b654eb208126f63a5bc94dbb4c14dc6247c96a4"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\HistoryTransition.olean",
+          "sha256": "a78559432ee22f0b15b00246c6647e2d01994af1b17747295b58b50ee9e2de0e"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Probability\\MarkovTrajectory.olean",
+          "sha256": "913da54ac592986029b229cfd93caabfbf7db15d8385c764100f901b8a813430"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\InfiniteConfigurationLaw.olean",
+          "sha256": "928100b8843e724ac384acf731e210dfe4017cb641a0cdeaa31b0f97d81b8fd9"
+        }
+      ]
+    },
+    {
+      "sourceProjectUnmodified": true,
+      "copiedArtifacts": [
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Probability\\DiscreteTotalVariation.olean",
+          "sha256": "4d83bb70505a3ae763f846f172f061ffdf577c232a159735266981477b95cec6"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\FiniteVolume.olean",
+          "sha256": "8b7ea888fa11132c006b8c9c1ee504605470b5abf8e9dbba42cf9a5d5b9651b2"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\FiniteClusters.olean",
+          "sha256": "1cce49693140ef7a92920d9ed2435e8f9c4bbce03371364c2bc5ddfd90612a74"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\FiniteClusterDensity.olean",
+          "sha256": "d84a7fd2dd272204583cd06ceea0da8db61b398da10f12560b41f29cc49415a8"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\InternalClusterEmbedding.olean",
+          "sha256": "0cd0529be933c3da8ed54c335a74cf6ec2a2db6fdb3143c39be09ab2daee44b6"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\FiberCounting.olean",
+          "sha256": "f18b8403464847575da44e3462cee191cf660a1eaca419116aa616a393d71673"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\CoarseClusterCounting.olean",
+          "sha256": "8d9cb61c5173d574fbf944e5bb797781ad5c134a7a006d98706400ba1d75b929"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\InternalClusterDecomposition.olean",
+          "sha256": "45339e71d2240792353a6a9ca0c4bc2a86085dbfbdf7f962adbf0149668fdb51"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\InternalClusterChoices.olean",
+          "sha256": "97de39b2802c01ed9370657be0d1eb22788a97b29dba403162357bb60a78c5ee"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\ClusterNumberRecursion.olean",
+          "sha256": "8aaff08331e71209921c9ebc7227387fc6bf3b042752290b8de79acca79f7103"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\BirthClusters.olean",
+          "sha256": "fa97090bd0533ae70270e5cac36942f7d5c27a5502e47c21fb27332408263d81"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\ClusterEquivalence.olean",
+          "sha256": "94a70e9b640cfe9c2d215ba19be819dac6589df91ca2a7e29d418b4d83a67097"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\ClusterNumberBoundary.olean",
+          "sha256": "f20e0c79fc1d6b3236520d875f6f308bdda429f137f8562fff6e02d7cba2f57c"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Analysis\\DiscountedIteration.olean",
+          "sha256": "f64cb9d49dbea2af8c7fe2db234534208a1633196a6c88e07e18ae59f55d4f7b"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\ClusterNumberSeries.olean",
+          "sha256": "eedaaf082fb751b82dd09c0836ab6e7b3b0cd1c8b6b297c302c06fb8454d7d72"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\BirthExpectations.olean",
+          "sha256": "a3f75a3544aba74b3be0d2247fdcbd9fe1a46ec58ec98502dd5b2a7e1caa03e3"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\VolumeLimit.olean",
+          "sha256": "91b8fd7c741771984fc21d8470dbb2238bb8f88cec9f1aa8573e9ae9171527b7"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\BirthSeries.olean",
+          "sha256": "e91f738624ccc06619ea57258031b56e6090a31548d99ca0d99003ea951b131b"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\ClusterSizeDensity.olean",
+          "sha256": "20fc3c9a1852c4008109e5a196cf72e87f9ff463a32126b8b33da679251de06b"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Matrix\\PrimitiveThreeState.olean",
+          "sha256": "a05cd27e584c4e704d23b50c0255570bda2348575878e5577537714fc9140177"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\GeometricPrimitivity.olean",
+          "sha256": "868dcde413e15c7747f7bdfbd49c9cd82ebcf0b200133777da5be7ee31ec4f19"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\MassRowBounds.olean",
+          "sha256": "dd44e10c6636a0e30b18d05b7d0790530f55cb3a91ee0427077d2d8085644b56"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Matrix\\StrictRowBound.olean",
+          "sha256": "4a80dbffbdc2e4365788fc69002061b41378f18f17a1230367375469199ee45e"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\MassSpectralUpperBound.olean",
+          "sha256": "a90b8518e2ffa940da9a9e894dd02006b181f48798ff1ec918f8b14f157c79db"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\VertexMassResponse.olean",
+          "sha256": "bdf8d3e5f22afe80bec5429f2c57539fc227e229f6116d5c7ef3bec035a90825"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\VertexMassIteration.olean",
+          "sha256": "a4a6184c95bcf9194bd05dee5382e80236507d5c8d19b579c1082b8803546f49"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\VertexMassPositivity.olean",
+          "sha256": "db77bb0f626de4a7628243adee73b58d61b0a02b0cd478455588707200d6ebb9"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Matrix\\AffineGrowth.olean",
+          "sha256": "0c49c5f1ef1692497daffe14544c307b8416d4b7d12b51af77c662bf6c274eef"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\VertexMassGrowth.olean",
+          "sha256": "abccbc4c0091403637768c0689a6b792da2639afa9abd4eacc8d2314fa516b38"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\ClusterNumberIteration.olean",
+          "sha256": "a025b582617930fdeec9f90c02db808f8ffa77b3ea3b241289ea330b4f08a719"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\ClusterNumberNormalization.olean",
+          "sha256": "92c326be4613fbd987f210a70a98d397afb8ecc932791fdcef5a3280f0facb9b"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\ClusterNumberVolumeLimit.olean",
+          "sha256": "dbf963bec0deb60fcacfafe82df9751fd0716e15bbd1afe5f25c209773d25a40"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\PivotalResponseBound.olean",
+          "sha256": "4600e564e1ce845506d2bf6ae2934df0594a26b953d40d87449b76f1b723d5a1"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\ClassicalClusterNumber.olean",
+          "sha256": "6c325fb1455c617d42c44f7a7924999a215faae0899fa8e69a59174e1306ef33"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\BoundaryMassDensity.olean",
+          "sha256": "88e830e6630a0df3ebb76d70e5a669963b1574340911f6ef0a4071571bf251ea"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\InternalClusterMass.olean",
+          "sha256": "8f6c8fae4228bcd7eaf0f709fa58efd1a7d340c9750c4480a1b546b5257147ba"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\InternalClusterMassLimit.olean",
+          "sha256": "c70c0fe906eda8e43d7bb1c4bdc522bed6df246e4d33ea6390978860565afb0d"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\ClusterMassSizeSums.olean",
+          "sha256": "22a3befab3910bb4fcf85f9ea52a4524c99f56855c0710013b83271daa3dc7b8"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\CriticalBirthMass.olean",
+          "sha256": "29684285c254f45e8fe550b826f247645a1814f65477298cffbaf9bf66397252"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\CriticalSizeTotalVariation.olean",
+          "sha256": "1c0c037f571536c5193a5155eac3735b60407b49d27433282792af1172a4b216"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\RootedLimitSizeLaw.olean",
+          "sha256": "07cbbc7a52acca424d87e82f15d16e4e4465b8d22773b3934ff64ae9afa79479"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\AnnealedBirthMomentSeries.olean",
+          "sha256": "6df0b10c8c64a053d03435b22e14eb7e5929e55a7a33a8aa4271b0eff4105563"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\AnnealedFiniteBirthMoments.olean",
+          "sha256": "6decaa7b39e93b873024652a368211fb4423ad3907e05553fd1a0914f43a7c7a"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\VertexMassPlane.olean",
+          "sha256": "98d43c22a6439a7fd83fd5c78dcc4c7f0e2b3ec7718bebd45d01f823cee39366"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Matrix\\PerronProjection.olean",
+          "sha256": "55441ed6657237b6fcd9fde4cfa3e10b7e2781b1fb1b1fa4a78aabb65d1229a4"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Analysis\\NormalizedGeometricSum.olean",
+          "sha256": "47cffd31ef05c283fdabd97df9451dc33d21312ec1b46d8baf2f60733c066051"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Matrix\\PerronPowerLimit.olean",
+          "sha256": "3d3169c5c7f3ba5831f5b2b53a97e966b6d6c093396b238c9132987c48348e08"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Matrix\\MassPlaneLimit.olean",
+          "sha256": "6774e61504015a14569fe65a1350499e91da9dc39c8dd00b11189b53ac0dd7b4"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\VertexMeanLimit.olean",
+          "sha256": "bf0ff3e9ad8da6e177ab5b570b58ff3f2da33c48b988f2d85a2d0c85a8b7e138"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\AnnealedBirthFirstMoment.olean",
+          "sha256": "b5fb905e8b55b4eab4df9bdfbc8c3e35c310053481ba94553054795fb3e1722e"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Probability\\FiniteWeightSquare.olean",
+          "sha256": "61813c2451f817f44bc492477e83966e52a8af74262eebc86eb40edfdd4ae016"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Probability\\FiniteRandomFamilyMoment.olean",
+          "sha256": "6ddff10cc72842a4ff6bc0550f72bd317a33e429c3cb4a3df09db369fd5820f5"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\AnnealedBirthMomentLower.olean",
+          "sha256": "b7aa92bee2b40b1767090cc9711ba975c0199b3f793e82620fb98b1fadcae915"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\SingleTerminalCellMass.olean",
+          "sha256": "ba1c69540fd119e5bd5430b489b388702c043a0c2ce94f9812269623a5c90c27"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\MassRowLowerBounds.olean",
+          "sha256": "fb7f2b8b6ec18cf4fbe6c081857de7c2e8ca43b43d1b57f7d1c261edd6d430af"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\IncidentDegree.olean",
+          "sha256": "7f2b0d60ca1b774d36e9d01f28068e7b2633a86c2b3ee56b149d86ee875af7ce"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\SingleTerminalMeanRecursion.olean",
+          "sha256": "e32d37bd2dd1e0d1a627b5f3b96862bc591eb4591284c5dd0ef7f685bf1abb48"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\SubstitutionFullConnectivity.olean",
+          "sha256": "26cc1d0f678d3bb0369aca1fb35da265a2f09a108b23effd08a1d747fd134d75"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\SubstitutionSimple.olean",
+          "sha256": "05f8c4751745ba0b0b4c7598ba9b1da297ffd4cd7f4eb22fb50a812a9e74c6e9"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\SubstitutionInvolution.olean",
+          "sha256": "d5000227ea64b87024e526fd9ca16ceca2e277f6d247e7e0e2cb8d4442f35c6e"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\CountingPolynomials.olean",
+          "sha256": "b0a405780435a1e27189628c2f9b90439105bbf51476655d2d5d59ba5b59df45"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\CrossingOpenCount.olean",
+          "sha256": "3d5d60bb8b0c6a0e62d4a4503a8cdd895bfdcb822748a9624f46d1dcfbb0cdc6"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\PathEdgeMinimality.olean",
+          "sha256": "91ac0675f53c10f9310090aa6bf838ab688990073197e84293c19f6844488dc9"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\CanonicalPivotal.olean",
+          "sha256": "bd557526611377a39c75b1728a848bee1b35620eb36119e73e6332d65cf27323"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\SubstitutionPivotal.olean",
+          "sha256": "308cd2788f85d7f760690bff170314c4289182ba4582fe9a07d0546e9e1a8b4a"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\ClassicalSubstitution.olean",
+          "sha256": "043ad1d2d674ce476ec0ebbf41b17d6c4cbae4505889aa953a2bc045378d2278"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\SingleTerminalGenerationMean.olean",
+          "sha256": "225687ffedb4c9ce3f981bbf507cf5973317fff2bb339fc7ec73d2e7c886e736"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\BirthMassPathwise.olean",
+          "sha256": "fe91226d8d5ea1d52cf60053bd6d33c6644d48646b26bdde353a1388600ff682"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\GenerationMomentRecursion.olean",
+          "sha256": "00f72c0d7134ce0ed681534ef44b11e05d6ea0427f0262d204227daa1e6717bb"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\VertexMassMoments.olean",
+          "sha256": "bf78c0e5d0e9425769cdd1657e2451fdcbe4a91bd912304b8f567dd66418e7af"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Probability\\MomentLinearPart.olean",
+          "sha256": "aa8aee307cedc3cc4f26819f2f482c96055eb6edd553941409bd1fdb892d1be9"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Probability\\MomentAssignments.olean",
+          "sha256": "7cdc5237c36cb1d37b1b5eb943fc65e8df8cb774fe3d3293ac7f8dce03375a71"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Matrix\\InhomogeneousGrowth.olean",
+          "sha256": "50c7f584a347e00b08e3356ed7edc3c4881a9aa7a432ed84369901c3ce3203c9"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Probability\\BranchingMoments.olean",
+          "sha256": "5b13510ae66af9a6e0fe4790e37b0f78aee749158322c2f9814b6863266b4669"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\VertexMomentRecursion.olean",
+          "sha256": "43464d919483d7e92785503101f01d567fee4485ab7e0a8a2b65b644a633966c"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Probability\\BranchingMomentBounds.olean",
+          "sha256": "7048d94ab4d2aa29513e797cd2d23fc5819087628daa3b6739f329061b4857c7"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Probability\\BranchingMomentGrowth.olean",
+          "sha256": "b0ddfc0e1a9f5d6e8e97904cecf35c8bfcd21db7409fb50c8a75103ee7549286"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\VertexMomentGrowth.olean",
+          "sha256": "b9419e05e771bee5ec8572f7596d4a452d191a518fbabf4a7f949c0737957a24"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\BoundaryMassMoments.olean",
+          "sha256": "1883df484d668542e77b33311a30b9a1bc1455ea6ce2982c2b2f14b9c6bd2382"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\BirthMomentUpper.olean",
+          "sha256": "3e863cf04f468110cf498c1ea6840b7db1ed572ef092b520317252623e5b869e"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\SingleTerminalMomentPathwise.olean",
+          "sha256": "7d9faa82f2740ad39256f87ec3229c6c33994d8c07393a9dfe79a9ee6a5c3caa"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\SingleTerminalMomentRecursion.olean",
+          "sha256": "f604cdbbdfecab703222c80b60eda20f3cd750c6d7f45a4613436a17707dbeb4"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Analysis\\ZeroDerivativeIteration.olean",
+          "sha256": "fd343a6376560957ce63d2b5246d80e996deb3edd6699a9cedbe3bb89a75047c"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\SupercriticalFailureSummability.olean",
+          "sha256": "5bc19026001d9b2852a92c85bb9392dd24e5e3a16d654229a1cea202ffb71246"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\SubcriticalCrossingSummability.olean",
+          "sha256": "a92a84918b8eac1d30a0020df17c6b999b0dc08a05ed6fb85b31ad237877a40a"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Analysis\\GeometricRecursionLimit.olean",
+          "sha256": "7232b931c85ff43f6e4e49678b73f4f78287ab4e44b96e0bf6ccd0c5a488f95b"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\SubcriticalSourceMeanLimit.olean",
+          "sha256": "6a30567f27c9c68658822c2fe7295609c9cebb0a11010978a6e519172a7eede3"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Analysis\\GeometricRecursionUpper.olean",
+          "sha256": "92ae7347aa586c3d89d0f3031eb54571140cfd6919c8907f524df0a9f9a49073"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\SubcriticalSourceMomentBound.olean",
+          "sha256": "ae878c5afcad7fd2fe4f6e0c5af3b75da658b94e1b3c32803bf351b9be5c2c4f"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\SubcriticalBoundaryMomentBound.olean",
+          "sha256": "dd8665be2f2067f6fcc28852f1bfe5a4c4ebb8af72b8a1c975ca104176dc65f0"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\BernoulliMonotonicity.olean",
+          "sha256": "e4646549c4b60be0a9293daefab1ec132e2e195c3524a64c3cddf29d3cd67190"
+        }
+      ]
+    },
+    {
+      "sourceProjectUnmodified": true,
+      "copiedArtifacts": [
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Probability\\FiniteProductVariance.olean",
+          "sha256": "e889eef9230a2d75dee09e1d4de454e5aed06eab87de713377173b1b2bee2ab3"
+        }
+      ]
+    },
+    {
+      "sourceProjectUnmodified": true,
+      "copiedArtifacts": [
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Matrix\\CriticalCharacteristic.olean",
+          "sha256": "64d6e92c6fa250ea734a58b9add9640a0b5c5aa96f370e509969bf313296354c"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Examples\\Diamond.olean",
+          "sha256": "1c669487b02a3a941169f5e504ceecfa1f675b1b408a04cf852a3abaf3a30c1d"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Examples\\DiamondCritical.olean",
+          "sha256": "d1642e1ef6f4ee4b48a6c91273e07469a79010597ad7d9188ec7aabf42670f1b"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Examples\\DiamondClassical.olean",
+          "sha256": "ccdc3ebfc023bed942360fa5b4b5c6a9576783c034020eb40c13c12a99e504fe"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\SubstitutionRadius.olean",
+          "sha256": "9117f99567447d7b210afaba91214a6b9a0e1e07daa5eee31db1a54a8d10e1e8"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\SubstitutionPotential.olean",
+          "sha256": "ab7ef8de13e9286a89e3f52da332402d77a0154d2a0e44458556b4662701cd5f"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\CellIsometry.olean",
+          "sha256": "3ed7392847f478c02630a13f1943e248bb3d505e897cfa813b8e44b19a3153e5"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\CoarseDistance.olean",
+          "sha256": "bb80395b2707899d3da8c8a831b7a4e787802c7f50e137288d7cc6a9b8444681"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\GeodesicEdgeLevels.olean",
+          "sha256": "70bd8c0d47f37b598f5215e49ffd0a3d8c417d4b0238072533efc5ab79c08819"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\CoarseRootMass.olean",
+          "sha256": "3ba9687d7d39f1577a25840dcf35ec3337151c5f96319dc4879159604d0d0eb9"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Probability\\FiniteLatticeInversion.olean",
+          "sha256": "868a48321df89b77746fa66835bd2a5e104deaaff69228e3e1d5fe620f12f330"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\ConditionalMassCharacteristic.olean",
+          "sha256": "1646a2fa1c12f7e55d21998742e803269ea3dd34aed9420ce312bfa273aed013"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\ConditionalMassInversion.olean",
+          "sha256": "99c88870c920452ac9ff0b5291224ae07178bee7c170a2350de50578a03fa907"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\GenerationMassCharacteristic.olean",
+          "sha256": "18a77b212357af2f3af9e5302917dad9a728e9b591be13c875fcff14bcb79938"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\ConditionalMassAtomOrientation.olean",
+          "sha256": "7e263b7aaabcd466f650b578cb6eb057809003c33fb66aa513e69acfd113b42d"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\CoarseRootLaw.olean",
+          "sha256": "20a0f1b880fd7a4878a72fa168dad19a0408fa6705b4978012ccfeb81018f9e1"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\CoarseRootMoments.olean",
+          "sha256": "ee19365b2fc4dae3262597ad704c6d97006631eadddcfa6ea381923a6ec10b80"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\FarConnectedPairs.olean",
+          "sha256": "3822436c9b8bd76a9677587984095dbf8af67e05cabc4fbb27ba1797288b260f"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\DistanceWindowPairs.olean",
+          "sha256": "b1421dbe67b7548893e067418f9d51a462708735d0dd7469c6e820d20953dafd"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\WindowNetworkEquivalence.olean",
+          "sha256": "edd36164035aead20b443304d29ee6e32493cce189b7a3654d4769ecbb2b41f6"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Examples\\DiamondRadiusGeometry.olean",
+          "sha256": "b54da5f4431f1a1ebd211648ca48796f97dab1d658f820241f98bdb12f4cdfba"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Examples\\DiamondOpenGeodesic.olean",
+          "sha256": "a1c66d9f05d7a321e6dd43853524664f88900cd8b7d3abbcef00f99d667cc75c"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Geometry\\MetricDirectLimit.olean",
+          "sha256": "feac714cdb28d959e289b8e49b9c67700c97618d0c3c58db0d6cc924da5e5f7e"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Geometry\\ScaledGenerationMetric.olean",
+          "sha256": "96375d7ad9b36e3798314f059a3c143073b732bfaa847914bc60d06fa7d444bb"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Geometry\\IsometricSequence.olean",
+          "sha256": "ab40a6f19ef1faab786eaf35f439143d74b5c730fbf0439c63c8217cdf7c36fa"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Geometry\\GenerationCompletion.olean",
+          "sha256": "7a815d690dc7e1439c919a716e6b5d3e0c2d9bfc7abf3194906a4d7f82e6b05a"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Geometry\\GenerationNet.olean",
+          "sha256": "3c62bc91e8b0b6807a7ca835bbbae914ffb1e7ae90a5e084eb4eb9143a261f80"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Geometry\\GeometricNets.olean",
+          "sha256": "7b24ee8ede609630b012d78b74376b148fb42b1379ad43821afbf4e4bacd3a4a"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Geometry\\GenerationCompactness.olean",
+          "sha256": "653c8fd58401fe3a94eb12a5aee6ee5e598474018648fcc29ae4dc58c8f0e9c8"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\UniformGenerationVolume.olean",
+          "sha256": "4e1cf9bc4039f105c613bee9f87afd5d8343d14f5ff780a77c8e9041e69381be"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Geometry\\GeometricCovers.olean",
+          "sha256": "8d5d8da4181769fd3bafd0485d65f4d4824dad637afd9ec59db99ea19e40863d"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Geometry\\FiniteCoverHausdorffBound.olean",
+          "sha256": "65bb79020a933317c7e30ce44f2570cb2a51d0c2f1a6ded3aeca43edadc38500"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Geometry\\GenerationHausdorffUpperBound.olean",
+          "sha256": "4019b42a8311c1ec8ff52487c9d7336146f9eaaff65520a087631af788d28268"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Geometry\\GenerationMetricSpace.olean",
+          "sha256": "9d37b69987cb80aaeeeb654aff38f0f3a2055df1a5a540f319d85a97292b1abf"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\NetworkEmbedding.olean",
+          "sha256": "276df1aba06ec118b4bdf99f736f8468a129d2a453d74dd58a3718b1037edda5"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Geometry\\CellBoundaryPotential.olean",
+          "sha256": "a8df51e1d2df221cf21ed276747ee6ed2b3a1306e5da5be0e7054e8005b9a948"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\GenerationCellEmbedding.olean",
+          "sha256": "ddbec2f27f9d53d3eac64e22f17d75d6d19465e1a93efa0164b6d50f32f265a2"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Geometry\\GenerationCellMetric.olean",
+          "sha256": "9fa7c3f898c232ab813a34a90080a3112c97b45600ab2de966b2f87ed39e4406"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Geometry\\GenerationCellBoundary.olean",
+          "sha256": "ca33ebbed5f5e612e24e74aefd214cd8fda81dba68e6a3402e4d31cb2d2d4e89"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Geometry\\SequenceSimilarity.olean",
+          "sha256": "6f8b884c821b1a6ec767f0e3ce49f8cc818390e1f48b66909244e292119e2e59"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Geometry\\GenerationMetricCells.olean",
+          "sha256": "43379e060247b52f5202eb07ff3c16cf0bdb27342d9b12f837507c8d45a058f3"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\RandomEIGS.olean",
+          "sha256": "87abd890eea0305e7527302fb5a3ecf98ed05ffa1987928751166f4ee3e5d94f"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\InfiniteObservables.olean",
+          "sha256": "2c969b75bc7308b1dcd5e762f600aee27766326acd138a66339eabb3d4916914"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Geometry\\PercolationClusterVertices.olean",
+          "sha256": "6c6f731ece2d984c9042580fb7d488620da62246cb859ba0deedc3e16db78c38"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Probability\\FourthMomentConvergence.olean",
+          "sha256": "d67c1c2a2a849a297b9ea8a1ff34b6b3b18a84a3f6ac84a2bd218b99fd0321c7"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Probability\\GeometricL2Sum.olean",
+          "sha256": "69802906bd39f8abe3d1c482e0313f2a72923fe50a13aee526f0d45c566de0af"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Probability\\SubcriticalL2Recursion.olean",
+          "sha256": "eb9d4ee8a23549f5c8bfa354d52e70b62ed67e4216b2d8417e96d73e783d2f9f"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Probability\\L2LimitOperations.olean",
+          "sha256": "5c164a0300b830ce5e61b7cb7f0e59ce73d421d28eed4c8472d84cfd07ac1639"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\LocalLabelLaw.olean",
+          "sha256": "6dbf55b46bbc71c9efdd41ab42a8044876f2a17326d37a120039ffe423007660"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\RefinementMean.olean",
+          "sha256": "545d70a50d6499bd8c0605bb527213ffa2deffd6fa2ebecd4e869629d4f91eb5"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\LocalPopulationBounds.olean",
+          "sha256": "11a152407f4b2ca88230eb893c433b3fadf7cbcc7956698d88e481a42643d71b"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\RefinementPopulationVariance.olean",
+          "sha256": "e6d8b83cd5cea38e93d31892d265c44708b93bc0a470eb80403193c91def4f10"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\InfiniteMassMoments.olean",
+          "sha256": "f26a4f174f51dad4377fa9f56f43fbc38b71dcf37cb9b70b68f5e67fafd0b06e"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Probability\\TrajectoryConditionalExpectation.olean",
+          "sha256": "c2c3a2747c9f119f9e3609ade2dc1563cd641ddbbd284c91d88b606127706ceb"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\HistoryConditionalExpectation.olean",
+          "sha256": "3a0643190d5c6d90cf4ba7c2d2a56015906b4c9df677ab909f41621dfcd887a0"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\PopulationMartingale.olean",
+          "sha256": "f70e192a2c2a523dc5f0e3c9b040bd3715ace22627b01d2688ab1bf4b190b4ca"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\RefinementVertexMean.olean",
+          "sha256": "d405b6dfb903b61ad6ed7b6166ca7592ed8a504a122fa02fb263bef9f649feb0"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\PopulationSquareBound.olean",
+          "sha256": "301cac67cff0e27fe6397552c6ca7cd89a8cb79837622cef106a85cfddb887e3"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\PopulationInnovation.olean",
+          "sha256": "be475089893adb02f0493e76882a9154d79216dfede9922a49649e7654fe4eec"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\SubcriticalPopulation.olean",
+          "sha256": "c85a1c2c6cd7df0435cb6de37e43281aace3165b9fc8775725a48d3432fad03f"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\SubcriticalPopulationSum.olean",
+          "sha256": "49311a194ee634bd610a04d60fed335bb6458ad34b06d68bf99fae6a756d74aa"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\RefinementVertexVariance.olean",
+          "sha256": "a2be8e67417f9d3aabbe3488f3adbddac96f30bbe444d2e822b34e743e10c936"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\VertexRewardCompensation.olean",
+          "sha256": "c669fa1dc5911702cfb07bcb6c9559ab5e8f1f714ed988c36ba53fea76fc69bd"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\VertexInnovation.olean",
+          "sha256": "78c74a59000de61d29108e1637dce520b0053d5c544461cd863ac267ef2b16e9"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\VertexNoiseLimit.olean",
+          "sha256": "b102810ce01df5a3ba6230ce73eaa5954ff051492448cff8bae502db68bcb140"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\VertexRewardSpectralSplit.olean",
+          "sha256": "d1764e0160633a70b06bfc2add9f3256325f5e67ba76a8edbd9dfed9d84a14c9"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Probability\\PerronL2Sum.olean",
+          "sha256": "00ee5d6a8bfe1f398229c278041dfbd288c44331ab4a96839eb514230e5f2130"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\VertexMassPerronApproximation.olean",
+          "sha256": "9992c88fa64c250d1da6a540d26bcff557dd6c5e387c1f6873571e77f4a4bd6b"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\PopulationConvergence.olean",
+          "sha256": "29e3e16dc3d1b725a7b639f29d785a81eeb891b16e3d684a0467508a12d18435"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\PopulationLimitMean.olean",
+          "sha256": "d0745fc638e4b01c2ce9195766105781978ed6875e8154ef295e10bc28c14e94"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\PositivePopulationLimit.olean",
+          "sha256": "8ef8518d89114f0f24d0917ebd40a0c0af1ec637aed44680389769857a3a9d58"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\VertexMassConvergence.olean",
+          "sha256": "2a3c4dd4858ac1183cb4ba87c91433b6f1aa0363ce52175c9999665f59c9a089"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Probability\\NonnegativeL2Limit.olean",
+          "sha256": "3925615b50fdf8bc4cda143c484fc32578090235865a4d0f8bbe2eecc88748af"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\VertexMassNonnegativeLimit.olean",
+          "sha256": "9e3737b406dd07f415e89d8180b79db1600f24991aabb4e946d2c67b1fe6c101"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Probability\\L2Characteristic.olean",
+          "sha256": "3ddb64745c313eaba90439f15d3d6b53b1be64a703711956a5dddb01f88fb965"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\VertexMassCharacteristicLimit.olean",
+          "sha256": "0dbb8f7e5db08b9f0616bc4e267516a82a057e1ed3147ab68526001146bd2b98"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Probability\\IndependentSumLaw.olean",
+          "sha256": "6f281e55f318dfe0e869377076fe6aec6d0100fd765e5f32ca9ef8c77b1a1682"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\VertexMassSmoothing.olean",
+          "sha256": "d6aced04d76e6b7bfdd8d8cc4f5e59f0c53603ea082164d1eba1e08b72a5e329"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Percolation\\MassDistributionSmoothing.olean",
+          "sha256": "3008d3e3b2030894faf9af04272dc3585f76d68adfa89d8b2e1503a66f76b23e"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\InternalCellNeighborhood.olean",
+          "sha256": "f3f141b9fb8324768a39875a3d71a783fc2dd0ff589dd963a400d1cca39c2e33"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\InteriorDecomposition.olean",
+          "sha256": "32cc8c4021255b494b60620fcf307173f6cf2cedffcbf2f84a024b99b5e03281"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\GenerationInternalNeighborhood.olean",
+          "sha256": "b35374ed57c0765108da13e6b755e76f469bb8aa72e2e0edb68a92633943c275"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\BirthAddress.olean",
+          "sha256": "725d84642ff43ff10a87e37beef48a0c20713862b56bc1854f6f78455ebd3883"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\BirthAgeCounting.olean",
+          "sha256": "a0aff2ccb04b46fe39750bced8ced91659241d7858cbcdae2a4fe4a9ab561b50"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\BirthAgeFiber.olean",
+          "sha256": "ffb8eca2f72f49d2b8ab4779ad9c527b69e352d6ea3599b76890e12d8a235d84"
+        },
+        {
+          "path": ".lake\\build\\lib\\lean\\Universality\\Graph\\AncestralInterior.olean",
+          "sha256": "a29fd036edc4dedfa7c077a84f972224836d1bcf835ea1b7fd0ff870a65bc595"
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 name = "IGSIII34"
 version = "0.1.0"
-defaultTargets = ["IGSIII34"]
+defaultTargets = ["IGSAlexanderOrbach"]
 
 [[require]]
 name = "Universality"
@@ -16,3 +16,12 @@ name = "IGSIII34"
 
 [[lean_lib]]
 name = "IGSIII"
+
+[[lean_lib]]
+name = "IGSIII4"
+
+[[lean_lib]]
+name = "IGSIIISectionsThreeFour"
+
+[[lean_lib]]
+name = "IGSAlexanderOrbach"

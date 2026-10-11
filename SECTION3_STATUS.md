@@ -1,8 +1,8 @@
 # Section 3: proved results and remaining scope
 
-Updated October 11, 2026, Asia/Shanghai. This is a publication of existing
-proved results, not a claim that the entire manuscript has been formalised.
-Section 2 and Section 4 sources are preserved.
+Updated October 11, 2026, Asia/Shanghai. The frozen Section3 scope is complete.
+Section4 now instantiates its former accepted inputs with the actual proved
+Section3 results. The repository default entry point is IGSAlexanderOrbach.
 
 ## Result index
 
@@ -34,41 +34,21 @@ holding times are `Exp(1)/degree`. The deterministic algebraic clock is
 Lean depth zero denotes the first generator; paper generation zero denotes
 one edge. The shift by one is therefore intentional.
 
-## Remaining scope
+## Completed integration and exact scope
 
-- Whole cadlag convergence is proved in the topology formed from genuine J1
-  metrics on every integer horizon. Its continuous-limit, arbitrary real
-  horizon bridge is proved. The independent usual-local J1 weak-test wrapper
-  remains to be integrated; the two global topologies are not called equal.
-- The scalar time changes are actual path-law conclusions. The manuscript's
-  equivalent scalar speed-measure form/kernel interpretation is still being
-  consolidated.
-- Original common chemical ambient results use the already formalised
-  Section 2 length/mesh interfaces. Final outer witnesses and the Section 4
-  dependency adapter are still being consolidated.
-- Analytic resistance-form recurrence and a positive integrable semigroup
-  occupation criterion are distinguished from a theorem about repeated
-  sample-path hitting of every open set.
-- The global Alexander–Orbach non-equality remains the manuscript conjecture.
+The original annealed marked-GHP/whole-path joint law, continuous-limit usual-local
+J1 interpretation, exact physical measures and same-master original clocks are
+complete within [Section3 coverage](COVERAGE.md). Its separate certificate audits
+12,037 declarations and1,486 source hashes.
 
-## Verification and historical material
+[Integrated Sections3–4 coverage](SECTION34_COVERAGE.md) and
+[the actual Section4 proof index](SECTION34_RESULT_INDEX.md) identify the completed
+adapters, original-model existence statements and actual typical heat-kernel
+AO conclusions. The final integrated audit covers12,294 declarations and1,532
+source hashes, including the six actual interface checks.
 
-The unified entry point is `IGSAlexanderOrbach`. `Audit.lean` checks every
-module-origin declaration in all four local namespaces, including private and
-generated declarations, and recursively permits only `propext`,
-`Classical.choice` and `Quot.sound`.
-The [publication manifest](verification/section3-source-manifest.json) records
-exact source hashes and the verification that actually ran. A cached-object
-unified audit is distinguished from a fresh clean Lake rebuild.
-
-This publication passed the unified Section 3 import, the complete package
-entry, and the all-namespace transitive axiom audit for **13,485 declarations**.
-All 1,547 adopted local module source hashes were rechecked after the audit.
-Only the three standard Lean axioms were found. A fresh clean Lake rebuild
-was not run for this snapshot; the full-manuscript completion flag remains false.
-
-The existing `section3-continuation/` directory and `PAUSED_SNAPSHOT.json` are
-the earlier user-requested pause snapshot. They are preserved for provenance
-and are not the current unified proof entry point. Their historical status
-files may describe earlier unfinished work. No manuscript PDF or TeX source
-is added by this publication.
+The global AO exclusion remains a conjecture. Continuous limiting representatives,
+respective electrical/chemical marked-GHP topologies and physical-mass typical
+compact-diffusion spectral scope are retained; no stronger statement is implied.
+Historical publication/preservation manifests retain their original dated scope;
+verification/section34/manifest.json is authoritative for the current unified package.

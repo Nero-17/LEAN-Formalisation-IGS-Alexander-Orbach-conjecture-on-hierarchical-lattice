@@ -1,0 +1,485 @@
+{
+  "status": "complete",
+  "reviewedUtc": "2026-10-11T11:46:41.595888+00:00",
+  "sourcePaperCommit": "db2cbd8163ef90cc70ebd4d97f282993fd3311b6",
+  "sourcePaperSha256": "207204ef8eaffc8240324349e3b94929ede9a7a129b0e1d63298f1ff49af5d51",
+  "scope": "Section 3, frozen main.tex lines 517-1160, with proved prerequisite imports.",
+  "unresolvedObligations": [],
+  "scopeNotes": [
+    "Original chemical marked geometry, both original masses and terminals, and the entire path are encoded by the separation quotient of the literal common-isometric-coupling cost.",
+    "Electrical marked GHP is certified on the same physical master event in its respective topology; no simultaneous bi-metric-and-path topology is asserted.",
+    "Integer-horizon and usual-local J1 coupling convergence are equated only at continuous limiting representatives; actual continuous-sample regularity is proved.",
+    "Natural-clock annealed convergence concerns all three original clocks and one common completed-environment limit kernel for any measurable starting sequence satisfying the genuine starting-point convergence condition.",
+    "The finite environmental mixtures retain the original innovation law exactly. No target joint convergence, target measurability, global state separability or global measurable set of continuous isometry classes is an input.",
+    "Typical spectral dimension is a small-time compact-diffusion statement, not an all-scale exit-time result, a value at every born vertex, or a microscopic infinite-graph long-time exponent.",
+    "No global Alexander-Orbach exclusion theorem is certified here; the stated fivefold subdivided diamond example is certified.",
+    "The auxiliary Appendix B resolvent identity is certified for parameter at least one, sufficient for the Section 3 small-time conclusion."
+  ],
+  "obligations": [
+    {
+      "label": "lem:electrical-eigenlaw",
+      "manuscriptLines": "539-581",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Percolation.exists_natural_resistance_completion20261011",
+          "source": "IGSIII34\\Percolation\\Continuation\\NaturalResistanceCompletion20261011.lean",
+          "sha256": "5b13a0df3293a8e24533b1c9226703ddc116eabc4ae9694b73c1bdb43de0d024"
+        },
+        {
+          "declaration": "IGSIII34.Percolation.natural_resistance_exponents",
+          "source": "IGSIII34\\Percolation\\Continuation\\NaturalResistanceExponents.lean",
+          "sha256": "ce8b034fd41034ade2613ede453658400e9dad5a57f9bdc07c6f34a87ff08e2d"
+        }
+      ]
+    },
+    {
+      "label": "lem:electrical-sandwich",
+      "manuscriptLines": "590-635",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Diffusion.actual_natural_unit_graph_conditional_reciprocal_sandwich",
+          "source": "IGSIII34\\Diffusion\\ActualNaturalElectricalPreFormCertificates.lean",
+          "sha256": "fdc3ea66b399f5fa4ec4dbb487425d7a8e76a0289f7253105089c46ca865fec2"
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.actual_natural_electrical_iteration_uniform_real_moment",
+          "source": "IGSIII34\\Diffusion\\ActualNaturalElectricalPreFormCertificates.lean",
+          "sha256": "fdc3ea66b399f5fa4ec4dbb487425d7a8e76a0289f7253105089c46ca865fec2"
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.actual_natural_electrical_iteration_supremum_moment",
+          "source": "IGSIII34\\Diffusion\\ActualNaturalElectricalPreFormCertificates.lean",
+          "sha256": "fdc3ea66b399f5fa4ec4dbb487425d7a8e76a0289f7253105089c46ca865fec2"
+        }
+      ]
+    },
+    {
+      "label": "thm:resistance-exponent",
+      "manuscriptLines": "638-670",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Percolation.natural_resistance_exponents",
+          "source": "IGSIII34\\Percolation\\Continuation\\NaturalResistanceExponents.lean",
+          "sha256": "ce8b034fd41034ade2613ede453658400e9dad5a57f9bdc07c6f34a87ff08e2d"
+        }
+      ]
+    },
+    {
+      "label": "electrical-chemical-growth-comparison",
+      "manuscriptLines": "672-674",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Diffusion.natural_electrical_growth_le_chemical_growth",
+          "source": "IGSIII34\\Diffusion\\NaturalResistanceChemicalComparison.lean",
+          "sha256": "169442649cae3aee5857aaca668efa638e9651989fc02785f6a6acb161ee6984"
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.exists_actual_chemical_mean_growth_above_natural_resistance",
+          "source": "IGSIII34\\Diffusion\\NaturalResistanceChemicalComparison.lean",
+          "sha256": "169442649cae3aee5857aaca668efa638e9651989fc02785f6a6acb161ee6984"
+        }
+      ]
+    },
+    {
+      "label": "lem:electrical-compactness",
+      "manuscriptLines": "681-722",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Diffusion.actual_natural_unit_graph_L2_compact_closure",
+          "source": "IGSIII34\\Diffusion\\ActualNaturalElectricalPreFormCertificates.lean",
+          "sha256": "fdc3ea66b399f5fa4ec4dbb487425d7a8e76a0289f7253105089c46ca865fec2"
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.natural_electrical_amplitude_bounds",
+          "source": "IGSIII34\\Diffusion\\NaturalResistanceAmplitudeBounds.lean",
+          "sha256": "8ce0b84bcd6991d3a2011566d77c16f8b849d4c7cc7f9b1aec96eba49bd165e9"
+        },
+        {
+          "declaration": "IGSIII34.Percolation.natural_physical_omega_witness_completion20261011",
+          "source": "IGSIII34\\Percolation\\Continuation\\NaturalPhysicalOmegaCompletion20261011.lean",
+          "sha256": "800b0102425c2db48af60185769c8cd1512da8de1791a09fa5f627295d87862e"
+        }
+      ]
+    },
+    {
+      "label": "lem:electrical-comparison",
+      "manuscriptLines": "726-758",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Resistance.FiniteNetwork.iid_resistance_integral_comparison",
+          "source": "IGSIII34\\Resistance\\IIDComparison.lean",
+          "sha256": "6851313046513e30aa5c08e100d3ac8d05bbeace0788feb612688d44ad914181"
+        }
+      ]
+    },
+    {
+      "label": "thm:electrical-amplitudes",
+      "manuscriptLines": "762-814",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Percolation.exists_natural_resistance_completion20261011",
+          "source": "IGSIII34\\Percolation\\Continuation\\NaturalResistanceCompletion20261011.lean",
+          "sha256": "5b13a0df3293a8e24533b1c9226703ddc116eabc4ae9694b73c1bdb43de0d024"
+        },
+        {
+          "declaration": "IGSIII34.Percolation.natural_physical_omega_witness_completion20261011",
+          "source": "IGSIII34\\Percolation\\Continuation\\NaturalPhysicalOmegaCompletion20261011.lean",
+          "sha256": "800b0102425c2db48af60185769c8cd1512da8de1791a09fa5f627295d87862e"
+        }
+      ]
+    },
+    {
+      "label": "lem:full-resistance-mesh",
+      "manuscriptLines": "823-857",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.ResistanceLimit.actual_stationary_local_resistance_mesh_completion20261011",
+          "source": "IGSIII34\\ResistanceLimit\\ActualElectricalLocalMeshCompletion20261011.lean",
+          "sha256": "9d75151e35d552301f20c845f30c56ac642c7e42690cf58ce9498488e187b06b"
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.ae_uniform_actual_electrical_mesh_fixed_cluster",
+          "source": "IGSIII34\\ResistanceLimit\\RadiusMesh.lean",
+          "sha256": "da93dd8d4eee3de13b75ca77c43f7b543e40f240f862c355361f839dd514442b"
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.actual_markedElectricalRadiusSupremum_memLp_fixed_cluster",
+          "source": "IGSIII34\\ResistanceLimit\\RadiusMoments.lean",
+          "sha256": "97ebea7876a8d4a7c4c80e652b70b7f1f89aea79bd0b4dc00707e3940bd6ae5b"
+        },
+        {
+          "declaration": "IGSIII34.Percolation.natural_physical_omega_witness_completion20261011",
+          "source": "IGSIII34\\Percolation\\Continuation\\NaturalPhysicalOmegaCompletion20261011.lean",
+          "sha256": "800b0102425c2db48af60185769c8cd1512da8de1791a09fa5f627295d87862e"
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_ae_actual_natural_common_section_three_all_clocks",
+          "source": "IGSIII34\\Spectral\\Collars\\ActualSameMasterAllClocks.lean",
+          "sha256": "3df78a1775210aede16ebd9b363630c2078af6d05b40d7f0efe70143c5dcadd4"
+        }
+      ]
+    },
+    {
+      "label": "thm:full-resistance-form-exact-traces-uniqueness",
+      "manuscriptLines": "863-925",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.ResistanceLimit.actual_finite_trace_minimum_attained",
+          "source": "IGSIII34\\ResistanceLimit\\ActualTraceMinimum.lean",
+          "sha256": "75869408f30b3f8c19e17affcc9b74f924c1933bebd8f87b735ca12ca7c1d432"
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.actual_form_unique_from_finite_traces",
+          "source": "IGSIII34\\ResistanceLimit\\ActualTraceUniqueness.lean",
+          "sha256": "785bf56519f03ee213ae2ec2479bca7d4f661aaa298c39060f4cd32a96395446"
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.actual_completed_form_unique_from_finite_traces",
+          "source": "IGSIII34\\ResistanceLimit\\ActualCompletionTraceUniqueness.lean",
+          "sha256": "b826ef75e848aa0b4f5140355399d72e47fdca5930615fb2d60d813f666d4164"
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.actual_completion_variational_resistance_eq",
+          "source": "IGSIII34\\ResistanceLimit\\ActualCompletionResistance.lean",
+          "sha256": "b77731a7d75b4ccb1dfa490ac7adca9d62a0a5d55ac30c4585ba07aefc7135a4"
+        }
+      ]
+    },
+    {
+      "label": "thm:full-resistance-form-common-carrier-regular-strong-local",
+      "manuscriptLines": "906-947",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_actual_natural_chemical_carrier_identification",
+          "source": "IGSIII34\\ResistanceLimit\\ActualNaturalChemicalCarrier.lean",
+          "sha256": "b1c55749b65fa1c247c71c9d13a72d167e10790ba4eee12c4eb185dacb419890"
+        },
+        {
+          "declaration": "IGSIII34.Forms.actualCompletionEnergyDomain_dense",
+          "source": "IGSIII34\\Forms\\ActualRegularityCompletion20261011.lean",
+          "sha256": "05be0361b6880b55708b38a699146f30c4107a56eb749a25e24bd90bc090fc66"
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.ae_actual_completion_strongly_local_fixed_cluster",
+          "source": "IGSIII34\\ResistanceLimit\\ActualStrongLocality.lean",
+          "sha256": "d26d011450961426b605fbc3518993ae0e84ebeb71acbc5856f0d1343ab02804"
+        }
+      ]
+    },
+    {
+      "label": "retained-component-energy-intrinsic-restriction-zero-extension",
+      "manuscriptLines": "950-960",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Forms.ae_actual_natural_completed_component_energy_decomposition",
+          "source": "IGSIII34\\Forms\\ActualCompletedComponentEnergy.lean",
+          "sha256": "3203c56b70305d6aa85d304e288fe64697dfa8e1d4c9e40a5d456f2ffb82a3a6"
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.actualRetainedComponentEnergy_eq_intrinsic_restriction",
+          "source": "IGSIII34\\ResistanceLimit\\ActualComponentIntrinsicEnergyBridge.lean",
+          "sha256": "7e50e28db1cb12ad26512d20be21f54299fe32b3f85550c4d2e801c2cb94f2f9"
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.actual_completed_component_resistance_bound",
+          "source": "IGSIII34\\ResistanceLimit\\ActualComponentIntrinsicEnergyBridge.lean",
+          "sha256": "7e50e28db1cb12ad26512d20be21f54299fe32b3f85550c4d2e801c2cb94f2f9"
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.actualElectricalComponent_completed_zero_extension_in_chemical_cell",
+          "source": "IGSIII34\\ResistanceLimit\\ActualElectricalChemicalZeroExtension.lean",
+          "sha256": "e88f71e2a776ef44293fdf7c8585580b491fa181207b301960950c596ab0dfd2"
+        }
+      ]
+    },
+    {
+      "label": "retained-component-root-law-including-dependent-B-sides",
+      "manuscriptLines": "960-962",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.ResistanceLimit.electrical_selected_trace_root_product_law",
+          "source": "IGSIII34\\ResistanceLimit\\ElectricalSelectedRootLaw.lean",
+          "sha256": "50c31fa970b1ead6451a75706f8947cf93f53dc284586e8cc617e588ee7255f0"
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.electrical_selected_energy_root_product_law",
+          "source": "IGSIII34\\ResistanceLimit\\ElectricalSelectedRootLaw.lean",
+          "sha256": "50c31fa970b1ead6451a75706f8947cf93f53dc284586e8cc617e588ee7255f0"
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.electrical_component_global_energy_scaling",
+          "source": "IGSIII34\\ResistanceLimit\\ElectricalComponentRootLaw.lean",
+          "sha256": "2226a89f8a14f81a589fcdc6e1f57f8e79762ff821fc83dc68a3e8ea59620b5f"
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.electrical_component_global_energy_root_law",
+          "source": "IGSIII34\\ResistanceLimit\\ElectricalComponentRootLaw.lean",
+          "sha256": "2226a89f8a14f81a589fcdc6e1f57f8e79762ff821fc83dc68a3e8ea59620b5f"
+        }
+      ]
+    },
+    {
+      "label": "lem:degree-measure",
+      "manuscriptLines": "972-995",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Diffusion.actual_joint_edge_vertex_limits",
+          "source": "IGSIII34\\Diffusion\\ActualDegreeRewards.lean",
+          "sha256": "b19a0d670c1f7cfb9c1fac2146d115888296fab84a85ad69fece6b2eb342c440"
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_ae_actual_natural_common_section_three_all_clocks",
+          "source": "IGSIII34\\Spectral\\Collars\\ActualSameMasterAllClocks.lean",
+          "sha256": "3df78a1775210aede16ebd9b363630c2078af6d05b40d7f0efe70143c5dcadd4"
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.ae_actual_natural_raw_electrical_markedGHP",
+          "source": "IGSIII34\\ResistanceLimit\\ActualNaturalRawElectricalMarkedGHP.lean",
+          "sha256": "f26f1de90a2e42695a1a1bc336533f5e072a1c13d5ae9e77d1487fc5e3e32ac8"
+        }
+      ]
+    },
+    {
+      "label": "thm:natural-process-same-event-all-starting-sequences-all-clocks",
+      "manuscriptLines": "997-1047",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_ae_actual_natural_common_section_three_all_clocks",
+          "source": "IGSIII34\\Spectral\\Collars\\ActualSameMasterAllClocks.lean",
+          "sha256": "3df78a1775210aede16ebd9b363630c2078af6d05b40d7f0efe70143c5dcadd4"
+        }
+      ]
+    },
+    {
+      "label": "thm:natural-process-original-joint-space-and-continuous-limit-usual-J1",
+      "manuscriptLines": "1004-1049",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Spectral.actualFullConfigurationPathLaw_eq_placed",
+          "source": "IGSIII34\\Spectral\\Collars\\ActualFiniteOriginalWholeLawIdentity.lean",
+          "sha256": "539ec811fb7960b64585b7af3f6186f9e3d25274712afbe4f7bfcedca3721309"
+        },
+        {
+          "declaration": "IGSIII34.Spectral.actualFullConfigurationPathLaw_discrete",
+          "source": "IGSIII34\\Spectral\\Collars\\ActualFiniteOriginalWholeLawIdentity.lean",
+          "sha256": "539ec811fb7960b64585b7af3f6186f9e3d25274712afbe4f7bfcedca3721309"
+        },
+        {
+          "declaration": "IGSIII34.Spectral.actualFullConfigurationPathLaw_weighted",
+          "source": "IGSIII34\\Spectral\\Collars\\ActualFiniteOriginalWholeLawIdentity.lean",
+          "sha256": "539ec811fb7960b64585b7af3f6186f9e3d25274712afbe4f7bfcedca3721309"
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.originalJointCompactPathLaws_weak_of_isometric_common_ambient",
+          "source": "IGSIII34\\Diffusion\\OriginalJointCommonAmbientWeak.lean",
+          "sha256": "986c2544b35e06f9648abc5c6595097fcbcc555c3222551eb6c1eaaf063ab31e"
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.originalJointCompactClass_tendsto_iff_coupled_usualJ1_continuous_limit",
+          "source": "IGSIII34\\Diffusion\\OriginalJointUsualContinuousLimitEquivalence.lean",
+          "sha256": "b2da6259f33d470ff58e11db06358b44edfa8ceb3ecfd1599f9fa2f4ebce025f"
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.originalJointCompactPathLaw_continuousSample_regular",
+          "source": "IGSIII34\\Diffusion\\OriginalJointContinuousSampleLaw.lean",
+          "sha256": "2fcd7a97a4c0e317b68deecee165e4a1292d2b335ee15ca2fc09b1a3e75be1ca"
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_ae_actual_natural_original_joint_limit",
+          "source": "IGSIII34\\Spectral\\Collars\\ActualSameMasterOriginalJointExistence.lean",
+          "sha256": "7004deaf8569064464afd885982992f3a8d860f52c781eff32fea39eb53c82dc"
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_ae_actual_all_clocks_original_joint_limits",
+          "source": "IGSIII34\\Spectral\\Collars\\ActualSameMasterAllClocksOriginalJointExistence.lean",
+          "sha256": "63e6934c51a92f6e8e2b3f4c7bcf825218c124b63daac6d5139f7464694ef29e"
+        },
+        {
+          "declaration": "IGSIII34.Spectral.actualAnnealedPlantedInitial_starting_convergence",
+          "source": "IGSIII34\\Spectral\\Collars\\ActualAnnealedPlantedStartingConvergence.lean",
+          "sha256": "650e3c72a7cdfc5d1d4074b471a44820f396bc5500a05374276fd37335ad9e7b"
+        }
+      ]
+    },
+    {
+      "label": "thm:natural-process-annealed-joint-convergence",
+      "manuscriptLines": "1048-1049",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_actual_natural_annealed_original_joint",
+          "source": "IGSIII34\\Spectral\\Collars\\ActualNaturalAnnealedOriginalJoint.lean",
+          "sha256": "606ad42b37e2e8f3223eb37c91dc510f71fdeafafbaec3f01c2dba47b491e878"
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_actual_all_clocks_annealed_original_joint",
+          "source": "IGSIII34\\Spectral\\Collars\\ActualAllClocksAnnealedOriginalJoint.lean",
+          "sha256": "fc4fc8307ebecd4150297555ec0928aa17a6d62c159302528f4da754e3550145"
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_actual_natural_annealed_original_coordinate_joint",
+          "source": "IGSIII34\\Spectral\\Collars\\ActualNaturalAnnealedOriginalCoordinateJoint.lean",
+          "sha256": "2fe0c301106c670373474a95541c97a12f849021916c18f6bf8be5a4e21db16d"
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.exists_completed_original_joint_annealed_family",
+          "source": "IGSIII34\\Diffusion\\CompletedEnvironmentOriginalJointFamily.lean",
+          "sha256": "2e073f019b1ab2c24120c8154ab93b8d527d76dfefd71396a0133c02ea98aa8a"
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.original_environment_joint_weak_of_completed_quenched",
+          "source": "IGSIII34\\Diffusion\\CompletedEnvironmentOriginalJointWeak.lean",
+          "sha256": "236a1fd057baa9fe8ef835e428716db74e2a0cc8cd0b65c2aa0e37d55c03ef93"
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.original_environment_joint_usual_tests_of_completed_quenched",
+          "source": "IGSIII34\\Diffusion\\CompletedEnvironmentOriginalJointUsualTests.lean",
+          "sha256": "24107064d5791d74f331edf498684b9afce2c60ea05ea91702ce93b009a9cd69"
+        }
+      ]
+    },
+    {
+      "label": "cor:deterministic-clock",
+      "manuscriptLines": "1053-1070",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_ae_actual_natural_common_section_three_all_clocks",
+          "source": "IGSIII34\\Spectral\\Collars\\ActualSameMasterAllClocks.lean",
+          "sha256": "3df78a1775210aede16ebd9b363630c2078af6d05b40d7f0efe70143c5dcadd4"
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_ae_actual_all_clocks_original_joint_limits",
+          "source": "IGSIII34\\Spectral\\Collars\\ActualSameMasterAllClocksOriginalJointExistence.lean",
+          "sha256": "63e6934c51a92f6e8e2b3f4c7bcf825218c124b63daac6d5139f7464694ef29e"
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_actual_all_clocks_annealed_original_joint",
+          "source": "IGSIII34\\Spectral\\Collars\\ActualAllClocksAnnealedOriginalJoint.lean",
+          "sha256": "fc4fc8307ebecd4150297555ec0928aa17a6d62c159302528f4da754e3550145"
+        },
+        {
+          "declaration": "IGSIII34.Spectral.scalarSpeedGlobalTimeScale_evaluation_completion20261011",
+          "source": "IGSIII34\\Spectral\\ActualScalarSpeedProcessCompletion20261011.lean",
+          "sha256": "33772908aa0bf4bf4865d2eb6572d987f8e6a4886c2463c46358e0c412ec4ff6"
+        },
+        {
+          "declaration": "IGSIII34.Spectral.actualScalarSpeedTransitionKernel_identity_completion20261011",
+          "source": "IGSIII34\\Spectral\\ActualScalarSpeedKernelCompletion20261011.lean",
+          "sha256": "679fca1cdd65f31d9edfe58ee4080a3d34b1e5c97a51930d04922c8e0f63ed2e"
+        },
+        {
+          "declaration": "IGSIII34.Spectral.scalarSpeedMeasure_variational_equivalence_completion20261011",
+          "source": "IGSIII34\\Spectral\\ScalarSpeedMeasureCompletion20261011.lean",
+          "sha256": "ad7cc83b34b0a4689157d7bac74585b664d88ddc6d74b847234f64f7b50a72c4"
+        }
+      ]
+    },
+    {
+      "label": "thm:heat-kernels-lem:spectral-typical",
+      "manuscriptLines": "1087-1139",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Spectral.ae_actual_typical_spectral_dimension_completion20261011",
+          "source": "IGSIII34\\Spectral\\ActualTypicalSpectralDimensionCompletion20261011.lean",
+          "sha256": "e6257916f540c11eda761a9d8a62cb68e216f4de34e776db1aa36be59fbbb91b"
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_ae_actual_natural_common_section_three_all_clocks",
+          "source": "IGSIII34\\Spectral\\Collars\\ActualSameMasterAllClocks.lean",
+          "sha256": "3df78a1775210aede16ebd9b363630c2078af6d05b40d7f0efe70143c5dcadd4"
+        }
+      ]
+    },
+    {
+      "label": "ex:spectral-threshold-fivefold-diamond",
+      "manuscriptLines": "1142-1151",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Spectral.fivefoldDiamond_actual_spectral_dimension_bound",
+          "source": "IGSIII34\\Spectral\\Collars\\FivefoldDiamondSpectralBound.lean",
+          "sha256": "191861d8ce062fa7b7904e3f9d3720750f8eedea062bf0fb34962a5832cf8362"
+        },
+        {
+          "declaration": "IGSIII34.Spectral.exists_fivefoldDiamond_strict_non_AO",
+          "source": "IGSIII34\\Spectral\\Collars\\FivefoldDiamondSpectralBound.lean",
+          "sha256": "191861d8ce062fa7b7904e3f9d3720750f8eedea062bf0fb34962a5832cf8362"
+        }
+      ]
+    },
+    {
+      "label": "scalar-speed-measure-kernel-and-spectral-dimension-invariance",
+      "manuscriptLines": "1154-1158",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Spectral.scalarSpeedMeasure_kernel_integral_completion20261011",
+          "source": "IGSIII34\\Spectral\\ScalarSpeedMeasureCompletion20261011.lean",
+          "sha256": "ad7cc83b34b0a4689157d7bac74585b664d88ddc6d74b847234f64f7b50a72c4"
+        },
+        {
+          "declaration": "IGSIII34.Spectral.scalar_speed_spectral_dimension_ae_completion20261011",
+          "source": "IGSIII34\\Spectral\\ScalarSpectralDimensionCompletion20261011.lean",
+          "sha256": "b5efe8410a6f750012a878298968de915ab397611b8609c9137411b9bffac9d7"
+        }
+      ]
+    }
+  ]
+}

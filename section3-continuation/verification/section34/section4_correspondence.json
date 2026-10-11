@@ -1,0 +1,212 @@
+{
+  "status": "complete",
+  "reviewedUtc": "2026-10-11T12:42:21.113341+00:00",
+  "sourcePaperCommit": "db2cbd8163ef90cc70ebd4d97f282993fd3311b6",
+  "sourcePaperSha256": "207204ef8eaffc8240324349e3b94929ede9a7a129b0e1d63298f1ff49af5d51",
+  "aggregateRoot": "IGSAlexanderOrbach",
+  "scope": "Frozen Section4 theorem obligations with every former Section3 input instantiated by actual proved Sections2–3 results.",
+  "obligations": [
+    {
+      "label": "Former electrical field and lower sandwich inputs discharged",
+      "manuscriptLines": "539–620;1161–1264",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "source": "IGSIII34/Percolation/Continuation/SectionFourDependency.lean",
+          "declaration": "IGSIII34.Percolation.naturalSectionFourElectrical",
+          "sha256": "09bf26fc5cbba2e2a1a96de0dc39aa4a405bbebe5760f9a2c4ae587f63d506f8"
+        },
+        {
+          "source": "IGSIII4/ActualSectionFour.lean",
+          "declaration": "IGSIII4.exists_section_four_from_proved_sections_two_three",
+          "sha256": "287aa0a983119a8824e889a24d26c954593ccdc6956ca19da7b72df2fc23ac11"
+        }
+      ]
+    },
+    {
+      "label": "Former mean-upper and terminal-core pruning inputs discharged",
+      "manuscriptLines": "574–620;1252–1264",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "source": "IGSIII4/ActualSectionThreeInputs.lean",
+          "declaration": "IGSIII4.naturalSectionFourMeanUpper",
+          "sha256": "8a8cfc264797efbe846539aa65cc2b71316e735572acd2f865b5ed0ace143576"
+        },
+        {
+          "source": "IGSIII34/Percolation/Continuation/NaturalMeanUpperCompletion20261011.lean",
+          "declaration": "IGSIII34.Percolation.natural_electrical_mean_upper_completion20261011",
+          "sha256": "3df29c927c2ba079e79e5647d32ce364a9793859dd7ee0cb7850efa97077133f"
+        },
+        {
+          "source": "IGSIII4/ActualSectionThreeInputs.lean",
+          "declaration": "IGSIII4.actual_section_four_core_pruning",
+          "sha256": "8a8cfc264797efbe846539aa65cc2b71316e735572acd2f865b5ed0ace143576"
+        },
+        {
+          "source": "IGSIII34/Resistance/ActualTerminalCorePruningCompletion20261011.lean",
+          "declaration": "IGSIII34.Percolation.classical_actual_core_pruning_section_three_completion20261011",
+          "sha256": "4575a87123480249a1d7652d47c2afc9dad9ec660ad086744712bf74fdddc130"
+        }
+      ]
+    },
+    {
+      "label": "Critical supersolution growth and equality rigidity",
+      "manuscriptLines": "1183–1218",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "source": "IGSIII4/ActualSectionFour.lean",
+          "declaration": "IGSIII4.natural_critical_supersolution",
+          "sha256": "287aa0a983119a8824e889a24d26c954593ccdc6956ca19da7b72df2fc23ac11"
+        }
+      ]
+    },
+    {
+      "label": "Strict chemical/electrical multiplier comparison",
+      "manuscriptLines": "1220–1233",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "source": "IGSIII4/ActualSectionFour.lean",
+          "declaration": "IGSIII4.section_four_for_natural_resistance",
+          "sha256": "287aa0a983119a8824e889a24d26c954593ccdc6956ca19da7b72df2fc23ac11"
+        },
+        {
+          "source": "IGSIII4/ActualChemicalData.lean",
+          "declaration": "IGSIII4.actual_strict_chemical_resistance",
+          "sha256": "c4027c99ace1e93ec37f9250b4641bb0cc5e41cea8c65c9b2667d91724cfc6ee"
+        }
+      ]
+    },
+    {
+      "label": "Full mass/core growth and strict clock/dimension comparison",
+      "manuscriptLines": "1235–1265",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "source": "IGSIII4/ActualSectionFour.lean",
+          "declaration": "IGSIII4.section_four_for_natural_resistance",
+          "sha256": "287aa0a983119a8824e889a24d26c954593ccdc6956ca19da7b72df2fc23ac11"
+        },
+        {
+          "source": "IGSIII4/TerminalCore.lean",
+          "declaration": "IGSIII4.terminalCoreMean_strictly_below_mass_radius",
+          "sha256": "db4726265bc4397acdca12c9ce0a15e44f918c32fd8fc82ab55a57a7c4804a49"
+        },
+        {
+          "source": "IGSIII4/ActualCoreClock.lean",
+          "declaration": "IGSIII4.actual_core_growth_clock",
+          "sha256": "07166be83ced7b545d22600853a2291d39406717d2ec7320431ae9c1149fd241"
+        },
+        {
+          "source": "IGSIII4/AlexanderOrbach.lean",
+          "declaration": "IGSIII4.actual_dimension_comparisons",
+          "sha256": "fe28f4767e72217497324e94bffdb3a871457d2fadae8be942d0fffd074699f4"
+        }
+      ]
+    },
+    {
+      "label": "AO mass and dimension equalities for the actual spectral limit",
+      "manuscriptLines": "1162–1181;1275–1283",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "source": "IGSIII4/ActualTypicalPointSectionFour.lean",
+          "declaration": "IGSIII4.exists_ae_actual_section_four_typical_heat_kernel",
+          "sha256": "84ccdfdf00dce971fcbae39c711a6799edb5667f0ca5b1ebacdc1ed6d36a8526"
+        },
+        {
+          "source": "IGSIII4/ActualSectionFour.lean",
+          "declaration": "IGSIII4.section_four_for_natural_resistance",
+          "sha256": "287aa0a983119a8824e889a24d26c954593ccdc6956ca19da7b72df2fc23ac11"
+        }
+      ]
+    },
+    {
+      "label": "AO exclusion outside the open rectangle, including boundaries",
+      "manuscriptLines": "1267–1284",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "source": "IGSIII4/ActualTypicalPointSectionFour.lean",
+          "declaration": "IGSIII4.exists_actual_section_four_and_typical_heat_kernel",
+          "sha256": "84ccdfdf00dce971fcbae39c711a6799edb5667f0ca5b1ebacdc1ed6d36a8526"
+        },
+        {
+          "source": "IGSIII4/AlexanderOrbach.lean",
+          "declaration": "IGSIII4.actual_ao_region",
+          "sha256": "fe28f4767e72217497324e94bffdb3a871457d2fadae8be942d0fffd074699f4"
+        }
+      ]
+    },
+    {
+      "label": "Strict spectral sign in both stated mass regions",
+      "manuscriptLines": "1286–1289",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "source": "IGSIII4/ActualTypicalPointSectionFour.lean",
+          "declaration": "IGSIII4.exists_ae_actual_section_four_typical_heat_kernel",
+          "sha256": "84ccdfdf00dce971fcbae39c711a6799edb5667f0ca5b1ebacdc1ed6d36a8526"
+        }
+      ]
+    },
+    {
+      "label": "Fivefold subdivided diamond at its own critical point",
+      "manuscriptLines": "1291–1300",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "source": "IGSIII4/ActualSectionFour.lean",
+          "declaration": "IGSIII4.natural_long_diamond_spectral_dimension_strictly_below_four_thirds",
+          "sha256": "287aa0a983119a8824e889a24d26c954593ccdc6956ca19da7b72df2fc23ac11"
+        },
+        {
+          "source": "IGSIII4/LongDiamond.lean",
+          "declaration": "IGSIII4.LongDiamond.actual_chemical_factor_ten",
+          "sha256": "e7fe0b3bea66adaf2c0535b7f28c08bb5a18dc84d7216973984004d6e69cb2e4"
+        },
+        {
+          "source": "IGSIII4/LongDiamond.lean",
+          "declaration": "IGSIII4.LongDiamond.chemical_mass_dimension_bound",
+          "sha256": "e7fe0b3bea66adaf2c0535b7f28c08bb5a18dc84d7216973984004d6e69cb2e4"
+        }
+      ]
+    },
+    {
+      "label": "Actual typical-point formula constructed, with outer and inner AE measures",
+      "manuscriptLines": "1077–1157;1162–1300",
+      "reviewed": true,
+      "entryPoints": [
+        {
+          "source": "IGSIII4/ActualTypicalPointSectionFour.lean",
+          "declaration": "IGSIII4.exists_actual_section_four_and_typical_heat_kernel",
+          "sha256": "84ccdfdf00dce971fcbae39c711a6799edb5667f0ca5b1ebacdc1ed6d36a8526"
+        },
+        {
+          "source": "IGSIII34/Spectral/ActualNaturalTypicalSpectralCompletion20261011.lean",
+          "declaration": "IGSIII34.Spectral.exists_ae_actual_natural_typical_spectral_completion20261011",
+          "sha256": "60b55b92d30b7dc1276bd43721a4a16e5350d23f74d53a13e23d66e89d345c90"
+        }
+      ]
+    }
+  ],
+  "scopeNotes": [
+    "The final two existence entrypoints take precisely six original-model parameters and construct natural/chemical/geometry/mass/spectral witnesses.",
+    "Historical Accepted* structures are data certificates for general helper lemmas, not axioms or inputs of final actual results.",
+    "The typical spectral assertion is the actual compact diffusion diagonal logarithmic small-time limit, under original innovation AE and physical-mass AE.",
+    "Dimension quantities use the established logarithmic mass/chemical/resistance growth formulas; the earlier geometry identification remains in the completed Section3 scope.",
+    "The complete imported project closure is compiled/checked against exact source/object hashes; unimported saved drafts and a clean rebuild of all drafts are not claimed.",
+    "No global AO exclusion is proved. NaturalGlobalAlexanderOrbachConjecture is a predicate only.",
+    "Section3 continuous-limit usual-local J1, respective chemical/electrical marked GHP and typical compact-diffusion scope are preserved."
+  ],
+  "unresolvedObligations": [],
+  "unprovedPredicates": [
+    {
+      "declaration": "IGSIII4.NaturalGlobalAlexanderOrbachConjecture",
+      "manuscriptLines": "1306–1312",
+      "status": "conjecture only"
+    }
+  ]
+}

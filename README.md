@@ -21,9 +21,10 @@ it does not claim a fresh combined build or completed Section 3 proof.
 
 # IGS: Alexander–Orbach conjecture on hierarchical lattices
 
-This repository packages the existing Lean formalisation of Sections 2, 3 and 4
-of IGS III. It contains Lean sources, pinned Lake dependencies and the required
-third-party licence. The manuscript and research archives are separate.
+This repository packages the Lean formalisation of Sections 2, 3 and 4 of
+IGS III. The root Lake package is the current verified entry point; it contains
+Lean sources, pinned dependencies and the required third-party licence.
+The manuscript and research archives are separate.
 
 ## Build
 
@@ -51,20 +52,41 @@ and `Quot.sound`.
 | `IGSIII4/` | Completed Section 4, relative to explicitly listed Section 3 inputs. |
 | `Universality/` | Required transitive IGS II Lean dependencies, included locally. |
 
-Section 3 establishes actual finite-network electrical estimates, natural
-resistance growth and its logarithmic limits, an endogenous positive field,
-and physical L2 and all-address almost-sure amplitude convergence. Uniform
-real moments and real-moment limits to fixed omega members are also proved.
-Final all-order amplitude assembly, eigenlaw uniqueness, full resistance forms,
-diffusion and actual heat-kernel spectral limits remain unfinished.
+The October 11, 2026 continuation establishes the actual unique positive
+mean-one natural electrical law, all-order amplitudes and real moments;
+the compact electrical carrier, its identification with the chemical carrier,
+the same full-support Perron probability mass, and the closed regular strongly
+local resistance form. Whole original finite resolvents, the actual Feller
+semigroup and positive conservative heat kernel, and the typical spectral
+dimension formula are proved.
 
-Section 4's accepted Section 3 facts are explicit theorem parameters in
-`IGSIII4/AcceptedSectionThree.lean`. They are not new Lean axioms. Its completed
-proofs do not establish the still-unfinished analytic inputs from Section 3.
+It also constructs the actual continuous limiting process and proves strong
+Markov identities for its natural filtration at almost-surely finite stopping
+times. Discrete, continuous rate-one and vertex-variable-speed original walks
+have whole cadlag path-law convergence with their genuine natural clocks;
+the exact deterministic-clock changes and common chemical isometric
+realisations are included. These results are not obtained by assuming a
+limiting process, a path-tightness conclusion or a spectral exponent.
+
+**Section 3 is still marked in progress.** The whole-path topology currently
+formalised uses genuine J1 time changes on every integer horizon. It is
+stronger than the usual local J1 topology at paths with an integer-time jump.
+At a continuous limit, uniform convergence on compact time intervals and
+genuine J1 convergence on every real horizon are proved. The final usual-local
+J1 weak-test bridge and the scalar speed-measure equivalence are being
+completed; no equality of the two whole-path topologies is asserted.
+See [the detailed scope and result index](SECTION3_STATUS.md).
+
+Section 4's accepted Section 3 facts remain explicit theorem parameters in
+`IGSIII4/AcceptedSectionThree.lean`. They are not new Lean axioms. The new
+Section 3 work proves the natural electrical sandwich and mean upper bound,
+and proves terminal-core pruning on every actual classical generation.
+The final consolidated Section 4 adapter is separate from its existing proofs.
 The global Alexander–Orbach exclusion is a conjecture predicate, not a proved theorem.
 
-Only formal modules that compiled in their original audited projects are included.
-Uncompiled working drafts are kept outside this package.
+Only individually compiled formal modules are adopted by the unified root
+package. Uncompiled working drafts are excluded from its import closure.
+The publication manifest records the adopted sources and verification scope.
 
 The finite-dimensional Brouwer foundation is adapted from
 [harfe/fixed-point-theorems-lean4](https://github.com/harfe/fixed-point-theorems-lean4/tree/770940ddf9878cf61952ed53d910b92bca841838)

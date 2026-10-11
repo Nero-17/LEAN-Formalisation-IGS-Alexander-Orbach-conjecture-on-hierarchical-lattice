@@ -29,7 +29,8 @@ finite actual geometry/mass/path observation kernels, and measurable starting-po
 adapters. They are preserved but are outside the above aggregate unless explicitly
 listed in its source hashes. Their presence alone is not an audit certificate.
 
-The latest unverified drafts include:
+The following originally listed drafts have now separately compiled in round
+2026-10-11-171820, though they remain outside the older aggregate:
 
 - `IGSIII34/Diffusion/CountableDistanceProfile.lean`
 - `IGSIII34/Diffusion/CountableDistanceProfileCadlagWeak.lean`
@@ -39,7 +40,12 @@ The latest unverified drafts include:
 ## Exact remaining obligation
 
 The manuscript's annealed joint-convergence sentence still needs its full actual-model
-bridge. Quenched convergence with an environment-dependent existential ambient space
+bridge. Latest adversarial review isolates both a determining-test/topology bridge
+for original marked-GHP/whole usual-local-J1 and ONE original decorated limit law.
+The intrinsic joint-test/DCT theorem does not by itself prove either item.
+Original-profile distance recovery is now exact and measurable, and true spatial
+whole-path isometric transport is compiled. Decorated coupling/gluing is in progress.
+Quenched convergence with an environment-dependent existential ambient space
 does not automatically supply measurable joint geometry/mass/whole-path laws.
 The actual finite conditional kernels and generic measurable-limit/integration tools
 are available. What remains is to assemble actual full-path transport and the correct

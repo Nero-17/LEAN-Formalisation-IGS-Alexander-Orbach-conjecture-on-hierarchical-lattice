@@ -80,12 +80,14 @@ theorem actualFiniteAnnealedPlacedPathLaw_weighted_configuration_transport
   set_option backward.defeqAttrib.useBackward true in
     dsimp only [actualFiniteClusterFintype, actualFiniteClusterFinite, actualFiniteClusterMeasurableSpace,
       actualFiniteClusterMetricSpace, actualFiniteClusterDecidableEq, actualFiniteClusterNonempty]
-  simp only [ActualFiniteCluster, configurationAtDepth, Function.update]
+  simp only [ActualFiniteCluster]
   generalize_proofs at *
-  generalize decision : instDecidableEqNat depth depth = currentDecision at *
-  cases currentDecision with
-  | isTrue identity => rfl
-  | isFalse contradiction => exact (contradiction rfl).elim
+  generalize stateIdentity : configurationAtDepth rule depth (configuration depth) depth = currentState at *
+  have same : currentState = configuration depth :=
+    stateIdentity.symm.trans (configurationAtDepth_self rule depth (configuration depth))
+  clear stateIdentity
+  subst currentState
+  rfl
 
 end
 end IGSIII34.Spectral

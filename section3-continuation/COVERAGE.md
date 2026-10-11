@@ -60,3 +60,9 @@ Research is now paused for organization and GitHub upload. The latest successful
 ## Round 2026-10-11-171820 — resumed actual annealed bridge
 
 Research resumed at09:18:20UTC. Three GPT6.1Sol high agents plus root are continuing. CountableDistanceProfile and CountableDistanceProfileCadlagWeak now compile: genuine whole integer-J1 and usual-localJ1 spatial transport, not merely rational-time tests. ActualCommonChemicalHausdorff now compiles: real original finite ranges converge to the SAME actual target range in NonemptyCompacts. A reconstructed weak-limit Markov kernel removes an unnecessary separability requirement on the whole-path target. These leaves are newer than the successful 11,231-declaration aggregate and are not yet included in that audit. Actual common-mass/marks, actual fullpath kernels and same-master assembly remain in progress.
+
+## Current semantic status — 2026-10-11 10:15 UTC
+
+Original finite whole-path laws, all three clock configuration transports, same-carrier full geometry/marks/both physical masses, intrinsic joint test transport/integration, arbitrary starting-point adapters, whole-path isometric transport, and exact Borel original-profile distance recovery are separately compiled. The coherent actual master response assembly is still compiling. None of these facts alone closes the original annealed joint-topology assertion.
+
+Two remaining semantic obligations are explicit: cover an original marked-GHP/whole usual-local-J1 determining test family, and construct/identify ONE original decorated joint probability law. Per-test dominated convergence gives individually measurable scalar responses. A full H-path law gives a probability on the auxiliary product metric. Neither may be substituted for those two obligations. The true decorated coupling/quotient and original-metric reconstruction route is in progress. Section3Complete remains false pending both semantic closure and the final aggregate audit.

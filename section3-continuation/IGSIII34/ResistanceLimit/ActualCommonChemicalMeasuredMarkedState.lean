@@ -26,9 +26,10 @@ theorem placed_measured_marked_state_tendsto
     (marksConverge : ∀ side, Tendsto (fun depth => marks depth side) atTop (𝓝 (mark side)))
     (massesConverge : ∀ counting, Tendsto (fun depth => masses depth counting) atTop (𝓝 (mass counting))) :
     Tendsto (fun depth => ((images depth, marks depth, masses depth) : PlacedMeasuredMarkedState Ambient))
-      atTop (𝓝 (image, mark, mass)) :=
-  imagesConverge.prodMk ((tendsto_pi_nhds.mpr marksConverge).prodMk
-    (tendsto_pi_nhds.mpr massesConverge))
+      atTop (𝓝 (image, mark, mass)) := by
+  simpa only [nhds_prod_eq] using
+    imagesConverge.prodMk ((tendsto_pi_nhds.mpr marksConverge).prodMk
+      (tendsto_pi_nhds.mpr massesConverge))
 
 variable (rule : Rule) (classicalRule : rule.Classical)
   (marks : (List (Fin rule.edges) × Bool) → Configuration rule.edges)

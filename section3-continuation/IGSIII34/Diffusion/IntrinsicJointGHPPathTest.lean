@@ -11,7 +11,7 @@ set_option maxHeartbeats 2400000
 namespace IGSIII34.Diffusion
 noncomputable section
 open MeasureTheory Filter TopologicalSpace
-open scoped _root_.Topology BigOperators BoundedContinuousFunction NNReal
+open scoped _root_.Topology BigOperators BoundedContinuousFunction NNReal ENNReal
 
 def JointMeasuredMarkedState (Space : Type*) [TopologicalSpace Space] [MeasurableSpace Space] :=
   NonemptyCompacts Space × (Bool → Space) × (Bool → ProbabilityMeasure Space)
@@ -73,7 +73,7 @@ theorem jointMeasuredMarkedStateCost_tendsto_zero
       ((states depth).2.2 side : Measure Space) (state.2.2 side : Measure Space)) atTop (𝓝 0) := by
     have coordinateLimit (side : Bool) : Tendsto (fun depth => levyProkhorovDist
         ((states depth).2.2 side : Measure Space) (state.2.2 side : Measure Space)) atTop (𝓝 0) := by
-      simpa only [levyProkhorovDist, ENNReal.toReal_zero] using (ENNReal.continuousAt_toReal (by simp : (0 : ENNReal) ≠ ∞)).tendsto.comp (masses side)
+      simpa only [levyProkhorovDist, ENNReal.toReal_zero, Function.comp_def] using (ENNReal.continuousAt_toReal (by simp : (0 : ENNReal) ≠ ∞)).tendsto.comp (masses side)
     simpa using tendsto_finsetSum Finset.univ (fun side _ => coordinateLimit side)
   simpa only [jointMeasuredMarkedStateCost, add_zero] using (carrierDistance.add markDistance).add massDistance
 
@@ -97,6 +97,8 @@ theorem intrinsic_joint_test_response_tendsto
         test.spatialLipschitz * jointMeasuredMarkedStateCost (states depth) state := by
     rw [← integral_sub ((test.value Space (states depth)).integrable (μ := (laws depth : Measure _))) ((test.value Space state).integrable (μ := (laws depth : Measure _)))]
     simpa using norm_integral_le_of_norm_le_const (μ := (laws depth : Measure _))
+      (f := fun path => test.value Space (states depth) path - test.value Space state path)
+      (C := (test.spatialLipschitz : ℝ) * jointMeasuredMarkedStateCost (states depth) state)
       (Eventually.of_forall (fun path => by
         simpa only [Real.norm_eq_abs] using test.spatialStability Space (states depth) state path))
   have errorZero : Tendsto (fun depth =>

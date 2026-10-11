@@ -18,6 +18,21 @@ def actualBothFiniteClusterProbability (rule : Rule)
     ProbabilityMeasure (ActualFiniteCluster rule configuration scale scalePositive depth) :=
   if counting then ⟨actualFiniteClusterMeasure rule configuration scale scalePositive depth, inferInstance⟩ else
     ⟨actualFiniteClusterDegreeMeasure rule configuration crossing scale scalePositive depth, inferInstance⟩
+
+@[simp] theorem actualBothFiniteClusterProbability_counting (rule : Rule)
+    (configuration : ∀ depth, Configuration (rule.generation depth).edges)
+    (crossing : ∀ depth, (rule.generation depth).network.crosses (configuration depth) = true)
+    (scale : ℝ) (scalePositive : 0 < scale) (depth : ℕ) :
+    (actualBothFiniteClusterProbability rule configuration crossing scale scalePositive depth true : Measure _) =
+      actualFiniteClusterMeasure rule configuration scale scalePositive depth := rfl
+
+@[simp] theorem actualBothFiniteClusterProbability_degree (rule : Rule)
+    (configuration : ∀ depth, Configuration (rule.generation depth).edges)
+    (crossing : ∀ depth, (rule.generation depth).network.crosses (configuration depth) = true)
+    (scale : ℝ) (scalePositive : 0 < scale) (depth : ℕ) :
+    (actualBothFiniteClusterProbability rule configuration crossing scale scalePositive depth false : Measure _) =
+      actualFiniteClusterDegreeMeasure rule configuration crossing scale scalePositive depth := rfl
+
 variable (rule : Rule) (classicalRule : rule.Classical)
   (p : ℝ) (positive : 0 < p) (belowOne : p < 1) (fixedPoint : rule.network.reliability p = p)
   (growth : ℝ) (value : Lp ℝ 2 (independentInnovationLaw rule p positive belowOne fixedPoint))

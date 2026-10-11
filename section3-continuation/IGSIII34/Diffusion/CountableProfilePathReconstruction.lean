@@ -55,8 +55,8 @@ theorem countableProfileContinuous_observation_regular
   obtain ⟨duration, durationPositive, close⟩ := Metric.uniformContinuousOn_iff.mp uniform tolerance positive
   refine ⟨duration, durationPositive, ?_⟩
   intro first last firstBefore lastBefore near
-  exact close (times first) ⟨zero_le _, by exact_mod_cast firstBefore⟩
-    (times last) ⟨zero_le _, by exact_mod_cast lastBefore⟩ near
+  exact close (times first) ⟨zero_le, by exact_mod_cast firstBefore⟩
+    (times last) ⟨zero_le, by exact_mod_cast lastBefore⟩ near
 
 /-- Observing and reconstructing a continuous path preserves its value at
 every nonnegative real time, rather than only at the observed coordinates. -/

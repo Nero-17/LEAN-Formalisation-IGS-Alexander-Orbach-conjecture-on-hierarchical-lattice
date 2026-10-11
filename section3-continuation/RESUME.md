@@ -1,6 +1,6 @@
 # Saved Section 3 progress — 2026-10-11
 
-Research is paused at the user's request to organize and upload all current work.
+Research resumed on 2026-10-11 at 09:18:20 UTC, round 2026-10-11-171820, to finish the actual annealed bridge and final audit.
 Section 3 is **not yet complete**. All saved Lean source files are retained, including
 unimported drafts. The root repository package remains the earlier verified baseline;
 this directory contains the current Section 3 continuation.

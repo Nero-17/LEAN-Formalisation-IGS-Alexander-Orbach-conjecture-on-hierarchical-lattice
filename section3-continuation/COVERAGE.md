@@ -55,3 +55,8 @@ One newly isolated prose obligation remains: main.tex line1049 states annealed j
 ## Saved on user request — 2026-10-11T05:37:50.711599+00:00
 
 Research is now paused for organization and GitHub upload. The latest successful aggregate audit contains 11,231 declarations at 05:31:41Z; all 1,406 source hashes were rechecked. Later compiled helpers and unverified drafts are preserved separately in scope, as described in RESUME.md. Section 3 remains incomplete because the actual full annealed marked-GHP/whole-path J1 bridge is not yet finished.
+
+
+## Round 2026-10-11-171820 — resumed actual annealed bridge
+
+Research resumed at09:18:20UTC. Three GPT6.1Sol high agents plus root are continuing. CountableDistanceProfile and CountableDistanceProfileCadlagWeak now compile: genuine whole integer-J1 and usual-localJ1 spatial transport, not merely rational-time tests. ActualCommonChemicalHausdorff now compiles: real original finite ranges converge to the SAME actual target range in NonemptyCompacts. A reconstructed weak-limit Markov kernel removes an unnecessary separability requirement on the whole-path target. These leaves are newer than the successful 11,231-declaration aggregate and are not yet included in that audit. Actual common-mass/marks, actual fullpath kernels and same-master assembly remain in progress.

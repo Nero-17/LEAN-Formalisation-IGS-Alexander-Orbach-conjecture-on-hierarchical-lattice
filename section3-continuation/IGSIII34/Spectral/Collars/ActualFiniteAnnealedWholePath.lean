@@ -2,8 +2,10 @@ import IGSIII34.Spectral.Collars.ActualFiniteAnnealedStartingPoints
 import IGSIII34.Diffusion.CountableDistanceProfile
 import IGSIII34.Diffusion.DiscreteCadlagWeakCompletion20261011
 import IGSIII34.Diffusion.FiniteWeightedCadlagLawCompletion20261011
+import Mathlib.MeasureTheory.Measure.DiracProba
 
 set_option autoImplicit false
+set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 3000000
 namespace IGSIII34.Spectral
 noncomputable section
@@ -47,7 +49,7 @@ def actualFiniteAnnealedWholePathLaw
   if discrete : kind = 0 then
     exact discreteCadlagProbabilityCompletion20261011
       (Vertex := ActualFiniteCluster rule (configurationAtDepth rule depth configuration) scale scalePositive depth)
-      (⟨finiteDiscreteWalkLaw endpoint degreePositive (Measure.dirac vertex), inferInstance⟩ : ProbabilityMeasure _)
+      (⟨finiteDiscreteWalkLaw (Vertex := ActualFiniteCluster rule (configurationAtDepth rule depth configuration) scale scalePositive depth) endpoint degreePositive (Measure.dirac vertex), inferInstance⟩ : ProbabilityMeasure _)
       clock clockPositive (actualFiniteAnnealedCompactProfile rule scale scalePositive depth configuration)
   else
     exact finiteWeightedCadlagProbabilityCompletion20261011
@@ -93,14 +95,14 @@ def actualFiniteAnnealedWholeResponse
 def actualFiniteAnnealedWholeConfigurationKernel
     (clock : Configuration (rule.generation depth).edges → ℝ) (kind : Fin 3) :
     Kernel (Configuration (rule.generation depth).edges × Fin (rule.generation depth).vertices) (ActualAnnealedWholeCode rule) :=
-  Kernel.ofFunOfCountable (fun input => (actualFiniteAnnealedWholeResponse rule scale scalePositive depth clock kind input : Measure _))
+  Kernel.ofFunOfCountable (fun input => (actualFiniteAnnealedWholeResponse rule scale scalePositive depth clock kind input : Measure (ActualAnnealedWholeCode rule)))
 
 instance actualFiniteAnnealedWholeConfigurationKernel_markov
     (clock : Configuration (rule.generation depth).edges → ℝ) (kind : Fin 3) :
     IsMarkovKernel (actualFiniteAnnealedWholeConfigurationKernel rule scale scalePositive depth clock kind) := by
   constructor
   intro input
-  change IsProbabilityMeasure (actualFiniteAnnealedWholeResponse rule scale scalePositive depth clock kind input : Measure _)
+  change IsProbabilityMeasure (actualFiniteAnnealedWholeResponse rule scale scalePositive depth clock kind input : Measure (ActualAnnealedWholeCode rule))
   infer_instance
 
 /-- Arbitrary measurable random starting vertices are allowed. The finite

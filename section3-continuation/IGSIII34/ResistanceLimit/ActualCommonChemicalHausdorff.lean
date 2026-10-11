@@ -37,6 +37,7 @@ variable {Ambient : Type*} [MetricSpace Ambient]
     dist (sources depth vertex) (target (actualChemicalVertex rule classicalRule
       (fun depth => markedGenerationConfiguration rule marks depth [] true) coherent scale scalePositive lengths nonnegative positive childConvergence depth vertex)) < tolerance)
 
+include placementClose in
 /-- On the SAME prescribed common ambient, the entire original finite
 cluster images converge in Hausdorff topology to the actual chemical image. -/
 theorem actual_common_chemical_compact_images_tendsto
@@ -61,7 +62,7 @@ theorem actual_common_chemical_compact_images_tendsto
   intro tolerance tolerancePositive
   filter_upwards [placementClose (tolerance / 4) (by positivity),
     (tendsto_order.mp mesh).2 (tolerance / 4) (by positivity), eventually_ge_atTop start] with depth close small beyond
-  rw [Real.dist_eq, sub_zero, abs_of_nonneg dist_nonneg, NonemptyCompacts.dist_eq]
+  rw [Real.dist_eq, sub_zero, abs_of_nonneg dist_nonneg, Metric.NonemptyCompacts.dist_eq]
   have bound : Metric.hausdorffDist (Set.range (sources depth)) (Set.range target) ≤ tolerance / 2 := by
     apply Metric.hausdorffDist_le_of_mem_dist (by positivity)
     · rintro _ ⟨vertex, rfl⟩
@@ -76,10 +77,15 @@ theorem actual_common_chemical_compact_images_tendsto
       have triangle := dist_triangle (target point)
         (target (actualChemicalVertex rule classicalRule (fun depth => markedGenerationConfiguration rule marks depth [] true)
           coherent scale scalePositive lengths nonnegative positive childConvergence depth vertex)) (sources depth vertex)
-      rw [targetIsometry.dist_eq, dist_comm _ (sources depth vertex)] at triangle
-      exact triangle.trans (by linarith [close vertex])
+      rw [targetIsometry.dist_eq] at triangle
+      have reverseClose := close vertex
+      rw [dist_comm] at reverseClose
+      have estimate : dist (target point) (sources depth vertex) ≤ tolerance / 2 :=
+        triangle.trans (by linarith)
+      simpa only [dist_comm] using estimate
   exact bound.trans_lt (by linarith)
 
+include placementClose in
 /-- Every fixed planted or born mark converges under the prescribed source
 placements. In particular this applies to both ordered planted terminals. -/
 theorem actual_common_chemical_born_mark_tendsto (age : ℕ)
@@ -95,6 +101,12 @@ theorem actual_common_chemical_born_mark_tendsto (age : ℕ)
   simp only [dif_pos bound]
   have estimate := close (retainedFiniteVertexEmbedding rule (fun depth => markedGenerationConfiguration rule marks depth [] true)
     coherent scale scalePositive age depth bound vertex)
+  change dist (sources depth (retainedFiniteVertexEmbedding rule (fun depth => markedGenerationConfiguration rule marks depth [] true)
+      coherent scale scalePositive age depth bound vertex))
+    (target (actualChemicalVertex rule classicalRule (fun depth => markedGenerationConfiguration rule marks depth [] true)
+      coherent scale scalePositive lengths nonnegative positive childConvergence depth
+      (retainedPersistentVertexEmbedding rule (fun depth => markedGenerationConfiguration rule marks depth [] true)
+        coherent age depth bound vertex))) < tolerance at estimate
   rw [← actualChemicalVertex_persistent rule classicalRule (fun depth => markedGenerationConfiguration rule marks depth [] true)
     coherent scale scalePositive lengths nonnegative positive childConvergence age depth bound vertex] at estimate
   exact estimate

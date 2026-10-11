@@ -8,7 +8,7 @@ set_option maxHeartbeats 4200000
 namespace IGSIII34.Diffusion
 noncomputable section
 open MeasureTheory Filter Set
-open scoped _root_.Topology
+open scoped _root_.Topology NNReal
 
 /-- Every original time of every original path is retained by the compact
 countable spatial profile. Coordinatewise uniform spatial approximation

@@ -1,28 +1,25 @@
-# Section 3 saved progress
+# Section 3 formalisation
 
-This is the saved continuation snapshot for round 2026-10-11-171820.
-Research is ongoing at the user’s request. See `RESUME.md` for the exact handoff.
-It contains compiled proofs and working drafts. **Section 3 is not yet complete.**
-The root package preserves the earlier verified baseline; the current Section 3
-continuation is this directory.
+The manuscript obligations for frozen source commit
+`db2cbd8163ef90cc70ebd4d97f282993fd3311b6` are complete within the explicit
+scope in `COVERAGE.md`. The original chemical metric, ordered marks, both
+physical masses and whole-path law occur in one genuine joint probability law;
+the usual-local J1 interpretation is proved at the continuous diffusion limits.
+Electrical marked GHP is also proved on the same environmental event.
 
-Current advances include genuine usual-local J1 probability-law convergence,
-the same common ambient and physical measure for the original natural and
-deterministic clocks, raw electrical and chemical marked GHP, physical closed-cell
-masses, and completed-form retained-component energy decomposition.
-Completed-domain zero extension, its canonical closed-cell support and intrinsic
-energy identification are compiled, as is the actual fivefold-diamond strict
-non-AO example. The annealed joint-law coding and measurability bridge remains
-unfinished. The latest successful combined audit covers 11,231 declarations;
-newer helpers and drafts remain outside that certificate unless its hashes list them.
+The final aggregate audit covers 12,037 declarations
+and permits only `propext`, `Classical.choice` and `Quot.sound`.
+`verification/section3_correspondence.json` links the reviewed manuscript
+obligations to audited declarations and exact source hashes. The audit is an
+incremental source/object check, not a claim of a clean rebuild.
 
-`PROGRESS_SNAPSHOT.json` records every copied Lean source hash.
-`verification/manifest.json` is the last successful aggregate audit; its claims
-apply only to its recorded source hashes. Later files and working drafts are
-not certified by that earlier audit. See `COVERAGE.md` for the scope.
+This directory also preserves working drafts outside the audited import
+closure. `PROGRESS_SNAPSHOT.json` distinguishes them by exact hashes.
+The repository root retains the earlier baseline; this continuation directory
+contains the completed Section 3 package. No global AO exclusion theorem,
+simultaneous two-metric joint topology or generic discontinuous-limit local-J1
+metrization is claimed.
 
-From this directory, fetch the pinned dependencies with `lake update` and
-`lake exe cache get`, build the vendored prerequisites with `lake build Universality`,
-then run `python scripts/verify.py --imported-only` to check the aggregate import
-closure. This is an incremental
-audit, not a claim of a clean rebuild or completed manuscript formalisation.
+With the pinned Lean and mathlib dependencies installed, reproduce the final
+certificate from this directory with
+`python scripts/verify.py --imported-only --section3-complete`.

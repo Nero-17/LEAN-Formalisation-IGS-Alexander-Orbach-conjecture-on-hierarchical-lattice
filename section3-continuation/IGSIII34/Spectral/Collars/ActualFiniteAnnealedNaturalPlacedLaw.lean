@@ -40,7 +40,7 @@ variable (rule : Rule) (p : ℝ) (positive : 0 < p) (belowOne : p < 1)
   have clock := actualFiniteAnnealedNaturalClock_original_identity rule (stationaryConfiguration rule marks.val) scale scalePositive depth
     (markedGenerationConfiguration_crosses rule marks.val marks.property.1.1.2.1 depth [] true) growth growthPositive (0 : Fin 3)
   simp only [show (0 : Fin 3) ≠ 2 from by decide, if_false] at clock
-  simpa only [clock, actualPaperPlacedDiscreteCadlagLaw, actualPaperDiscreteClockCompletion20261011, diracProba] using identity
+  simpa only [clock, actualPaperPlacedDiscreteCadlagLaw, actualPaperDiscreteClockCompletion20261011, diracProba, ProbabilityMeasure.coe_mk] using identity
 
  theorem actualFiniteAnnealedNaturalPlacedLaw_rate_one (depth : ℕ) :
     actualFiniteAnnealedPlacedPathLaw rule scale scalePositive depth (stationaryConfiguration rule marks.val depth)
@@ -84,7 +84,7 @@ variable (rule : Rule) (p : ℝ) (positive : 0 < p) (belowOne : p < 1)
   simp only [show (2 : Fin 3) ≠ 1 from by decide, if_false] at identity
   simp only [clock] at identity
   rw [← finiteCountingOriginalCadlagIdentity _ _ _ (growth ^ (depth + 1)) (pow_pos growthPositive _) (placement depth)] at identity
-  exact identity
+  simpa only [clock, actualVertexVariableSpeedPlacedCadlagLawCompletion20261011] using identity
 
 end
 end IGSIII34.Spectral

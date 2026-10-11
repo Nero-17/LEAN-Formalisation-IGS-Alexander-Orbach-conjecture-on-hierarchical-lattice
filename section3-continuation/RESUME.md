@@ -1,83 +1,14 @@
-# Saved Section 3 progress — 2026-10-11
+# Section 3 completed handoff
 
-Research resumed on 2026-10-11 at 09:18:20 UTC, round 2026-10-11-171820, to finish the actual annealed bridge and final audit.
-Section 3 is **not yet complete**. All saved Lean source files are retained, including
-unimported drafts. The root repository package remains the earlier verified baseline;
-this directory contains the current Section 3 continuation.
+Section 3 correspondence and final aggregate audit complete.
 
-## Verified aggregate
+Round2026-10-11-191126; original start2026-10-11T11:11:26Z.
+No Section 3 proof obligation remains in the certified frozen scope.
+Read COVERAGE.md, SECTION3_RESULT_INDEX.md and the exact manifest/correspondence
+before extending the result. The actual all-clock annealed family, original
+environmental mixture identities and continuous-limit usual tests are included.
 
-`verification/manifest.json` records the successful audit at
-2026-10-11T05:31:41Z: **11,231 declarations**, including private/generated declarations
-owned by imported IGSIII/IGSIII34/IGSIII4 modules. Only `propext`, `Classical.choice`,
-and `Quot.sound` occur transitively. Its 1,406 recorded project source hashes were
-rechecked before this upload. This does not certify every saved draft or a clean
-build of the whole repository. The vendor IGS II dependencies are included locally.
-
-The audited work includes the same-carrier metric/measure/process theorem for the
-original clocks, usual-local J1 convergence, completed component energy decomposition,
-actual intrinsic/global energy identification, canonical closed-cell identification,
-zero extension with exact support, and the concrete fivefold-diamond bound
-`ds <= log(20)/log(10) < 4/3` for actual critical parameters and the natural electrical law.
-
-## Later saved work
-
-Newer separately compiled modules establish root/inactive-component energy identities,
-the component homeomorphism, literal natural-field sandwich/compactness/moment
-certificates, measurable weak-limit Markov kernels, annealed joint integration,
-finite actual geometry/mass/path observation kernels, and measurable starting-point
-adapters. They are preserved but are outside the above aggregate unless explicitly
-listed in its source hashes. Their presence alone is not an audit certificate.
-
-The following originally listed drafts have now separately compiled in round
-2026-10-11-171820, though they remain outside the older aggregate:
-
-- `IGSIII34/Diffusion/CountableDistanceProfile.lean`
-- `IGSIII34/Diffusion/CountableDistanceProfileCadlagWeak.lean`
-- `IGSIII34/ResistanceLimit/ActualCommonChemicalHausdorff.lean`
-- `IGSIII34/Spectral/Collars/ActualFiniteAnnealedWholePath.lean`
-
-## Exact remaining obligation
-
-The manuscript's annealed joint-convergence sentence still needs its full actual-model
-bridge. Latest adversarial review isolates both a determining-test/topology bridge
-for original marked-GHP/whole usual-local-J1 and ONE original decorated limit law.
-The intrinsic joint-test/DCT theorem does not by itself prove either item.
-Original-profile distance recovery is now exact and measurable, and true spatial
-whole-path isometric transport is compiled. Decorated coupling/gluing is in progress.
-Quenched convergence with an environment-dependent existential ambient space
-does not automatically supply measurable joint geometry/mass/whole-path laws.
-The actual finite conditional kernels and generic measurable-limit/integration tools
-are available. What remains is to assemble actual full-path transport and the correct
-joint marked-GHP/J1 interpretation. Rational-time profile codes alone must not be
-labelled full J1 convergence; distance-profile homeomorphisms alone do not preserve
-the original chemical metric or GHP topology.
-
-Continue from the current saved sources; resolve the draft interfaces, connect them
-to the SAME actual master witnesses, then extend `IGSIII34.lean` only with passed leaves
-and rerun the aggregate audit. Do not replace the gap by an assumed measurability,
-convergence, or topology-equivalence hypothesis.
-
-## Reproduction
-
-From this directory, using the pinned Lean toolchain:
-
-```sh
-lake update
-lake exe cache get
-lake build Universality
-python scripts/verify.py --imported-only
-```
-
-`PROGRESS_SNAPSHOT.json` lists every saved Lean source hash and separates exact
-aggregate-audited sources from sources outside that audit. The private manuscript
-and research archive are not included in this public repository.
-
-
-## Latest checkpoint — 2026-10-11T11:07:29.825213+00:00
-
-GitHub authentication is repaired: the actual user-context CLI is logged in as Nero-17, normal push succeeded, and remote main was read back at6d6244782ba4c5e602ee01e6d7172d153d819096. Sandboxed commands run as CodexSandboxOnline and cannot use the human account's Windows credential store. Future authenticated gh/git commands must use approved user-context execution. No repeated login or plaintext token is required.
-
-Original joint metric/couplings, continuous-limit usual-local J1 equivalence, isometric original-to-extended embedding, and the bounded-Lipschitz determining intrinsic-test lift are separately compiled. Both same-master five-clock intrinsic-response variants and the completed-environment ONE-kernel/annealed integration helpers are separately compiled. The actual finite original joint kernel, exact original law transport/common-ambient weak theorem, same-master a.e. original joint weak-existence instantiation, and final aggregate/source audit still need closure. These are saved working sources, not a completion claim; the latest aggregate remains the older11,231-declaration certificate.
-
-Mathematical work was set aside for the user's explicit GitHub diagnosis request. Continue from saved sources and worker handoffs. Section3 is NOT complete.
+The current root package is IGSIII34.lean. Saved unimported drafts are excluded
+from the certificate. Global AO exclusion is not proved by this package.
+GitHub authenticated commands use approved user-context execution.
+This round has one authoritative Drive archive ID in ROUND_STATE.json.

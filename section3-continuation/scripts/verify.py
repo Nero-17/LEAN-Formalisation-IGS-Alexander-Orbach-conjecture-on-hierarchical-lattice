@@ -101,6 +101,7 @@ def main():
     modules['IGSIII34'] = ROOT / 'IGSIII34.lean'
     modules['IGSIII'] = ROOT / 'IGSIII.lean'
     imported_only = '--imported-only' in sys.argv
+    request_section_three_complete = '--section3-complete' in sys.argv
     if imported_only:
         imported_modules = {}
         def include(module):
@@ -226,6 +227,28 @@ run_cmd do
     after = {str(path.relative_to(ROOT)): sha256(path) for path in current_paths}
     if before != after:
         raise RuntimeError('Sources changed during verification')
+    correspondence = None
+    if request_section_three_complete:
+        correspondence_path = VERIFY / 'section3_correspondence.json'
+        if not correspondence_path.exists():
+            raise RuntimeError('Completion requires the reviewed manuscript-obligation correspondence')
+        correspondence = json.loads(correspondence_path.read_text(encoding='utf-8-sig'))
+        if (correspondence.get('status') != 'complete' or
+                correspondence.get('sourcePaperSha256') != FROZEN_PAPER_SHA256 or
+                correspondence.get('unresolvedObligations')):
+            raise RuntimeError('Manuscript correspondence is incomplete or belongs to another source')
+        obligations = correspondence.get('obligations', [])
+        if not obligations:
+            raise RuntimeError('No manuscript obligations were reviewed')
+        portable_source_hashes = {name.replace('\\', '/'): digest for name, digest in after.items()}
+        for obligation in obligations:
+            if not obligation.get('reviewed') or not obligation.get('entryPoints'):
+                raise RuntimeError('Unreviewed obligation: ' + obligation.get('label', '<unnamed>'))
+            for entry in obligation['entryPoints']:
+                if entry['declaration'] not in names:
+                    raise RuntimeError('Obligation theorem absent from audited closure: ' + entry['declaration'])
+                if portable_source_hashes.get(entry['source'].replace('\\', '/')) != entry['sha256']:
+                    raise RuntimeError('Obligation source changed: ' + entry['source'])
     manifest = {
         'verifiedUtc': datetime.now(timezone.utc).isoformat(),
         'sourcePaperCommit': 'db2cbd8163ef90cc70ebd4d97f282993fd3311b6',
@@ -242,11 +265,16 @@ run_cmd do
         'allowedAxioms': sorted(allowed),
         'sourceSha256': after,
         'objectSha256': objects,
-        'manuscriptFormalisationComplete': False,
+        'manuscriptFormalisationComplete': request_section_three_complete,
+        'section3CorrespondenceSha256': sha256(VERIFY / 'section3_correspondence.json')
+            if correspondence is not None else None,
     }
     (VERIFY / 'manifest.json').write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding='utf-8')
-    STATUS.write_text(f'Build and axiom audit passed for {len(names)} declarations.\n'
-                      'Full manuscript Section 3 remains incomplete; separate Section 4 depends on its explicit Section 3 inputs. See COVERAGE.md.\n', encoding='utf-8')
+    manuscript_status = ('Section 3 manuscript correspondence and aggregate audit complete. See the exact scope in COVERAGE.md.\n'
+                         if request_section_three_complete else
+                         'Full manuscript Section 3 remains incomplete; separate Section 4 depends on its explicit Section 3 inputs. See COVERAGE.md.\n')
+    STATUS.write_text(f'Build and axiom audit passed for {len(names)} declarations.\n' + manuscript_status,
+                      encoding='utf-8')
     print(STATUS.read_text(), flush=True)
 
 

@@ -1,37 +1,46 @@
 # Section 3 proof index
 
-Source manuscript: `db2cbd8163ef90cc70ebd4d97f282993fd3311b6`.
-Status: integration in progress. Consult `COVERAGE.md` and the exact hashes in
-`verification/manifest.json`; this index is not a verification certificate.
+Section 3 correspondence and final aggregate audit complete.
 
-| Manuscript obligation | Formal entry point |
+Frozen manuscript: db2cbd8163ef90cc70ebd4d97f282993fd3311b6.
+Scope: Section 3, frozen main.tex lines 517-1160, with proved prerequisite imports.
+
+The exact certificate is verification/manifest.json and its hashed
+verification/section3_correspondence.json. Unimported saved drafts are excluded.
+
+| Manuscript obligation | Formal entry points |
 |---|---|
-| Actual natural electrical multiplier, amplitudes, all-order convergence and eigenlaw uniqueness | `Percolation/Continuation/NaturalResistanceCompletion20261011.lean`, `exists_natural_resistance_completion20261011` |
-| All logarithmic exponents for that same multiplier | `Percolation/Continuation/NaturalResistanceExponents.lean`, `natural_resistance_exponents` |
-| Electrical/chemical growth and amplitude bounds | `Diffusion/NaturalResistanceChemicalComparison.lean`, `Diffusion/NaturalResistanceAmplitudeBounds.lean` |
-| Actual full finite trace form and uniqueness | `ResistanceLimit/ActualTraceMinimum.lean`, `ActualTraceUniqueness.lean`, `ActualCompletionTraceUniqueness.lean` |
-| Variational resistance for arbitrary completion points | `ResistanceLimit/ActualCompletionResistance.lean`, `actual_completion_variational_resistance_eq` |
-| Same chemical/electrical carrier, physical mass, both marked GHP limits, original natural and deterministic clocks, limiting process and typical heat-kernel exponent | `Spectral/Collars/ActualSameMasterAllClocks.lean`, `exists_ae_actual_natural_common_section_three_all_clocks` |
-| Genuine usual-local J1 probability-law convergence | `Diffusion/UsualLocalJ1PathLaw.lean`, `UsualLocalJ1ContinuousLimitRecovery.lean` and the actual master above |
-| Exact completed-form retained-component energy decomposition | `Forms/ActualCompletedComponentEnergy.lean`, `ae_actual_natural_completed_component_energy_decomposition` |
-| Intrinsic local resistance inequality | `Diffusion/ActualElectricalComponentCompletion.lean` |
-| Completed finite-energy zero extension with exact local restriction and energy scaling | `Diffusion/ActualElectricalComponentZeroExtension.lean` |
-| Actual selecting-configuration / complete trace-code root law, including the two dependent B sides | `ResistanceLimit/ElectricalSelectedRootLaw.lean`, `ElectricalComponentRootLaw.lean` |
-| Required fivefold subdivided diamond example | `Spectral/Collars/FivefoldDiamondGraph.lean`, `FivefoldDiamondResistance.lean`, `FivefoldDiamondSpectralBound.lean` (actual critical witness and strict bound compiled) |
-| Section 4's electrical interface from the actual natural witness | `Percolation/Continuation/SectionFourDependency.lean`, `exists_actual_section_four_electrical` |
+| lem:electrical-eigenlaw (main.tex539-581) | [exists_natural_resistance_completion20261011](IGSIII34/Percolation/Continuation/NaturalResistanceCompletion20261011.lean)<br>[natural_resistance_exponents](IGSIII34/Percolation/Continuation/NaturalResistanceExponents.lean) |
+| lem:electrical-sandwich (main.tex590-635) | [actual_natural_unit_graph_conditional_reciprocal_sandwich](IGSIII34/Diffusion/ActualNaturalElectricalPreFormCertificates.lean)<br>[actual_natural_electrical_iteration_uniform_real_moment](IGSIII34/Diffusion/ActualNaturalElectricalPreFormCertificates.lean)<br>[actual_natural_electrical_iteration_supremum_moment](IGSIII34/Diffusion/ActualNaturalElectricalPreFormCertificates.lean) |
+| thm:resistance-exponent (main.tex638-670) | [natural_resistance_exponents](IGSIII34/Percolation/Continuation/NaturalResistanceExponents.lean) |
+| electrical-chemical-growth-comparison (main.tex672-674) | [natural_electrical_growth_le_chemical_growth](IGSIII34/Diffusion/NaturalResistanceChemicalComparison.lean)<br>[exists_actual_chemical_mean_growth_above_natural_resistance](IGSIII34/Diffusion/NaturalResistanceChemicalComparison.lean) |
+| lem:electrical-compactness (main.tex681-722) | [actual_natural_unit_graph_L2_compact_closure](IGSIII34/Diffusion/ActualNaturalElectricalPreFormCertificates.lean)<br>[natural_electrical_amplitude_bounds](IGSIII34/Diffusion/NaturalResistanceAmplitudeBounds.lean)<br>[natural_physical_omega_witness_completion20261011](IGSIII34/Percolation/Continuation/NaturalPhysicalOmegaCompletion20261011.lean) |
+| lem:electrical-comparison (main.tex726-758) | [iid_resistance_integral_comparison](IGSIII34/Resistance/IIDComparison.lean) |
+| thm:electrical-amplitudes (main.tex762-814) | [exists_natural_resistance_completion20261011](IGSIII34/Percolation/Continuation/NaturalResistanceCompletion20261011.lean)<br>[natural_physical_omega_witness_completion20261011](IGSIII34/Percolation/Continuation/NaturalPhysicalOmegaCompletion20261011.lean) |
+| lem:full-resistance-mesh (main.tex823-857) | [actual_stationary_local_resistance_mesh_completion20261011](IGSIII34/ResistanceLimit/ActualElectricalLocalMeshCompletion20261011.lean)<br>[ae_uniform_actual_electrical_mesh_fixed_cluster](IGSIII34/ResistanceLimit/RadiusMesh.lean)<br>[actual_markedElectricalRadiusSupremum_memLp_fixed_cluster](IGSIII34/ResistanceLimit/RadiusMoments.lean)<br>[natural_physical_omega_witness_completion20261011](IGSIII34/Percolation/Continuation/NaturalPhysicalOmegaCompletion20261011.lean)<br>[exists_ae_actual_natural_common_section_three_all_clocks](IGSIII34/Spectral/Collars/ActualSameMasterAllClocks.lean) |
+| thm:full-resistance-form-exact-traces-uniqueness (main.tex863-925) | [actual_finite_trace_minimum_attained](IGSIII34/ResistanceLimit/ActualTraceMinimum.lean)<br>[actual_form_unique_from_finite_traces](IGSIII34/ResistanceLimit/ActualTraceUniqueness.lean)<br>[actual_completed_form_unique_from_finite_traces](IGSIII34/ResistanceLimit/ActualCompletionTraceUniqueness.lean)<br>[actual_completion_variational_resistance_eq](IGSIII34/ResistanceLimit/ActualCompletionResistance.lean) |
+| thm:full-resistance-form-common-carrier-regular-strong-local (main.tex906-947) | [exists_actual_natural_chemical_carrier_identification](IGSIII34/ResistanceLimit/ActualNaturalChemicalCarrier.lean)<br>[actualCompletionEnergyDomain_dense](IGSIII34/Forms/ActualRegularityCompletion20261011.lean)<br>[ae_actual_completion_strongly_local_fixed_cluster](IGSIII34/ResistanceLimit/ActualStrongLocality.lean) |
+| retained-component-energy-intrinsic-restriction-zero-extension (main.tex950-960) | [ae_actual_natural_completed_component_energy_decomposition](IGSIII34/Forms/ActualCompletedComponentEnergy.lean)<br>[actualRetainedComponentEnergy_eq_intrinsic_restriction](IGSIII34/ResistanceLimit/ActualComponentIntrinsicEnergyBridge.lean)<br>[actual_completed_component_resistance_bound](IGSIII34/ResistanceLimit/ActualComponentIntrinsicEnergyBridge.lean)<br>[actualElectricalComponent_completed_zero_extension_in_chemical_cell](IGSIII34/ResistanceLimit/ActualElectricalChemicalZeroExtension.lean) |
+| retained-component-root-law-including-dependent-B-sides (main.tex960-962) | [electrical_selected_trace_root_product_law](IGSIII34/ResistanceLimit/ElectricalSelectedRootLaw.lean)<br>[electrical_selected_energy_root_product_law](IGSIII34/ResistanceLimit/ElectricalSelectedRootLaw.lean)<br>[electrical_component_global_energy_scaling](IGSIII34/ResistanceLimit/ElectricalComponentRootLaw.lean)<br>[electrical_component_global_energy_root_law](IGSIII34/ResistanceLimit/ElectricalComponentRootLaw.lean) |
+| lem:degree-measure (main.tex972-995) | [actual_joint_edge_vertex_limits](IGSIII34/Diffusion/ActualDegreeRewards.lean)<br>[exists_ae_actual_natural_common_section_three_all_clocks](IGSIII34/Spectral/Collars/ActualSameMasterAllClocks.lean)<br>[ae_actual_natural_raw_electrical_markedGHP](IGSIII34/ResistanceLimit/ActualNaturalRawElectricalMarkedGHP.lean) |
+| thm:natural-process-same-event-all-starting-sequences-all-clocks (main.tex997-1047) | [exists_ae_actual_natural_common_section_three_all_clocks](IGSIII34/Spectral/Collars/ActualSameMasterAllClocks.lean) |
+| thm:natural-process-original-joint-space-and-continuous-limit-usual-J1 (main.tex1004-1049) | [actualFullConfigurationPathLaw_eq_placed](IGSIII34/Spectral/Collars/ActualFiniteOriginalWholeLawIdentity.lean)<br>[actualFullConfigurationPathLaw_discrete](IGSIII34/Spectral/Collars/ActualFiniteOriginalWholeLawIdentity.lean)<br>[actualFullConfigurationPathLaw_weighted](IGSIII34/Spectral/Collars/ActualFiniteOriginalWholeLawIdentity.lean)<br>[originalJointCompactPathLaws_weak_of_isometric_common_ambient](IGSIII34/Diffusion/OriginalJointCommonAmbientWeak.lean)<br>[originalJointCompactClass_tendsto_iff_coupled_usualJ1_continuous_limit](IGSIII34/Diffusion/OriginalJointUsualContinuousLimitEquivalence.lean)<br>[originalJointCompactPathLaw_continuousSample_regular](IGSIII34/Diffusion/OriginalJointContinuousSampleLaw.lean)<br>[exists_ae_actual_natural_original_joint_limit](IGSIII34/Spectral/Collars/ActualSameMasterOriginalJointExistence.lean)<br>[exists_ae_actual_all_clocks_original_joint_limits](IGSIII34/Spectral/Collars/ActualSameMasterAllClocksOriginalJointExistence.lean)<br>[actualAnnealedPlantedInitial_starting_convergence](IGSIII34/Spectral/Collars/ActualAnnealedPlantedStartingConvergence.lean) |
+| thm:natural-process-annealed-joint-convergence (main.tex1048-1049) | [exists_actual_natural_annealed_original_joint](IGSIII34/Spectral/Collars/ActualNaturalAnnealedOriginalJoint.lean)<br>[exists_actual_all_clocks_annealed_original_joint](IGSIII34/Spectral/Collars/ActualAllClocksAnnealedOriginalJoint.lean)<br>[exists_actual_natural_annealed_original_coordinate_joint](IGSIII34/Spectral/Collars/ActualNaturalAnnealedOriginalCoordinateJoint.lean)<br>[exists_completed_original_joint_annealed_family](IGSIII34/Diffusion/CompletedEnvironmentOriginalJointFamily.lean)<br>[original_environment_joint_weak_of_completed_quenched](IGSIII34/Diffusion/CompletedEnvironmentOriginalJointWeak.lean)<br>[original_environment_joint_usual_tests_of_completed_quenched](IGSIII34/Diffusion/CompletedEnvironmentOriginalJointUsualTests.lean) |
+| cor:deterministic-clock (main.tex1053-1070) | [exists_ae_actual_natural_common_section_three_all_clocks](IGSIII34/Spectral/Collars/ActualSameMasterAllClocks.lean)<br>[exists_ae_actual_all_clocks_original_joint_limits](IGSIII34/Spectral/Collars/ActualSameMasterAllClocksOriginalJointExistence.lean)<br>[exists_actual_all_clocks_annealed_original_joint](IGSIII34/Spectral/Collars/ActualAllClocksAnnealedOriginalJoint.lean)<br>[scalarSpeedGlobalTimeScale_evaluation_completion20261011](IGSIII34/Spectral/ActualScalarSpeedProcessCompletion20261011.lean)<br>[actualScalarSpeedTransitionKernel_identity_completion20261011](IGSIII34/Spectral/ActualScalarSpeedKernelCompletion20261011.lean)<br>[scalarSpeedMeasure_variational_equivalence_completion20261011](IGSIII34/Spectral/ScalarSpeedMeasureCompletion20261011.lean) |
+| thm:heat-kernels-lem:spectral-typical (main.tex1087-1139) | [ae_actual_typical_spectral_dimension_completion20261011](IGSIII34/Spectral/ActualTypicalSpectralDimensionCompletion20261011.lean)<br>[exists_ae_actual_natural_common_section_three_all_clocks](IGSIII34/Spectral/Collars/ActualSameMasterAllClocks.lean) |
+| ex:spectral-threshold-fivefold-diamond (main.tex1142-1151) | [fivefoldDiamond_actual_spectral_dimension_bound](IGSIII34/Spectral/Collars/FivefoldDiamondSpectralBound.lean)<br>[exists_fivefoldDiamond_strict_non_AO](IGSIII34/Spectral/Collars/FivefoldDiamondSpectralBound.lean) |
+| scalar-speed-measure-kernel-and-spectral-dimension-invariance (main.tex1154-1158) | [scalarSpeedMeasure_kernel_integral_completion20261011](IGSIII34/Spectral/ScalarSpeedMeasureCompletion20261011.lean)<br>[scalar_speed_spectral_dimension_ae_completion20261011](IGSIII34/Spectral/ScalarSpectralDimensionCompletion20261011.lean) |
 
-All paths in this table are relative to `IGSIII34/`. Canonical closed-component
-identification, exact intrinsic/global energy correspondence and explicit support
-of zero extension are compiled in the ResistanceLimit actual component leaves.
-The remaining annealed joint-law coding/measurability obligation is tracked in `COVERAGE.md`.
+Scope conditions:
 
-The process conclusions concern the compact limiting diffusion and typical
-points, with original finite clocks and generation shifts retained. They do
-not assert an infinite microscopic graph's long-time return exponent or a
-spectral exponent at every finite-born vertex. The generic discontinuous-limit
-metrization of the local path topology is not claimed; continuous-limit
-neighborhood recovery covers the actual diffusion limits. The auxiliary
-Appendix B resolvent identity is currently certified for parameter at least
-one, the range needed for the small-time spectral theorem.
+- Original chemical marked geometry, both original masses and terminals, and the entire path are encoded by the separation quotient of the literal common-isometric-coupling cost.
+- Electrical marked GHP is certified on the same physical master event in its respective topology; no simultaneous bi-metric-and-path topology is asserted.
+- Integer-horizon and usual-local J1 coupling convergence are equated only at continuous limiting representatives; actual continuous-sample regularity is proved.
+- Natural-clock annealed convergence concerns all three original clocks and one common completed-environment limit kernel for any measurable starting sequence satisfying the genuine starting-point convergence condition.
+- The finite environmental mixtures retain the original innovation law exactly. No target joint convergence, target measurability, global state separability or global measurable set of continuous isometry classes is an input.
+- Typical spectral dimension is a small-time compact-diffusion statement, not an all-scale exit-time result, a value at every born vertex, or a microscopic infinite-graph long-time exponent.
+- No global Alexander-Orbach exclusion theorem is certified here; the stated fivefold subdivided diamond example is certified.
+- The auxiliary Appendix B resolvent identity is certified for parameter at least one, sufficient for the Section 3 small-time conclusion.
 
-No global Alexander–Orbach exclusion theorem is claimed.
+Final audit: 12,037 declarations, 1,486 exact source hashes, verified 2026-10-11T12:06:19.186205+00:00.
+Allowed axioms: propext, Classical.choice, Quot.sound.

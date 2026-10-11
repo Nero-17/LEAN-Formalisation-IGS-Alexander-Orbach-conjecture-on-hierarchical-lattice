@@ -30,7 +30,7 @@ theorem originalJointCompactLaws_weak_of_common_ambient
     (spatial : Tendsto (fun index => jointMeasuredMarkedStateCost (states index) state) atTop (𝓝 0))
     (paths : Tendsto pathLaws atTop (𝓝 pathLaw)) :
     Tendsto originalLaws atTop (𝓝 originalLaw) := by
-  apply ProbabilityMeasure.tendsto_iff_forall_lipschitz_integral_tendsto.mpr
+  apply tendsto_iff_forall_lipschitz_integral_tendsto.mpr
   intro function bounded lipschitz
   obtain ⟨constant, lipschitz⟩ := lipschitz
   let test : OriginalJointCompactSpace →ᵇ ℝ := {
@@ -113,9 +113,9 @@ theorem originalJointCompactPathLaws_weak_of_isometric_common_ambient
       target targetIsometry.continuous).measurable.aemeasurable)
   · intro index
     rw [originalJointCompactPathLaw_toExtended,
-      extendedJointCompactPathLaw_isometricTransport]
+      extendedJointCompactPathLaw_isometricTransport (sources index) (sourceIsometry index)]
   · rw [originalJointCompactPathLaw_toExtended,
-      extendedJointCompactPathLaw_isometricTransport]
+      extendedJointCompactPathLaw_isometricTransport target targetIsometry]
   · exact spatial
   · exact paths
 

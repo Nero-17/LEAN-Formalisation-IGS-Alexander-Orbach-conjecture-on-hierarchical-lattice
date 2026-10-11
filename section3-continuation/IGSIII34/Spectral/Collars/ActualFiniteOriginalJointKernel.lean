@@ -12,7 +12,7 @@ open IGSIII34.Diffusion IGSIII34.ResistanceLimit MeasureTheory ProbabilityTheory
 
 def actualFiniteOriginalJointFallback : OriginalJointCompactSpace :=
   originalJointCompactPathEncoding (fun _ => ()) (fun _ => diracProba ())
-    ⟨⟨fun _ _ => ()⟩, continuous_path_cadlag_completion20261011 _ continuous_const⟩
+    ⟨⟨fun _ => ()⟩, continuous_path_cadlag_completion20261011 _ continuous_const⟩
 
 variable (rule : Rule) (scale : ℝ) (scalePositive : 0 < scale) (depth : ℕ)
 
@@ -52,14 +52,14 @@ def actualFiniteOriginalJointConfigurationKernel
     (clock : Configuration (rule.generation depth).edges → ℝ) (kind : Fin 3) :
     Kernel (Configuration (rule.generation depth).edges × Fin (rule.generation depth).vertices)
       OriginalJointCompactSpace :=
-  Kernel.ofFunOfCountable (fun input => (actualFiniteOriginalJointResponse rule scale scalePositive depth clock kind input : Measure _))
+  Kernel.ofFunOfCountable (fun input => (actualFiniteOriginalJointResponse rule scale scalePositive depth clock kind input).toMeasure)
 
 instance actualFiniteOriginalJointConfigurationKernel_markov
     (clock : Configuration (rule.generation depth).edges → ℝ) (kind : Fin 3) :
     IsMarkovKernel (actualFiniteOriginalJointConfigurationKernel rule scale scalePositive depth clock kind) := by
   constructor
   intro input
-  change IsProbabilityMeasure (actualFiniteOriginalJointResponse rule scale scalePositive depth clock kind input : Measure _)
+  change IsProbabilityMeasure (actualFiniteOriginalJointResponse rule scale scalePositive depth clock kind input : Measure OriginalJointCompactSpace)
   infer_instance
 
 def actualFiniteOriginalJointEnvironmentKernel

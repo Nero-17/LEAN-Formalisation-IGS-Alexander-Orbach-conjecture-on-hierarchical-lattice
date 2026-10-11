@@ -6,7 +6,7 @@ set_option backward.isDefEq.respectTransparency false
 namespace IGSIII34.Diffusion
 noncomputable section
 open MeasureTheory Filter TopologicalSpace
-open scoped Topology NNReal
+open scoped Topology NNReal BoundedContinuousFunction
 
 def extendedJointStatePathClass
     {Space : Type} [MetricSpace Space] [CompactSpace Space]

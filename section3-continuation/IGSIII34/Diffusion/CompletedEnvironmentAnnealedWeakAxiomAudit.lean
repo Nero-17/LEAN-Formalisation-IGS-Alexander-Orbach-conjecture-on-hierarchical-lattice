@@ -1,0 +1,6 @@
+import IGSIII34.Diffusion.CompletedEnvironmentAnnealedWeak
+import IGSIII34.Diffusion.OriginalJointUsualWeakSample
+
+#print axioms IGSIII34.Diffusion.annealed_weak_of_quenched_measurable_environment
+#print axioms IGSIII34.Diffusion.annealed_joint_weak_of_quenched_opens_measurable_environment
+#print axioms IGSIII34.Diffusion.originalJointCompact_weak_usual_tests_sample

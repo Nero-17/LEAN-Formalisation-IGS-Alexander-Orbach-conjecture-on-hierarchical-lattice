@@ -33,7 +33,7 @@ theorem annealed_weak_of_quenched_measurable_environment
   have identity (kernel : Kernel Environment State) [IsMarkovKernel kernel] :
       (∫ point, test point ∂(kernel ∘ₘ environmentLaw)) =
       ∫ sample, ∫ point, test point ∂kernel sample ∂environmentLaw := by
-    exact ProbabilityTheory.integral_comp (κ := Kernel.const Unit environmentLaw)
+    exact ProbabilityTheory.Kernel.integral_comp (κ := Kernel.const Unit environmentLaw)
       (η := kernel) (a := ()) (test.integrable (μ := kernel ∘ₘ environmentLaw))
   change Tendsto (fun index => ∫ point, test point ∂(kernels index ∘ₘ environmentLaw)) atTop
     (𝓝 (∫ point, test point ∂(limit ∘ₘ environmentLaw)))

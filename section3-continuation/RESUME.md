@@ -72,3 +72,12 @@ python scripts/verify.py --imported-only
 `PROGRESS_SNAPSHOT.json` lists every saved Lean source hash and separates exact
 aggregate-audited sources from sources outside that audit. The private manuscript
 and research archive are not included in this public repository.
+
+
+## Latest checkpoint — 2026-10-11T11:07:29.825213+00:00
+
+GitHub authentication is repaired: the actual user-context CLI is logged in as Nero-17, normal push succeeded, and remote main was read back at6d6244782ba4c5e602ee01e6d7172d153d819096. Sandboxed commands run as CodexSandboxOnline and cannot use the human account's Windows credential store. Future authenticated gh/git commands must use approved user-context execution. No repeated login or plaintext token is required.
+
+Original joint metric/couplings, continuous-limit usual-local J1 equivalence, isometric original-to-extended embedding, and the bounded-Lipschitz determining intrinsic-test lift are separately compiled. Both same-master five-clock intrinsic-response variants and the completed-environment ONE-kernel/annealed integration helpers are separately compiled. The actual finite original joint kernel, exact original law transport/common-ambient weak theorem, same-master a.e. original joint weak-existence instantiation, and final aggregate/source audit still need closure. These are saved working sources, not a completion claim; the latest aggregate remains the older11,231-declaration certificate.
+
+Mathematical work was set aside for the user's explicit GitHub diagnosis request. Continue from saved sources and worker handoffs. Section3 is NOT complete.

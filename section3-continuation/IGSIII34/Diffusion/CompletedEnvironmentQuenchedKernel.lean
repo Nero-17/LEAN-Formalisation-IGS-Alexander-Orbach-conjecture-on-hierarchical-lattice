@@ -12,6 +12,10 @@ open scoped _root_.Topology BoundedContinuousFunction NNReal ENNReal
 variable {Environment State : Type*} [MeasurableSpace Environment]
   [MetricSpace State] [MeasurableSpace State] [BorelSpace State]
 
+def completedEnvironmentKernelProbability (kernel : Kernel Environment State)
+    (markov : IsMarkovKernel kernel) (sample : Environment) : ProbabilityMeasure State :=
+  ⟨kernel sample, markov.isProbabilityMeasure sample⟩
+
 local instance : OpensMeasurableSpace State := inferInstance
 local instance : TopologicalSpace (ProbabilityMeasure State) := inferInstance
 
@@ -24,8 +28,8 @@ theorem complete_environment_weak_limit_measure_measurable
     [∀ depth, IsMarkovKernel (kernels depth)]
     (limit : Environment → ProbabilityMeasure State)
     (convergence : ∀ᵐ environment ∂environmentLaw,
-      Tendsto (fun depth => (⟨kernels depth environment, inferInstance⟩ :
-        ProbabilityMeasure State)) atTop (𝓝 (limit environment))) :
+      Tendsto (fun depth => completedEnvironmentKernelProbability (kernels depth) inferInstance environment)
+        atTop (𝓝 (limit environment))) :
     Measurable (fun environment => (limit environment : Measure State)) := by
   apply Measurable.measure_of_isPiSystem_of_isProbabilityMeasure
     (S := {set : Set State | IsClosed set})
@@ -66,23 +70,21 @@ theorem exists_complete_environment_quenched_limit_kernel
     [∀ depth, IsMarkovKernel (kernels depth)]
     (existence : ∀ᵐ environment ∂environmentLaw,
       ∃ limit : ProbabilityMeasure State,
-        Tendsto (fun depth => (⟨kernels depth environment, inferInstance⟩ :
-          ProbabilityMeasure State)) atTop (𝓝 limit)) :
+        Tendsto (fun depth => completedEnvironmentKernelProbability (kernels depth) inferInstance environment)
+          atTop (𝓝 limit)) :
     ∃ kernel : Kernel Environment State, ∃ kernelMarkov : IsMarkovKernel kernel,
       ∀ᵐ environment ∂environmentLaw,
-        Tendsto (fun depth => (⟨kernels depth environment, inferInstance⟩ :
-          ProbabilityMeasure State)) atTop
-          (𝓝 (⟨kernel environment, kernelMarkov.isProbabilityMeasure environment⟩ :
-            ProbabilityMeasure State)) := by
+        Tendsto (fun depth => completedEnvironmentKernelProbability (kernels depth) inferInstance environment)
+          atTop (𝓝 (completedEnvironmentKernelProbability kernel kernelMarkov environment)) := by
   classical
   let limit (environment : Environment) : ProbabilityMeasure State :=
     if good : ∃ target : ProbabilityMeasure State,
-        Tendsto (fun depth => (⟨kernels depth environment, inferInstance⟩ :
-          ProbabilityMeasure State)) atTop (𝓝 target) then good.choose
-    else ⟨kernels 0 environment, inferInstance⟩
+        Tendsto (fun depth => completedEnvironmentKernelProbability (kernels depth) inferInstance environment)
+          atTop (𝓝 target) then good.choose
+    else completedEnvironmentKernelProbability (kernels 0) inferInstance environment
   have convergence : ∀ᵐ environment ∂environmentLaw,
-      Tendsto (fun depth => (⟨kernels depth environment, inferInstance⟩ :
-        ProbabilityMeasure State)) atTop (𝓝 (limit environment)) := by
+      Tendsto (fun depth => completedEnvironmentKernelProbability (kernels depth) inferInstance environment)
+        atTop (𝓝 (limit environment)) := by
     filter_upwards [existence] with environment good
     simpa only [limit, dif_pos good] using good.choose_spec
   let kernel : Kernel Environment State :=

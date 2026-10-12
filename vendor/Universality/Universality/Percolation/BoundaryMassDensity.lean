@@ -9,8 +9,8 @@ open scoped Topology
 set_option maxHeartbeats 0
 
 /-- Each actual conditional internal boundary mass occupies an asymptotically
-zero fraction of the finite graph. This alone is not yet the infinite-volume
-assertion that the critical root cluster is almost surely finite. -/
+zero fraction of the finite graph. This finite-graph density statement alone
+does not imply that the infinite-volume critical root cluster is almost surely finite. -/
 theorem Classical.conditional_boundary_mass_density_tendsto_zero {rule : Rule}
     (h : rule.Classical) (p : ℝ) (hp : 0 < p) (hp' : p < 1)
     (hfixed : rule.network.reliability p = p) (state : LiveState) :

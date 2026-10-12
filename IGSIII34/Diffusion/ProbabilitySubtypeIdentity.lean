@@ -6,8 +6,8 @@ namespace IGSIII34.Diffusion
 noncomputable section
 open MeasureTheory
 
-/-- Equality of ambient laws reflects equality of subtype laws even when
-the subtype itself has not yet been shown to be a measurable ambient set. -/
+/-- Equality of ambient laws reflects equality of subtype laws without
+assuming that the subtype is a measurable ambient set. -/
 theorem probability_subtype_val_map_injective
     {Ambient : Type*} [MeasurableSpace Ambient] (predicate : Ambient → Prop) :
     Function.Injective (fun law : ProbabilityMeasure {point : Ambient // predicate point} =>

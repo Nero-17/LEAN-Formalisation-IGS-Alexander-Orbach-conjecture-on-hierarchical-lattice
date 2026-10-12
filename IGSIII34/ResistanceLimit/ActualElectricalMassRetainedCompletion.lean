@@ -4,7 +4,7 @@ import IGSIII34.ResistanceLimit.ElectricalMassCompletion
 /-! The full-support electrical speed measure comes from the same actual
 Perron cylinder law as Section 2. Field convergence and both mesh events used
 in this construction were proved on the original innovation probability law.
-This does not yet identify the electrical and chemical completions. -/
+The measure is constructed on the electrical metric completion. -/
 set_option autoImplicit false
 set_option maxHeartbeats 3200000
 set_option backward.isDefEq.respectTransparency false

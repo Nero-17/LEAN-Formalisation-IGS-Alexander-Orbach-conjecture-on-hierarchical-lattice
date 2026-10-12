@@ -1,6 +1,6 @@
 # Alexander–Orbach conjecture on hierarchical lattices
 
-Lean formalisation of *Iterated Graph Systems (III): Alexander–Orbach conjecture on hierarchical lattices*.
+Lean formalisation of *Iterated Graph Systems (III): Alexander–Orbach conjecture on hierarchical lattices*, including the auxiliary results in Appendices A–C.
 
 The development covers chemical geometry and mass, natural resistance, diffusion, typical-point spectral dimension, Alexander–Orbach exclusion criteria, and density of spectral dimensions in `(1, 2)` for classical hierarchical lattices at their own critical percolation probabilities. The assertion that no classical hierarchical lattice attains spectral dimension `4/3` remains a conjecture.
 
@@ -29,6 +29,8 @@ import IGSAlexanderOrbach
 | [`vendor/Universality/`](vendor/Universality) | Shared graph and percolation foundations |
 
 Spectral dimension refers to the small-time heat-kernel exponent of the natural limiting diffusion at physical-mass-almost-everywhere points.
+
+The spectral-density construction includes uniform moment estimates for positive finitely supported input laws, strict variance bounds, resistance and full-mass logarithmic asymptotics, and rational-parameter witnesses.
 
 ## Attribution
 

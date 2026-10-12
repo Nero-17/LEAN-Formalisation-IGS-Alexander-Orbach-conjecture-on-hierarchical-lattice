@@ -1,0 +1,10 @@
+{
+  "source": "IGSIII4/SpectralDensity/CoarseMassGrowth20261012.lean",
+  "sourceSha256": "ae2cb2d69a1dd8315e36487c34aac50943396c40c8f4856fe821baa1bb4c0368",
+  "sourceUnchanged": true,
+  "objectSha256": "cb2292456a6ce863ba435698cf4795d82cfc271cb20948ef950151cf2ce72139",
+  "returnCode": 0,
+  "startedUtc": "2026-10-12T05:21:24.741516+00:00",
+  "endedUtc": "2026-10-12T05:21:48.583650+00:00",
+  "log": "IGSIII4__SpectralDensity__CoarseMassGrowth20261012.compile.log"
+}

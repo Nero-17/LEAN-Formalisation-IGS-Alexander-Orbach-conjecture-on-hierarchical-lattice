@@ -28,3 +28,6 @@ name = "IGSIIISectionsTwoThreeFour"
 
 [[lean_lib]]
 name = "IGSAlexanderOrbach"
+
+[[lean_lib]]
+name = "IGSIIILatestManuscript20261012"

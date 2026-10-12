@@ -1,5 +1,16 @@
 # IGS III Lean formalisation
 
+## Latest manuscript update (12 October 2026): in progress
+
+The manuscript has advanced to `551b8a5` and adds a spectral-density theorem.
+The new [synchronisation status](verification/manuscript-sync20261012/STATUS.md)
+and [exact-source receipts](verification/manuscript-sync20261012/manifest.json)
+cover the saved new proofs. The density theorem is **not yet proved in Lean**.
+Build the partial new entry with `lake build IGSIIILatestManuscript20261012`.
+The default entry and completion numbers below describe the earlier certified
+manuscript72298e5, not the new source. Its proposed theta/AO wording corrections
+have since been applied in Overleaf and are present in the newer source.
+
 The default `IGSAlexanderOrbach.lean` imports the latest reviewed Sections2–5
 through the retained aggregate name `IGSIIISectionsTwoThreeFour.lean`.
 The original Sections2–4 task topics now occupy Sections2–5 after the diffusion/AO

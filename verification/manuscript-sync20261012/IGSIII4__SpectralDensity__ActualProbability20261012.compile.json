@@ -1,0 +1,10 @@
+{
+  "source": "IGSIII4/SpectralDensity/ActualProbability20261012.lean",
+  "sourceSha256": "3aa343062ebc4edd813488a8e1249c5b0d8fc57cf9123c9140218675d6e6e25f",
+  "sourceUnchanged": true,
+  "objectSha256": "2049183c55f2413d21a24a2589f7ecdd9b02ffed6e98c9c1d4f7f7a2fd82f743",
+  "returnCode": 0,
+  "startedUtc": "2026-10-12T05:22:42.179514+00:00",
+  "endedUtc": "2026-10-12T05:23:19.750410+00:00",
+  "log": "IGSIII4__SpectralDensity__ActualProbability20261012.compile.log"
+}

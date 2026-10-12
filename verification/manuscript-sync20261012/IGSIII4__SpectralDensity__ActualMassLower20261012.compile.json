@@ -1,0 +1,10 @@
+{
+  "source": "IGSIII4/SpectralDensity/ActualMassLower20261012.lean",
+  "sourceSha256": "432d160edbdd1fcebfec70a5c323d1d6ff028ea800177ca5309c521fbea84bdd",
+  "sourceUnchanged": true,
+  "objectSha256": "56baaad52d30c722dc2d388c54a6f599f2cd0888c86ecb4b19a8891ab17b55c9",
+  "returnCode": 0,
+  "startedUtc": "2026-10-12T05:13:32.362864+00:00",
+  "endedUtc": "2026-10-12T05:14:00.334834+00:00",
+  "log": "IGSIII4__SpectralDensity__ActualMassLower20261012.compile.log"
+}

@@ -1,0 +1,10 @@
+{
+  "source": "IGSIII4/SpectralDensity/CeilingGrowth20261012.lean",
+  "sourceSha256": "c6c0181874307672e05a261fc8b944bef38bc3091292ca9430a8724fd917010a",
+  "sourceUnchanged": true,
+  "objectSha256": "003c8c5ba6dee2e5544a958f50b16a9fcbb1d872e455893ea78f9f26fec1b98e",
+  "returnCode": 0,
+  "startedUtc": "2026-10-12T05:00:14.511760+00:00",
+  "endedUtc": "2026-10-12T05:00:44.559841+00:00",
+  "log": "IGSIII4__SpectralDensity__CeilingGrowth20261012.compile.log"
+}

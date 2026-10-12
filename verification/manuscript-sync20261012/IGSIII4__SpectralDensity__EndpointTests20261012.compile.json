@@ -1,0 +1,10 @@
+{
+  "source": "IGSIII4/SpectralDensity/EndpointTests20261012.lean",
+  "sourceSha256": "fa8cceacc514982b331c020c2cabc38b636801e70ba4a0a5f6dbc96fe9ab87f0",
+  "sourceUnchanged": true,
+  "objectSha256": "e5028801bbc8365e7c0941592f4f2061472bf40eb277dbf94fdd622e57f9ba19",
+  "returnCode": 0,
+  "startedUtc": "2026-10-12T05:21:52.652528+00:00",
+  "endedUtc": "2026-10-12T05:22:22.536117+00:00",
+  "log": "IGSIII4__SpectralDensity__EndpointTests20261012.compile.log"
+}

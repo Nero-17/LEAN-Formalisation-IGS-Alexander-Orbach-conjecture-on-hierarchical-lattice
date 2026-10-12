@@ -1,0 +1,58 @@
+IGSIII4\SpectralDensity\BernoulliCircuit20261012.lean:84:65: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+IGSIII4\SpectralDensity\BernoulliCircuit20261012.lean:116:12: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+IGSIII4\SpectralDensity\BernoulliCircuit20261012.lean:160:12: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+IGSIII4\SpectralDensity\BernoulliCircuit20261012.lean:206:6: warning: This simp argument is unused:
+  consFourOne
+
+Hint: Omit it from the simp argument list.
+  simp [outerCrossing, expectation_cons, expectation_const, Fin.cons_zero, c̵o̵n̵s̵F̵o̵u̵r̵O̵n̵e̵,̵ ̵consFourTwo,
+  ̲  ̲ ̲ ̲ ̲ ̲consFourThree, consThreeOne, consThreeTwo, consTwoOne, *]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+IGSIII4\SpectralDensity\BernoulliCircuit20261012.lean:206:19: warning: This simp argument is unused:
+  consFourTwo
+
+Hint: Omit it from the simp argument list.
+  simp [outerCrossing, expectation_cons, expectation_const, Fin.cons_zero,
+  ̵  ̵ ̵ ̵ ̵ ̵consFourOne,
+  ̲ c̵o̵n̵s̵F̵o̵u̵r̵T̵w̵o̵,̵  ̲ ̲ ̲ ̲consFourThree, consThreeOne, consThreeTwo, consTwoOne, *]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+IGSIII4\SpectralDensity\BernoulliCircuit20261012.lean:206:32: warning: This simp argument is unused:
+  consFourThree
+
+Hint: Omit it from the simp argument list.
+  simp [outerCrossing, expectation_cons, expectation_const, Fin.cons_zero, consFourOne,
+  ̲  ̲ ̲ ̲ ̲ ̲consFourTwo, c̵o̵n̵s̵F̵o̵u̵r̵T̵h̵r̵e̵e̵,̵ ̵consThreeOne, consThreeTwo, consTwoOne, *]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+IGSIII4\SpectralDensity\BernoulliCircuit20261012.lean:206:47: warning: This simp argument is unused:
+  consThreeOne
+
+Hint: Omit it from the simp argument list.
+  simp [outerCrossing, expectation_cons, expectation_const, Fin.cons_zero, consFourOne,
+  ̲  ̲ ̲ ̲ ̲ ̲consFourTwo, consFourThree, c̵o̵n̵s̵T̵h̵r̵e̵e̵O̵n̵e̵,̵ ̵consThreeTwo, consTwoOne, *]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+IGSIII4\SpectralDensity\BernoulliCircuit20261012.lean:206:61: warning: This simp argument is unused:
+  consThreeTwo
+
+Hint: Omit it from the simp argument list.
+  simp [outerCrossing, expectation_cons, expectation_const, Fin.cons_zero, consFourOne,
+  ̲  ̲ ̲ ̲ ̲ ̲consFourTwo, consFourThree, consThreeOne, c̵o̵n̵s̵T̵h̵r̵e̵e̵T̵w̵o̵,̵ ̵consTwoOne, *]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+IGSIII4\SpectralDensity\BernoulliCircuit20261012.lean:206:75: warning: This simp argument is unused:
+  consTwoOne
+
+Hint: Omit it from the simp argument list.
+  simp [outerCrossing, expectation_cons, expectation_const, Fin.cons_zero, consFourOne,
+  ̲  ̲ ̲ ̲ ̲ ̲consFourTwo, consFourThree, consThreeOne, consThreeTwo, c̵o̵n̵s̵T̵w̵o̵O̵n̵e̵,̵ ̵*]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

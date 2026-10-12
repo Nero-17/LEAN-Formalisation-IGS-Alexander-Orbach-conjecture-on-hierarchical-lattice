@@ -1,0 +1,66 @@
+IGSIII4\SpectralDensity\ActualFamily20261012.lean:103:8: warning: This simp argument is unused:
+  rule
+
+Hint: Omit it from the simp argument list.
+  simp [r̵u̵l̵e̵,̵ ̵Edge, Fintype.card_sum, Fintype.card_prod, Nat.mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+IGSIII4\SpectralDensity\ActualFamily20261012.lean:108:8: warning: This simp argument is unused:
+  rule
+
+Hint: Omit it from the simp argument list.
+  simp [r̵u̵l̵e̵,̵ ̵Vertex, Fintype.card_sum, Fintype.card_prod, Nat.mul_assoc, Nat.add_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+IGSIII4\SpectralDensity\ActualFamily20261012.lean:227:26: warning: 'simp_all' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+IGSIII4\SpectralDensity\ActualFamily20261012.lean:232:26: warning: 'simp_all' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+IGSIII4\SpectralDensity\ActualFamily20261012.lean:227:26: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+IGSIII4\SpectralDensity\ActualFamily20261012.lean:232:26: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+IGSIII4\SpectralDensity\ActualFamily20261012.lean:385:4: warning: 'all_goals omega' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+IGSIII4\SpectralDensity\ActualFamily20261012.lean:385:14: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+IGSIII4\SpectralDensity\ActualFamily20261012.lean:417:6: warning: 'all_goals omega' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+IGSIII4\SpectralDensity\ActualFamily20261012.lean:417:16: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+IGSIII4\SpectralDensity\ActualFamily20261012.lean:470:41: warning: This simp argument is unused:
+  and_true
+
+Hint: Omit it from the simp argument list.
+  simp_all only [true_and,̵ ̵a̵n̵d̵_̵t̵r̵u̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+IGSIII4\SpectralDensity\ActualFamily20261012.lean:808:40: warning: This simp argument is unused:
+  Bool.true_and
+
+Hint: Omit it from the simp argument list.
+  simp only [firstActive, secondActive, B̵o̵o̵l̵.̵t̵r̵u̵e̵_̵a̵n̵d̵,̵ ̵Bool.true_or, if_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+IGSIII4\SpectralDensity\ActualFamily20261012.lean:808:55: warning: This simp argument is unused:
+  Bool.true_or
+
+Hint: Omit it from the simp argument list.
+  simp only [firstActive, secondActive, Bool.true_and, B̵o̵o̵l̵.̵t̵r̵u̵e̵_̵o̵r̵,̵ ̵if_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+IGSIII4\SpectralDensity\ActualFamily20261012.lean:808:69: warning: This simp argument is unused:
+  if_true
+
+Hint: Omit it from the simp argument list.
+  simp only [firstActive, secondActive, Bool.true_and, Bool.true_or,̵ ̵i̵f̵_̵t̵r̵u̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

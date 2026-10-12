@@ -1,0 +1,10 @@
+{
+  "source": "IGSIII/Mass/ActualPopulationNormalization20261012.lean",
+  "sourceSha256": "9f7222dc77974e410d29d7adb21b24d93e92960214a2f87801ef2235260a97fc",
+  "sourceUnchanged": true,
+  "objectSha256": "70085c8d966f3b1cd3edd28d94f56d72805b7b23bd8fa3d3bbb3f1d147c430cb",
+  "returnCode": 0,
+  "startedUtc": "2026-10-12T05:25:10.519560+00:00",
+  "endedUtc": "2026-10-12T05:25:55.331133+00:00",
+  "log": "IGSIII__Mass__ActualPopulationNormalization20261012.compile.log"
+}

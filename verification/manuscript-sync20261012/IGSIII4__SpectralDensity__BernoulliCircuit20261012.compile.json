@@ -1,0 +1,10 @@
+{
+  "source": "IGSIII4/SpectralDensity/BernoulliCircuit20261012.lean",
+  "sourceSha256": "fbc4203d0e06f794e00668552210fe32ad3039b63647a5ad5f48042187281359",
+  "sourceUnchanged": true,
+  "objectSha256": "49a572681ebde699be75ddfd8f975d856b2df89fdd41f4ff754f8d3dae83f7ee",
+  "returnCode": 0,
+  "startedUtc": "2026-10-12T05:18:19.671782+00:00",
+  "endedUtc": "2026-10-12T05:18:37.349377+00:00",
+  "log": "IGSIII4__SpectralDensity__BernoulliCircuit20261012.compile.log"
+}

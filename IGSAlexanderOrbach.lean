@@ -31,6 +31,15 @@ import IGSIII4.SpectralDensity.ActualProbability
 import IGSIII4.SpectralDensity.ActualMassBridge
 import IGSIII4.SpectralDensity.ActualSharpMassBounds
 import IGSIII4.SpectralDensity.ActualPhysicalDensity
+import IGSIII4.SpectralDensity.CriticalMonotonicity
+import IGSIII4.SpectralDensity.CriticalPathCountBounds
+import IGSIII4.SpectralDensity.StrictBlockMoments
+import IGSIII4.SpectralDensity.StrictGenerationMoments
+import IGSIII4.SpectralDensity.CellVarianceRemainder
+import IGSIII4.SpectralDensity.UnitResistanceBounds
+import IGSIII4.SpectralDensity.ResistanceLogAsymptotics
+import IGSIII4.SpectralDensity.MassLogAsymptotics
+import IGSIII4.SpectralDensity.RationalSpectralDensity
 
 /-! Chemical geometry, resistance, diffusion and spectral dimension of
 critical percolation clusters on classical hierarchical lattices. -/

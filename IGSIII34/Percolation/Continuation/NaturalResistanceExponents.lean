@@ -1,4 +1,4 @@
-import IGSIII34.Percolation.Continuation.NaturalPhysicalOmegaCompletion20261011
+import IGSIII34.Percolation.Continuation.NaturalPhysicalOmegaCompletion
 import IGSIII34.Percolation.ResistanceTheorem
 
 /-! All four logarithmic exponents belong to the same natural multiplier
@@ -16,7 +16,7 @@ theorem natural_resistance_exponents
     (rule : Rule) (classicalRule : rule.Classical) (p : ℝ)
     (positive : 0 < p) (belowOne : p < 1)
     (fixedPoint : rule.network.reliability p = p)
-    (natural : NaturalResistanceCompletion20261011 rule p positive belowOne fixedPoint)
+    (natural : NaturalResistanceCompletion rule p positive belowOne fixedPoint)
     (pathLength : Configuration rule.edges → ℕ)
     (distanceBound : ∀ configuration, rule.network.crosses configuration = true →
       (network rule.network configuration).graph.dist rule.network.source rule.network.target ≤ pathLength configuration) :
@@ -42,7 +42,7 @@ theorem natural_resistance_exponents
   obtain ⟨growth, aboveOne, lower, upper, almostSure, meanLimit, meanLogLimit, momentLimit⟩ :=
     exists_actual_resistance_exponent rule classicalRule p positive belowOne fixedPoint pathLength distanceBound
   obtain ⟨constant, _, growthBounds, _, _⟩ :=
-    natural_physical_omega_witness_completion20261011 rule classicalRule p positive belowOne fixedPoint natural
+    natural_physical_omega_witness_completion rule classicalRule p positive belowOne fixedPoint natural
   have constantBound : 1 ≤ constant⁻¹ := by
     simpa only [pow_zero, mul_one] using (growthBounds 0).1.trans (growthBounds 0).2
   have naturalMeanLimit := tendsto_log_div_nat_of_growth_bounds

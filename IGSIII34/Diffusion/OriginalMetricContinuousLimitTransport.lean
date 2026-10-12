@@ -1,5 +1,5 @@
 import IGSIII34.Diffusion.WholeCadlagIsometricTransport
-import IGSIII34.Diffusion.SkorokhodGlobalContinuousLimitCompletion20261011
+import IGSIII34.Diffusion.SkorokhodGlobalContinuousLimitCompletion
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false
@@ -12,22 +12,22 @@ open scoped Topology NNReal ENNReal PiCountable
 error is uniform over all true isometric realizations in compact ambients. -/
 theorem skorokhodJ1_near_isometric_continuous_uniform
     {Target : Type*} [MetricSpace Target] [CompactSpace Target]
-    (limit : C(SkorokhodIntervalTimeCompletion20261011, Target))
+    (limit : C(SkorokhodIntervalTimeCompletion, Target))
     (tolerance : ℝ) (tolerancePositive : 0 < tolerance) :
     ∃ error : ℝ, 0 < error ∧
       ∀ (Ambient : Type*) [MetricSpace Ambient] [CompactSpace Ambient],
       ∀ placement : Target → Ambient, Isometry placement →
-      ∀ path : SkorokhodIntervalPathCompletion20261011 Ambient,
-      dist path (skorokhodCarrierMapCompletion20261011 placement
-        (continuousIntervalPathCompletion20261011 limit)) < error →
+      ∀ path : SkorokhodIntervalPathCompletion Ambient,
+      dist path (skorokhodCarrierMapCompletion placement
+        (continuousIntervalPathCompletion limit)) < error →
       ∀ time, dist (path time) (placement (limit time)) < tolerance := by
   obtain ⟨duration, durationPositive, continuousClose⟩ := Metric.uniformContinuous_iff.mp
     (CompactSpace.uniformContinuous_of_continuous limit.continuous) (tolerance / 2) (by positivity)
   let error := min duration (tolerance / 2)
   refine ⟨error, lt_min durationPositive (by positivity), ?_⟩
   intro Ambient _ _ placement isometry path near time
-  have nearEDistance : skorokhodJ1EDistCompletion20261011 path
-      (skorokhodCarrierMapCompletion20261011 placement (continuousIntervalPathCompletion20261011 limit)) <
+  have nearEDistance : skorokhodJ1EDistCompletion path
+      (skorokhodCarrierMapCompletion placement (continuousIntervalPathCompletion limit)) <
       ENNReal.ofReal error := edist_lt_ofReal.mpr near
   obtain ⟨change, changeSmall⟩ := iInf_lt_iff.mp nearEDistance
   have timeSmall : ∀ next, dist (change next) next < error := by
@@ -59,30 +59,30 @@ theorem skorokhodGlobal_near_isometric_continuous_uniform
     ∃ error : ℝ, 0 < error ∧
       ∀ (Ambient : Type*) [MetricSpace Ambient] [CompactSpace Ambient],
       ∀ placement : Target → Ambient, Isometry placement →
-      ∀ path : SkorokhodGlobalPathCompletion20261011 Ambient,
-      dist path (skorokhodGlobalCarrierMapCompletion20261011 placement ⟨limit⟩) < error →
+      ∀ path : SkorokhodGlobalPathCompletion Ambient,
+      dist path (skorokhodGlobalCarrierMapCompletion placement ⟨limit⟩) < error →
       ∀ time : ℝ≥0, time ≤ horizon → dist (path time) (placement (limit time)) < tolerance := by
   let count : ℕ := ⌊(horizon : ℝ)⌋₊
-  let profile : C(SkorokhodIntervalTimeCompletion20261011, Target) :=
+  let profile : C(SkorokhodIntervalTimeCompletion, Target) :=
     ⟨fun time => limit ((count+1 : ℝ≥0) * ⟨time.val, time.property.1⟩), limitContinuous.comp (by fun_prop)⟩
   obtain ⟨intervalError, intervalPositive, intervalClose⟩ :=
     skorokhodJ1_near_isometric_continuous_uniform profile tolerance tolerancePositive
   refine ⟨min intervalError (2⁻¹ ^ Encodable.encode count), lt_min intervalPositive (by positivity), ?_⟩
   intro Ambient _ _ placement isometry path near time before
   have coordinateBound :
-      dist (skorokhodIntegerProfileCompletion20261011 path count)
-        (skorokhodIntegerProfileCompletion20261011
-          (skorokhodGlobalCarrierMapCompletion20261011 placement ⟨limit⟩) count) ≤
-      dist path (skorokhodGlobalCarrierMapCompletion20261011 placement ⟨limit⟩) :=
+      dist (skorokhodIntegerProfileCompletion path count)
+        (skorokhodIntegerProfileCompletion
+          (skorokhodGlobalCarrierMapCompletion placement ⟨limit⟩) count) ≤
+      dist path (skorokhodGlobalCarrierMapCompletion placement ⟨limit⟩) :=
     PiCountable.dist_le_dist_pi_of_dist_lt
       (near.trans_le (min_le_right _ _))
   have coordinateNear := coordinateBound.trans_lt (near.trans_le (min_le_left _ _))
   have bound := intervalClose Ambient placement isometry
-    (skorokhodIntegerProfileCompletion20261011 path count) coordinateNear
+    (skorokhodIntegerProfileCompletion path count) coordinateNear
   have countPositive : 0 < (count+1 : ℝ) := by positivity
   have physicalBefore : (time : ℝ) ≤ (count+1 : ℝ) :=
     (NNReal.coe_le_coe.mpr before).trans (Nat.lt_floor_add_one (horizon : ℝ)).le
-  let unitTime : SkorokhodIntervalTimeCompletion20261011 :=
+  let unitTime : SkorokhodIntervalTimeCompletion :=
     ⟨(time : ℝ) / (count+1 : ℝ),
       ⟨div_nonneg time.property countPositive.le, (div_le_one countPositive).mpr physicalBefore⟩⟩
   have timeIdentity : (count+1 : ℝ≥0) * ⟨unitTime.val, unitTime.property.1⟩ = time := by
@@ -103,20 +103,20 @@ theorem skorokhodGlobal_near_isometric_continuous_horizon
     ∃ error : ℝ, 0 < error ∧
       ∀ (Ambient : Type*) [MetricSpace Ambient] [CompactSpace Ambient],
       ∀ placement : Target → Ambient, Isometry placement →
-      ∀ path : SkorokhodGlobalPathCompletion20261011 Ambient,
-      dist path (skorokhodGlobalCarrierMapCompletion20261011 placement ⟨limit⟩) < error →
-      dist (skorokhodHorizonRestrictionCompletion20261011 horizon path)
-        (skorokhodHorizonRestrictionCompletion20261011 horizon
-          (skorokhodGlobalCarrierMapCompletion20261011 placement ⟨limit⟩)) < tolerance := by
+      ∀ path : SkorokhodGlobalPathCompletion Ambient,
+      dist path (skorokhodGlobalCarrierMapCompletion placement ⟨limit⟩) < error →
+      dist (skorokhodHorizonRestrictionCompletion horizon path)
+        (skorokhodHorizonRestrictionCompletion horizon
+          (skorokhodGlobalCarrierMapCompletion placement ⟨limit⟩)) < tolerance := by
   obtain ⟨error, errorPositive, close⟩ := skorokhodGlobal_near_isometric_continuous_uniform
     limit limitContinuous horizon (tolerance / 2) (by positivity)
   refine ⟨error, errorPositive, ?_⟩
   intro Ambient _ _ placement isometry path near
   have bound := close Ambient placement isometry path near
-  have edistance : edist (skorokhodHorizonRestrictionCompletion20261011 horizon path)
-      (skorokhodHorizonRestrictionCompletion20261011 horizon
-        (skorokhodGlobalCarrierMapCompletion20261011 placement ⟨limit⟩)) ≤ ENNReal.ofReal (tolerance / 2) := by
-    apply (skorokhodJ1EDist_le_uniform_completion20261011 _ _).trans
+  have edistance : edist (skorokhodHorizonRestrictionCompletion horizon path)
+      (skorokhodHorizonRestrictionCompletion horizon
+        (skorokhodGlobalCarrierMapCompletion placement ⟨limit⟩)) ≤ ENNReal.ofReal (tolerance / 2) := by
+    apply (skorokhodJ1EDist_le_uniform_completion _ _).trans
     apply iSup_le
     intro time
     rw [edist_dist]

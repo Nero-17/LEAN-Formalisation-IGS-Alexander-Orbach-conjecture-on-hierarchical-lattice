@@ -12,7 +12,7 @@ open IGSIII34.Diffusion IGSIII34.ResistanceLimit MeasureTheory ProbabilityTheory
 
 def actualFiniteOriginalJointFallback : OriginalJointCompactSpace :=
   originalJointCompactPathEncoding (fun _ => ()) (fun _ => diracProba ())
-    ⟨⟨fun _ => ()⟩, continuous_path_cadlag_completion20261011 _ continuous_const⟩
+    ⟨⟨fun _ => ()⟩, continuous_path_cadlag_completion _ continuous_const⟩
 
 variable (rule : Rule) (scale : ℝ) (scalePositive : 0 < scale) (depth : ℕ)
 

@@ -10,7 +10,7 @@ open scoped Topology NNReal
 /-- The genuine cadlag carrier equipped with the local-J1 sequential
 topology, separated from the stronger integer-horizon carrier. -/
 structure UsualLocalJ1Path (Space : Type*) [MetricSpace Space] [CompactSpace Space] where
-  path : SkorokhodCadlagPathCompletion20261011 Space
+  path : SkorokhodCadlagPathCompletion Space
 
 variable {Space : Type*} [MetricSpace Space] [CompactSpace Space]
 
@@ -20,7 +20,7 @@ instance usualLocalJ1PathTopology : TopologicalSpace (UsualLocalJ1Path Space) :=
 instance usualLocalJ1PathMeasurable : MeasurableSpace (UsualLocalJ1Path Space) := borel _
 instance usualLocalJ1PathBorel : BorelSpace (UsualLocalJ1Path Space) := ⟨rfl⟩
 
-def integerJ1ToUsualLocalJ1Path (path : SkorokhodCadlagPathCompletion20261011 Space) :
+def integerJ1ToUsualLocalJ1Path (path : SkorokhodCadlagPathCompletion Space) :
     UsualLocalJ1Path Space := ⟨path⟩
 
 theorem integerJ1ToUsualLocalJ1Path_continuous :
@@ -31,7 +31,7 @@ theorem integerJ1ToUsualLocalJ1Path_continuous :
 /-- A true probability law on the explicitly constructed local-J1
 topological and Borel carrier, preserving the exact underlying cadlag path. -/
 def usualLocalJ1PathProbability
-    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 Space)) :
+    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion Space)) :
     ProbabilityMeasure (UsualLocalJ1Path Space) :=
   law.map integerJ1ToUsualLocalJ1Path_continuous.measurable.aemeasurable
 
@@ -39,8 +39,8 @@ def usualLocalJ1PathProbability
 from the stronger integer-horizon weak convergence. No measurability or
 continuity of individual tests is left as a caller hypothesis. -/
 theorem integerJ1_weak_to_usualLocalJ1
-    (laws : ℕ → ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 Space))
-    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 Space))
+    (laws : ℕ → ProbabilityMeasure (SkorokhodCadlagPathCompletion Space))
+    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion Space))
     (weak : Tendsto laws atTop (𝓝 law)) :
     Tendsto (fun index => usualLocalJ1PathProbability (laws index)) atTop
       (𝓝 (usualLocalJ1PathProbability law)) :=

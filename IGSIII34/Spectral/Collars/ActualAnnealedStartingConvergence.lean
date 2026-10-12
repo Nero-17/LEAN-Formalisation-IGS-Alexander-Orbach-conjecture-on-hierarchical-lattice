@@ -1,7 +1,7 @@
 import IGSIII34.Spectral.Collars.ActualFiniteAnnealedCanonicalPath
 import IGSIII34.ResistanceLimit.ActualStationaryCompletion
 import IGSIII34.ResistanceLimit.ActualHarmonic
-import IGSIII34.Percolation.Continuation.NaturalResistanceCompletion20261011
+import IGSIII34.Percolation.Continuation.NaturalResistanceCompletion
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false
@@ -29,7 +29,7 @@ chemical carrier by the master homeomorphism. It assumes no path-law limit. -/
 def ActualAnnealedStartingConvergence
     (rule : Rule) (p : ℝ) (positive : 0 < p) (belowOne : p < 1)
     (fixedPoint : rule.network.reliability p = p)
-    (natural : NaturalResistanceCompletion20261011 rule p positive belowOne fixedPoint)
+    (natural : NaturalResistanceCompletion rule p positive belowOne fixedPoint)
     (initial : ∀ depth, ((List (Fin rule.edges) × Bool) → Configuration rule.edges) →
       Fin (rule.generation depth).vertices) : Prop :=
   ∀ᵐ marks ∂independentInnovationLaw rule p positive belowOne fixedPoint,
@@ -44,7 +44,7 @@ def ActualAnnealedStartingConvergence
 theorem actualAnnealedSelectedVertex_initial_probability_tendsto
     (rule : Rule) (p : ℝ) (positive : 0 < p) (belowOne : p < 1)
     (fixedPoint : rule.network.reliability p = p)
-    (natural : NaturalResistanceCompletion20261011 rule p positive belowOne fixedPoint)
+    (natural : NaturalResistanceCompletion rule p positive belowOne fixedPoint)
     (marks : (List (Fin rule.edges) × Bool) → Configuration rule.edges)
     (typical : StationaryHarmonicTypical rule p positive belowOne fixedPoint
       natural.growth (natural.amplitude • natural.field) marks)

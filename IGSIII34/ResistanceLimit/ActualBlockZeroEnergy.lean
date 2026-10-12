@@ -1,6 +1,6 @@
 import IGSIII34.ResistanceLimit.ActualSideCellZeroExtension
 import IGSIII34.ResistanceLimit.ActualBlockZeroPersistence
-import IGSIII34.ResistanceLimit.GenerationBlockEnergyCompletion20261011
+import IGSIII34.ResistanceLimit.GenerationBlockEnergyCompletion
 
 set_option autoImplicit false
 set_option maxHeartbeats 3200000

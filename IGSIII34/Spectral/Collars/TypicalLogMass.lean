@@ -1,5 +1,5 @@
 import IGSIII34.Spectral.Collars.MassLogarithm
-import IGSIII34.Spectral.ActualBoundaryTypicalMassCompletion20261011
+import IGSIII34.Spectral.ActualBoundaryTypicalMassCompletion
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false
@@ -41,7 +41,7 @@ theorem actual_boundary_vertex_ratio_typical_log_mass
       (rule.interior_fixed_point_spectral_dominance p positive belowOne fixedPoint
         classicalRule.massAdmissible.symmetric classicalRule.scale).2.1)
   filter_upwards [canonicalProperties, actualRatios,
-    actual_boundary_vertex_ratio_typical_lower_completion20261011 rule classicalRule p positive belowOne
+    actual_boundary_vertex_ratio_typical_lower_completion rule classicalRule p positive belowOne
       fixedPoint weight actualRatios] with marks canonical actual lower
   have same (address : List (Fin rule.edges × Bool)) : weight address marks = canonicalWeight address marks :=
     tendsto_nhds_unique (actual address) (canonical.2.1 address).2.2.1

@@ -1,7 +1,7 @@
 import IGSIII34.Spectral.Collars.FivefoldDiamondGraph
 import IGSIII34.Resistance.DistanceEnergy
 import IGSIII34.Percolation.ElectricalTransfer
-import IGSIII34.Percolation.Continuation.NaturalResistanceCompletion20261011
+import IGSIII34.Percolation.Continuation.NaturalResistanceCompletion
 set_option autoImplicit false
 set_option maxHeartbeats 5000000
 set_option maxRecDepth 100000
@@ -111,7 +111,7 @@ theorem fivefoldDiamond_electrical_iteration_lower
 theorem fivefoldDiamond_natural_resistance_growth_lower
     (p : ℝ) (positive : 0 < p) (belowOne : p < 1)
     (fixedPoint : fivefoldDiamondRule.network.reliability p = p)
-    (natural : NaturalResistanceCompletion20261011 fivefoldDiamondRule p positive belowOne fixedPoint) :
+    (natural : NaturalResistanceCompletion fivefoldDiamondRule p positive belowOne fixedPoint) :
     5 ≤ natural.growth := by
   have events : ∀ᵐ marks ∂independentInnovationLaw fivefoldDiamondRule p positive belowOne fixedPoint,
       (∀ address, fivefoldDiamondNetwork.crosses (marks (address,true)) = true) ∧

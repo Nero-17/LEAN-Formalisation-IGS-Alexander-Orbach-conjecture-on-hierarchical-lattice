@@ -19,8 +19,8 @@ theorem originalJointCompactLaws_weak_of_common_ambient
     (originalLaws : ℕ → ProbabilityMeasure OriginalJointCompactSpace)
     (originalLaw : ProbabilityMeasure OriginalJointCompactSpace)
     (states : ℕ → JointMeasuredMarkedState Ambient) (state : JointMeasuredMarkedState Ambient)
-    (pathLaws : ℕ → ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 Ambient))
-    (pathLaw : ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 Ambient))
+    (pathLaws : ℕ → ProbabilityMeasure (SkorokhodCadlagPathCompletion Ambient))
+    (pathLaw : ProbabilityMeasure (SkorokhodCadlagPathCompletion Ambient))
     (placedFinite : ∀ index, (originalLaws index).map
       originalJointCompactSpaceToExtended_isometry.continuous.measurable.aemeasurable =
         extendedJointCompactPathLaw (states index) (pathLaws index))
@@ -46,7 +46,7 @@ theorem originalJointCompactLaws_weak_of_common_ambient
   have identity
       (jointLaw : ProbabilityMeasure OriginalJointCompactSpace)
       (placedState : JointMeasuredMarkedState Ambient)
-      (placedPathLaw : ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 Ambient))
+      (placedPathLaw : ProbabilityMeasure (SkorokhodCadlagPathCompletion Ambient))
       (placement : jointLaw.map
         originalJointCompactSpaceToExtended_isometry.continuous.measurable.aemeasurable =
           extendedJointCompactPathLaw placedState placedPathLaw) :
@@ -82,8 +82,8 @@ theorem originalJointCompactPathLaws_weak_of_isometric_common_ambient
     (sourceMarks : ∀ index, Bool → Sources index)
     (sourceMasses : ∀ index, Bool → ProbabilityMeasure (Sources index))
     (targetMarks : Bool → Target) (targetMasses : Bool → ProbabilityMeasure Target)
-    (sourceLaws : ∀ index, ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 (Sources index)))
-    (targetLaw : ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 Target))
+    (sourceLaws : ∀ index, ProbabilityMeasure (SkorokhodCadlagPathCompletion (Sources index)))
+    (targetLaw : ProbabilityMeasure (SkorokhodCadlagPathCompletion Target))
     (sources : ∀ index, Sources index → Ambient) (sourceIsometry : ∀ index, Isometry (sources index))
     (target : Target → Ambient) (targetIsometry : Isometry target)
     (spatial : Tendsto (fun index => jointMeasuredMarkedStateCost
@@ -92,9 +92,9 @@ theorem originalJointCompactPathLaws_weak_of_isometric_common_ambient
       (jointMeasuredMarkedStateMap target targetIsometry.continuous
         (originalJointCompactFullState targetMarks targetMasses))) atTop (𝓝 0))
     (paths : Tendsto (fun index => (sourceLaws index).map
-      (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011
+      (skorokhodCadlagContinuousCarrierMap_continuous_completion
         (sources index) (sourceIsometry index).continuous).measurable.aemeasurable) atTop
-      (𝓝 (targetLaw.map (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011
+      (𝓝 (targetLaw.map (skorokhodCadlagContinuousCarrierMap_continuous_completion
         target targetIsometry.continuous).measurable.aemeasurable))) :
     Tendsto (fun index => originalJointCompactPathLaw (sourceMarks index) (sourceMasses index)
       (sourceLaws index)) atTop
@@ -107,9 +107,9 @@ theorem originalJointCompactPathLaws_weak_of_isometric_common_ambient
     (jointMeasuredMarkedStateMap target targetIsometry.continuous
       (originalJointCompactFullState targetMarks targetMasses))
     (fun index => (sourceLaws index).map
-      (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011
+      (skorokhodCadlagContinuousCarrierMap_continuous_completion
         (sources index) (sourceIsometry index).continuous).measurable.aemeasurable)
-    (targetLaw.map (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011
+    (targetLaw.map (skorokhodCadlagContinuousCarrierMap_continuous_completion
       target targetIsometry.continuous).measurable.aemeasurable)
   · intro index
     rw [originalJointCompactPathLaw_toExtended,

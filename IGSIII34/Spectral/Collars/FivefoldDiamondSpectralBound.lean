@@ -13,7 +13,7 @@ actual natural electrical witness of the fivefold subdivided diamond. -/
 theorem fivefoldDiamond_actual_spectral_dimension_bound
     (p : ℝ) (positive : 0 < p) (belowOne : p < 1)
     (fixedPoint : fivefoldDiamondRule.network.reliability p = p)
-    (natural : NaturalResistanceCompletion20261011 fivefoldDiamondRule p positive belowOne fixedPoint) :
+    (natural : NaturalResistanceCompletion fivefoldDiamondRule p positive belowOne fixedPoint) :
     typicalSpectralDimension
         (spectralRadius ℂ ((fivefoldDiamondRule.network.massMatrix p).map Complex.ofReal)).toReal
         natural.growth ≤ Real.log 20 / Real.log 10 ∧
@@ -34,12 +34,12 @@ explicit strict non-AO example; no growth or critical-point existence is assumed
 theorem exists_fivefoldDiamond_strict_non_AO :
     ∃ p : ℝ, ∃ positive : 0 < p, ∃ belowOne : p < 1,
       ∃ fixedPoint : fivefoldDiamondRule.network.reliability p = p,
-      ∃ natural : NaturalResistanceCompletion20261011 fivefoldDiamondRule p positive belowOne fixedPoint,
+      ∃ natural : NaturalResistanceCompletion fivefoldDiamondRule p positive belowOne fixedPoint,
         typicalSpectralDimension
           (spectralRadius ℂ ((fivefoldDiamondRule.network.massMatrix p).map Complex.ofReal)).toReal
           natural.growth < (4 / 3 : ℝ) := by
   obtain ⟨p, positive, belowOne, fixedPoint⟩ := fivefoldDiamond_critical_exists
-  obtain ⟨natural⟩ := exists_natural_resistance_completion20261011 fivefoldDiamondRule
+  obtain ⟨natural⟩ := exists_natural_resistance_completion fivefoldDiamondRule
     fivefoldDiamondRule_classical p positive belowOne fixedPoint
   exact ⟨p, positive, belowOne, fixedPoint, natural,
     (fivefoldDiamond_actual_spectral_dimension_bound p positive belowOne fixedPoint natural).2⟩

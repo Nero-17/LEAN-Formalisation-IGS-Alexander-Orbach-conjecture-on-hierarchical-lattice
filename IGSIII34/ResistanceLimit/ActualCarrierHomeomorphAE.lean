@@ -1,4 +1,4 @@
-import IGSIII34.ResistanceLimit.ActualCarrierHomeomorphCompletion20261011
+import IGSIII34.ResistanceLimit.ActualCarrierHomeomorphCompletion
 import IGSIII34.ResistanceLimit.ActualCompactness
 
 set_option autoImplicit false
@@ -76,7 +76,7 @@ theorem actual_carrier_homeomorph_of_typical
     (chemicalRadiusBounds : ∀ address opened depth, chemicalStart ≤ address.length →
       (markedTerminalComponentRadius rule marks.val depth address opened : ℝ) / chemicalScale ^ (depth + 1 + address.length) ≤
         chemicalCoefficient * chemicalEta ^ address.length) :
-    IsHomeomorph (chemicalElectricalCompletionMapCompletion20261011 rule classicalRule
+    IsHomeomorph (chemicalElectricalCompletionMapCompletion rule classicalRule
       (stationaryConfiguration rule marks.val)
       (typicalStationaryCoherent rule p positive belowOne fixedPoint growth value ⟨marks.val,marks.property.1.1.1⟩)
       chemicalScale chemicalScalePositive lengths lengthNonnegative lengthPositive childConvergence
@@ -85,7 +85,7 @@ theorem actual_carrier_homeomorph_of_typical
         ⟨marks.val,marks.property.1.1.1⟩)
       marks.property.1.1.1.2.2) := by
   obtain ⟨electricalStart, electricalBounds⟩ := marks.property.2.2.2
-  exact actual_chemical_electrical_completion_homeomorph_completion20261011 rule p positive belowOne fixedPoint growth value
+  exact actual_chemical_electrical_completion_homeomorph_completion rule p positive belowOne fixedPoint growth value
     growthPositive (carrierTypicalHarmonicMarks rule p positive belowOne fixedPoint growth value electricalEta marks)
     classicalRule chemicalScale chemicalScalePositive lengths lengthNonnegative lengthPositive childConvergence
     marks.property.2.1 marks.property.2.2.1 electricalEta ((rule.edges + 1 : ℝ) / (1 - electricalEta)) electricalStart

@@ -1,6 +1,6 @@
 import IGSIII34.ResistanceLimit.RawElectricalFiniteCluster
-import IGSIII34.ResistanceLimit.ActualElectricalLocalMeshCompletion20261011
-import IGSIII34.ResistanceLimit.ActualAvailableCellCoverCompletion20261011
+import IGSIII34.ResistanceLimit.ActualElectricalLocalMeshCompletion
+import IGSIII34.ResistanceLimit.ActualAvailableCellCoverCompletion
 
 set_option autoImplicit false
 set_option maxHeartbeats 3200000
@@ -56,7 +56,7 @@ theorem actual_raw_electrical_joint_anchor
   rw [stationaryConfiguration, generationBlockCells_marked, List.nil_append] at rawBound
   have normalizedBound := rawBound.trans (by
     simpa only [markedElectricalRadius, stationaryConfiguration, Nat.add_assoc, Nat.add_left_comm, Nat.add_comm] using cellRadius)
-  have stationaryBound := actual_stationary_local_resistance_mesh_completion20261011 rule p positive belowOne fixedPoint
+  have stationaryBound := actual_stationary_local_resistance_mesh_completion rule p positive belowOne fixedPoint
     growth value growthPositive marks fieldLimit eta coefficient start radiusBounds coarse fine beyond edge side child reachable
     (identity ▸ point.property)
   refine ⟨anchor, ?_, ?_⟩

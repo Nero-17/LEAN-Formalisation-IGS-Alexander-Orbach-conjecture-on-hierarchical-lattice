@@ -1,4 +1,4 @@
-import IGSIII34.Spectral.BoundarySkeletonCompletion20261011
+import IGSIII34.Spectral.BoundarySkeletonCompletion
 import Mathlib.Algebra.Order.Floor.Semiring
 import Mathlib.Data.Nat.Cast.Order.Field
 
@@ -20,7 +20,7 @@ theorem summable_geometric_linear_ceiling
     Summable (fun depth : ℕ => ratio ^ Nat.ceil (width * depth)) := by
   obtain ⟨divisor, reciprocalBelow⟩ := exists_nat_one_div_lt positiveWidth
   apply Summable.of_nonneg_of_le (fun _ => pow_nonneg nonnegative _) _
-    (summable_geometric_nat_div_completion20261011 ratio nonnegative belowOne
+    (summable_geometric_nat_div_completion ratio nonnegative belowOne
       (divisor + 1) (Nat.succ_pos _))
   intro depth
   apply pow_le_pow_of_le_one nonnegative belowOne.le
@@ -40,7 +40,7 @@ theorem actual_boundary_all_rational_linear_collars_avoided
     (rule : Rule) (classicalRule : rule.Classical) (p : ℝ)
     (positive : 0 < p) (belowOne : p < 1)
     (fixedPoint : rule.network.reliability p = p)
-    (continuation : ActualMassContinuationCompletion20261011 rule p positive belowOne fixedPoint)
+    (continuation : ActualMassContinuationCompletion rule p positive belowOne fixedPoint)
     (weight : List (Fin rule.edges × Bool) →
       (((List (Fin rule.edges) × Bool) → Configuration rule.edges) → ℝ))
     (actualRatios : ∀ᵐ marks ∂independentInnovationLaw rule p positive belowOne fixedPoint,
@@ -57,7 +57,7 @@ theorem actual_boundary_all_rational_linear_collars_avoided
       (∀ depth word, boundary {path | path depth = word} =
         ENNReal.ofReal (weight (List.ofFn word) marks)) →
       ∀ᵐ path ∂boundary, ∀ width : ℚ, 0 < width → ∀ᶠ depth in atTop,
-        path ∉ terminalCylinderCollarCompletion20261011 rule 0 depth
+        path ∉ terminalCylinderCollarCompletion rule 0 depth
           (Nat.ceil ((width : ℝ) * depth)) := by
   have degreeStrict := classicalRule.terminal_degree_lt_mass_spectralRadius p positive belowOne
   have radiusPositive : 0 < (spectralRadius ℂ ((rule.network.massMatrix p).map Complex.ofReal)).toReal :=
@@ -74,10 +74,10 @@ theorem actual_boundary_all_rational_linear_collars_avoided
       (∀ depth word, boundary {path | path depth = word} =
         ENNReal.ofReal (weight (List.ofFn word) marks)) →
       ∀ᵐ path ∂boundary, ∀ᶠ depth in atTop,
-        path ∉ terminalCylinderCollarCompletion20261011 rule 0 depth
+        path ∉ terminalCylinderCollarCompletion rule 0 depth
           (Nat.ceil ((width : ℝ) * depth)) := by
     by_cases positiveWidth : 0 < width
-    · have result := actual_boundary_collar_ae_avoidance_completion20261011
+    · have result := actual_boundary_collar_ae_avoidance_completion
         rule classicalRule p positive belowOne fixedPoint continuation weight actualRatios nonnegative
         (fun _ => 0) (fun depth => depth) (fun depth => Nat.ceil ((width : ℝ) * depth))
         (summable_geometric_linear_ceiling _ _ ratioNonnegative ratioBelowOne

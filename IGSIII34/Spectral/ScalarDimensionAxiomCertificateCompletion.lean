@@ -1,0 +1,7 @@
+import IGSIII34.Spectral.ScalarSpectralDimensionCompletion
+import IGSIII34.Diffusion.ActualScalarSpeedSolutionCompletion
+
+#print axioms IGSIII34.Spectral.scalar_speed_spectral_dimension_completion
+#print axioms IGSIII34.Spectral.scalar_speed_spectral_dimension_ae_completion
+#print axioms IGSIII34.Diffusion.actualScalarSpeedEnergySolution_variational_completion
+#print axioms IGSIII34.Diffusion.actualScalarSpeedEnergySolution_extension_completion

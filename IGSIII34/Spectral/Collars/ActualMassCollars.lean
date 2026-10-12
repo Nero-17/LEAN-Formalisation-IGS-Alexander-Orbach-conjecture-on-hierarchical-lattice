@@ -34,7 +34,7 @@ theorem exists_actual_typical_log_mass_and_linear_collars
           IsProbabilityMeasure boundary ∧
           (∀ depth word, boundary {path | path depth = word} =
             ENNReal.ofReal (weight (List.ofFn word) marks)) ∧
-          boundary (terminalSkeletonBoundaryCompletion20261011 rule) = 0 ∧
+          boundary (terminalSkeletonBoundaryCompletion rule) = 0 ∧
           ∀ᵐ path ∂boundary,
             (∀ depth, Fin.init (path (depth + 1)) = path depth ∧
               0 < weight (List.ofFn (path depth)) marks) ∧
@@ -42,11 +42,11 @@ theorem exists_actual_typical_log_mass_and_linear_collars
               atTop (𝓝 (-Real.log
                 ((spectralRadius ℂ ((rule.network.massMatrix p).map Complex.ofReal)).toReal))) ∧
             ∀ width : ℚ, 0 < width → ∀ᶠ depth in atTop,
-              path ∉ terminalCylinderCollarCompletion20261011 rule 0 depth
+              path ∉ terminalCylinderCollarCompletion rule 0 depth
                 (Nat.ceil ((width : ℝ) * depth)) := by
-  obtain ⟨weight, properties⟩ := exists_actual_typical_component_mass_completion20261011
+  obtain ⟨weight, properties⟩ := exists_actual_typical_component_mass_completion
     classicalRule p positive belowOne fixedPoint
-  obtain ⟨continuation⟩ := exists_actual_mass_continuation_completion20261011
+  obtain ⟨continuation⟩ := exists_actual_mass_continuation_completion
     rule classicalRule p positive belowOne fixedPoint
   have actualRatios : ∀ᵐ marks ∂independentInnovationLaw rule p positive belowOne fixedPoint,
       ∀ address, Tendsto (fun depth => markedOrientedVertexMass rule marks depth
@@ -62,7 +62,7 @@ theorem exists_actual_typical_log_mass_and_linear_collars
       (classicalRule.terminal_degree_lt_mass_spectralRadius p positive belowOne)
   refine ⟨weight, ?_⟩
   filter_upwards [properties,
-    actual_boundary_skeleton_zero_mass_completion20261011 rule classicalRule p positive belowOne
+    actual_boundary_skeleton_zero_mass_completion rule classicalRule p positive belowOne
       fixedPoint continuation weight actualRatios nonnegative,
     actual_boundary_all_rational_linear_collars_avoided rule classicalRule p positive belowOne
       fixedPoint continuation weight actualRatios nonnegative]

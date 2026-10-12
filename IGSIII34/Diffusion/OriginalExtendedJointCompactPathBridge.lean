@@ -24,7 +24,7 @@ theorem originalJointCompactPathRepresentative_toExtended
     {Space : Type} [MetricSpace Space] [CompactSpace Space]
     [MeasurableSpace Space] [BorelSpace Space]
     (marks : Bool → Space) (masses : Bool → ProbabilityMeasure Space)
-    (path : SkorokhodCadlagPathCompletion20261011 Space) :
+    (path : SkorokhodCadlagPathCompletion Space) :
     ExtendedJointCompactRepresentative.ofOriginal
         (OriginalJointCompactRepresentative.ofCompactSpace marks masses path) =
       ExtendedJointCompactRepresentative.ofCompactSpace
@@ -50,13 +50,13 @@ theorem originalJointCompactPathRepresentative_toExtended
     ambient := compact
     state := originalJointRepresentativeState
       (OriginalJointCompactRepresentative.ofCompactSpace marks masses path)
-    path := skorokhodCadlagContinuousCarrierMapCompletion20261011 embedding embedding.continuous path } :
+    path := skorokhodCadlagContinuousCarrierMapCompletion embedding embedding.continuous path } :
       ExtendedJointCompactRepresentative) =
     ({
       ambient := compact
       state := jointMeasuredMarkedStateMap embedding embedding.continuous
         (originalJointCompactFullState marks masses)
-      path := skorokhodCadlagContinuousCarrierMapCompletion20261011 embedding embedding.continuous path } :
+      path := skorokhodCadlagContinuousCarrierMapCompletion embedding embedding.continuous path } :
       ExtendedJointCompactRepresentative)
   rw [states]
 
@@ -64,7 +64,7 @@ theorem originalJointCompactPathRepresentative_extended_class
     {Space : Type} [MetricSpace Space] [CompactSpace Space]
     [MeasurableSpace Space] [BorelSpace Space]
     (marks : Bool → Space) (masses : Bool → ProbabilityMeasure Space)
-    (path : SkorokhodCadlagPathCompletion20261011 Space) :
+    (path : SkorokhodCadlagPathCompletion Space) :
     extendedJointCompactClass (.ofOriginal (.ofCompactSpace marks masses path)) =
       extendedJointStatePathClass (originalJointCompactFullState marks masses) path :=
   congrArg extendedJointCompactClass
@@ -74,7 +74,7 @@ theorem originalJointCompactPathEncoding_toExtended
     {Space : Type} [MetricSpace Space] [CompactSpace Space]
     [MeasurableSpace Space] [BorelSpace Space]
     (marks : Bool → Space) (masses : Bool → ProbabilityMeasure Space)
-    (path : SkorokhodCadlagPathCompletion20261011 Space) :
+    (path : SkorokhodCadlagPathCompletion Space) :
     originalJointCompactSpaceToExtended (originalJointCompactPathEncoding marks masses path) =
       extendedJointStatePathClass (originalJointCompactFullState marks masses) path := by
   rw [originalJointCompactPathEncoding, originalJointCompactSpaceToExtended_class]

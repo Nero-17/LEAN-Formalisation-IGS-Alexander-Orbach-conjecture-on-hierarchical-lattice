@@ -11,14 +11,14 @@ open scoped Topology NNReal
 variable {Space : Type*} [MetricSpace Space] [CompactSpace Space]
 
 def cadlagLeftJumpBox
-    (path : SkorokhodCadlagPathCompletion20261011 Space) (level : ℕ) (lower : ℚ) : Set ℝ≥0 :=
+    (path : SkorokhodCadlagPathCompletion Space) (level : ℕ) (lower : ℚ) : Set ℝ≥0 :=
   {time | 0 ≤ (lower : ℝ) ∧ (lower : ℝ) < time ∧ ∃ leftValue : Space,
     4 * (1 / (level + 1 : ℝ)) ≤ dist leftValue (path.val time) ∧
     ∀ previous : ℝ≥0, (lower : ℝ) < previous → previous < time →
       dist (path.val previous) leftValue < 1 / (level + 1 : ℝ)}
 
 theorem cadlagLeftJumpBox_subsingleton
-    (path : SkorokhodCadlagPathCompletion20261011 Space) (level : ℕ) (lower : ℚ) :
+    (path : SkorokhodCadlagPathCompletion Space) (level : ℕ) (lower : ℚ) :
     (cadlagLeftJumpBox path level lower).Subsingleton := by
   have tolerancePositive : 0 < 1 / (level + 1 : ℝ) := by positivity
   have cannotIncrease (first second : ℝ≥0)
@@ -46,7 +46,7 @@ theorem cadlagLeftJumpBox_subsingleton
     (not_lt.mp (cannotIncrease first second firstMember secondMember))
 
 theorem cadlag_positive_discontinuities_countable
-    (path : SkorokhodCadlagPathCompletion20261011 Space) :
+    (path : SkorokhodCadlagPathCompletion Space) :
     {time : ℝ≥0 | 0 < time ∧ ¬ ContinuousAt path.val.toFun time}.Countable := by
   apply (countable_iUnion (fun level => countable_iUnion (fun lower =>
     (cadlagLeftJumpBox_subsingleton path level lower).countable))).mono
@@ -89,7 +89,7 @@ theorem cadlag_positive_discontinuities_countable
 /-- Every positive open physical-time interval contains a continuity
 endpoint of the cadlag path. -/
 theorem cadlag_exists_continuity_endpoint
-    (path : SkorokhodCadlagPathCompletion20261011 Space)
+    (path : SkorokhodCadlagPathCompletion Space)
     (lower upper : ℝ≥0) (ordered : lower < upper) :
     ∃ time : ℝ≥0, lower < time ∧ time < upper ∧ ContinuousAt path.val.toFun time := by
   have countable := (cadlag_positive_discontinuities_countable path).image

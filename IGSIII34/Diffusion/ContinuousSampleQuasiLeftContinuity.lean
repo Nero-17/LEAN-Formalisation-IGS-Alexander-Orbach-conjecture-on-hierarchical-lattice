@@ -1,4 +1,4 @@
-import IGSIII34.Diffusion.CountableContinuousProcessCompletion20261011
+import IGSIII34.Diffusion.CountableContinuousProcessCompletion
 
 set_option autoImplicit false
 namespace IGSIII34.Diffusion
@@ -16,10 +16,10 @@ theorem countableTimeContinuousSample_stopping_sequence
     (times : ℕ → ℝ≥0) (dense : DenseRange times) (sample : ℕ → Space)
     (stoppingSequence : ℕ → ℝ≥0) (stoppingLimit : ℝ≥0)
     (convergence : Tendsto stoppingSequence atTop (𝓝 stoppingLimit)) :
-    Tendsto (fun index => countableTimeContinuousSampleCompletion20261011
+    Tendsto (fun index => countableTimeContinuousSampleCompletion
       times dense sample (stoppingSequence index)) atTop
-      (𝓝 (countableTimeContinuousSampleCompletion20261011 times dense sample stoppingLimit)) :=
-  ((countableTimeContinuousSample_continuous_completion20261011
+      (𝓝 (countableTimeContinuousSampleCompletion times dense sample stoppingLimit)) :=
+  ((countableTimeContinuousSample_continuous_completion
     times dense sample).tendsto stoppingLimit).comp convergence
 
 /-- The constructed continuous process has almost-sure quasi-left
@@ -33,9 +33,9 @@ theorem countableTimeContinuousSample_ae_stopping_sequence
     (convergence : ∀ᵐ sample ∂(law : Measure (ℕ → Space)),
       Tendsto (fun index => stoppingSequence index sample) atTop (𝓝 (stoppingLimit sample))) :
     ∀ᵐ sample ∂(law : Measure (ℕ → Space)),
-      Tendsto (fun index => countableTimeContinuousSampleCompletion20261011
+      Tendsto (fun index => countableTimeContinuousSampleCompletion
         times dense sample (stoppingSequence index sample)) atTop
-        (𝓝 (countableTimeContinuousSampleCompletion20261011 times dense sample (stoppingLimit sample))) := by
+        (𝓝 (countableTimeContinuousSampleCompletion times dense sample (stoppingLimit sample))) := by
   filter_upwards [convergence] with sample converges
   exact countableTimeContinuousSample_stopping_sequence times dense sample
     (fun index => stoppingSequence index sample) (stoppingLimit sample) converges

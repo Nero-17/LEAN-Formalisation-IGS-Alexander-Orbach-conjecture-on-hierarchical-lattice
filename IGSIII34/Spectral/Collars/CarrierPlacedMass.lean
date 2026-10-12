@@ -80,7 +80,7 @@ theorem actual_same_carrier_placed_mass
       (stationaryConfiguration rule marks.val) chemicalScale chemicalScalePositive depth =>
       actualStationaryElectricalVertex rule p positive belowOne fixedPoint growth value growthPositive
         ⟨marks.val, marks.property.1.1⟩ depth vertex) := fun _ => measurable_of_finite _
-  have projectedWeak := IGSIII34.Diffusion.probability_weak_of_levyProkhorov_completion20261011
+  have projectedWeak := IGSIII34.Diffusion.probability_weak_of_levyProkhorov_completion
     (fun depth => (measures depth).map (projectionMeasurable depth).aemeasurable)
     (⟨boundary.map realization, Measure.isProbabilityMeasure_map realizationMeasurable.aemeasurable⟩ : ProbabilityMeasure (ActualStationaryElectricalSpace rule p positive belowOne fixedPoint growth value growthPositive ⟨marks.val, marks.property.1.1⟩)) bornProjectionLP
   have close : ∀ tolerance : ℝ, 0 < tolerance → ∀ᶠ depth in atTop, ∀ vertex,

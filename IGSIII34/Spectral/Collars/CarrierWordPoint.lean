@@ -1,4 +1,4 @@
-import IGSIII34.ResistanceLimit.ActualCarrierMeasureCompletion20261011
+import IGSIII34.ResistanceLimit.ActualCarrierMeasureCompletion
 import IGSIII.Geometry.ActualFiniteCluster
 import IGSIII34.Spectral.Collars.CellCarrierTransport
 

@@ -1,5 +1,5 @@
 import IGSIII34.Diffusion.ExactEdgeOwnership
-import IGSIII34.Diffusion.ClusterSourceEnergyCompletion20261011
+import IGSIII34.Diffusion.ClusterSourceEnergyCompletion
 
 set_option autoImplicit false
 set_option maxHeartbeats 2600000
@@ -33,7 +33,7 @@ theorem sourceComponentEnergy_eq_weighted_cluster_energy
     exact Finset.sum_subtype (Finset.univ.filter fun edge : {edge : Fin edges // configuration edge = true} =>
       (rule.openGraph configuration).Reachable rule.source (rule.endpoint edge.val).1)
       (by simp) response
-  have reindexed := (clusterOpenRetainedEquivCompletion20261011 rule configuration).sum_comp
+  have reindexed := (clusterOpenRetainedEquivCompletion rule configuration).sum_comp
     (fun edge => response edge.val)
   unfold sourceComponentEnergy finiteEnergy
   simp only [graph_eq_openGraph, ite_mul, zero_mul]

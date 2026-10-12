@@ -1,5 +1,5 @@
 import IGSIII34.Diffusion.ActualPaperDeterministicCommonAmbient
-import IGSIII34.Diffusion.WeightedClockRateIdentificationCompletion20261011
+import IGSIII34.Diffusion.WeightedClockRateIdentificationCompletion
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 2000000
@@ -20,12 +20,12 @@ variable {Ambient : Type*} [MetricSpace Ambient] [CompactSpace Ambient]
 def actualPaperDeterministicPlacedGlobalSample (countingSpeed : Bool) (depth : ℕ)
     (placement : ActualFiniteCluster rule (stationaryConfiguration rule marks.val) chemicalScale chemicalScalePositive depth → Ambient)
     (sample : (ℕ → ActualFiniteCluster rule (stationaryConfiguration rule marks.val) chemicalScale chemicalScalePositive depth) × (ℕ → ℝ)) :=
-  weightedHoldingGlobalSampleCompletion20261011
-    (fun vertex => if countingSpeed then finiteCountingClockDensityCompletion20261011
+  weightedHoldingGlobalSampleCompletion
+    (fun vertex => if countingSpeed then finiteCountingClockDensityCompletion
       (Vertex := ActualFiniteCluster rule (stationaryConfiguration rule marks.val) chemicalScale chemicalScalePositive depth)
       (clusterRetainedEndpoint (rule.generation depth).network (stationaryConfiguration rule marks.val depth)) vertex else 1)
-    (actualPaperDiscreteClockCompletion20261011 rule p positive belowOne fixedPoint growth value ⟨marks.val, marks.property.1.1⟩ depth *
-      (actualPaperDeterministicClockRatioCompletion20261011 rule p growth marks.val chemicalScale chemicalScalePositive countingSpeed depth : ℝ))
+    (actualPaperDiscreteClockCompletion rule p positive belowOne fixedPoint growth value ⟨marks.val, marks.property.1.1⟩ depth *
+      (actualPaperDeterministicClockRatioCompletion rule p growth marks.val chemicalScale chemicalScalePositive countingSpeed depth : ℝ))
     placement sample
 
 include classicalRule growthPositive in
@@ -51,39 +51,39 @@ theorem actualPaperDeterministicPlacedGlobalSample_original_clock (countingSpeed
   · filter_upwards [] with sample
     intro time
     unfold actualPaperDeterministicPlacedGlobalSample
-    simp only [Bool.false_eq_true, ↓reduceIte, weightedHoldingGlobalSampleCompletion20261011,
-      weightedHoldingSampleCompletion20261011, holdingGlobalSkorokhodSampleCompletion20261011, one_mul]
+    simp only [Bool.false_eq_true, ↓reduceIte, weightedHoldingGlobalSampleCompletion,
+      weightedHoldingSampleCompletion, holdingGlobalSkorokhodSampleCompletion, one_mul]
     congr 2
     exact congrArg (fun acceleration : ℝ => acceleration * (time : ℝ))
-      (actualPaperDeterministicClockRatio_normalization_completion20261011 rule classicalRule p positive belowOne fixedPoint
+      (actualPaperDeterministicClockRatio_normalization_completion rule classicalRule p positive belowOne fixedPoint
         growth value growthPositive marks chemicalScale chemicalScalePositive false depth)
-  · have ratioPositive := actualPaperDeterministicRatios_positive_of_classical_completion20261011 rule classicalRule p positive belowOne fixedPoint
+  · have ratioPositive := actualPaperDeterministicRatios_positive_of_classical_completion rule classicalRule p positive belowOne fixedPoint
       growth value growthPositive marks chemicalScale chemicalScalePositive true depth
-    have identity := finiteCountingClockDensity_vertex_clock_identity_completion20261011
+    have identity := finiteCountingClockDensity_vertex_clock_identity_completion
       (Vertex := ActualFiniteCluster rule (stationaryConfiguration rule marks.val) chemicalScale chemicalScalePositive depth)
       (clusterRetainedEndpoint (rule.generation depth).network (stationaryConfiguration rule marks.val depth))
       (cluster_degree_positive _ _ (markedGenerationConfiguration_crosses rule marks.val marks.property.1.1.2.1 depth [] true)) initial
-      (growth ^ (depth+1) * (actualPaperDeterministicClockRatioCompletion20261011 rule p growth marks.val chemicalScale chemicalScalePositive true depth : ℝ))
+      (growth ^ (depth+1) * (actualPaperDeterministicClockRatioCompletion rule p growth marks.val chemicalScale chemicalScalePositive true depth : ℝ))
       (mul_pos (pow_pos growthPositive _) (NNReal.coe_pos.mpr ratioPositive))
     filter_upwards [identity] with sample equality
     intro time
     unfold actualPaperDeterministicPlacedGlobalSample
-    simp only [↓reduceIte, weightedHoldingGlobalSampleCompletion20261011,
-      holdingGlobalSkorokhodSampleCompletion20261011]
-    have normalization := actualPaperDeterministicClockRatio_normalization_completion20261011 rule classicalRule p positive belowOne fixedPoint
+    simp only [↓reduceIte, weightedHoldingGlobalSampleCompletion,
+      holdingGlobalSkorokhodSampleCompletion]
+    have normalization := actualPaperDeterministicClockRatio_normalization_completion rule classicalRule p positive belowOne fixedPoint
       growth value growthPositive marks chemicalScale chemicalScalePositive true depth
     simp only [↓reduceIte] at normalization
     have atTime := equality (time : ℝ) time.property
     simp only [← mul_assoc] at atTime
     rw [normalization] at atTime
     apply congrArg placement
-    simpa only [actualPaperDiscreteClockCompletion20261011, weightedHoldingSampleCompletion20261011, ← mul_assoc] using atTime
+    simpa only [actualPaperDiscreteClockCompletion, weightedHoldingSampleCompletion, ← mul_assoc] using atTime
 
 
 def actualPaperDeterministicPlacedOriginalSample (countingSpeed : Bool) (depth : ℕ)
     (placement : ActualFiniteCluster rule (stationaryConfiguration rule marks.val) chemicalScale chemicalScalePositive depth → Ambient)
     (sample : (ℕ → ActualFiniteCluster rule (stationaryConfiguration rule marks.val) chemicalScale chemicalScalePositive depth) × (ℕ → ℝ)) :
-    SkorokhodGlobalPathCompletion20261011 Ambient :=
+    SkorokhodGlobalPathCompletion Ambient :=
   ⟨fun time => placement (holdingTimePath sample.1
     (fun index => if countingSpeed then sample.2 index / degree
       (clusterRetainedEndpoint (rule.generation depth).network (stationaryConfiguration rule marks.val depth)) (sample.1 index) else sample.2 index)
@@ -108,7 +108,7 @@ theorem actualPaperDeterministicPlacedCadlagLaw_original_clock (countingSpeed : 
   letI := clusterEdge_nonempty (rule.generation depth).network (stationaryConfiguration rule marks.val depth)
     (markedGenerationConfiguration_crosses rule marks.val marks.property.1.1.2.1 depth [] true)
   unfold actualPaperDeterministicPlacedCadlagLaw
-  rw [finiteWeightedCadlagProbability_val_completion20261011]
+  rw [finiteWeightedCadlagProbability_val_completion]
   change (finiteContinuousWalkSampleLaw
     (Vertex := ActualFiniteCluster rule (stationaryConfiguration rule marks.val) chemicalScale chemicalScalePositive depth)
     (clusterRetainedEndpoint (rule.generation depth).network (stationaryConfiguration rule marks.val depth))
@@ -118,7 +118,7 @@ theorem actualPaperDeterministicPlacedCadlagLaw_original_clock (countingSpeed : 
   apply Measure.map_congr
   filter_upwards [actualPaperDeterministicPlacedGlobalSample_original_clock rule classicalRule p positive belowOne fixedPoint growth value
     growthPositive marks chemicalScale chemicalScalePositive countingSpeed depth placement initial] with sample equality
-  exact congrArg SkorokhodGlobalPathCompletion20261011.mk (funext equality)
+  exact congrArg SkorokhodGlobalPathCompletion.mk (funext equality)
 
 end
 end IGSIII34.Diffusion

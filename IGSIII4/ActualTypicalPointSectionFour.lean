@@ -1,5 +1,5 @@
 import IGSIII4.ActualSectionFour
-import IGSIII34.Spectral.ActualNaturalTypicalSpectralCompletion20261011
+import IGSIII34.Spectral.ActualNaturalTypicalSpectralCompletion
 
 /-! Section 4 for the actual constructed compact diffusion heat kernel.
 Natural resistance, physical mass, compact carrier and spectral data are all
@@ -24,7 +24,7 @@ local instance {Carrier : Type*} [UniformSpace Carrier] :
 theorem exists_ae_actual_section_four_typical_heat_kernel
     (rule : Rule) (classicalRule : rule.Classical) (p : ℝ)
     (positive : 0 < p) (belowOne : p < 1) (fixedPoint : rule.network.reliability p = p)
-    (natural : NaturalResistanceCompletion20261011 rule p positive belowOne fixedPoint)
+    (natural : NaturalResistanceCompletion rule p positive belowOne fixedPoint)
     (chemical : ActualChemicalSectionTwo rule p positive belowOne fixedPoint) :
     ∃ weight : List (Fin rule.edges × Bool) → (((List (Fin rule.edges) × Bool) → Configuration rule.edges) → ℝ),
       (∀ᵐ marks ∂independentInnovationLaw rule p positive belowOne fixedPoint,
@@ -66,13 +66,13 @@ theorem exists_ae_actual_section_four_typical_heat_kernel
       ∀ anchor : ActualStationaryEnergySkeleton rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
         (zero_lt_one.trans natural.aboveOne)
         (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) ⟨marks, typical⟩),
-      ∃ data : ActualSpectralDataCompletion20261011 rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
+      ∃ data : ActualSpectralDataCompletion rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
         (zero_lt_one.trans natural.aboveOne)
         (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) ⟨marks, typical⟩)
         anchor (boundary.map realization),
       ∀ᵐ point ∂boundary.map realization,
       ∃ dimension : ℝ,
-        Tendsto (fun time => -2 * Real.log (actualSpectralHeatKernelCompletion20261011
+        Tendsto (fun time => -2 * Real.log (actualSpectralHeatKernelCompletion
           rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
           (zero_lt_one.trans natural.aboveOne)
           (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth
@@ -90,7 +90,7 @@ theorem exists_ae_actual_section_four_typical_heat_kernel
         (2 ≤ chemicalMassDimension (actualMassGrowth rule p) chemical.growth → (4 / 3 : ℝ) < dimension) ∧
         (chemicalMassDimension (actualMassGrowth rule p) chemical.growth ≤ (4 / 3 : ℝ) → dimension < (4 / 3 : ℝ)) := by
   obtain ⟨weight, actualRatios, witnesses⟩ :=
-    exists_ae_actual_natural_typical_spectral_completion20261011
+    exists_ae_actual_natural_typical_spectral_completion
       rule classicalRule p positive belowOne fixedPoint natural
   have conclusions := section_four_for_natural_resistance
     rule classicalRule p positive belowOne fixedPoint natural chemical
@@ -114,7 +114,7 @@ theorem exists_ae_actual_section_four_typical_heat_kernel
 theorem exists_actual_section_four_and_typical_heat_kernel
     (rule : Rule) (classicalRule : rule.Classical) (p : ℝ)
     (positive : 0 < p) (belowOne : p < 1) (fixedPoint : rule.network.reliability p = p)
-    : ∃ natural : NaturalResistanceCompletion20261011 rule p positive belowOne fixedPoint,
+    : ∃ natural : NaturalResistanceCompletion rule p positive belowOne fixedPoint,
       ∃ chemical : ActualChemicalSectionTwo rule p positive belowOne fixedPoint,
       SectionFourConclusions rule p positive belowOne fixedPoint
         (naturalSectionFourElectrical rule p positive belowOne fixedPoint natural) chemical ∧
@@ -158,13 +158,13 @@ theorem exists_actual_section_four_and_typical_heat_kernel
       ∀ anchor : ActualStationaryEnergySkeleton rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
         (zero_lt_one.trans natural.aboveOne)
         (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) ⟨marks, typical⟩),
-      ∃ data : ActualSpectralDataCompletion20261011 rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
+      ∃ data : ActualSpectralDataCompletion rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
         (zero_lt_one.trans natural.aboveOne)
         (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) ⟨marks, typical⟩)
         anchor (boundary.map realization),
       ∀ᵐ point ∂boundary.map realization,
       ∃ dimension : ℝ,
-        Tendsto (fun time => -2 * Real.log (actualSpectralHeatKernelCompletion20261011
+        Tendsto (fun time => -2 * Real.log (actualSpectralHeatKernelCompletion
           rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
           (zero_lt_one.trans natural.aboveOne)
           (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth
@@ -181,7 +181,7 @@ theorem exists_actual_section_four_and_typical_heat_kernel
           chemicalResistanceDimension natural.growth chemical.growth < 1) → dimension ≠ (4 / 3 : ℝ)) ∧
         (2 ≤ chemicalMassDimension (actualMassGrowth rule p) chemical.growth → (4 / 3 : ℝ) < dimension) ∧
         (chemicalMassDimension (actualMassGrowth rule p) chemical.growth ≤ (4 / 3 : ℝ) → dimension < (4 / 3 : ℝ)) := by
-  obtain ⟨natural⟩ := exists_natural_resistance_completion20261011
+  obtain ⟨natural⟩ := exists_natural_resistance_completion
     rule classicalRule p positive belowOne fixedPoint
   obtain ⟨chemical⟩ := exists_actual_chemical_section_two
     rule classicalRule p positive belowOne fixedPoint
@@ -196,7 +196,7 @@ def NaturalGlobalAlexanderOrbachConjecture : Prop :=
   ∀ (rule : Rule), rule.Classical → ∀ (probability : ℝ)
     (positive : 0 < probability) (belowOne : probability < 1)
     (fixedPoint : rule.network.reliability probability = probability)
-    (natural : NaturalResistanceCompletion20261011 rule probability positive belowOne fixedPoint),
+    (natural : NaturalResistanceCompletion rule probability positive belowOne fixedPoint),
       actualMassGrowth rule probability ≠ natural.growth ^ 2
 
 end

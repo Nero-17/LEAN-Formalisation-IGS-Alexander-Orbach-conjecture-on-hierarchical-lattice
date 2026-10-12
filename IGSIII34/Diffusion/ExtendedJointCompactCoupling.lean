@@ -25,9 +25,9 @@ def ExtendedJointCompactCoupling.cost {first last : ExtendedJointCompactRepresen
       first.state)
     (jointMeasuredMarkedStateMap coupling.lastPlacement coupling.lastIsometry.continuous
       last.state) +
-  dist (skorokhodCadlagContinuousCarrierMapCompletion20261011 coupling.firstPlacement
+  dist (skorokhodCadlagContinuousCarrierMapCompletion coupling.firstPlacement
       coupling.firstIsometry.continuous first.path)
-    (skorokhodCadlagContinuousCarrierMapCompletion20261011 coupling.lastPlacement
+    (skorokhodCadlagContinuousCarrierMapCompletion coupling.lastPlacement
       coupling.lastIsometry.continuous last.path)
 
 def ExtendedJointCompactCoupling.reverse {first last : ExtendedJointCompactRepresentative}

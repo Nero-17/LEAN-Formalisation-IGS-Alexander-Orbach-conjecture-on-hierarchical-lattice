@@ -12,7 +12,7 @@ def originalJointCompactPathLaw
     {Space : Type} [MetricSpace Space] [CompactSpace Space]
     [MeasurableSpace Space] [BorelSpace Space]
     (marks : Bool → Space) (masses : Bool → ProbabilityMeasure Space)
-    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 Space)) :
+    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion Space)) :
     ProbabilityMeasure OriginalJointCompactSpace :=
   law.map (originalJointCompactPathEncoding_continuous marks masses).measurable.aemeasurable
 
@@ -20,7 +20,7 @@ theorem originalJointCompactPathLaw_integral
     {Space : Type} [MetricSpace Space] [CompactSpace Space]
     [MeasurableSpace Space] [BorelSpace Space]
     (marks : Bool → Space) (masses : Bool → ProbabilityMeasure Space)
-    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 Space))
+    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion Space))
     (test : OriginalJointCompactSpace →ᵇ ℝ) :
     (∫ point, test point ∂(originalJointCompactPathLaw marks masses law : Measure _)) =
       ∫ path, test (originalJointCompactPathEncoding marks masses path) ∂(law : Measure _) := by
@@ -31,8 +31,8 @@ theorem originalJointCompactPathLaw_tendsto
     {Space : Type} [MetricSpace Space] [CompactSpace Space]
     [MeasurableSpace Space] [BorelSpace Space]
     (marks : Bool → Space) (masses : Bool → ProbabilityMeasure Space)
-    (laws : ℕ → ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 Space))
-    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 Space))
+    (laws : ℕ → ProbabilityMeasure (SkorokhodCadlagPathCompletion Space))
+    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion Space))
     (weak : Tendsto laws atTop (𝓝 law)) :
     Tendsto (fun index => originalJointCompactPathLaw marks masses (laws index)) atTop
       (𝓝 (originalJointCompactPathLaw marks masses law)) :=
@@ -43,7 +43,7 @@ theorem originalJointCompactPathLaw_toExtended
     {Space : Type} [MetricSpace Space] [CompactSpace Space]
     [MeasurableSpace Space] [BorelSpace Space]
     (marks : Bool → Space) (masses : Bool → ProbabilityMeasure Space)
-    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 Space)) :
+    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion Space)) :
     (originalJointCompactPathLaw marks masses law).map
         originalJointCompactSpaceToExtended_isometry.continuous.measurable.aemeasurable =
       extendedJointCompactPathLaw (originalJointCompactFullState marks masses) law := by

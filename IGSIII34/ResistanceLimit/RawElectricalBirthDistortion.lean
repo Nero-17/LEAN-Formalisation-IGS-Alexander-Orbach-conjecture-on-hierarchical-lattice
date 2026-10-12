@@ -1,5 +1,5 @@
 import IGSIII34.ResistanceLimit.RawElectricalJointAnchor
-import IGSIII34.Topology.JointAnchorDistortionCompletion20261011
+import IGSIII34.Topology.JointAnchorDistortionCompletion
 
 set_option autoImplicit false
 set_option maxHeartbeats 3600000
@@ -57,7 +57,7 @@ theorem actual_raw_electrical_birth_uniform_distortion
     ⟨depth - coarse - 1, by omega⟩
   subst depth
   have anchorBounds := largeBounds (coarse + fine + 1) (by omega)
-  have fullBound := IGSIII34.Topology.joint_anchor_projection_distortion_completion20261011
+  have fullBound := IGSIII34.Topology.joint_anchor_projection_distortion_completion
     (fun anchor => show RawElectricalFiniteCluster rule (stationaryConfiguration rule marks.val) growth growthPositive (coarse + fine + 1) from
       retainedPersistentVertexEmbedding rule (stationaryConfiguration rule marks.val)
         (typicalStationaryCoherent rule p positive belowOne fixedPoint growth value marks) coarse (coarse + fine + 1) (by omega) anchor)

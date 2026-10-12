@@ -1,0 +1,6 @@
+import IGSIII34.Diffusion.ActualScalarSpeedSolutionCompletion
+
+#print axioms IGSIII34.Diffusion.actualParameterResolventBilinear_integral_pairing_completion
+#print axioms IGSIII34.Diffusion.actualContinuousEnergySolution_integral_pairing_completion
+#print axioms IGSIII34.Diffusion.actualScalarSpeedEnergySolution_variational_completion
+#print axioms IGSIII34.Diffusion.actualScalarSpeedEnergySolution_extension_completion

@@ -1,6 +1,6 @@
 import IGSIII34.ResistanceLimit.ActualCarrierHomeomorphAE
 import IGSIII.Geometry.CriticalChemicalLengths
-import IGSIII34.ResistanceLimit.ActualChemicalCommonRealisationCompletion20261011
+import IGSIII34.ResistanceLimit.ActualChemicalCommonRealisationCompletion
 
 set_option autoImplicit false
 set_option maxHeartbeats 2800000
@@ -38,7 +38,7 @@ def ActualChemicalCarrierIdentification : Prop :=
             (rule.generation fine).network.source (rule.generation fine).network.target : ℝ) /
             chemicalGrowth ^ (coarse + fine + 2)) atTop
           (𝓝 (chemicalBlockLimitLength rule p positive belowOne fixedPoint chemicalGrowth amplitude chemicalValue marks coarse edge)),
-        IsHomeomorph (chemicalElectricalCompletionMapCompletion20261011 rule classicalRule
+        IsHomeomorph (chemicalElectricalCompletionMapCompletion rule classicalRule
           (stationaryConfiguration rule marks)
           (typicalStationaryCoherent rule p positive belowOne fixedPoint growth value ⟨marks,typical.1.1⟩)
           chemicalGrowth chemicalGrowthPositive
@@ -124,7 +124,7 @@ theorem actual_chemical_carrier_identification_fixed_cluster
       lengthNonnegative lengthPositive childConvergence chemicalEta ((rule.edges + 1 : ℝ) / (1 - chemicalEta)) chemicalStart
       chemicalEtaPositive.le chemicalEtaBelowOne
       (div_nonneg (by positivity) (sub_pos.mpr chemicalEtaBelowOne).le) chemicalBounds
-  · exact exists_actual_chemical_common_isometric_realisation_completion20261011 rule classicalRule marks
+  · exact exists_actual_chemical_common_isometric_realisation_completion rule classicalRule marks
       electrical.1.1.1.2.1
       (typicalStationaryCoherent rule p positive belowOne fixedPoint growth value ⟨marks,electrical.1.1.1⟩)
       chemicalGrowth chemicalGrowthPositive

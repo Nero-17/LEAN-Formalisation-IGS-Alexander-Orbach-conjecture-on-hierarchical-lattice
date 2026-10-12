@@ -35,7 +35,7 @@ theorem originalJointCompactRepresentative_ofCompactSpace_continuous
     {Space : Type} [MetricSpace Space] [CompactSpace Space]
     [MeasurableSpace Space] [BorelSpace Space]
     (marks : Bool → Space) (masses : Bool → ProbabilityMeasure Space)
-    (path : SkorokhodCadlagPathCompletion20261011 Space)
+    (path : SkorokhodCadlagPathCompletion Space)
     (continuous : Continuous path.val.toFun) :
     Continuous (OriginalJointCompactRepresentative.ofCompactSpace marks masses path).path.val.toFun := by
   letI : Nonempty Space := ⟨marks true⟩
@@ -50,21 +50,21 @@ theorem originalJointCompactPathLaw_continuousSample_regular
     (continuous : ∀ outcome, Continuous (sample outcome))
     (evaluations : ∀ time, Measurable (fun outcome => sample outcome time)) :
     OriginalJointUsualTestRegular (originalJointCompactPathLaw marks masses
-      (continuousCadlagProbabilityCompletion20261011 law sample continuous evaluations)) := by
+      (continuousCadlagProbabilityCompletion law sample continuous evaluations)) := by
   have measurable := (originalJointCompactPathEncoding_continuous marks masses).measurable.comp
-    (continuousCadlagSample_measurable_completion20261011 sample continuous evaluations)
+    (continuousCadlagSample_measurable_completion sample continuous evaluations)
   have regular := originalJointContinuousSampleLaw_regular law
     (fun outcome => OriginalJointCompactRepresentative.ofCompactSpace marks masses
-      (continuousCadlagSampleCompletion20261011 sample continuous outcome)) measurable
+      (continuousCadlagSampleCompletion sample continuous outcome)) measurable
     (fun outcome => originalJointCompactRepresentative_ofCompactSpace_continuous marks masses _
       (continuous outcome))
   convert regular using 1
   apply ProbabilityMeasure.toMeasure_injective
   change ((law : Measure Outcome).map
-    (continuousCadlagSampleCompletion20261011 sample continuous)).map
+    (continuousCadlagSampleCompletion sample continuous)).map
     (originalJointCompactPathEncoding marks masses) = _
   rw [Measure.map_map (originalJointCompactPathEncoding_continuous marks masses).measurable
-    (continuousCadlagSample_measurable_completion20261011 sample continuous evaluations)]
+    (continuousCadlagSample_measurable_completion sample continuous evaluations)]
   rfl
 
 theorem originalJointCompactPathLaw_spatial_continuousSample_regular
@@ -77,8 +77,8 @@ theorem originalJointCompactPathLaw_spatial_continuousSample_regular
     (evaluations : ∀ time, Measurable (fun outcome => sample outcome time))
     (spatial : First → Space) (spatialContinuous : Continuous spatial) :
     OriginalJointUsualTestRegular (originalJointCompactPathLaw marks masses
-      ((continuousCadlagProbabilityCompletion20261011 law sample continuous evaluations).map
-        (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011 spatial spatialContinuous).measurable.aemeasurable)) := by
+      ((continuousCadlagProbabilityCompletion law sample continuous evaluations).map
+        (skorokhodCadlagContinuousCarrierMap_continuous_completion spatial spatialContinuous).measurable.aemeasurable)) := by
   rw [continuousCadlagProbability_spatial_map]
   exact originalJointCompactPathLaw_continuousSample_regular marks masses law _ _ _
 

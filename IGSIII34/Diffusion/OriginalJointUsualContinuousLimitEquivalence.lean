@@ -34,8 +34,8 @@ theorem originalJointCoupledUsualJ1_continuous_limit_cost
     (summable_geometric_two_encode (ι := ℕ)) coordinateConvergence domination
   simp only [tsum_zero] at pathConvergence
   have wholeConvergence : Tendsto (fun index => dist
-      (skorokhodGlobalCarrierMapCompletion20261011 (couplings index).firstPlacement (sequence index).path.val)
-      (skorokhodGlobalCarrierMapCompletion20261011 (couplings index).lastPlacement limit.path.val)) atTop (𝓝 0) := by
+      (skorokhodGlobalCarrierMapCompletion (couplings index).firstPlacement (sequence index).path.val)
+      (skorokhodGlobalCarrierMapCompletion (couplings index).lastPlacement limit.path.val)) atTop (𝓝 0) := by
     exact pathConvergence
   have total := convergence.1.add wholeConvergence
   simp only [add_zero] at total

@@ -1,6 +1,6 @@
 import IGSIII.Geometry.CellLocalisationGH
 import IGSIII34.Diffusion.ContinuousWalkConstruction
-import IGSIII34.Diffusion.FiniteWeightedHoldingPathsCompletion20261011
+import IGSIII34.Diffusion.FiniteWeightedHoldingPathsCompletion
 
 set_option autoImplicit false
 set_option maxHeartbeats 3000000
@@ -92,7 +92,7 @@ def actualFiniteAnnealedObservedPath
     (time : ℕ) : ActualFiniteCluster rule (configurationAtDepth rule depth configuration) scale scalePositive depth :=
   if kind = 0 then sample.1 ⌊(clock * times time : ℝ≥0)⌋₊ else
     finiteContinuousWalkPath
-      (weightedHoldingSampleCompletion20261011
+      (weightedHoldingSampleCompletion
         (fun vertex => if kind = 1 then 1 else
           (degree (clusterRetainedEndpoint (rule.generation depth).network (configurationAtDepth rule depth configuration depth)) vertex)⁻¹) sample)
       (clock * times time)
@@ -109,7 +109,7 @@ theorem actualFiniteAnnealedObservedPath_measurable
     exact (measurable_pi_apply _).comp measurable_fst
   · simp only [actualFiniteAnnealedObservedPath, discrete, if_false]
     exact (holdingTimePath_measurable _).comp
-      (weightedHoldingSample_measurable_completion20261011 _)
+      (weightedHoldingSample_measurable_completion _)
 
 def actualFiniteAnnealedConditionalResponse
     (times : ℕ → ℝ≥0) (clock : Configuration (rule.generation depth).edges → ℝ≥0) (kind : Fin 3)

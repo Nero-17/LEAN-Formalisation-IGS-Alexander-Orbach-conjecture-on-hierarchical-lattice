@@ -1,6 +1,6 @@
 import IGSIII34.ResistanceLimit.RawElectricalMarkedGHP
-import IGSIII34.Diffusion.ActualNaturalCountingMassCompletion20261011
-import IGSIII34.Diffusion.ActualNaturalDegreeMassCompletion20261011
+import IGSIII34.Diffusion.ActualNaturalCountingMassCompletion
+import IGSIII34.Diffusion.ActualNaturalDegreeMassCompletion
 
 set_option autoImplicit false
 set_option maxHeartbeats 6000000
@@ -21,7 +21,7 @@ metric using the same actual boundary realization and natural scalar. -/
 theorem ae_actual_natural_raw_electrical_markedGHP
     (rule : Rule) (classicalRule : rule.Classical) (p : ℝ)
     (positive : 0 < p) (belowOne : p < 1) (fixedPoint : rule.network.reliability p = p)
-    (natural : NaturalResistanceCompletion20261011 rule p positive belowOne fixedPoint)
+    (natural : NaturalResistanceCompletion rule p positive belowOne fixedPoint)
     (weight : List (Fin rule.edges × Bool) → (((List (Fin rule.edges) × Bool) → Configuration rule.edges) → ℝ))
     (actualRatios : ∀ᵐ marks ∂independentInnovationLaw rule p positive belowOne fixedPoint,
       ∀ address, Tendsto (fun depth =>
@@ -65,7 +65,7 @@ theorem ae_actual_natural_raw_electrical_markedGHP
         (actualElectricalTerminal rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
           (zero_lt_one.trans natural.aboveOne) ⟨marks, typical⟩) := by
   obtain ⟨constant, constantPositive, growthBounds, membership, endpointFixed⟩ :=
-    natural_physical_omega_witness_completion20261011 rule classicalRule p positive belowOne fixedPoint natural
+    natural_physical_omega_witness_completion rule classicalRule p positive belowOne fixedPoint natural
   have growthPositive := zero_lt_one.trans natural.aboveOne
   obtain ⟨eta, inverseBelowEta, etaBelowOne⟩ := exists_between (inv_lt_one_of_one_lt₀ natural.aboveOne)
   have etaPositive := (inv_pos.mpr growthPositive).trans inverseBelowEta
@@ -73,8 +73,8 @@ theorem ae_actual_natural_raw_electrical_markedGHP
     have multiplied := mul_lt_mul_of_pos_left inverseBelowEta growthPositive
     simpa only [mul_inv_cancel₀ growthPositive.ne'] using multiplied
   filter_upwards [
-    ae_actual_natural_counting_mass_tendsto_completion20261011 rule classicalRule p positive belowOne fixedPoint natural weight actualRatios nonnegative,
-    ae_actual_natural_degree_mass_tendsto_completion20261011 rule classicalRule p positive belowOne fixedPoint natural weight actualRatios nonnegative,
+    ae_actual_natural_counting_mass_tendsto_completion rule classicalRule p positive belowOne fixedPoint natural weight actualRatios nonnegative,
+    ae_actual_natural_degree_mass_tendsto_completion rule classicalRule p positive belowOne fixedPoint natural weight actualRatios nonnegative,
     actual_electrical_field_limits_fixed_cluster rule classicalRule p positive belowOne fixedPoint
       constant natural.growth constantPositive growthPositive growthBounds (natural.amplitude • natural.field) endpointFixed membership,
     ae_uniform_actual_electrical_mesh_fixed_cluster rule classicalRule p positive belowOne fixedPoint

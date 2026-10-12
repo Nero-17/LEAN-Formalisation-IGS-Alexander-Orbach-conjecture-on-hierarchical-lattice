@@ -20,7 +20,7 @@ theorem actualAnnealedPlantedInitial_measurable (rule : Rule) (side : Bool) (dep
 theorem actualAnnealedPlantedInitial_starting_convergence
     (rule : Rule) (p : ℝ) (positive : 0 < p) (belowOne : p < 1)
     (fixedPoint : rule.network.reliability p = p)
-    (natural : NaturalResistanceCompletion20261011 rule p positive belowOne fixedPoint)
+    (natural : NaturalResistanceCompletion rule p positive belowOne fixedPoint)
     (side : Bool) :
     ActualAnnealedStartingConvergence rule p positive belowOne fixedPoint natural
       (actualAnnealedPlantedInitial rule side) := by

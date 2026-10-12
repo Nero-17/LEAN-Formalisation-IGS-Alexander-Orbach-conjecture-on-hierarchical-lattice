@@ -1,6 +1,6 @@
 import IGSIII.Geometry.CellLocalisationActualSeparation
 import IGSIII.Geometry.ActualComponentBoundary
-import IGSIII34.Spectral.NoncollarPathSuffixCompletion20261011
+import IGSIII34.Spectral.NoncollarPathSuffixCompletion
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false
@@ -75,13 +75,13 @@ theorem actualChemicalWordComponent_descendant_anchor
     (suffix : Fin (fine + 1) → (Fin rule.edges × Bool))
     (prefixLive : retainedComponentState rule marks (List.ofFn parentWord) ≠ .inactive)
     (live : retainedComponentState rule marks
-      (List.ofFn (blockWordAppendCompletion20261011 coarse fine parentWord suffix)) ≠ .inactive) :
+      (List.ofFn (blockWordAppendCompletion coarse fine parentWord suffix)) ≠ .inactive) :
     let ambientData := actual_block_lengths_of_terminal_field rule p positive belowOne fixedPoint growth amplitude
       growthPositive amplitudePositive value marks crossing fieldPositive fieldConvergence
     actualComponentWordPoint rule classicalRule marks crossing coherent growth growthPositive
       (chemicalBlockLimitLength rule p positive belowOne fixedPoint growth amplitude value marks)
       ambientData.1 ambientData.2.1 ambientData.2.2 (coarse + fine + 1)
-        (blockWordAppendCompletion20261011 coarse fine parentWord suffix) ∈
+        (blockWordAppendCompletion coarse fine parentWord suffix) ∈
       actualChemicalWordComponent rule classicalRule p positive belowOne fixedPoint growth amplitude
         growthPositive amplitudePositive value marks crossing coherent fieldPositive fieldConvergence coarse parentWord := by
   dsimp only
@@ -89,10 +89,10 @@ theorem actualChemicalWordComponent_descendant_anchor
   rw [dif_pos prefixLive]
   let localAnchor : Fin (rule.generation fine).vertices :=
     if (retainedComponentState rule marks
-        (List.ofFn (blockWordAppendCompletion20261011 coarse fine parentWord suffix))).sourceSelected then
+        (List.ofFn (blockWordAppendCompletion coarse fine parentWord suffix))).sourceSelected then
       ((rule.generation fine).network.endpoint (generationWordEdge rule fine (fun index => (suffix index).1))).1
     else ((rule.generation fine).network.endpoint (generationWordEdge rule fine (fun index => (suffix index).1))).2
-  have localRetained := actual_component_descendant_anchor_local_reachable_completion20261011
+  have localRetained := actual_component_descendant_anchor_local_reachable_completion
     rule marks crossing coarse fine parentWord suffix prefixLive live
   refine ⟨actualChemicalCellVertex rule classicalRule p positive belowOne fixedPoint growth amplitude
     growthPositive amplitudePositive value marks crossing coherent fieldPositive fieldConvergence coarse
@@ -104,7 +104,7 @@ theorem actualChemicalWordComponent_descendant_anchor
   rw [dif_pos live]
   apply congrArg
   apply Subtype.ext
-  exact (component_descendant_anchor_block_identity_completion20261011 rule marks coarse fine parentWord suffix).symm
+  exact (component_descendant_anchor_block_identity_completion rule marks coarse fine parentWord suffix).symm
 
 /-- The original boundary realization lies in its actual physical closed
 prefix component, simultaneously at every finite generation. -/
@@ -140,7 +140,7 @@ theorem actualChemicalWordComponent_boundary_membership
   apply closed.mem_of_tendsto (converges.comp (tendsto_add_atTop_nat (depth + 1)))
   apply Eventually.of_forall
   intro fine
-  obtain ⟨suffix, decomposition⟩ := nested_path_block_decomposition_completion20261011 path
+  obtain ⟨suffix, decomposition⟩ := nested_path_block_decomposition_completion path
     (fun depth => (retained depth).1) depth fine
   have member := actualChemicalWordComponent_descendant_anchor rule classicalRule p positive belowOne fixedPoint growth amplitude
     growthPositive amplitudePositive value marks crossing coherent fieldPositive fieldConvergence depth fine (path (depth + 1)) suffix

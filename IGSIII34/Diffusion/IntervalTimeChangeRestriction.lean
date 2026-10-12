@@ -1,4 +1,4 @@
-import IGSIII34.Diffusion.IntervalOneKnotCompletion20261011
+import IGSIII34.Diffusion.IntervalOneKnotCompletion
 
 set_option autoImplicit false
 set_option maxHeartbeats 2600000
@@ -7,23 +7,23 @@ noncomputable section
 open Set
 open scoped Topology
 
-def intervalScaledTime (terminal time : SkorokhodIntervalTimeCompletion20261011) :
-    SkorokhodIntervalTimeCompletion20261011 :=
+def intervalScaledTime (terminal time : SkorokhodIntervalTimeCompletion) :
+    SkorokhodIntervalTimeCompletion :=
   ⟨terminal.val * time.val,
     ⟨mul_nonneg terminal.property.1 time.property.1,
       (mul_le_mul_of_nonneg_left time.property.2 terminal.property.1).trans (by simpa using terminal.property.2)⟩⟩
 
 theorem intervalScaledTime_le_terminal
-    (terminal time : SkorokhodIntervalTimeCompletion20261011) :
+    (terminal time : SkorokhodIntervalTimeCompletion) :
     intervalScaledTime terminal time ≤ terminal := by
   change terminal.val * time.val ≤ terminal.val
   simpa only [mul_one] using mul_le_mul_of_nonneg_left time.property.2 terminal.property.1
 
 def intervalRestrictedOrderIso
-    (change : SkorokhodIntervalTimeCompletion20261011 ≃o SkorokhodIntervalTimeCompletion20261011)
-    (terminal : SkorokhodIntervalTimeCompletion20261011) (positive : 0 < terminal.val)
+    (change : SkorokhodIntervalTimeCompletion ≃o SkorokhodIntervalTimeCompletion)
+    (terminal : SkorokhodIntervalTimeCompletion) (positive : 0 < terminal.val)
     (fixed : change terminal = terminal) :
-    SkorokhodIntervalTimeCompletion20261011 ≃o SkorokhodIntervalTimeCompletion20261011 where
+    SkorokhodIntervalTimeCompletion ≃o SkorokhodIntervalTimeCompletion where
   toFun time := ⟨(change (intervalScaledTime terminal time)).val / terminal.val, by
     constructor
     · exact div_nonneg (change _).property.1 positive.le
@@ -79,9 +79,9 @@ def intervalRestrictedOrderIso
     exact mul_le_mul_iff_of_pos_left positive
 
 theorem intervalRestrictedOrderIso_scaled_apply
-    (change : SkorokhodIntervalTimeCompletion20261011 ≃o SkorokhodIntervalTimeCompletion20261011)
-    (terminal : SkorokhodIntervalTimeCompletion20261011) (positive : 0 < terminal.val)
-    (fixed : change terminal = terminal) (time : SkorokhodIntervalTimeCompletion20261011) :
+    (change : SkorokhodIntervalTimeCompletion ≃o SkorokhodIntervalTimeCompletion)
+    (terminal : SkorokhodIntervalTimeCompletion) (positive : 0 < terminal.val)
+    (fixed : change terminal = terminal) (time : SkorokhodIntervalTimeCompletion) :
     intervalScaledTime terminal (intervalRestrictedOrderIso change terminal positive fixed time) =
       change (intervalScaledTime terminal time) := by
   apply Subtype.ext

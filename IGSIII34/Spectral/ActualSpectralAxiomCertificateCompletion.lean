@@ -1,0 +1,8 @@
+import IGSIII34.Spectral.ActualTypicalSpectralDimensionCompletion
+
+#print axioms IGSIII34.Spectral.ae_actual_typical_spectral_dimension_completion
+#print axioms IGSIII34.Spectral.actual_diagonal_resolvent_clock_lower_completion
+#print axioms IGSIII34.Spectral.actual_diagonal_resolvent_clock_upper_completion
+#print axioms IGSIII34.Spectral.exists_actual_spectral_data_completion
+#print axioms IGSIII34.Spectral.spectral_dimension_from_true_clock_bounds_completion
+

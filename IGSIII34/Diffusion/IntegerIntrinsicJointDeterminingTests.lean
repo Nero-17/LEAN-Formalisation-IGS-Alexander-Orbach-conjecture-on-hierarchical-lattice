@@ -84,7 +84,7 @@ def IntegerIntrinsicJointGHPPathTest.ofExtendedBoundedLipschitz
   isometricTransport First Last _ _ _ _ _ _ _ _ mapping isometry state path := by
     change test (extendedJointStatePathClass
       (jointMeasuredMarkedStateMap mapping isometry.continuous state)
-      (skorokhodCadlagContinuousCarrierMapCompletion20261011 mapping isometry.continuous path)) = _
+      (skorokhodCadlagContinuousCarrierMapCompletion mapping isometry.continuous path)) = _
     rw [extendedJointStatePathClass_isometricTransport mapping isometry state path]
     rfl
 

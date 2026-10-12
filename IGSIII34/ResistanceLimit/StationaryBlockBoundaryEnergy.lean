@@ -1,5 +1,5 @@
 import IGSIII34.ResistanceLimit.CellPreservedEnergy
-import IGSIII34.ResistanceLimit.StationaryBlockResponseCompletion20261011
+import IGSIII34.ResistanceLimit.StationaryBlockResponseCompletion
 
 set_option autoImplicit false
 set_option maxHeartbeats 1800000

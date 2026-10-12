@@ -1,7 +1,7 @@
 import IGSIII34.Spectral.Collars.ActualFiniteConfigurationLawTransport
 import IGSIII34.Spectral.Collars.DiscreteDeterministicPlacement
 import IGSIII34.Diffusion.ActualPaperDeterministicCommonAmbient
-import IGSIII34.Diffusion.ActualPaperDeterministicWalkIdentityCompletion20261011
+import IGSIII34.Diffusion.ActualPaperDeterministicWalkIdentityCompletion
 import IGSIII34.Diffusion.FiniteCountingOriginalCadlagIdentity
 
 set_option autoImplicit false
@@ -47,10 +47,10 @@ theorem actualFiniteAnnealedDeterministicPlacedLaw_discrete (depth : ℕ) :
   have identity := actualFiniteAnnealedPlacedPathLaw_discrete_configuration_transport rule (stationaryConfiguration rule marks.val)
     scale scalePositive depth (markedGenerationConfiguration_crosses rule marks.val marks.property.1.1.2.1 depth [] true)
     (initial depth) _ (actualFiniteAnnealedDeterministicClock_positive rule classicalRule p positive belowOne fixedPoint growth growthPositive depth) (placement depth)
-  have clock := actualPaperDeterministicClockRatio_normalization_completion20261011 rule classicalRule p positive belowOne fixedPoint
+  have clock := actualPaperDeterministicClockRatio_normalization_completion rule classicalRule p positive belowOne fixedPoint
     growth value growthPositive marks scale scalePositive false depth
   simp only [Bool.false_eq_true, if_false] at clock
-  simpa only [actualPaperDiscreteDeterministicPlacedCadlagLaw, actualPaperDiscreteClockCompletion20261011,
+  simpa only [actualPaperDiscreteDeterministicPlacedCadlagLaw, actualPaperDiscreteClockCompletion,
     clock, actualFiniteAnnealedDeterministicClock, diracProba, ProbabilityMeasure.coe_mk] using identity
 
 theorem actualFiniteAnnealedDeterministicPlacedLaw_rate_one (depth : ℕ) :
@@ -65,10 +65,10 @@ theorem actualFiniteAnnealedDeterministicPlacedLaw_rate_one (depth : ℕ) :
     scale scalePositive depth (markedGenerationConfiguration_crosses rule marks.val marks.property.1.1.2.1 depth [] true)
     (initial depth) _ (actualFiniteAnnealedDeterministicClock_positive rule classicalRule p positive belowOne fixedPoint growth growthPositive depth)
     1 (by decide) (placement depth)
-  have clock := actualPaperDeterministicClockRatio_normalization_completion20261011 rule classicalRule p positive belowOne fixedPoint
+  have clock := actualPaperDeterministicClockRatio_normalization_completion rule classicalRule p positive belowOne fixedPoint
     growth value growthPositive marks scale scalePositive false depth
   simp only [Bool.false_eq_true, if_false] at clock
-  simpa only [actualPaperDeterministicPlacedCadlagLaw, actualPaperDiscreteClockCompletion20261011,
+  simpa only [actualPaperDeterministicPlacedCadlagLaw, actualPaperDiscreteClockCompletion,
     clock, actualFiniteAnnealedDeterministicClock, ite_true, Bool.false_eq_true, if_false] using identity
 
 theorem actualFiniteAnnealedDeterministicPlacedLaw_inverse_degree (depth : ℕ) :
@@ -85,22 +85,22 @@ theorem actualFiniteAnnealedDeterministicPlacedLaw_inverse_degree (depth : ℕ) 
     scale scalePositive depth (markedGenerationConfiguration_crosses rule marks.val marks.property.1.1.2.1 depth [] true)
     (initial depth) _ (actualFiniteAnnealedDeterministicClock_positive rule classicalRule p positive belowOne fixedPoint growth growthPositive depth)
     2 (by decide) (placement depth)
-  have clock := actualPaperDeterministicClockRatio_normalization_completion20261011 rule classicalRule p positive belowOne fixedPoint
+  have clock := actualPaperDeterministicClockRatio_normalization_completion rule classicalRule p positive belowOne fixedPoint
     growth value growthPositive marks scale scalePositive true depth
   simp only [ite_true] at clock
-  have ratioPositive := actualPaperDeterministicRatios_positive_of_classical_completion20261011 rule classicalRule p positive belowOne fixedPoint
+  have ratioPositive := actualPaperDeterministicRatios_positive_of_classical_completion rule classicalRule p positive belowOne fixedPoint
     growth value growthPositive marks scale scalePositive true depth
   have countingIdentity := finiteCountingOriginalCadlagIdentity
     (Vertex := ActualFiniteCluster rule (stationaryConfiguration rule marks.val) scale scalePositive depth)
     (clusterRetainedEndpoint (rule.generation depth).network (stationaryConfiguration rule marks.val depth))
     (cluster_degree_positive _ _ (markedGenerationConfiguration_crosses rule marks.val marks.property.1.1.2.1 depth [] true))
     (diracProba (initial depth))
-    (growth ^ (depth + 1) * (actualPaperDeterministicClockRatioCompletion20261011 rule p growth marks.val scale scalePositive true depth : ℝ))
+    (growth ^ (depth + 1) * (actualPaperDeterministicClockRatioCompletion rule p growth marks.val scale scalePositive true depth : ℝ))
     (mul_pos (pow_pos growthPositive _) (NNReal.coe_pos.mpr ratioPositive)) (placement depth)
   simp only [← mul_assoc, clock] at countingIdentity
   simp only [show (2 : Fin 3) ≠ 1 from by decide, if_false] at identity
   exact identity.trans (by
-    simpa only [actualPaperDeterministicPlacedCadlagLaw, actualPaperDiscreteClockCompletion20261011,
+    simpa only [actualPaperDeterministicPlacedCadlagLaw, actualPaperDiscreteClockCompletion,
       actualFiniteAnnealedDeterministicClock, ite_true] using countingIdentity.symm)
 
 end

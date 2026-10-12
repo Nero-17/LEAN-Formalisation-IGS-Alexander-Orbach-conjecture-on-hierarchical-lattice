@@ -12,7 +12,7 @@ open scoped _root_.Topology NNReal
 
 variable (rule : Rule) (p : ℝ) (positive : 0 < p) (belowOne : p < 1)
   (fixedPoint : rule.network.reliability p = p)
-  (natural : NaturalResistanceCompletion20261011 rule p positive belowOne fixedPoint)
+  (natural : NaturalResistanceCompletion rule p positive belowOne fixedPoint)
 
 /-- The three original natural-clock finite laws, before environmental
 integration. Both masses, both terminals, the entire chemical carrier and

@@ -1,12 +1,12 @@
 import IGSIII34.Diffusion.ActualNaturalPaperLocalJ1LawWitness
 import IGSIII34.Diffusion.UsualLocalJ1PathLaw
-import IGSIII34.Diffusion.ActualNaturalPaperDeterministicCadlagCompletion20261011
-import IGSIII34.Diffusion.ActualNaturalVertexSpeedCadlagCompletion20261011
-import IGSIII34.Spectral.ActualNaturalTypicalSpectralCompletion20261011
-import IGSIII34.Spectral.ActualSpectralDataCompletion20261011
-import IGSIII34.Forms.ActualFormMassWitnessCompletion20261011
-import IGSIII34.ResistanceLimit.ActualElectricalMassRetainedCompletion20261011
-import IGSIII34.Percolation.Continuation.NaturalPhysicalOmegaCompletion20261011
+import IGSIII34.Diffusion.ActualNaturalPaperDeterministicCadlagCompletion
+import IGSIII34.Diffusion.ActualNaturalVertexSpeedCadlagCompletion
+import IGSIII34.Spectral.ActualNaturalTypicalSpectralCompletion
+import IGSIII34.Spectral.ActualSpectralDataCompletion
+import IGSIII34.Forms.ActualFormMassWitnessCompletion
+import IGSIII34.ResistanceLimit.ActualElectricalMassRetainedCompletion
+import IGSIII34.Percolation.Continuation.NaturalPhysicalOmegaCompletion
 
 /-! The actual physical natural endpoint, Perron mass and spectral data
 are assembled on one event of the original critical innovation law.
@@ -31,7 +31,7 @@ theorem exists_actual_classical_paper_localJ1_law_spectral_witness
     (rule : Rule) (classicalRule : rule.Classical) (p : ℝ)
     (positive : 0 < p) (belowOne : p < 1) (fixedPoint : rule.network.reliability p = p)
     :
-    ∃ natural : NaturalResistanceCompletion20261011 rule p positive belowOne fixedPoint,
+    ∃ natural : NaturalResistanceCompletion rule p positive belowOne fixedPoint,
     ∃ weight : List (Fin rule.edges × Bool) → (((List (Fin rule.edges) × Bool) → Configuration rule.edges) → ℝ),
     ∃ (edgeCoefficient vertexCoefficient : ℝ)
       (mass : ((List (Fin rule.edges) × Bool) → Configuration rule.edges) → ℝ),
@@ -76,7 +76,7 @@ theorem exists_actual_classical_paper_localJ1_law_spectral_witness
       (boundary.map realization).support = Set.univ ∧
       (∀ (chemicalScale : ℝ) (chemicalScalePositive : 0 < chemicalScale),
       ∀ anchor : ActualStationaryEnergySkeleton rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) ⟨marks, typical⟩),
-      ∀ data : ActualSpectralDataCompletion20261011 rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
+      ∀ data : ActualSpectralDataCompletion rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
         (zero_lt_one.trans natural.aboveOne)
         (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) ⟨marks, typical⟩) anchor (boundary.map realization),
       ∀ initial : ∀ depth, ProbabilityMeasure (ActualFiniteCluster rule (stationaryConfiguration rule marks) chemicalScale chemicalScalePositive depth),
@@ -92,32 +92,32 @@ theorem exists_actual_classical_paper_localJ1_law_spectral_witness
         (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩),
 
       ∀ countingSpeed : Bool,
-        Tendsto (fun depth => usualLocalJ1PathProbability (actualPaperDeterministicCadlagLawCompletion20261011 rule classicalRule p positive belowOne fixedPoint
+        Tendsto (fun depth => usualLocalJ1PathProbability (actualPaperDeterministicCadlagLawCompletion rule classicalRule p positive belowOne fixedPoint
           natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical⟩
           chemicalScale chemicalScalePositive countingSpeed depth (initial depth))) atTop
-          (𝓝 (usualLocalJ1PathProbability  (continuousCadlagProbabilityCompletion20261011 limitLaw
-            (fun path time => countableTimeContinuousSampleCompletion20261011 times dense path
+          (𝓝 (usualLocalJ1PathProbability  (continuousCadlagProbabilityCompletion limitLaw
+            (fun path time => countableTimeContinuousSampleCompletion times dense path
               (Real.toNNReal (1 / (if countingSpeed then vertexCoefficient * mass marks else 2 * (edgeCoefficient * mass marks))) * time))
-            (fun path => (countableTimeContinuousSample_continuous_completion20261011 times dense path).comp (continuous_const.mul continuous_id))
-            (fun time => countableTimeContinuousSample_evaluation_measurable_completion20261011 times dense
+            (fun path => (countableTimeContinuousSample_continuous_completion times dense path).comp (continuous_const.mul continuous_id))
+            (fun time => countableTimeContinuousSample_evaluation_measurable_completion times dense
               (Real.toNNReal (1 / (if countingSpeed then vertexCoefficient * mass marks else 2 * (edgeCoefficient * mass marks))) * time)))))) ∧
 
       ∀ anchor : ActualStationaryEnergySkeleton rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
         (zero_lt_one.trans natural.aboveOne)
         (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) ⟨marks, typical⟩),
-      ∃ data : ActualSpectralDataCompletion20261011 rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
+      ∃ data : ActualSpectralDataCompletion rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
         (zero_lt_one.trans natural.aboveOne)
         (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) ⟨marks, typical⟩)
         anchor (boundary.map realization),
       ∀ᵐ point ∂boundary.map realization,
-        Tendsto (fun time => -2 * Real.log (actualSpectralHeatKernelCompletion20261011
+        Tendsto (fun time => -2 * Real.log (actualSpectralHeatKernelCompletion
           rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
           (zero_lt_one.trans natural.aboveOne)
           (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth
             (natural.amplitude • natural.field) ⟨marks, typical⟩) anchor (boundary.map realization) data time point point) / Real.log time)
           (𝓝[>] 0) (𝓝 (2 * Real.log ((spectralRadius ℂ ((rule.network.massMatrix p).map Complex.ofReal)).toReal) /
             Real.log (((spectralRadius ℂ ((rule.network.massMatrix p).map Complex.ofReal)).toReal) * natural.growth))) := by
-  obtain ⟨natural⟩ := exists_natural_resistance_completion20261011 rule classicalRule p positive belowOne fixedPoint
+  obtain ⟨natural⟩ := exists_natural_resistance_completion rule classicalRule p positive belowOne fixedPoint
   exact ⟨natural, exists_ae_actual_natural_paper_localJ1_law_spectral_witness rule classicalRule p positive belowOne fixedPoint natural⟩
 
 end

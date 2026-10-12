@@ -11,8 +11,8 @@ variable {Space : Type*} [MetricSpace Space] [CompactSpace Space]
 /-- The standard local-J1 window criterion is preserved by every
 subsequence tending to infinity. -/
 theorem usualLocalJ1Sequence_subsequence
-    (paths : ℕ → SkorokhodCadlagPathCompletion20261011 Space)
-    (path : SkorokhodCadlagPathCompletion20261011 Space)
+    (paths : ℕ → SkorokhodCadlagPathCompletion Space)
+    (path : SkorokhodCadlagPathCompletion Space)
     (convergence : usualLocalJ1SequenceConvergence paths path)
     (selection : ℕ → ℕ) (divergence : Tendsto selection atTop atTop) :
     usualLocalJ1SequenceConvergence (paths ∘ selection) path := by
@@ -23,9 +23,9 @@ theorem usualLocalJ1Sequence_subsequence
 is a sequential space. This follows from subsequence extraction, not
 from an assumed metrization of the path carrier. -/
 theorem usualLocalJ1SequenceTopology_sequential :
-    @SequentialSpace (SkorokhodCadlagPathCompletion20261011 Space)
+    @SequentialSpace (SkorokhodCadlagPathCompletion Space)
       usualLocalJ1SequenceTopology := by
-  letI : TopologicalSpace (SkorokhodCadlagPathCompletion20261011 Space) := usualLocalJ1SequenceTopology
+  letI : TopologicalSpace (SkorokhodCadlagPathCompletion Space) := usualLocalJ1SequenceTopology
   constructor
   intro set sequentiallyClosed
   apply isOpen_compl_iff.mp

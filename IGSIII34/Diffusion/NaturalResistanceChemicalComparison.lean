@@ -38,12 +38,12 @@ with the actual Section 2 mean-growth bound. -/
 theorem natural_electrical_growth_le_chemical_growth
     (rule : Rule) (classicalRule : rule.Classical) (p : ℝ)
     (positive : 0 < p) (belowOne : p < 1) (fixedPoint : rule.network.reliability p = p)
-    (natural : NaturalResistanceCompletion20261011 rule p positive belowOne fixedPoint)
+    (natural : NaturalResistanceCompletion rule p positive belowOne fixedPoint)
     (chemicalGrowth : ℝ) (chemicalGrowthPositive : 0 < chemicalGrowth)
     (constant : ℝ) (meanUpper : ∀ depth, manuscriptDistanceMean rule p depth ≤ constant * chemicalGrowth ^ depth) :
     natural.growth ≤ chemicalGrowth := by
   obtain ⟨electricalConstant, electricalConstantPositive, growthBounds, _, _⟩ :=
-    natural_physical_omega_witness_completion20261011 rule classicalRule p positive belowOne fixedPoint natural
+    natural_physical_omega_witness_completion rule classicalRule p positive belowOne fixedPoint natural
   apply base_le_of_uniform_pow_comparison chemicalGrowthPositive
   intro depth
   have comparison : (electricalOrbitScale rule p positive belowOne fixedPoint depth : ℝ) ≤ manuscriptDistanceMean rule p depth := by
@@ -60,7 +60,7 @@ bound on the same critical model, without a new asymptotic premise. -/
 theorem exists_actual_chemical_mean_growth_above_natural_resistance
     (rule : Rule) (classicalRule : rule.Classical) (p : ℝ)
     (positive : 0 < p) (belowOne : p < 1) (fixedPoint : rule.network.reliability p = p)
-    (natural : NaturalResistanceCompletion20261011 rule p positive belowOne fixedPoint) :
+    (natural : NaturalResistanceCompletion rule p positive belowOne fixedPoint) :
     ∃ constant chemicalGrowth : ℝ, 0 < constant ∧ 0 < chemicalGrowth ∧
       (∀ depth, chemicalGrowth ^ depth ≤ manuscriptDistanceMean rule p depth ∧
         manuscriptDistanceMean rule p depth ≤ constant⁻¹ * chemicalGrowth ^ depth) ∧

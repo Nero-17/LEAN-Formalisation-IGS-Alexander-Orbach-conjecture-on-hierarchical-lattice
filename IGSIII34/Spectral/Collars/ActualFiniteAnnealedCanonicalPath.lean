@@ -1,6 +1,6 @@
 import IGSIII34.Spectral.Collars.ActualFiniteAnnealedStartingPoints
-import IGSIII34.Diffusion.DiscreteCadlagWeakCompletion20261011
-import IGSIII34.Diffusion.FiniteWeightedCadlagLawCompletion20261011
+import IGSIII34.Diffusion.DiscreteCadlagWeakCompletion
+import IGSIII34.Diffusion.FiniteWeightedCadlagLawCompletion
 import Mathlib.MeasureTheory.Measure.DiracProba
 
 set_option autoImplicit false
@@ -18,16 +18,16 @@ theorem discreteCadlagProbability_placement_map
     [MetricSpace Second] [CompactSpace Second] [MeasurableSpace Second] [BorelSpace Second]
     (law : ProbabilityMeasure (ℕ → Vertex)) (clock : ℝ) (positive : 0 < clock)
     (placement : Vertex → First) (map : First → Second) (continuous : Continuous map) :
-    (discreteCadlagProbabilityCompletion20261011 law clock positive placement).map
-      (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011 map continuous).measurable.aemeasurable =
-    discreteCadlagProbabilityCompletion20261011 law clock positive (map ∘ placement) := by
+    (discreteCadlagProbabilityCompletion law clock positive placement).map
+      (skorokhodCadlagContinuousCarrierMap_continuous_completion map continuous).measurable.aemeasurable =
+    discreteCadlagProbabilityCompletion law clock positive (map ∘ placement) := by
   apply ProbabilityMeasure.toMeasure_injective
-  change ((law : Measure (ℕ → Vertex)).map (discreteCadlagSampleCompletion20261011 clock positive placement)).map
-    (skorokhodCadlagContinuousCarrierMapCompletion20261011 map continuous) =
-    (law : Measure (ℕ → Vertex)).map (discreteCadlagSampleCompletion20261011 clock positive (map ∘ placement))
+  change ((law : Measure (ℕ → Vertex)).map (discreteCadlagSampleCompletion clock positive placement)).map
+    (skorokhodCadlagContinuousCarrierMapCompletion map continuous) =
+    (law : Measure (ℕ → Vertex)).map (discreteCadlagSampleCompletion clock positive (map ∘ placement))
   rw [AEMeasurable.map_map_of_aemeasurable
-    (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011 map continuous).measurable.aemeasurable
-    (discreteCadlagSample_measurable_completion20261011 clock positive placement).aemeasurable]
+    (skorokhodCadlagContinuousCarrierMap_continuous_completion map continuous).measurable.aemeasurable
+    (discreteCadlagSample_measurable_completion clock positive placement).aemeasurable]
   rfl
 
 theorem holdingCadlagProbability_placement_map
@@ -39,25 +39,25 @@ theorem holdingCadlagProbability_placement_map
       Tendsto (cumulativeHoldingTime sample.2) atTop atTop)
     (clock : ℝ) (positive : 0 < clock) (placement : Vertex → First)
     (map : First → Second) (continuous : Continuous map) :
-    (holdingCadlagProbabilityCompletion20261011 law regular clock positive placement).map
-      (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011 map continuous).measurable.aemeasurable =
-    holdingCadlagProbabilityCompletion20261011 law regular clock positive (map ∘ placement) := by
+    (holdingCadlagProbabilityCompletion law regular clock positive placement).map
+      (skorokhodCadlagContinuousCarrierMap_continuous_completion map continuous).measurable.aemeasurable =
+    holdingCadlagProbabilityCompletion law regular clock positive (map ∘ placement) := by
   apply ProbabilityMeasure.toMeasure_injective
-  change ((law : Measure ((ℕ → Vertex) × (ℕ → ℝ))).map (holdingCadlagSampleCompletion20261011 clock positive placement)).map
-    (skorokhodCadlagContinuousCarrierMapCompletion20261011 map continuous) =
-    (law : Measure ((ℕ → Vertex) × (ℕ → ℝ))).map (holdingCadlagSampleCompletion20261011 clock positive (map ∘ placement))
+  change ((law : Measure ((ℕ → Vertex) × (ℕ → ℝ))).map (holdingCadlagSampleCompletion clock positive placement)).map
+    (skorokhodCadlagContinuousCarrierMapCompletion map continuous) =
+    (law : Measure ((ℕ → Vertex) × (ℕ → ℝ))).map (holdingCadlagSampleCompletion clock positive (map ∘ placement))
   rw [AEMeasurable.map_map_of_aemeasurable
-    (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011 map continuous).measurable.aemeasurable
-    (holdingCadlagSample_aemeasurable_completion20261011 (law : Measure _) regular clock positive placement)]
+    (skorokhodCadlagContinuousCarrierMap_continuous_completion map continuous).measurable.aemeasurable
+    (holdingCadlagSample_aemeasurable_completion (law : Measure _) regular clock positive placement)]
   apply Measure.map_congr
   apply Filter.Eventually.of_forall
   intro sample
   apply Subtype.ext
   classical
   by_cases condition : (∀ index, 0 < sample.2 index) ∧ Tendsto (cumulativeHoldingTime sample.2) atTop atTop
-  · simp only [Function.comp_apply, holdingCadlagSampleCompletion20261011, dif_pos condition]
+  · simp only [Function.comp_apply, holdingCadlagSampleCompletion, dif_pos condition]
     rfl
-  · simp only [Function.comp_apply, holdingCadlagSampleCompletion20261011, dif_neg condition]
+  · simp only [Function.comp_apply, holdingCadlagSampleCompletion, dif_neg condition]
     rfl
 
 theorem finiteWeightedCadlagProbability_placement_map
@@ -69,10 +69,10 @@ theorem finiteWeightedCadlagProbability_placement_map
     (initial : ProbabilityMeasure Vertex) (weight : Vertex → ℝ) (weightPositive : ∀ vertex, 0 < weight vertex)
     (clock : ℝ) (positive : 0 < clock) (placement : Vertex → First)
     (map : First → Second) (continuous : Continuous map) :
-    (finiteWeightedCadlagProbabilityCompletion20261011 endpoint degreePositive initial weight weightPositive clock positive placement).map
-      (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011 map continuous).measurable.aemeasurable =
-    finiteWeightedCadlagProbabilityCompletion20261011 endpoint degreePositive initial weight weightPositive clock positive (map ∘ placement) := by
-  unfold finiteWeightedCadlagProbabilityCompletion20261011 weightedHoldingCadlagProbabilityCompletion20261011
+    (finiteWeightedCadlagProbabilityCompletion endpoint degreePositive initial weight weightPositive clock positive placement).map
+      (skorokhodCadlagContinuousCarrierMap_continuous_completion map continuous).measurable.aemeasurable =
+    finiteWeightedCadlagProbabilityCompletion endpoint degreePositive initial weight weightPositive clock positive (map ∘ placement) := by
+  unfold finiteWeightedCadlagProbabilityCompletion weightedHoldingCadlagProbabilityCompletion
   exact holdingCadlagProbability_placement_map _ _ _ _ _ _ _
 
 variable (rule : Rule) (scale : ℝ) (scalePositive : 0 < scale) (depth : ℕ)
@@ -84,7 +84,7 @@ def actualFiniteAnnealedCanonicalPathLaw
     (crossing : (rule.generation depth).network.crosses configuration = true)
     (initial : Fin (rule.generation depth).vertices)
     (clock : ℝ) (clockPositive : 0 < clock) (kind : Fin 3) :
-    ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011
+    ProbabilityMeasure (SkorokhodCadlagPathCompletion
       (ActualFiniteCluster rule (configurationAtDepth rule depth configuration) scale scalePositive depth)) := by
   classical
   let endpoint := clusterRetainedEndpoint (rule.generation depth).network (configurationAtDepth rule depth configuration depth)
@@ -92,12 +92,12 @@ def actualFiniteAnnealedCanonicalPathLaw
     (configurationAtDepth rule depth configuration depth) (by simpa only [configurationAtDepth_self] using crossing)
   let vertex := actualFiniteAnnealedInitialVertex rule scale scalePositive depth configuration initial
   if discrete : kind = 0 then
-    exact discreteCadlagProbabilityCompletion20261011
+    exact discreteCadlagProbabilityCompletion
       (Vertex := ActualFiniteCluster rule (configurationAtDepth rule depth configuration) scale scalePositive depth)
       (⟨finiteDiscreteWalkLaw (Vertex := ActualFiniteCluster rule (configurationAtDepth rule depth configuration) scale scalePositive depth) endpoint degreePositive (Measure.dirac vertex), inferInstance⟩ : ProbabilityMeasure _)
       clock clockPositive id
   else
-    exact finiteWeightedCadlagProbabilityCompletion20261011
+    exact finiteWeightedCadlagProbabilityCompletion
       (Vertex := ActualFiniteCluster rule (configurationAtDepth rule depth configuration) scale scalePositive depth)
       endpoint degreePositive (diracProba vertex)
       (fun point => if kind = 1 then 1 else (degree endpoint point)⁻¹)
@@ -111,19 +111,19 @@ def actualFiniteAnnealedPlacedPathLaw
     (initial : Fin (rule.generation depth).vertices)
     (clock : ℝ) (clockPositive : 0 < clock) (kind : Fin 3)
     (placement : ActualFiniteCluster rule (configurationAtDepth rule depth configuration) scale scalePositive depth → Space) :
-    ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 Space) := by
+    ProbabilityMeasure (SkorokhodCadlagPathCompletion Space) := by
   classical
   let endpoint := clusterRetainedEndpoint (rule.generation depth).network (configurationAtDepth rule depth configuration depth)
   have degreePositive := cluster_degree_positive (rule.generation depth).network
     (configurationAtDepth rule depth configuration depth) (by simpa only [configurationAtDepth_self] using crossing)
   let vertex := actualFiniteAnnealedInitialVertex rule scale scalePositive depth configuration initial
   if discrete : kind = 0 then
-    exact discreteCadlagProbabilityCompletion20261011
+    exact discreteCadlagProbabilityCompletion
       (Vertex := ActualFiniteCluster rule (configurationAtDepth rule depth configuration) scale scalePositive depth)
       (⟨finiteDiscreteWalkLaw (Vertex := ActualFiniteCluster rule (configurationAtDepth rule depth configuration) scale scalePositive depth) endpoint degreePositive (Measure.dirac vertex), inferInstance⟩ : ProbabilityMeasure _)
       clock clockPositive placement
   else
-    exact finiteWeightedCadlagProbabilityCompletion20261011
+    exact finiteWeightedCadlagProbabilityCompletion
       (Vertex := ActualFiniteCluster rule (configurationAtDepth rule depth configuration) scale scalePositive depth)
       endpoint degreePositive (diracProba vertex)
       (fun point => if kind = 1 then 1 else (degree endpoint point)⁻¹)
@@ -142,7 +142,7 @@ theorem actualFiniteAnnealedPlacedPathLaw_eq_canonical_map
     (continuous : Continuous placement) :
     actualFiniteAnnealedPlacedPathLaw rule scale scalePositive depth configuration crossing initial clock clockPositive kind placement =
     (actualFiniteAnnealedCanonicalPathLaw rule scale scalePositive depth configuration crossing initial clock clockPositive kind).map
-      (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011 placement continuous).measurable.aemeasurable := by
+      (skorokhodCadlagContinuousCarrierMap_continuous_completion placement continuous).measurable.aemeasurable := by
   classical
   unfold actualFiniteAnnealedPlacedPathLaw actualFiniteAnnealedCanonicalPathLaw
   dsimp only

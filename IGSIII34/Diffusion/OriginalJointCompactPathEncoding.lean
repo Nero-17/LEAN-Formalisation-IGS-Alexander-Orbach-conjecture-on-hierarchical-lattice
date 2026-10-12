@@ -16,7 +16,7 @@ def OriginalJointCompactRepresentative.ofCompactSpace
     {Space : Type} [MetricSpace Space] [CompactSpace Space]
     [MeasurableSpace Space] [BorelSpace Space]
     (marks : Bool → Space) (masses : Bool → ProbabilityMeasure Space)
-    (path : SkorokhodCadlagPathCompletion20261011 Space) : OriginalJointCompactRepresentative := by
+    (path : SkorokhodCadlagPathCompletion Space) : OriginalJointCompactRepresentative := by
   letI : Nonempty Space := ⟨marks true⟩
   let compact : NonemptyCompacts OriginalJointUniversalSpace := NonemptyCompacts.kuratowskiEmbedding Space
   let embedding : Space ≃ᵢ compact := (kuratowskiEmbedding.isometry Space).isometryEquivOnRange
@@ -24,13 +24,13 @@ def OriginalJointCompactRepresentative.ofCompactSpace
     carrier := compact
     marks := embedding ∘ marks
     masses := fun side => (masses side).map embedding.continuous.measurable.aemeasurable
-    path := skorokhodCadlagContinuousCarrierMapCompletion20261011 embedding embedding.continuous path }
+    path := skorokhodCadlagContinuousCarrierMapCompletion embedding embedding.continuous path }
 
 def originalJointCompactPathEncoding
     {Space : Type} [MetricSpace Space] [CompactSpace Space]
     [MeasurableSpace Space] [BorelSpace Space]
     (marks : Bool → Space) (masses : Bool → ProbabilityMeasure Space)
-    (path : SkorokhodCadlagPathCompletion20261011 Space) : OriginalJointCompactSpace :=
+    (path : SkorokhodCadlagPathCompletion Space) : OriginalJointCompactSpace :=
   originalJointCompactClass (.ofCompactSpace marks masses path)
 
 end

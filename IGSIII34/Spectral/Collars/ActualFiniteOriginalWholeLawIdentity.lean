@@ -33,7 +33,7 @@ theorem actualFullConfigurationPathLaw_discrete
     (clock : ℝ) (clockPositive : 0 < clock) :
     actualFullConfigurationPathLaw rule configuration scale scalePositive depth crossing initial.val
       clock clockPositive 0 =
-    discreteCadlagProbabilityCompletion20261011
+    discreteCadlagProbabilityCompletion
       (Vertex := ActualFiniteCluster rule configuration scale scalePositive depth)
       (⟨finiteDiscreteWalkLaw
         (Vertex := ActualFiniteCluster rule configuration scale scalePositive depth)
@@ -55,7 +55,7 @@ theorem actualFullConfigurationPathLaw_weighted
     (clock : ℝ) (clockPositive : 0 < clock) (kind : Fin 3) (notDiscrete : kind ≠ 0) :
     actualFullConfigurationPathLaw rule configuration scale scalePositive depth crossing initial.val
       clock clockPositive kind =
-    finiteWeightedCadlagProbabilityCompletion20261011
+    finiteWeightedCadlagProbabilityCompletion
       (Vertex := ActualFiniteCluster rule configuration scale scalePositive depth)
       (clusterRetainedEndpoint (rule.generation depth).network (configuration depth))
       (cluster_degree_positive (rule.generation depth).network (configuration depth) crossing)

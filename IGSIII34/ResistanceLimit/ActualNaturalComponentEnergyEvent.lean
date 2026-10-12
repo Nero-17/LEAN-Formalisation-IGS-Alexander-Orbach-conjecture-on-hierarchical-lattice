@@ -17,7 +17,7 @@ original natural innovation event. No inverse metric or locality is assumed. -/
 theorem ae_actual_natural_component_energy_event
     (rule : Rule) (p : ℝ) (positive : 0 < p) (belowOne : p < 1)
     (fixedPoint : rule.network.reliability p = p)
-    (natural : NaturalResistanceCompletion20261011 rule p positive belowOne fixedPoint) :
+    (natural : NaturalResistanceCompletion rule p positive belowOne fixedPoint) :
     ∀ᵐ marks ∂independentInnovationLaw rule p positive belowOne fixedPoint,
       ComponentElectricalTypical rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) marks ∧
       StationaryEnergyTypical rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) marks ∧

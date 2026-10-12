@@ -2,7 +2,7 @@ import IGSIII34.Spectral.Collars.ActualFiniteConfigurationLawTransport
 import IGSIII34.Spectral.Collars.ActualFiniteAnnealedNaturalClockIdentity
 import IGSIII34.ResistanceLimit.ActualCommonChemicalPaperLaw
 import IGSIII34.ResistanceLimit.ActualCommonChemicalContinuousPaperLaw
-import IGSIII34.Diffusion.ActualCommonVertexSpeedChemicalCadlagCompletion20261011
+import IGSIII34.Diffusion.ActualCommonVertexSpeedChemicalCadlagCompletion
 import IGSIII34.Diffusion.FiniteCountingOriginalCadlagIdentity
 import IGSIII34.Diffusion.FiniteUnitWeightCadlagIdentity
 
@@ -40,7 +40,7 @@ variable (rule : Rule) (p : ℝ) (positive : 0 < p) (belowOne : p < 1)
   have clock := actualFiniteAnnealedNaturalClock_original_identity rule (stationaryConfiguration rule marks.val) scale scalePositive depth
     (markedGenerationConfiguration_crosses rule marks.val marks.property.1.1.2.1 depth [] true) growth growthPositive (0 : Fin 3)
   simp only [show (0 : Fin 3) ≠ 2 from by decide, if_false] at clock
-  simpa only [clock, actualPaperPlacedDiscreteCadlagLaw, actualPaperDiscreteClockCompletion20261011, diracProba, ProbabilityMeasure.coe_mk] using identity
+  simpa only [clock, actualPaperPlacedDiscreteCadlagLaw, actualPaperDiscreteClockCompletion, diracProba, ProbabilityMeasure.coe_mk] using identity
 
  theorem actualFiniteAnnealedNaturalPlacedLaw_rate_one (depth : ℕ) :
     actualFiniteAnnealedPlacedPathLaw rule scale scalePositive depth (stationaryConfiguration rule marks.val depth)
@@ -60,7 +60,7 @@ variable (rule : Rule) (p : ℝ) (positive : 0 < p) (belowOne : p < 1)
     (markedGenerationConfiguration_crosses rule marks.val marks.property.1.1.2.1 depth [] true) growth growthPositive (1 : Fin 3)
   simp only [show (1 : Fin 3) ≠ 2 from by decide, if_false] at clock
   simp only [ite_true, finiteUnitWeightCadlagIdentity] at identity
-  simpa only [clock, actualPaperPlacedContinuousCadlagLaw, actualPaperDiscreteClockCompletion20261011] using identity
+  simpa only [clock, actualPaperPlacedContinuousCadlagLaw, actualPaperDiscreteClockCompletion] using identity
 
  theorem actualFiniteAnnealedNaturalPlacedLaw_inverse_degree (depth : ℕ) :
     actualFiniteAnnealedPlacedPathLaw rule scale scalePositive depth (stationaryConfiguration rule marks.val depth)
@@ -69,7 +69,7 @@ variable (rule : Rule) (p : ℝ) (positive : 0 < p) (belowOne : p < 1)
       (actualFiniteAnnealedNaturalClock_positive rule (stationaryConfiguration rule marks.val) scale scalePositive depth
         (markedGenerationConfiguration_crosses rule marks.val marks.property.1.1.2.1 depth [] true) growth growthPositive 2)
       2 (placement depth ∘ actualAnnealedFiniteVertexEquiv rule (stationaryConfiguration rule marks.val) scale scalePositive depth) =
-    actualVertexVariableSpeedPlacedCadlagLawCompletion20261011 rule p positive belowOne fixedPoint growth value growthPositive marks scale scalePositive
+    actualVertexVariableSpeedPlacedCadlagLawCompletion rule p positive belowOne fixedPoint growth value growthPositive marks scale scalePositive
       depth (diracProba (initial depth)) (placement depth) := by
   letI := clusterEdge_nonempty (rule.generation depth).network (stationaryConfiguration rule marks.val depth)
     (markedGenerationConfiguration_crosses rule marks.val marks.property.1.1.2.1 depth [] true)
@@ -84,7 +84,7 @@ variable (rule : Rule) (p : ℝ) (positive : 0 < p) (belowOne : p < 1)
   simp only [show (2 : Fin 3) ≠ 1 from by decide, if_false] at identity
   simp only [clock] at identity
   rw [← finiteCountingOriginalCadlagIdentity _ _ _ (growth ^ (depth + 1)) (pow_pos growthPositive _) (placement depth)] at identity
-  simpa only [clock, actualVertexVariableSpeedPlacedCadlagLawCompletion20261011] using identity
+  simpa only [clock, actualVertexVariableSpeedPlacedCadlagLawCompletion] using identity
 
 end
 end IGSIII34.Spectral

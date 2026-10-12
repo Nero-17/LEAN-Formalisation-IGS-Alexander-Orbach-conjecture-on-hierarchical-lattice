@@ -13,14 +13,14 @@ continuous for the standard local-J1 window criterion. Measurability
 follows from the proved identity continuity and is not an extra input.
 The limiting probability law may charge discontinuous paths. -/
 theorem integerJ1_weak_integral_usualLocalJ1
-    (laws : ℕ → ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 Space))
-    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 Space))
+    (laws : ℕ → ProbabilityMeasure (SkorokhodCadlagPathCompletion Space))
+    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion Space))
     (weak : Tendsto laws atTop (𝓝 law))
-    (test : SkorokhodCadlagPathCompletion20261011 Space → ℝ)
+    (test : SkorokhodCadlagPathCompletion Space → ℝ)
     (bound : ℝ) (bounded : ∀ path, |test path| ≤ bound)
     (continuity : usualLocalJ1SequentiallyContinuousTest test) :
-    Tendsto (fun index => ∫ path, test path ∂(laws index : Measure (SkorokhodCadlagPathCompletion20261011 Space)))
-      atTop (𝓝 (∫ path, test path ∂(law : Measure (SkorokhodCadlagPathCompletion20261011 Space)))) := by
+    Tendsto (fun index => ∫ path, test path ∂(laws index : Measure (SkorokhodCadlagPathCompletion Space)))
+      atTop (𝓝 (∫ path, test path ∂(law : Measure (SkorokhodCadlagPathCompletion Space)))) := by
   have integerContinuity := usualLocalJ1Test_integer_continuous test continuity
   exact probability_weak_integral_bounded_ae_continuous laws law weak test
     integerContinuity.measurable bound bounded

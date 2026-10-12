@@ -1,5 +1,5 @@
 import IGSIII34.ResistanceLimit.SideSourceTrace
-import IGSIII34.ResistanceLimit.StationaryBlockTraceCompletion20261011
+import IGSIII34.ResistanceLimit.StationaryBlockTraceCompletion
 
 set_option autoImplicit false
 set_option maxHeartbeats 3000000

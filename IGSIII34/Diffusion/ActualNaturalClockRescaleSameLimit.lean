@@ -1,11 +1,11 @@
-import IGSIII34.Diffusion.ActualWeightedClockRescaleCompletion20261011
-import IGSIII34.Diffusion.ActualVertexSpeedGlobalWeakCompletion20261011
-import IGSIII34.Diffusion.ActualNaturalAdditiveClockCompletion20261011
-import IGSIII34.Diffusion.ActualDiscreteGlobalWholeWeakCompletion20261011
-import IGSIII34.Diffusion.ActualContinuousLimitAssemblyCompletion20261011
-import IGSIII34.Diffusion.ActualNaturalDegreeMassCompletion20261011
-import IGSIII34.Diffusion.ActualResolventUniformCompletion20261011
-import IGSIII34.Spectral.ActualNaturalSpectralWitnessCompletion20261011
+import IGSIII34.Diffusion.ActualWeightedClockRescaleCompletion
+import IGSIII34.Diffusion.ActualVertexSpeedGlobalWeakCompletion
+import IGSIII34.Diffusion.ActualNaturalAdditiveClockCompletion
+import IGSIII34.Diffusion.ActualDiscreteGlobalWholeWeakCompletion
+import IGSIII34.Diffusion.ActualContinuousLimitAssemblyCompletion
+import IGSIII34.Diffusion.ActualNaturalDegreeMassCompletion
+import IGSIII34.Diffusion.ActualResolventUniformCompletion
+import IGSIII34.Spectral.ActualNaturalSpectralWitnessCompletion
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false
@@ -16,21 +16,21 @@ open Universality Universality.FiniteNetwork IGSIII34.Percolation IGSIII34.Resis
 open IGSIII.Chemical.Substitution IGSIII.Geometry MeasureTheory Filter
 open scoped _root_.Topology NNReal
 
-local instance sameLimitNaturalClockRescaleCompletionMeasurableCompletion20261011 {Carrier : Type*} [UniformSpace Carrier] : MeasurableSpace (UniformSpace.Completion Carrier) := borel _
-local instance sameLimitNaturalClockRescaleCompletionBorelCompletion20261011 {Carrier : Type*} [UniformSpace Carrier] : BorelSpace (UniformSpace.Completion Carrier) := ⟨rfl⟩
+local instance sameLimitNaturalClockRescaleCompletionMeasurableCompletion {Carrier : Type*} [UniformSpace Carrier] : MeasurableSpace (UniformSpace.Completion Carrier) := borel _
+local instance sameLimitNaturalClockRescaleCompletionBorelCompletion {Carrier : Type*} [UniformSpace Carrier] : BorelSpace (UniformSpace.Completion Carrier) := ⟨rfl⟩
 
 /-- The original natural field supplies all electrical convergence and mesh
 inputs. Any actual Perron boundary realization with the same vertex ratios
 therefore has whole finite-resolvent convergence on the genuine paper clock. -/
-local instance sameLimitNaturalClockRescaleContinuousMeasurableCompletion20261011 {Space : Type*} [TopologicalSpace Space] : MeasurableSpace C(ℝ≥0, Space) := borel _
-local instance sameLimitNaturalClockRescaleContinuousBorelCompletion20261011 {Space : Type*} [TopologicalSpace Space] : BorelSpace C(ℝ≥0, Space) := ⟨rfl⟩
-local instance sameLimitNaturalClockRescaleCarrierMeasurableCompletion20261011 (rule : Rule) (p : ℝ) (positive : 0 < p) (belowOne : p < 1)
+local instance sameLimitNaturalClockRescaleContinuousMeasurableCompletion {Space : Type*} [TopologicalSpace Space] : MeasurableSpace C(ℝ≥0, Space) := borel _
+local instance sameLimitNaturalClockRescaleContinuousBorelCompletion {Space : Type*} [TopologicalSpace Space] : BorelSpace C(ℝ≥0, Space) := ⟨rfl⟩
+local instance sameLimitNaturalClockRescaleCarrierMeasurableCompletion (rule : Rule) (p : ℝ) (positive : 0 < p) (belowOne : p < 1)
     (fixedPoint : rule.network.reliability p = p) (growth : ℝ)
     (value : Lp ℝ 2 (independentInnovationLaw rule p positive belowOne fixedPoint))
     (growthPositive : 0 < growth)
     (marks : {marks // StationaryElectricalTypical rule p positive belowOne fixedPoint growth value marks}) :
     MeasurableSpace (ActualStationaryElectricalSpace rule p positive belowOne fixedPoint growth value growthPositive marks) := borel _
-local instance sameLimitNaturalClockRescaleCarrierBorelCompletion20261011 (rule : Rule) (p : ℝ) (positive : 0 < p) (belowOne : p < 1)
+local instance sameLimitNaturalClockRescaleCarrierBorelCompletion (rule : Rule) (p : ℝ) (positive : 0 < p) (belowOne : p < 1)
     (fixedPoint : rule.network.reliability p = p) (growth : ℝ)
     (value : Lp ℝ 2 (independentInnovationLaw rule p positive belowOne fixedPoint))
     (growthPositive : 0 < growth)
@@ -39,7 +39,7 @@ local instance sameLimitNaturalClockRescaleCarrierBorelCompletion20261011 (rule 
 theorem ae_actual_natural_weighted_clock_rescale_same_limit
     (rule : Rule) (classicalRule : rule.Classical) (p : ℝ)
     (positive : 0 < p) (belowOne : p < 1) (fixedPoint : rule.network.reliability p = p)
-    (natural : NaturalResistanceCompletion20261011 rule p positive belowOne fixedPoint)
+    (natural : NaturalResistanceCompletion rule p positive belowOne fixedPoint)
     (weight : List (Fin rule.edges × Bool) → (((List (Fin rule.edges) × Bool) → Configuration rule.edges) → ℝ))
     (actualRatios : ∀ᵐ marks ∂independentInnovationLaw rule p positive belowOne fixedPoint,
       ∀ address, Tendsto (fun depth =>
@@ -67,7 +67,7 @@ theorem ae_actual_natural_weighted_clock_rescale_same_limit
       letI := massOpenPositive
       ∀ (chemicalScale : ℝ) (chemicalScalePositive : 0 < chemicalScale),
       ∀ anchor : ActualStationaryEnergySkeleton rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) ⟨marks, typical⟩),
-      ∀ data : ActualSpectralDataCompletion20261011 rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
+      ∀ data : ActualSpectralDataCompletion rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
         (zero_lt_one.trans natural.aboveOne)
         (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) ⟨marks, typical⟩) anchor (boundary.map realization),
       ∀ initial : ∀ depth, ProbabilityMeasure (ActualFiniteCluster rule (stationaryConfiguration rule marks) chemicalScale chemicalScalePositive depth),
@@ -75,7 +75,7 @@ theorem ae_actual_natural_weighted_clock_rescale_same_limit
       ∀ limitLaw : ProbabilityMeasure (ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
         (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩),
 
-      Tendsto (fun depth => actualPaperDiscreteElectricalObservationLawCompletion20261011 rule p positive belowOne fixedPoint
+      Tendsto (fun depth => actualPaperDiscreteElectricalObservationLawCompletion rule p positive belowOne fixedPoint
         natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩
         chemicalScale chemicalScalePositive times initial depth) atTop (𝓝 limitLaw) →
 
@@ -83,15 +83,15 @@ theorem ae_actual_natural_weighted_clock_rescale_same_limit
       ∀ (ratios : ℕ → ℝ≥0) (ratiosPositive : ∀ depth, 0 < ratios depth),
       ∀ (ratio : ℝ≥0) (ratioPositive : 0 < ratio),
       Tendsto ratios atTop (𝓝 ratio) →
-        Tendsto (fun depth => actualWeightedClockRescaledGlobalLawCompletion20261011 rule p positive belowOne fixedPoint
+        Tendsto (fun depth => actualWeightedClockRescaledGlobalLawCompletion rule p positive belowOne fixedPoint
           natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical⟩
           chemicalScale chemicalScalePositive countingSpeed ratios ratiosPositive depth (initial depth)) atTop
-          (𝓝 (limitLaw.map (continuousGlobalFamily_measurable_completion20261011
-            (fun path time => countableTimeContinuousSampleCompletion20261011 times dense path (ratio*time))
-            (fun path => (countableTimeContinuousSample_continuous_completion20261011 times dense path).comp (continuous_const.mul continuous_id))
-            (fun time => countableTimeContinuousSample_evaluation_measurable_completion20261011 times dense (ratio*time))).aemeasurable)) := by
+          (𝓝 (limitLaw.map (continuousGlobalFamily_measurable_completion
+            (fun path time => countableTimeContinuousSampleCompletion times dense path (ratio*time))
+            (fun path => (countableTimeContinuousSample_continuous_completion times dense path).comp (continuous_const.mul continuous_id))
+            (fun time => countableTimeContinuousSample_evaluation_measurable_completion times dense (ratio*time))).aemeasurable)) := by
   obtain ⟨constant, constantPositive, growthBounds, membership, endpointFixed⟩ :=
-    natural_physical_omega_witness_completion20261011 rule classicalRule p positive belowOne fixedPoint natural
+    natural_physical_omega_witness_completion rule classicalRule p positive belowOne fixedPoint natural
   have growthPositive := zero_lt_one.trans natural.aboveOne
   have physicalPositive : ∀ᵐ marks ∂independentInnovationLaw rule p positive belowOne fixedPoint,
       0 < (natural.amplitude • natural.field) marks := by
@@ -104,9 +104,9 @@ theorem ae_actual_natural_weighted_clock_rescale_same_limit
   have productGreaterThanOne : 1 < natural.growth * eta := by
     have multiplied := mul_lt_mul_of_pos_left inverseBelowEta growthPositive
     simpa only [mul_inv_cancel₀ growthPositive.ne'] using multiplied
-  filter_upwards [ae_actual_natural_additive_clock_prefix_probability_tendsto_completion20261011 rule classicalRule p positive belowOne fixedPoint natural weight actualRatios nonnegative,
-    ae_actualCountingClock_density_bound_completion20261011 rule classicalRule p positive belowOne fixedPoint,
-    ae_actual_natural_degree_mass_tendsto_completion20261011 rule classicalRule p positive belowOne fixedPoint natural weight actualRatios nonnegative,
+  filter_upwards [ae_actual_natural_additive_clock_prefix_probability_tendsto_completion rule classicalRule p positive belowOne fixedPoint natural weight actualRatios nonnegative,
+    ae_actualCountingClock_density_bound_completion rule classicalRule p positive belowOne fixedPoint,
+    ae_actual_natural_degree_mass_tendsto_completion rule classicalRule p positive belowOne fixedPoint natural weight actualRatios nonnegative,
     electricalField_stationary_of_fixed rule p positive belowOne fixedPoint natural.growth growthPositive (natural.amplitude • natural.field) physicalPositive endpointFixed,
     actual_electrical_field_limits_fixed_cluster rule classicalRule p positive belowOne fixedPoint constant natural.growth constantPositive growthPositive
       growthBounds (natural.amplitude • natural.field) endpointFixed membership,
@@ -128,7 +128,7 @@ theorem ae_actual_natural_weighted_clock_rescale_same_limit
       (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩)).IsOpenPosMeasure := massOpenPositive
   obtain ⟨bound, boundPositive, bounded⟩ := density chemicalScale chemicalScalePositive
   intro countingSpeed ratios ratiosPositive ratio ratioPositive ratioConvergence
-  apply actual_weighted_rescaled_global_weak_completion20261011 rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
+  apply actual_weighted_rescaled_global_weak_completion rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
     (zero_lt_one.trans natural.aboveOne) ⟨marks, typical⟩ chemicalScale chemicalScalePositive measure anchor
     (Nat.zero_lt_of_lt classicalRule.edges_gt_one) natural.aboveOne
     (degrees typical.1.1 boundary probability atoms realization projection chemicalScale chemicalScalePositive)

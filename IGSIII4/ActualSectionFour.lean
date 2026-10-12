@@ -15,7 +15,7 @@ theorem section_four_for_natural_resistance
     (rule : Rule) (classicalRule : rule.Classical) (probability : ℝ)
     (positive : 0 < probability) (belowOne : probability < 1)
     (fixedPoint : rule.network.reliability probability = probability)
-    (natural : NaturalResistanceCompletion20261011 rule probability positive belowOne fixedPoint)
+    (natural : NaturalResistanceCompletion rule probability positive belowOne fixedPoint)
     (chemical : ActualChemicalSectionTwo rule probability positive belowOne fixedPoint) :
     SectionFourConclusions rule probability positive belowOne fixedPoint
       (naturalSectionFourElectrical rule probability positive belowOne fixedPoint natural) chemical :=
@@ -30,11 +30,11 @@ theorem exists_section_four_from_proved_sections_two_three
     (rule : Rule) (classicalRule : rule.Classical) (probability : ℝ)
     (positive : 0 < probability) (belowOne : probability < 1)
     (fixedPoint : rule.network.reliability probability = probability) :
-    ∃ natural : NaturalResistanceCompletion20261011 rule probability positive belowOne fixedPoint,
+    ∃ natural : NaturalResistanceCompletion rule probability positive belowOne fixedPoint,
     ∃ chemical : ActualChemicalSectionTwo rule probability positive belowOne fixedPoint,
       SectionFourConclusions rule probability positive belowOne fixedPoint
         (naturalSectionFourElectrical rule probability positive belowOne fixedPoint natural) chemical := by
-  obtain ⟨natural⟩ := exists_natural_resistance_completion20261011
+  obtain ⟨natural⟩ := exists_natural_resistance_completion
     rule classicalRule probability positive belowOne fixedPoint
   obtain ⟨chemical⟩ := exists_actual_chemical_section_two
     rule classicalRule probability positive belowOne fixedPoint
@@ -45,7 +45,7 @@ theorem natural_critical_supersolution
     (rule : Rule) (classicalRule : rule.Classical) (probability : ℝ)
     (positive : 0 < probability) (belowOne : probability < 1)
     (fixedPoint : rule.network.reliability probability = probability)
-    (natural : NaturalResistanceCompletion20261011 rule probability positive belowOne fixedPoint)
+    (natural : NaturalResistanceCompletion rule probability positive belowOne fixedPoint)
     (value : ((List (Fin rule.edges) × Bool) → Configuration rule.edges) → ℝ)
     (measurable : Measurable value)
     (integrable : Integrable value (IGSIII.Chemical.Substitution.independentInnovationLaw
@@ -69,7 +69,7 @@ theorem natural_critical_supersolution
 theorem natural_long_diamond_spectral_dimension_strictly_below_four_thirds
     (probability : ℝ) (positive : 0 < probability) (belowOne : probability < 1)
     (fixedPoint : LongDiamond.network.reliability probability = probability)
-    (natural : NaturalResistanceCompletion20261011 LongDiamond.rule probability positive belowOne fixedPoint) :
+    (natural : NaturalResistanceCompletion LongDiamond.rule probability positive belowOne fixedPoint) :
     typicalSpectralDimension (actualMassGrowth LongDiamond.rule probability) natural.growth < (4 / 3 : ℝ) :=
   LongDiamond.spectral_dimension_strictly_below_four_thirds probability positive belowOne fixedPoint
     (naturalSectionFourElectrical LongDiamond.rule probability positive belowOne fixedPoint natural)

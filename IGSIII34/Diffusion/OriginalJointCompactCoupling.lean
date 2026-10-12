@@ -20,7 +20,7 @@ structure OriginalJointCompactRepresentative where
   carrier : NonemptyCompacts OriginalJointUniversalSpace
   marks : Bool → carrier
   masses : Bool → ProbabilityMeasure carrier
-  path : SkorokhodCadlagPathCompletion20261011 carrier
+  path : SkorokhodCadlagPathCompletion carrier
 
 /-- A coupling consists of true isometric placements into one compact
 ambient. No distance-profile homeomorphism is substituted for an isometry. -/
@@ -43,9 +43,9 @@ def OriginalJointCompactCoupling.cost {first last : OriginalJointCompactRepresen
       (originalJointRepresentativeState first))
     (jointMeasuredMarkedStateMap coupling.lastPlacement coupling.lastIsometry.continuous
       (originalJointRepresentativeState last)) +
-  dist (skorokhodCadlagContinuousCarrierMapCompletion20261011 coupling.firstPlacement
+  dist (skorokhodCadlagContinuousCarrierMapCompletion coupling.firstPlacement
       coupling.firstIsometry.continuous first.path)
-    (skorokhodCadlagContinuousCarrierMapCompletion20261011 coupling.lastPlacement
+    (skorokhodCadlagContinuousCarrierMapCompletion coupling.lastPlacement
       coupling.lastIsometry.continuous last.path)
 
 def OriginalJointCompactCoupling.reverse {first last : OriginalJointCompactRepresentative}

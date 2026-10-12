@@ -1,5 +1,5 @@
 import IGSIII34.Spectral.Collars.ActualFiniteAnnealedCoding
-import IGSIII34.ResistanceLimit.ActualChemicalBirthDistortionCompletion20261011
+import IGSIII34.ResistanceLimit.ActualChemicalBirthDistortionCompletion
 import IGSIII.Geometry.ChemicalMetricCodeFaithfulness
 
 set_option autoImplicit false
@@ -106,7 +106,7 @@ theorem actualFiniteAnnealedDistanceProfile_uniform
           (actualAnnealedFiniteVertexEquiv rule (fun depth => markedGenerationConfiguration rule marks depth [] true) scale scalePositive depth vertex))
           (actualChemicalLabelPoint rule classicalRule (fun depth => markedGenerationConfiguration rule marks depth [] true)
             coherent scale scalePositive lengths nonnegative positive childConvergence label)| < tolerance := by
-  filter_upwards [actual_chemical_birth_uniform_distortion_completion20261011 rule classicalRule marks crossing coherent
+  filter_upwards [actual_chemical_birth_uniform_distortion_completion rule classicalRule marks crossing coherent
     scale scalePositive lengths nonnegative positive childConvergence eta coefficient start etaNonnegative etaBelowOne radiusBounds tolerance tolerancePositive,
     eventually_ge_atTop label.1] with depth distortion bound
   intro vertex

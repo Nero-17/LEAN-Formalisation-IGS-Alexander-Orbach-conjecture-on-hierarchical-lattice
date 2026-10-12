@@ -1,4 +1,4 @@
-import IGSIII34.Percolation.Continuation.NaturalPhysicalOmegaCompletion20261011
+import IGSIII34.Percolation.Continuation.NaturalPhysicalOmegaCompletion
 import IGSIII34.Percolation.ElectricalSandwich
 
 set_option autoImplicit false
@@ -14,7 +14,7 @@ lies in the manuscript interval [1, E X⁻¹]. -/
 theorem natural_electrical_amplitude_bounds
     (rule : Rule) (classicalRule : rule.Classical) (p : ℝ)
     (positive : 0 < p) (belowOne : p < 1) (fixedPoint : rule.network.reliability p = p)
-    (natural : NaturalResistanceCompletion20261011 rule p positive belowOne fixedPoint) :
+    (natural : NaturalResistanceCompletion rule p positive belowOne fixedPoint) :
     1 ≤ natural.amplitude ∧ natural.amplitude ≤
       ∫ marks, (natural.field marks)⁻¹ ∂independentInnovationLaw rule p positive belowOne fixedPoint := by
   have inverseIntegrable : Integrable (fun marks => (natural.field marks)⁻¹)
@@ -23,7 +23,7 @@ theorem natural_electrical_amplitude_bounds
   have inversePositive := inverse_mean_positive
     (independentInnovationLaw rule p positive belowOne fixedPoint) natural.field natural.fieldPositive inverseIntegrable
   obtain ⟨constant, constantPositive, growthBounds, membership, endpointFixed⟩ :=
-    natural_physical_omega_witness_completion20261011 rule classicalRule p positive belowOne fixedPoint natural
+    natural_physical_omega_witness_completion rule classicalRule p positive belowOne fixedPoint natural
   have endpointLimit := electricalOrbitLp_tendsto_ae_fixed_cluster rule classicalRule p positive belowOne fixedPoint
     constant natural.growth constantPositive (zero_lt_one.trans natural.aboveOne) growthBounds
     (natural.amplitude • natural.field) endpointFixed membership

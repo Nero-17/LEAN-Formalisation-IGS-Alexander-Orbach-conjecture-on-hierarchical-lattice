@@ -12,7 +12,7 @@ states are used only to extend tests from legitimate original states. -/
 structure ExtendedJointCompactRepresentative where
   ambient : NonemptyCompacts OriginalJointUniversalSpace
   state : JointMeasuredMarkedState ambient
-  path : SkorokhodCadlagPathCompletion20261011 ambient
+  path : SkorokhodCadlagPathCompletion ambient
 
 /-- Every original representative is an extended representative whose
 specified geometric carrier is its entire compact ambient. -/
@@ -28,13 +28,13 @@ def ExtendedJointCompactRepresentative.ofCompactSpace
     {Space : Type} [MetricSpace Space] [CompactSpace Space]
     [MeasurableSpace Space] [BorelSpace Space]
     (state : JointMeasuredMarkedState Space)
-    (path : SkorokhodCadlagPathCompletion20261011 Space) : ExtendedJointCompactRepresentative := by
+    (path : SkorokhodCadlagPathCompletion Space) : ExtendedJointCompactRepresentative := by
   letI : Nonempty Space := state.1.nonempty.to_subtype.map Subtype.val
   let embedding := (kuratowskiEmbedding.isometry Space).isometryEquivOnRange
   exact {
     ambient := NonemptyCompacts.kuratowskiEmbedding Space
     state := jointMeasuredMarkedStateMap embedding embedding.isometry.continuous state
-    path := skorokhodCadlagContinuousCarrierMapCompletion20261011
+    path := skorokhodCadlagContinuousCarrierMapCompletion
       embedding embedding.isometry.continuous path }
 
 end

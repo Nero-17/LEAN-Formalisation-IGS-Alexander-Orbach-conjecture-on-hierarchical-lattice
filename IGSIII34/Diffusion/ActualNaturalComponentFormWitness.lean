@@ -14,7 +14,7 @@ input, simultaneously at all addresses and both retained planted sides. -/
 theorem ae_actual_natural_component_form_fields
     (rule : Rule) (p : ℝ) (positive : 0 < p) (belowOne : p < 1)
     (fixedPoint : rule.network.reliability p = p)
-    (natural : NaturalResistanceCompletion20261011 rule p positive belowOne fixedPoint) :
+    (natural : NaturalResistanceCompletion rule p positive belowOne fixedPoint) :
     ∀ᵐ marks ∂independentInnovationLaw rule p positive belowOne fixedPoint,
       ComponentElectricalTypical rule p positive belowOne fixedPoint natural.growth
         (natural.amplitude • natural.field) marks ∧

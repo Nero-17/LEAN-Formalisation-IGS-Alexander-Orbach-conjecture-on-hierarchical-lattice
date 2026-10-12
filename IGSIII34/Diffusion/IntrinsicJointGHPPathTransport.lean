@@ -11,7 +11,7 @@ theorem intrinsic_joint_test_integral_bound
     {Space : Type} [MetricSpace Space] [CompactSpace Space]
     [MeasurableSpace Space] [BorelSpace Space]
     (test : IntrinsicJointGHPPathTest) (state : JointMeasuredMarkedState Space)
-    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 Space)) :
+    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion Space)) :
     ‖∫ path, test.value Space state path ∂(law : Measure _)‖ ≤ test.bound :=
   ((test.value Space state).norm_integral_le_norm (law : Measure _)).trans (test.bounded Space state)
 
@@ -23,14 +23,14 @@ theorem intrinsic_joint_test_integral_isometric_transport
     [MetricSpace Last] [CompactSpace Last] [MeasurableSpace Last] [BorelSpace Last]
     (test : IntrinsicJointGHPPathTest) (mapping : First → Last) (isometry : Isometry mapping)
     (state : JointMeasuredMarkedState First)
-    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 First)) :
+    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion First)) :
     (∫ path, test.value Last (jointMeasuredMarkedStateMap mapping isometry.continuous state) path
-      ∂(law.map (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011
+      ∂(law.map (skorokhodCadlagContinuousCarrierMap_continuous_completion
         mapping isometry.continuous).measurable.aemeasurable : Measure _)) =
     ∫ path, test.value First state path ∂(law : Measure _) := by
   change (∫ path, test.value Last (jointMeasuredMarkedStateMap mapping isometry.continuous state) path
-    ∂(law : Measure _).map (skorokhodCadlagContinuousCarrierMapCompletion20261011 mapping isometry.continuous)) = _
-  rw [integral_map (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011
+    ∂(law : Measure _).map (skorokhodCadlagContinuousCarrierMapCompletion mapping isometry.continuous)) = _
+  rw [integral_map (skorokhodCadlagContinuousCarrierMap_continuous_completion
     mapping isometry.continuous).measurable.aemeasurable
     (test.value Last (jointMeasuredMarkedStateMap mapping isometry.continuous state)).continuous.aestronglyMeasurable]
   apply integral_congr_ae

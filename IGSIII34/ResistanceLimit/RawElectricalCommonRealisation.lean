@@ -1,6 +1,6 @@
 import IGSIII34.ResistanceLimit.RawElectricalBirthDistortion
 import IGSIII34.Topology.IncreasingDenseNets
-import IGSIII34.Topology.CommonProjectionMetricRealisationCompletion20261011
+import IGSIII34.Topology.CommonProjectionMetricRealisationCompletion
 
 set_option autoImplicit false
 set_option maxHeartbeats 3600000
@@ -63,7 +63,7 @@ theorem exists_actual_raw_electrical_common_isometric_realisation
   letI : Nonempty (ActualStationaryElectricalSpace rule p positive belowOne fixedPoint growth value growthPositive marks) :=
     ⟨actualStationaryElectricalVertex rule p positive belowOne fixedPoint growth value growthPositive marks 0
       ⟨(rule.generation 0).network.source, SimpleGraph.Reachable.refl _⟩⟩
-  exact IGSIII34.Topology.exists_common_isometric_realisation_of_uniform_projection_distortion_completion20261011
+  exact IGSIII34.Topology.exists_common_isometric_realisation_of_uniform_projection_distortion_completion
     (fun depth => RawElectricalFiniteCluster rule (stationaryConfiguration rule marks.val) growth growthPositive depth)
     (fun depth vertex => actualStationaryElectricalVertex rule p positive belowOne fixedPoint growth value growthPositive marks depth vertex)
     (actual_raw_electrical_birth_uniform_distortion rule p positive belowOne fixedPoint growth value growthPositive marks

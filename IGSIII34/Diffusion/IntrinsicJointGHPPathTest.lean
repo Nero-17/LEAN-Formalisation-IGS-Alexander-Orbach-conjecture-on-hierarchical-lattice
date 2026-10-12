@@ -1,5 +1,5 @@
 import IGSIII34.Diffusion.UsualLocalJ1WeakTests
-import IGSIII34.Diffusion.CommonEmbeddingCadlagWeakCompletion20261011
+import IGSIII34.Diffusion.CommonEmbeddingCadlagWeakCompletion
 import IGSIII34.Spectral.Collars.MeasureTransport
 import Mathlib.Topology.MetricSpace.Closeds
 import Mathlib.MeasureTheory.Integral.BoundedContinuousFunction
@@ -37,7 +37,7 @@ structure IntrinsicJointGHPPathTest where
   spatialLipschitz : ℝ≥0
   value : ∀ (Space : Type) [MetricSpace Space] [CompactSpace Space]
     [MeasurableSpace Space] [BorelSpace Space],
-    JointMeasuredMarkedState Space → (SkorokhodCadlagPathCompletion20261011 Space →ᵇ ℝ)
+    JointMeasuredMarkedState Space → (SkorokhodCadlagPathCompletion Space →ᵇ ℝ)
   bounded : ∀ (Space : Type) [MetricSpace Space] [CompactSpace Space]
     [MeasurableSpace Space] [BorelSpace Space] (state : JointMeasuredMarkedState Space),
     ‖value Space state‖ ≤ bound
@@ -46,15 +46,15 @@ structure IntrinsicJointGHPPathTest where
     usualLocalJ1SequentiallyContinuousTest (value Space state)
   spatialStability : ∀ (Space : Type) [MetricSpace Space] [CompactSpace Space]
     [MeasurableSpace Space] [BorelSpace Space] (first last : JointMeasuredMarkedState Space)
-    (path : SkorokhodCadlagPathCompletion20261011 Space),
+    (path : SkorokhodCadlagPathCompletion Space),
     |value Space first path - value Space last path| ≤
       spatialLipschitz * jointMeasuredMarkedStateCost first last
   isometricTransport : ∀ (First Last : Type) [MetricSpace First] [CompactSpace First]
     [MeasurableSpace First] [BorelSpace First] [MetricSpace Last] [CompactSpace Last]
     [MeasurableSpace Last] [BorelSpace Last] (mapping : First → Last) (isometry : Isometry mapping)
-    (state : JointMeasuredMarkedState First) (path : SkorokhodCadlagPathCompletion20261011 First),
+    (state : JointMeasuredMarkedState First) (path : SkorokhodCadlagPathCompletion First),
     value Last (jointMeasuredMarkedStateMap mapping isometry.continuous state)
-      (skorokhodCadlagContinuousCarrierMapCompletion20261011 mapping isometry.continuous path) =
+      (skorokhodCadlagContinuousCarrierMapCompletion mapping isometry.continuous path) =
       value First state path
 
 theorem jointMeasuredMarkedStateCost_tendsto_zero
@@ -84,8 +84,8 @@ theorem intrinsic_joint_test_response_tendsto
     [MeasurableSpace Space] [BorelSpace Space]
     (test : IntrinsicJointGHPPathTest)
     (states : ℕ → JointMeasuredMarkedState Space) (state : JointMeasuredMarkedState Space)
-    (laws : ℕ → ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 Space))
-    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 Space))
+    (laws : ℕ → ProbabilityMeasure (SkorokhodCadlagPathCompletion Space))
+    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion Space))
     (spatial : Tendsto (fun depth => jointMeasuredMarkedStateCost (states depth) state) atTop (𝓝 0))
     (weak : Tendsto laws atTop (𝓝 law)) :
     Tendsto (fun depth => ∫ path, test.value Space (states depth) path ∂(laws depth : Measure _)) atTop

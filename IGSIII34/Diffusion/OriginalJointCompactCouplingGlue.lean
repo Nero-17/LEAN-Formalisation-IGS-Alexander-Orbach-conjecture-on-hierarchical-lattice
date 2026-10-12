@@ -41,19 +41,19 @@ theorem OriginalJointCompactCoupling.cost_triangle_of_placements
   have stateFirstBound := jointMeasuredMarkedStateCost_isometric_map_le
     leftMapping leftIsometry firstState middleLeftState
   have pathMiddleIdentity :
-      skorokhodCadlagContinuousCarrierMapCompletion20261011 leftMapping leftIsometry.continuous
-        (skorokhodCadlagContinuousCarrierMapCompletion20261011 left.lastPlacement left.lastIsometry.continuous middle.path) =
-      skorokhodCadlagContinuousCarrierMapCompletion20261011 rightMapping rightIsometry.continuous
-        (skorokhodCadlagContinuousCarrierMapCompletion20261011 right.firstPlacement right.firstIsometry.continuous middle.path) := by
+      skorokhodCadlagContinuousCarrierMapCompletion leftMapping leftIsometry.continuous
+        (skorokhodCadlagContinuousCarrierMapCompletion left.lastPlacement left.lastIsometry.continuous middle.path) =
+      skorokhodCadlagContinuousCarrierMapCompletion rightMapping rightIsometry.continuous
+        (skorokhodCadlagContinuousCarrierMapCompletion right.firstPlacement right.firstIsometry.continuous middle.path) := by
     rw [skorokhodCadlagCarrierMap_comp, skorokhodCadlagCarrierMap_comp]
     congr 1
   have pathBound := dist_triangle
-    (skorokhodCadlagContinuousCarrierMapCompletion20261011 leftMapping leftIsometry.continuous
-      (skorokhodCadlagContinuousCarrierMapCompletion20261011 left.firstPlacement left.firstIsometry.continuous first.path))
-    (skorokhodCadlagContinuousCarrierMapCompletion20261011 leftMapping leftIsometry.continuous
-      (skorokhodCadlagContinuousCarrierMapCompletion20261011 left.lastPlacement left.lastIsometry.continuous middle.path))
-    (skorokhodCadlagContinuousCarrierMapCompletion20261011 rightMapping rightIsometry.continuous
-      (skorokhodCadlagContinuousCarrierMapCompletion20261011 right.lastPlacement right.lastIsometry.continuous last.path))
+    (skorokhodCadlagContinuousCarrierMapCompletion leftMapping leftIsometry.continuous
+      (skorokhodCadlagContinuousCarrierMapCompletion left.firstPlacement left.firstIsometry.continuous first.path))
+    (skorokhodCadlagContinuousCarrierMapCompletion leftMapping leftIsometry.continuous
+      (skorokhodCadlagContinuousCarrierMapCompletion left.lastPlacement left.lastIsometry.continuous middle.path))
+    (skorokhodCadlagContinuousCarrierMapCompletion rightMapping rightIsometry.continuous
+      (skorokhodCadlagContinuousCarrierMapCompletion right.lastPlacement right.lastIsometry.continuous last.path))
   rw [(skorokhodCadlagCarrierMap_isometry leftMapping leftIsometry).dist_eq,
     pathMiddleIdentity, (skorokhodCadlagCarrierMap_isometry rightMapping rightIsometry).dist_eq] at pathBound
   unfold cost

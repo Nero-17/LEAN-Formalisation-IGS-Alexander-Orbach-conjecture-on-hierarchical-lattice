@@ -32,10 +32,10 @@ theorem originalJointCompactPathEncoding_isometricTransport
     (mapping : First → Last) (isometry : Isometry mapping)
     (surjective : Function.Surjective mapping)
     (marks : Bool → First) (masses : Bool → ProbabilityMeasure First)
-    (path : SkorokhodCadlagPathCompletion20261011 First) :
+    (path : SkorokhodCadlagPathCompletion First) :
     originalJointCompactPathEncoding (mapping ∘ marks)
       (fun side => (masses side).map isometry.continuous.measurable.aemeasurable)
-      (skorokhodCadlagContinuousCarrierMapCompletion20261011 mapping isometry.continuous path) =
+      (skorokhodCadlagContinuousCarrierMapCompletion mapping isometry.continuous path) =
       originalJointCompactPathEncoding marks masses path := by
   apply originalJointCompactSpaceToExtended_isometry.injective
   rw [originalJointCompactPathEncoding_toExtended, originalJointCompactPathEncoding_toExtended,
@@ -50,22 +50,22 @@ theorem originalJointCompactPathLaw_isometricTransport
     (mapping : First → Last) (isometry : Isometry mapping)
     (surjective : Function.Surjective mapping)
     (marks : Bool → First) (masses : Bool → ProbabilityMeasure First)
-    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 First)) :
+    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion First)) :
     originalJointCompactPathLaw (mapping ∘ marks)
       (fun side => (masses side).map isometry.continuous.measurable.aemeasurable)
-      (law.map (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011
+      (law.map (skorokhodCadlagContinuousCarrierMap_continuous_completion
         mapping isometry.continuous).measurable.aemeasurable) =
       originalJointCompactPathLaw marks masses law := by
   apply ProbabilityMeasure.toMeasure_injective
   change ((law : Measure _).map
-      (skorokhodCadlagContinuousCarrierMapCompletion20261011 mapping isometry.continuous)).map
+      (skorokhodCadlagContinuousCarrierMapCompletion mapping isometry.continuous)).map
       (originalJointCompactPathEncoding (mapping ∘ marks)
         (fun side => (masses side).map isometry.continuous.measurable.aemeasurable)) =
     (law : Measure _).map (originalJointCompactPathEncoding marks masses)
   rw [Measure.map_map
     (originalJointCompactPathEncoding_continuous (mapping ∘ marks)
       (fun side => (masses side).map isometry.continuous.measurable.aemeasurable)).measurable
-    (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011
+    (skorokhodCadlagContinuousCarrierMap_continuous_completion
       mapping isometry.continuous).measurable]
   apply Measure.map_congr
   exact Eventually.of_forall

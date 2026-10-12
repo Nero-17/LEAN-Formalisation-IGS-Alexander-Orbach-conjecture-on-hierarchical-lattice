@@ -1,6 +1,6 @@
 import IGSIII34.Spectral.Collars.WordCellBoundaries
 import IGSIII34.Spectral.Collars.CellMassIdentification
-import IGSIII34.Spectral.ActualBoundaryTypicalMassCompletion20261011
+import IGSIII34.Spectral.ActualBoundaryTypicalMassCompletion
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false
@@ -87,7 +87,7 @@ theorem actualChemicalWordComponent_mass_identification
       0 < weight (List.ofFn (path (depth + 1))) ∧
       realization path ∈ actualChemicalWordComponent rule classicalRule p positive belowOne fixedPoint growth amplitude
         growthPositive amplitudePositive value marks crossing coherent fieldPositive fieldConvergence depth (path (depth + 1)) := by
-    filter_upwards [membership, finite_partition_positive_weight_ae_completion20261011 boundary
+    filter_upwards [membership, finite_partition_positive_weight_ae_completion boundary
       (fun path => path (depth + 1)) (fun word => weight (List.ofFn word)) (atoms (depth + 1))]
       with path member positiveWeight
     exact ⟨positiveWeight, member depth⟩

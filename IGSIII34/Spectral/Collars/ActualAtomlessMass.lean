@@ -1,5 +1,5 @@
 import IGSIII34.Spectral.Collars.RetainedSkeleton
-import IGSIII34.Spectral.ActualNaturalSpectralWitnessCompletion20261011
+import IGSIII34.Spectral.ActualNaturalSpectralWitnessCompletion
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false
@@ -23,7 +23,7 @@ Neither the endpoint nor the mass measure is supplied by the caller. -/
 theorem exists_actual_natural_mass_null_singletons_and_skeleton
     (rule : Rule) (classicalRule : rule.Classical) (p : ℝ)
     (positive : 0 < p) (belowOne : p < 1) (fixedPoint : rule.network.reliability p = p) :
-    ∃ natural : NaturalResistanceCompletion20261011 rule p positive belowOne fixedPoint,
+    ∃ natural : NaturalResistanceCompletion rule p positive belowOne fixedPoint,
     ∃ weight : List (Fin rule.edges × Bool) →
       (((List (Fin rule.edges) × Bool) → Configuration rule.edges) → ℝ),
       (∀ᵐ marks ∂independentInnovationLaw rule p positive belowOne fixedPoint,
@@ -64,11 +64,11 @@ theorem exists_actual_natural_mass_null_singletons_and_skeleton
           (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne)
           (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth
             (natural.amplitude • natural.field) ⟨marks, typical⟩)))) = 0 := by
-  obtain ⟨natural⟩ := exists_natural_resistance_completion20261011
+  obtain ⟨natural⟩ := exists_natural_resistance_completion
     rule classicalRule p positive belowOne fixedPoint
-  obtain ⟨continuation⟩ := exists_actual_mass_continuation_completion20261011
+  obtain ⟨continuation⟩ := exists_actual_mass_continuation_completion
     rule classicalRule p positive belowOne fixedPoint
-  obtain ⟨weight, actualRatios, witnesses⟩ := exists_ae_actual_natural_spectral_witness_completion20261011
+  obtain ⟨weight, actualRatios, witnesses⟩ := exists_ae_actual_natural_spectral_witness_completion
     rule classicalRule p positive belowOne fixedPoint natural
   have nonnegative : ∀ᵐ marks ∂independentInnovationLaw rule p positive belowOne fixedPoint,
       ∀ address, 0 ≤ weight address marks := by

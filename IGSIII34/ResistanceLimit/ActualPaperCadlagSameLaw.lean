@@ -1,5 +1,5 @@
-import IGSIII34.Diffusion.ActualDiscreteCadlagWholeWeakCompletion20261011
-import IGSIII34.Diffusion.ActualContinuousCadlagWholeWeakCompletion20261011
+import IGSIII34.Diffusion.ActualDiscreteCadlagWholeWeakCompletion
+import IGSIII34.Diffusion.ActualContinuousCadlagWholeWeakCompletion
 
 set_option autoImplicit false
 set_option maxHeartbeats 2200000
@@ -28,24 +28,24 @@ theorem actual_paper_discrete_cadlag_same_law
     (times : ℕ → ℝ≥0) (dense : DenseRange times)
     (limitLaw : ProbabilityMeasure (ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint
       growth value growthPositive ⟨marks.val,marks.property.1.1⟩))
-    (weak : Tendsto (fun depth => actualPaperDiscreteElectricalGlobalJ1LawCompletion20261011
+    (weak : Tendsto (fun depth => actualPaperDiscreteElectricalGlobalJ1LawCompletion
       rule p positive belowOne fixedPoint growth value growthPositive marks chemicalScale chemicalScalePositive initial depth)
-      atTop (𝓝 (limitLaw.map (continuousGlobalFamily_measurable_completion20261011
-        (countableTimeContinuousSampleCompletion20261011 times dense)
-        (countableTimeContinuousSample_continuous_completion20261011 times dense)
-        (countableTimeContinuousSample_evaluation_measurable_completion20261011 times dense)).aemeasurable))) :
-    Tendsto (fun depth => actualPaperDiscreteElectricalCadlagLawCompletion20261011
+      atTop (𝓝 (limitLaw.map (continuousGlobalFamily_measurable_completion
+        (countableTimeContinuousSampleCompletion times dense)
+        (countableTimeContinuousSample_continuous_completion times dense)
+        (countableTimeContinuousSample_evaluation_measurable_completion times dense)).aemeasurable))) :
+    Tendsto (fun depth => actualPaperDiscreteElectricalCadlagLawCompletion
       rule p positive belowOne fixedPoint growth value growthPositive marks chemicalScale chemicalScalePositive initial depth)
-      atTop (𝓝 (continuousCadlagProbabilityCompletion20261011 limitLaw
-        (countableTimeContinuousSampleCompletion20261011 times dense)
-        (countableTimeContinuousSample_continuous_completion20261011 times dense)
-        (countableTimeContinuousSample_evaluation_measurable_completion20261011 times dense))) := by
-  apply probability_subtype_weak_of_val_weak_completion20261011
-    (fun path : SkorokhodGlobalPathCompletion20261011
+      atTop (𝓝 (continuousCadlagProbabilityCompletion limitLaw
+        (countableTimeContinuousSampleCompletion times dense)
+        (countableTimeContinuousSample_continuous_completion times dense)
+        (countableTimeContinuousSample_evaluation_measurable_completion times dense))) := by
+  apply probability_subtype_weak_of_val_weak_completion
+    (fun path : SkorokhodGlobalPathCompletion
       (ActualStationaryElectricalSpace rule p positive belowOne fixedPoint growth value growthPositive
-        ⟨marks.val,marks.property.1.1⟩) => SkorokhodCadlagCompletion20261011 path)
-  simpa only [actualPaperDiscreteElectricalCadlagLaw_val_completion20261011,
-    continuousCadlagProbability_val_completion20261011] using weak
+        ⟨marks.val,marks.property.1.1⟩) => SkorokhodCadlagCompletion path)
+  simpa only [actualPaperDiscreteElectricalCadlagLaw_val_completion,
+    continuousCadlagProbability_val_completion] using weak
 
 theorem actual_paper_continuous_cadlag_same_law
     (initial : ∀ depth, ProbabilityMeasure (ActualFiniteCluster rule (stationaryConfiguration rule marks.val)
@@ -53,24 +53,24 @@ theorem actual_paper_continuous_cadlag_same_law
     (times : ℕ → ℝ≥0) (dense : DenseRange times)
     (limitLaw : ProbabilityMeasure (ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint
       growth value growthPositive ⟨marks.val,marks.property.1.1⟩))
-    (weak : Tendsto (fun depth => actualPaperContinuousElectricalGlobalJ1LawCompletion20261011
+    (weak : Tendsto (fun depth => actualPaperContinuousElectricalGlobalJ1LawCompletion
       rule p positive belowOne fixedPoint growth value growthPositive marks chemicalScale chemicalScalePositive initial depth)
-      atTop (𝓝 (limitLaw.map (continuousGlobalFamily_measurable_completion20261011
-        (countableTimeContinuousSampleCompletion20261011 times dense)
-        (countableTimeContinuousSample_continuous_completion20261011 times dense)
-        (countableTimeContinuousSample_evaluation_measurable_completion20261011 times dense)).aemeasurable))) :
-    Tendsto (fun depth => actualPaperContinuousElectricalCadlagLawCompletion20261011
+      atTop (𝓝 (limitLaw.map (continuousGlobalFamily_measurable_completion
+        (countableTimeContinuousSampleCompletion times dense)
+        (countableTimeContinuousSample_continuous_completion times dense)
+        (countableTimeContinuousSample_evaluation_measurable_completion times dense)).aemeasurable))) :
+    Tendsto (fun depth => actualPaperContinuousElectricalCadlagLawCompletion
       rule p positive belowOne fixedPoint growth value growthPositive marks chemicalScale chemicalScalePositive initial depth)
-      atTop (𝓝 (continuousCadlagProbabilityCompletion20261011 limitLaw
-        (countableTimeContinuousSampleCompletion20261011 times dense)
-        (countableTimeContinuousSample_continuous_completion20261011 times dense)
-        (countableTimeContinuousSample_evaluation_measurable_completion20261011 times dense))) := by
-  apply probability_subtype_weak_of_val_weak_completion20261011
-    (fun path : SkorokhodGlobalPathCompletion20261011
+      atTop (𝓝 (continuousCadlagProbabilityCompletion limitLaw
+        (countableTimeContinuousSampleCompletion times dense)
+        (countableTimeContinuousSample_continuous_completion times dense)
+        (countableTimeContinuousSample_evaluation_measurable_completion times dense))) := by
+  apply probability_subtype_weak_of_val_weak_completion
+    (fun path : SkorokhodGlobalPathCompletion
       (ActualStationaryElectricalSpace rule p positive belowOne fixedPoint growth value growthPositive
-        ⟨marks.val,marks.property.1.1⟩) => SkorokhodCadlagCompletion20261011 path)
-  simpa only [actualPaperContinuousElectricalCadlagLaw_val_completion20261011,
-    continuousCadlagProbability_val_completion20261011] using weak
+        ⟨marks.val,marks.property.1.1⟩) => SkorokhodCadlagCompletion path)
+  simpa only [actualPaperContinuousElectricalCadlagLaw_val_completion,
+    continuousCadlagProbability_val_completion] using weak
 
 end
 end IGSIII34.ResistanceLimit

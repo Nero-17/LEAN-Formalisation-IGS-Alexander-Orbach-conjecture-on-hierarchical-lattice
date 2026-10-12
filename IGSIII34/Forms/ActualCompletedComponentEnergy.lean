@@ -14,7 +14,7 @@ skeleton, has the exact finite retained-component energy decomposition. -/
 theorem ae_actual_natural_completed_component_energy_decomposition
     (rule : Rule) (p : ℝ) (positive : 0 < p) (belowOne : p < 1)
     (fixedPoint : rule.network.reliability p = p)
-    (natural : NaturalResistanceCompletion20261011 rule p positive belowOne fixedPoint) :
+    (natural : NaturalResistanceCompletion rule p positive belowOne fixedPoint) :
     ∀ᵐ marks ∂independentInnovationLaw rule p positive belowOne fixedPoint,
       ∀ typical : StationaryEnergyTypical rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) marks,
       ∀ potential : energyDomain (actualEnergyEndpoint rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical⟩) (actualEnergyConductance rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) ⟨marks, typical⟩) (actualEnergyConductance_nonnegative rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical⟩),

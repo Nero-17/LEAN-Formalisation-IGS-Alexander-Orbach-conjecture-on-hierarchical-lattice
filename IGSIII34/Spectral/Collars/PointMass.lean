@@ -1,6 +1,6 @@
-import IGSIII34.Spectral.ActualCutoffQuotientCompletion20261011
-import IGSIII34.Spectral.BoundarySkeletonCompletion20261011
-import IGSIII34.Spectral.HarmonicCompletionMeasurableCompletion20261011
+import IGSIII34.Spectral.ActualCutoffQuotientCompletion
+import IGSIII34.Spectral.BoundarySkeletonCompletion
+import IGSIII34.Spectral.HarmonicCompletionMeasurableCompletion
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false
@@ -57,8 +57,8 @@ realization fibres or assuming an inverse mass moment. -/
 theorem actual_physical_mass_null_singletons
     (rule : Rule) (classicalRule : rule.Classical) (p : ℝ)
     (positive : 0 < p) (belowOne : p < 1) (fixedPoint : rule.network.reliability p = p)
-    (natural : NaturalResistanceCompletion20261011 rule p positive belowOne fixedPoint)
-    (continuation : ActualMassContinuationCompletion20261011 rule p positive belowOne fixedPoint)
+    (natural : NaturalResistanceCompletion rule p positive belowOne fixedPoint)
+    (continuation : ActualMassContinuationCompletion rule p positive belowOne fixedPoint)
     (weight : List (Fin rule.edges × Bool) → (((List (Fin rule.edges) × Bool) → Configuration rule.edges) → ℝ))
     (actualRatios : ∀ᵐ marks ∂independentInnovationLaw rule p positive belowOne fixedPoint,
       ∀ address, Tendsto (fun depth =>
@@ -102,10 +102,10 @@ theorem actual_physical_mass_null_singletons
   have ratioBelowOne : slack /
       (spectralRadius ℂ ((rule.network.massMatrix p).map Complex.ofReal)).toReal < 1 :=
     (div_lt_one radiusPositive).mpr slackBelowRadius
-  filter_upwards [actual_localized_cutoff_noncollar_paths_completion20261011 rule classicalRule p positive belowOne fixedPoint natural,
-    actual_physical_socket_mass_subexponential_completion20261011 rule classicalRule p positive belowOne fixedPoint
+  filter_upwards [actual_localized_cutoff_noncollar_paths_completion rule classicalRule p positive belowOne fixedPoint natural,
+    actual_physical_socket_mass_subexponential_completion rule classicalRule p positive belowOne fixedPoint
       continuation weight actualRatios nonnegative,
-    actual_boundary_all_reciprocal_collars_avoided_completion20261011 rule classicalRule p positive belowOne fixedPoint
+    actual_boundary_all_reciprocal_collars_avoided_completion rule classicalRule p positive belowOne fixedPoint
       continuation weight actualRatios nonnegative]
     with marks cutoffs masses collars
   intro typical compactness boundary probability atoms retainedPaths realization realizationMeasurable convergence
@@ -145,7 +145,7 @@ theorem actual_physical_mass_null_singletons
       (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne)
       (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth
         (natural.amplitude • natural.field) ⟨marks, typical⟩) potential, ?_, atPoint, ?_⟩
-    · exact actual_completion_square_integrable_completion20261011 rule p positive belowOne fixedPoint
+    · exact actual_completion_square_integrable_completion rule p positive belowOne fixedPoint
         natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne)
         (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth
           (natural.amplitude • natural.field) ⟨marks, typical⟩) (boundary.map realization) potential

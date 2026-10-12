@@ -1,5 +1,5 @@
 import IGSIII34.Diffusion.ActualElectricalComponentInclusion
-import IGSIII34.Percolation.Continuation.NaturalResistanceCompletion20261011
+import IGSIII34.Percolation.Continuation.NaturalResistanceCompletion
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false
@@ -13,7 +13,7 @@ compatibility event simultaneously at every address and either planted side. -/
 theorem ae_actual_natural_component_electrical_typical
     (rule : Rule) (p : ℝ) (positive : 0 < p) (belowOne : p < 1)
     (fixedPoint : rule.network.reliability p = p)
-    (natural : NaturalResistanceCompletion20261011 rule p positive belowOne fixedPoint) :
+    (natural : NaturalResistanceCompletion rule p positive belowOne fixedPoint) :
     ∀ᵐ marks ∂independentInnovationLaw rule p positive belowOne fixedPoint,
       ComponentElectricalTypical rule p positive belowOne fixedPoint natural.growth
         (natural.amplitude • natural.field) marks := by

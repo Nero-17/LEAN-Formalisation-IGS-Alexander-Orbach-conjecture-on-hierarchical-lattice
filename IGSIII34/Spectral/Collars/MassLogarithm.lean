@@ -1,4 +1,4 @@
-import IGSIII34.Spectral.ActualTypicalMassCompletion20261011
+import IGSIII34.Spectral.ActualTypicalMassCompletion
 import Mathlib.Analysis.SpecialFunctions.Log.Basic
 import Mathlib.Analysis.SpecialFunctions.Exp
 import Mathlib.Analysis.SpecificLimits.Basic

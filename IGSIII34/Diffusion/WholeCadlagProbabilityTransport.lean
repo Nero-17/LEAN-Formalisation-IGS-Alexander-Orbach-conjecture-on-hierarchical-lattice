@@ -16,22 +16,22 @@ theorem skorokhodCadlagProbabilityMap_comp
     [MetricSpace Last] [CompactSpace Last] [MeasurableSpace Last] [BorelSpace Last]
     (firstMapping : First → Middle) (firstContinuous : Continuous firstMapping)
     (lastMapping : Middle → Last) (lastContinuous : Continuous lastMapping)
-    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 First)) :
-    (law.map (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011
+    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion First)) :
+    (law.map (skorokhodCadlagContinuousCarrierMap_continuous_completion
       firstMapping firstContinuous).measurable.aemeasurable).map
-      (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011
+      (skorokhodCadlagContinuousCarrierMap_continuous_completion
         lastMapping lastContinuous).measurable.aemeasurable =
-      law.map (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011
+      law.map (skorokhodCadlagContinuousCarrierMap_continuous_completion
         (lastMapping ∘ firstMapping) (lastContinuous.comp firstContinuous)).measurable.aemeasurable := by
   apply ProbabilityMeasure.toMeasure_injective
   change ((law : Measure _).map
-    (skorokhodCadlagContinuousCarrierMapCompletion20261011 firstMapping firstContinuous)).map
-    (skorokhodCadlagContinuousCarrierMapCompletion20261011 lastMapping lastContinuous) =
-    (law : Measure _).map (skorokhodCadlagContinuousCarrierMapCompletion20261011
+    (skorokhodCadlagContinuousCarrierMapCompletion firstMapping firstContinuous)).map
+    (skorokhodCadlagContinuousCarrierMapCompletion lastMapping lastContinuous) =
+    (law : Measure _).map (skorokhodCadlagContinuousCarrierMapCompletion
       (lastMapping ∘ firstMapping) (lastContinuous.comp firstContinuous))
   rw [Measure.map_map
-    (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011 lastMapping lastContinuous).measurable
-    (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011 firstMapping firstContinuous).measurable]
+    (skorokhodCadlagContinuousCarrierMap_continuous_completion lastMapping lastContinuous).measurable
+    (skorokhodCadlagContinuousCarrierMap_continuous_completion firstMapping firstContinuous).measurable]
   apply Measure.map_congr
   exact Eventually.of_forall
     (skorokhodCadlagCarrierMap_comp firstMapping firstContinuous lastMapping lastContinuous)

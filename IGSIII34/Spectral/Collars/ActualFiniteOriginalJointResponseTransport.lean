@@ -35,11 +35,11 @@ def actualFullConfigurationPathLaw
     (crossing : (rule.generation depth).network.crosses (configuration depth) = true)
     (initial : Fin (rule.generation depth).vertices)
     (clock : ℝ) (clockPositive : 0 < clock) (kind : Fin 3) :
-    ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011
+    ProbabilityMeasure (SkorokhodCadlagPathCompletion
       (ActualFiniteCluster rule configuration scale scalePositive depth)) :=
   (actualFiniteAnnealedCanonicalPathLaw rule scale scalePositive depth
     (configuration depth) crossing initial clock clockPositive kind).map
-    (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011
+    (skorokhodCadlagContinuousCarrierMap_continuous_completion
       (actualAnnealedFiniteVertexEquiv rule configuration scale scalePositive depth)
       (actualAnnealedFiniteVertexEquiv rule configuration scale scalePositive depth).continuous).measurable.aemeasurable
 
@@ -55,7 +55,7 @@ theorem actualFullConfigurationPathLaw_placed
     (continuous : Continuous placement) :
     (actualFullConfigurationPathLaw rule configuration scale scalePositive depth crossing initial
       clock clockPositive kind).map
-      (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011
+      (skorokhodCadlagContinuousCarrierMap_continuous_completion
         placement continuous).measurable.aemeasurable =
     actualFiniteAnnealedPlacedPathLaw rule scale scalePositive depth (configuration depth)
       crossing initial clock clockPositive kind

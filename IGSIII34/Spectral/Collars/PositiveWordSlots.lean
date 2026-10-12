@@ -1,5 +1,5 @@
 import IGSIII34.Spectral.Collars.FiniteOwnerComparison
-import IGSIII34.Spectral.ActualDescendantAnchorCompletion20261011
+import IGSIII34.Spectral.ActualDescendantAnchorCompletion
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency true

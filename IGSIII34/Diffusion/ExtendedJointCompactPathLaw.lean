@@ -12,7 +12,7 @@ def extendedJointStatePathClass
     {Space : Type} [MetricSpace Space] [CompactSpace Space]
     [MeasurableSpace Space] [BorelSpace Space]
     (state : JointMeasuredMarkedState Space)
-    (path : SkorokhodCadlagPathCompletion20261011 Space) : ExtendedJointCompactSpace :=
+    (path : SkorokhodCadlagPathCompletion Space) : ExtendedJointCompactSpace :=
   extendedJointCompactClass (.ofCompactSpace state path)
 
 theorem extendedJointStatePathClass_lipschitz
@@ -36,9 +36,9 @@ theorem extendedJointStatePathClass_isometricTransport
     [MeasurableSpace Last] [BorelSpace Last]
     (mapping : First → Last) (isometry : Isometry mapping)
     (state : JointMeasuredMarkedState First)
-    (path : SkorokhodCadlagPathCompletion20261011 First) :
+    (path : SkorokhodCadlagPathCompletion First) :
     extendedJointStatePathClass (jointMeasuredMarkedStateMap mapping isometry.continuous state)
-      (skorokhodCadlagContinuousCarrierMapCompletion20261011 mapping isometry.continuous path) =
+      (skorokhodCadlagContinuousCarrierMapCompletion mapping isometry.continuous path) =
       extendedJointStatePathClass state path := by
   apply Eq.symm
   apply dist_le_zero.mp
@@ -50,7 +50,7 @@ def extendedJointCompactPathLaw
     {Space : Type} [MetricSpace Space] [CompactSpace Space]
     [MeasurableSpace Space] [BorelSpace Space]
     (state : JointMeasuredMarkedState Space)
-    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 Space)) :
+    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion Space)) :
     ProbabilityMeasure ExtendedJointCompactSpace :=
   law.map (extendedJointStatePathClass_lipschitz state).continuous.measurable.aemeasurable
 
@@ -58,7 +58,7 @@ theorem extendedJointCompactPathLaw_integral
     {Space : Type} [MetricSpace Space] [CompactSpace Space]
     [MeasurableSpace Space] [BorelSpace Space]
     (state : JointMeasuredMarkedState Space)
-    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 Space))
+    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion Space))
     (test : ExtendedJointCompactSpace →ᵇ ℝ) :
     (∫ point, test point ∂(extendedJointCompactPathLaw state law : Measure _)) =
       ∫ path, test (extendedJointStatePathClass state path) ∂(law : Measure _) := by
@@ -69,8 +69,8 @@ theorem extendedJointCompactPathLaw_tendsto
     {Space : Type} [MetricSpace Space] [CompactSpace Space]
     [MeasurableSpace Space] [BorelSpace Space]
     (state : JointMeasuredMarkedState Space)
-    (laws : ℕ → ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 Space))
-    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 Space))
+    (laws : ℕ → ProbabilityMeasure (SkorokhodCadlagPathCompletion Space))
+    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion Space))
     (weak : Tendsto laws atTop (𝓝 law)) :
     Tendsto (fun index => extendedJointCompactPathLaw state (laws index)) atTop
       (𝓝 (extendedJointCompactPathLaw state law)) :=
@@ -84,20 +84,20 @@ theorem extendedJointCompactPathLaw_isometricTransport
     [MeasurableSpace Last] [BorelSpace Last]
     (mapping : First → Last) (isometry : Isometry mapping)
     (state : JointMeasuredMarkedState First)
-    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 First)) :
+    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion First)) :
     extendedJointCompactPathLaw (jointMeasuredMarkedStateMap mapping isometry.continuous state)
-      (law.map (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011
+      (law.map (skorokhodCadlagContinuousCarrierMap_continuous_completion
         mapping isometry.continuous).measurable.aemeasurable) =
       extendedJointCompactPathLaw state law := by
   apply ProbabilityMeasure.toMeasure_injective
   change ((law : Measure _).map
-      (skorokhodCadlagContinuousCarrierMapCompletion20261011 mapping isometry.continuous)).map
+      (skorokhodCadlagContinuousCarrierMapCompletion mapping isometry.continuous)).map
       (extendedJointStatePathClass (jointMeasuredMarkedStateMap mapping isometry.continuous state)) =
     (law : Measure _).map (extendedJointStatePathClass state)
   rw [Measure.map_map
     (extendedJointStatePathClass_lipschitz
       (jointMeasuredMarkedStateMap mapping isometry.continuous state)).continuous.measurable
-    (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011
+    (skorokhodCadlagContinuousCarrierMap_continuous_completion
       mapping isometry.continuous).measurable]
   apply Measure.map_congr
   exact Eventually.of_forall (extendedJointStatePathClass_isometricTransport mapping isometry state)

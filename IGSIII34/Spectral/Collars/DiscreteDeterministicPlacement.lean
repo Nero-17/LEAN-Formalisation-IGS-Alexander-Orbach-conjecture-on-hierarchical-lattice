@@ -1,8 +1,8 @@
 import IGSIII34.Spectral.Collars.DiscreteSameObservedLimit
-import IGSIII34.Diffusion.ActualPaperDiscreteDeterministicLawCompletion20261011
-import IGSIII34.Diffusion.DiscreteCadlagWeakCompletion20261011
-import IGSIII34.Diffusion.ActualPaperDeterministicLawIdentityCompletion20261011
-import IGSIII34.Diffusion.FiniteWeightedCommonEmbeddingCompletion20261011
+import IGSIII34.Diffusion.ActualPaperDiscreteDeterministicLawCompletion
+import IGSIII34.Diffusion.DiscreteCadlagWeakCompletion
+import IGSIII34.Diffusion.ActualPaperDeterministicLawIdentityCompletion
+import IGSIII34.Diffusion.FiniteWeightedCommonEmbeddingCompletion
 import IGSIII34.Diffusion.UsualLocalJ1PathLaw
 import IGSIII34.Diffusion.UsualLocalJ1SpatialWeakTests
 
@@ -31,15 +31,15 @@ def actualPaperDiscreteDeterministicPlacedCadlagLaw
       chemicalScale chemicalScalePositive depth))
     (placement : ActualFiniteCluster rule (stationaryConfiguration rule marks.val)
       chemicalScale chemicalScalePositive depth → Ambient) :
-    ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011 Ambient) :=
-  discreteCadlagProbabilityCompletion20261011
+    ProbabilityMeasure (SkorokhodCadlagPathCompletion Ambient) :=
+  discreteCadlagProbabilityCompletion
     (⟨finiteDiscreteWalkLaw
       (Vertex := ActualFiniteCluster rule (stationaryConfiguration rule marks.val) chemicalScale chemicalScalePositive depth)
       (clusterRetainedEndpoint (rule.generation depth).network (stationaryConfiguration rule marks.val depth))
       (cluster_degree_positive _ _ (markedGenerationConfiguration_crosses rule marks.val marks.property.1.1.2.1 depth [] true)) initial, inferInstance⟩ : ProbabilityMeasure _)
-    (actualPaperDiscreteClockCompletion20261011 rule p positive belowOne fixedPoint growth value ⟨marks.val, marks.property.1.1⟩ depth * (actualPaperDeterministicClockRatioCompletion20261011 rule p growth marks.val chemicalScale chemicalScalePositive false depth : ℝ))
-    (mul_pos (actualPaperDiscreteClock_positive_completion20261011 rule p positive belowOne fixedPoint growth value growthPositive ⟨marks.val, marks.property.1.1⟩ depth)
-      (NNReal.coe_pos.mpr (actualPaperDeterministicRatios_positive_of_classical_completion20261011 rule classicalRule p positive belowOne fixedPoint growth value growthPositive marks chemicalScale chemicalScalePositive false depth)))
+    (actualPaperDiscreteClockCompletion rule p positive belowOne fixedPoint growth value ⟨marks.val, marks.property.1.1⟩ depth * (actualPaperDeterministicClockRatioCompletion rule p growth marks.val chemicalScale chemicalScalePositive false depth : ℝ))
+    (mul_pos (actualPaperDiscreteClock_positive_completion rule p positive belowOne fixedPoint growth value growthPositive ⟨marks.val, marks.property.1.1⟩ depth)
+      (NNReal.coe_pos.mpr (actualPaperDeterministicRatios_positive_of_classical_completion rule classicalRule p positive belowOne fixedPoint growth value growthPositive marks chemicalScale chemicalScalePositive false depth)))
     placement
 
 local instance discreteDeterministicCommonElectricalMeasurable : MeasurableSpace
@@ -60,14 +60,14 @@ theorem actualPaperDiscreteDeterministicPlacedCadlagLaw_tendsto
     (placementClose : ∀ tolerance : ℝ, 0 < tolerance → ∀ᶠ depth in atTop, ∀ point,
       dist (sources depth point) (targetEmbedding (actualStationaryElectricalVertex rule p positive belowOne fixedPoint
         growth value growthPositive ⟨marks.val, marks.property.1.1⟩ depth point)) < tolerance)
-    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion20261011
+    (law : ProbabilityMeasure (SkorokhodCadlagPathCompletion
       (ActualStationaryElectricalSpace rule p positive belowOne fixedPoint growth value growthPositive ⟨marks.val, marks.property.1.1⟩)))
-    (weak : Tendsto (fun depth => actualPaperDiscreteDeterministicCadlagLawCompletion20261011 rule classicalRule p positive belowOne fixedPoint
+    (weak : Tendsto (fun depth => actualPaperDiscreteDeterministicCadlagLawCompletion rule classicalRule p positive belowOne fixedPoint
       growth value growthPositive marks chemicalScale chemicalScalePositive depth (initial depth)) atTop (𝓝 law)) :
     Tendsto (fun depth => actualPaperDiscreteDeterministicPlacedCadlagLaw rule classicalRule p positive belowOne fixedPoint growth value growthPositive
       marks chemicalScale chemicalScalePositive depth (initial depth) (sources depth)) atTop
-      (𝓝 (law.map (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011 targetEmbedding continuous).measurable.aemeasurable)) := by
-  apply discreteCadlagProbability_common_embedding_weak_completion20261011
+      (𝓝 (law.map (skorokhodCadlagContinuousCarrierMap_continuous_completion targetEmbedding continuous).measurable.aemeasurable)) := by
+  apply discreteCadlagProbability_common_embedding_weak_completion
     (fun depth => ActualFiniteCluster rule (stationaryConfiguration rule marks.val) chemicalScale chemicalScalePositive depth)
     (fun depth => (⟨finiteDiscreteWalkLaw
       (Vertex := ActualFiniteCluster rule (stationaryConfiguration rule marks.val) chemicalScale chemicalScalePositive depth)
@@ -75,16 +75,16 @@ theorem actualPaperDiscreteDeterministicPlacedCadlagLaw_tendsto
       (cluster_degree_positive _ _ (markedGenerationConfiguration_crosses rule marks.val marks.property.1.1.2.1 depth [] true))
       (initial depth : Measure (ActualFiniteCluster rule (stationaryConfiguration rule marks.val) chemicalScale chemicalScalePositive depth)), inferInstance⟩ :
         ProbabilityMeasure (ℕ → ActualFiniteCluster rule (stationaryConfiguration rule marks.val) chemicalScale chemicalScalePositive depth)))
-    (fun depth => actualPaperDiscreteClockCompletion20261011 rule p positive belowOne fixedPoint growth value ⟨marks.val, marks.property.1.1⟩ depth *
-      (actualPaperDeterministicClockRatioCompletion20261011 rule p growth marks.val chemicalScale chemicalScalePositive false depth : ℝ))
-    (fun depth => mul_pos (actualPaperDiscreteClock_positive_completion20261011 rule p positive belowOne fixedPoint growth value growthPositive
+    (fun depth => actualPaperDiscreteClockCompletion rule p positive belowOne fixedPoint growth value ⟨marks.val, marks.property.1.1⟩ depth *
+      (actualPaperDeterministicClockRatioCompletion rule p growth marks.val chemicalScale chemicalScalePositive false depth : ℝ))
+    (fun depth => mul_pos (actualPaperDiscreteClock_positive_completion rule p positive belowOne fixedPoint growth value growthPositive
       ⟨marks.val, marks.property.1.1⟩ depth) (NNReal.coe_pos.mpr
-        (actualPaperDeterministicRatios_positive_of_classical_completion20261011 rule classicalRule p positive belowOne fixedPoint
+        (actualPaperDeterministicRatios_positive_of_classical_completion rule classicalRule p positive belowOne fixedPoint
           growth value growthPositive marks chemicalScale chemicalScalePositive false depth)))
     targetEmbedding continuous
     (fun depth => actualStationaryElectricalVertex rule p positive belowOne fixedPoint growth value growthPositive ⟨marks.val, marks.property.1.1⟩ depth)
     sources law ?_ placementClose
-  simpa only [actualPaperDiscreteDeterministicCadlagLawCompletion20261011, actualDiscreteClockRescaledCadlagLawCompletion20261011] using weak
+  simpa only [actualPaperDiscreteDeterministicCadlagLawCompletion, actualDiscreteClockRescaledCadlagLawCompletion] using weak
 
 end
 end IGSIII34.Diffusion

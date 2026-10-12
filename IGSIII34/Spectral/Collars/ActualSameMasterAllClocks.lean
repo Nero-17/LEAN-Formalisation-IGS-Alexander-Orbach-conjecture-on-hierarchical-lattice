@@ -30,9 +30,9 @@ variable (rule : Rule) (p : ℝ) (positive : 0 < p) (belowOne : p < 1)
   (growthPositive : 0 < growth)
   (marks : {marks // StationaryHarmonicTypical rule p positive belowOne fixedPoint growth value marks})
 
-local instance sectionThreeAllClocks_actualNaturalConstructedDiffusionWitnessCarrierMeasurableCompletion20261011 : MeasurableSpace
+local instance sectionThreeAllClocks_actualNaturalConstructedDiffusionWitnessCarrierMeasurableCompletion : MeasurableSpace
     (ActualStationaryElectricalSpace rule p positive belowOne fixedPoint growth value growthPositive ⟨marks.val, marks.property.1.1⟩) := borel _
-local instance sectionThreeAllClocks_actualNaturalConstructedDiffusionWitnessCarrierBorelCompletion20261011 : BorelSpace
+local instance sectionThreeAllClocks_actualNaturalConstructedDiffusionWitnessCarrierBorelCompletion : BorelSpace
     (ActualStationaryElectricalSpace rule p positive belowOne fixedPoint growth value growthPositive ⟨marks.val, marks.property.1.1⟩) := ⟨rfl⟩
 
 variable [CompactSpace (ActualStationaryElectricalSpace rule p positive belowOne fixedPoint growth value growthPositive ⟨marks.val, marks.property.1.1⟩)]
@@ -43,40 +43,40 @@ variable (anchor : ActualStationaryEnergySkeleton rule p positive belowOne fixed
   (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint growth value marks))
   [(measure : Measure (ActualStationaryElectricalSpace rule p positive belowOne fixedPoint growth value growthPositive ⟨marks.val, marks.property.1.1⟩)).IsOpenPosMeasure]
 
-local instance sectionThreeAllClocks_ActualNaturalConstructedDiffusionWitnessCompletion20261011Compact : CompactSpace
+local instance sectionThreeAllClocks_ActualNaturalConstructedDiffusionWitnessCompletionCompact : CompactSpace
     (UniformSpace.Completion (ActualStationaryEnergySkeleton rule p positive belowOne fixedPoint growth value growthPositive
       (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint growth value marks))) := by
   change CompactSpace (ActualStationaryElectricalSpace rule p positive belowOne fixedPoint growth value growthPositive ⟨marks.val, marks.property.1.1⟩)
   infer_instance
-local instance sectionThreeAllClocks_ActualNaturalConstructedDiffusionWitnessCompletion20261011Measurable : MeasurableSpace
+local instance sectionThreeAllClocks_ActualNaturalConstructedDiffusionWitnessCompletionMeasurable : MeasurableSpace
     (UniformSpace.Completion (ActualStationaryEnergySkeleton rule p positive belowOne fixedPoint growth value growthPositive
       (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint growth value marks))) := borel _
-local instance sectionThreeAllClocks_ActualNaturalConstructedDiffusionWitnessCompletion20261011Borel : BorelSpace
+local instance sectionThreeAllClocks_ActualNaturalConstructedDiffusionWitnessCompletionBorel : BorelSpace
     (UniformSpace.Completion (ActualStationaryEnergySkeleton rule p positive belowOne fixedPoint growth value growthPositive
       (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint growth value marks))) := ⟨rfl⟩
 
 open IGSIII34.Spectral ProbabilityTheory
-local instance sectionThreeAllClocks_actualNaturalConstructedDiffusionWitnessNormCompletion20261011 : NormedAddCommGroup
-    (actualAnchoredEnergyDomainCompletion20261011 rule p positive belowOne fixedPoint growth value growthPositive
+local instance sectionThreeAllClocks_actualNaturalConstructedDiffusionWitnessNormCompletion : NormedAddCommGroup
+    (actualAnchoredEnergyDomainCompletion rule p positive belowOne fixedPoint growth value growthPositive
       (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint growth value marks) anchor) :=
   actualAnchoredNormedAddCommGroup rule p positive belowOne fixedPoint growth value growthPositive
     (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint growth value marks) anchor
-local instance sectionThreeAllClocks_actualNaturalConstructedDiffusionWitnessCutoffApproximationCompletion20261011 : UniformSpace
-    (actualAnchoredEnergyDomainCompletion20261011 rule p positive belowOne fixedPoint growth value growthPositive
+local instance sectionThreeAllClocks_actualNaturalConstructedDiffusionWitnessCutoffApproximationCompletion : UniformSpace
+    (actualAnchoredEnergyDomainCompletion rule p positive belowOne fixedPoint growth value growthPositive
       (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint growth value marks) anchor) :=
-  (sectionThreeAllClocks_actualNaturalConstructedDiffusionWitnessNormCompletion20261011 rule p positive belowOne fixedPoint growth value growthPositive marks anchor).toMetricSpace.toUniformSpace
-local instance sectionThreeAllClocks_actualNaturalConstructedDiffusionWitnessTopologyCompletion20261011 : TopologicalSpace
-    (actualAnchoredEnergyDomainCompletion20261011 rule p positive belowOne fixedPoint growth value growthPositive
+  (sectionThreeAllClocks_actualNaturalConstructedDiffusionWitnessNormCompletion rule p positive belowOne fixedPoint growth value growthPositive marks anchor).toMetricSpace.toUniformSpace
+local instance sectionThreeAllClocks_actualNaturalConstructedDiffusionWitnessTopologyCompletion : TopologicalSpace
+    (actualAnchoredEnergyDomainCompletion rule p positive belowOne fixedPoint growth value growthPositive
       (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint growth value marks) anchor) :=
-  (sectionThreeAllClocks_actualNaturalConstructedDiffusionWitnessNormCompletion20261011 rule p positive belowOne fixedPoint growth value growthPositive marks anchor).toMetricSpace.toUniformSpace.toTopologicalSpace
-local instance sectionThreeAllClocks_actualNaturalConstructedDiffusionWitnessInnerCompletion20261011 : InnerProductSpace ℝ
-    (actualAnchoredEnergyDomainCompletion20261011 rule p positive belowOne fixedPoint growth value growthPositive
+  (sectionThreeAllClocks_actualNaturalConstructedDiffusionWitnessNormCompletion rule p positive belowOne fixedPoint growth value growthPositive marks anchor).toMetricSpace.toUniformSpace.toTopologicalSpace
+local instance sectionThreeAllClocks_actualNaturalConstructedDiffusionWitnessInnerCompletion : InnerProductSpace ℝ
+    (actualAnchoredEnergyDomainCompletion rule p positive belowOne fixedPoint growth value growthPositive
       (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint growth value marks) anchor) :=
   actualAnchoredInnerProductSpace rule p positive belowOne fixedPoint growth value growthPositive
     (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint growth value marks) anchor
 
-local instance sectionThreeAllClocks_actualNaturalConstructedDiffusionWitnessCompleteCompletion20261011 : CompleteSpace
-    (actualAnchoredEnergyDomainCompletion20261011 rule p positive belowOne fixedPoint growth value growthPositive
+local instance sectionThreeAllClocks_actualNaturalConstructedDiffusionWitnessCompleteCompletion : CompleteSpace
+    (actualAnchoredEnergyDomainCompletion rule p positive belowOne fixedPoint growth value growthPositive
       (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint growth value marks) anchor) :=
   actual_anchored_completeSpace rule p positive belowOne fixedPoint growth value growthPositive
     (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint growth value marks) anchor
@@ -93,16 +93,16 @@ variable (classicalRule : rule.Classical)
       chemicalScale ^ (coarse + fine + 2)) atTop (𝓝 (lengths coarse edge)))
 
 local instance sectionThreeAllClocks_exactChemicalCarrierMeasurable : MeasurableSpace
-    (actualStationaryChemicalSpaceCompletion20261011 rule p positive belowOne fixedPoint growth value marks classicalRule
+    (actualStationaryChemicalSpaceCompletion rule p positive belowOne fixedPoint growth value marks classicalRule
       chemicalScale chemicalScalePositive lengths lengthNonnegative lengthPositive childConvergence) := borel _
 local instance sectionThreeAllClocks_exactChemicalCarrierBorel : BorelSpace
-    (actualStationaryChemicalSpaceCompletion20261011 rule p positive belowOne fixedPoint growth value marks classicalRule
+    (actualStationaryChemicalSpaceCompletion rule p positive belowOne fixedPoint growth value marks classicalRule
       chemicalScale chemicalScalePositive lengths lengthNonnegative lengthPositive childConvergence) := ⟨rfl⟩
 
 theorem exists_ae_actual_natural_common_section_three_all_clocks
     (rule : Rule) (classicalRule : rule.Classical) (p : ℝ)
     (positive : 0 < p) (belowOne : p < 1) (fixedPoint : rule.network.reliability p = p)
-    (natural : NaturalResistanceCompletion20261011 rule p positive belowOne fixedPoint) :
+    (natural : NaturalResistanceCompletion rule p positive belowOne fixedPoint) :
     ∃ chemicalGrowth : ℝ, ∃ chemicalGrowthPositive : 0 < chemicalGrowth,
     ∃ amplitude : ℝ, ∃ amplitudeAtLeastOne : 1 ≤ amplitude, ∃ chemicalValue : Lp ℝ 2 (independentInnovationLaw rule p positive belowOne fixedPoint),
     ∃ weight : List (Fin rule.edges × Bool) → (((List (Fin rule.edges) × Bool) → Configuration rule.edges) → ℝ),
@@ -168,16 +168,16 @@ theorem exists_ae_actual_natural_common_section_three_all_clocks
           (rule.generation fine).network.source (rule.generation fine).network.target : ℝ) /
           chemicalGrowth ^ (coarse + fine + 2)) atTop
         (𝓝 (chemicalBlockLimitLength rule p positive belowOne fixedPoint chemicalGrowth amplitude chemicalValue marks coarse edge)),
-      ∃ homeomorph : (actualStationaryChemicalSpaceCompletion20261011 rule p positive belowOne fixedPoint
+      ∃ homeomorph : (actualStationaryChemicalSpaceCompletion rule p positive belowOne fixedPoint
         natural.growth (natural.amplitude • natural.field) ⟨marks,typical⟩ classicalRule chemicalGrowth chemicalGrowthPositive
         (chemicalBlockLimitLength rule p positive belowOne fixedPoint chemicalGrowth amplitude chemicalValue marks)
         lengthNonnegative lengthPositive childConvergence) ≃ₜ (ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
         (zero_lt_one.trans natural.aboveOne) ⟨marks,typical.1.1⟩),
-      letI : MeasurableSpace (actualStationaryChemicalSpaceCompletion20261011 rule p positive belowOne fixedPoint
+      letI : MeasurableSpace (actualStationaryChemicalSpaceCompletion rule p positive belowOne fixedPoint
         natural.growth (natural.amplitude • natural.field) ⟨marks,typical⟩ classicalRule chemicalGrowth chemicalGrowthPositive
         (chemicalBlockLimitLength rule p positive belowOne fixedPoint chemicalGrowth amplitude chemicalValue marks)
         lengthNonnegative lengthPositive childConvergence) := borel _
-      letI : BorelSpace (actualStationaryChemicalSpaceCompletion20261011 rule p positive belowOne fixedPoint
+      letI : BorelSpace (actualStationaryChemicalSpaceCompletion rule p positive belowOne fixedPoint
         natural.growth (natural.amplitude • natural.field) ⟨marks,typical⟩ classicalRule chemicalGrowth chemicalGrowthPositive
         (chemicalBlockLimitLength rule p positive belowOne fixedPoint chemicalGrowth amplitude chemicalValue marks)
         lengthNonnegative lengthPositive childConvergence) := ⟨rfl⟩
@@ -276,7 +276,7 @@ theorem exists_ae_actual_natural_common_section_three_all_clocks
       ∃ complete : CompleteSpace Ambient, ∃ compact : CompactSpace Ambient,
       letI := complete
       letI := compact
-      ∃ target : (actualStationaryChemicalSpaceCompletion20261011 rule p positive belowOne fixedPoint
+      ∃ target : (actualStationaryChemicalSpaceCompletion rule p positive belowOne fixedPoint
         natural.growth (natural.amplitude • natural.field) ⟨marks,typical⟩ classicalRule chemicalGrowth chemicalGrowthPositive
         (chemicalBlockLimitLength rule p positive belowOne fixedPoint chemicalGrowth amplitude chemicalValue marks)
         lengthNonnegative lengthPositive childConvergence) → Ambient,
@@ -291,7 +291,7 @@ theorem exists_ae_actual_natural_common_section_three_all_clocks
           (chemicalBlockLimitLength rule p positive belowOne fixedPoint chemicalGrowth amplitude chemicalValue marks)
           lengthNonnegative lengthPositive childConvergence depth vertex)) < tolerance) ∧
       (∀ vertices : ∀ depth, ActualFiniteCluster rule (stationaryConfiguration rule marks) chemicalGrowth chemicalGrowthPositive depth,
-        ∀ point : actualStationaryChemicalSpaceCompletion20261011 rule p positive belowOne fixedPoint
+        ∀ point : actualStationaryChemicalSpaceCompletion rule p positive belowOne fixedPoint
           natural.growth (natural.amplitude • natural.field) ⟨marks,typical⟩ classicalRule chemicalGrowth chemicalGrowthPositive
           (chemicalBlockLimitLength rule p positive belowOne fixedPoint chemicalGrowth amplitude chemicalValue marks)
           lengthNonnegative lengthPositive childConvergence,
@@ -324,7 +324,7 @@ theorem exists_ae_actual_natural_common_section_three_all_clocks
       Tendsto (fun depth => levyProkhorovEDist ((actualFiniteClusterDegreeMeasure rule (stationaryConfiguration rule marks) (fun depth => markedGenerationConfiguration_crosses rule marks typical.1.1.2.1 depth [] true) chemicalGrowth chemicalGrowthPositive depth).map (sources depth))
         ((boundary.map realization).map (target ∘ homeomorph.symm))) atTop (𝓝 0)) ∧
       (      ∀ anchor : ActualStationaryEnergySkeleton rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) ⟨marks, typical⟩),
-      ∃ data : ActualSpectralDataCompletion20261011 rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
+      ∃ data : ActualSpectralDataCompletion rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
         (zero_lt_one.trans natural.aboveOne)
         (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) ⟨marks, typical⟩) anchor (boundary.map realization),
       ∀ initial : ∀ depth, ProbabilityMeasure (ActualFiniteCluster rule (stationaryConfiguration rule marks) chemicalGrowth chemicalGrowthPositive depth),
@@ -337,128 +337,128 @@ theorem exists_ae_actual_natural_common_section_three_all_clocks
             (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩ depth vertex)).aemeasurable)
         atTop (𝓝 initialLimit) →
     ∃ limitLaw : ProbabilityMeasure (ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩),
-      Tendsto (fun depth => actualPaperDiscreteElectricalObservationLawCompletion20261011
+      Tendsto (fun depth => actualPaperDiscreteElectricalObservationLawCompletion
         rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩
         chemicalGrowth chemicalGrowthPositive times initial depth) atTop (𝓝 limitLaw) ∧
       (∀ countingSpeed : Bool,
       (Tendsto (fun depth => actualPaperDeterministicPlacedCadlagLaw rule classicalRule p positive belowOne fixedPoint
           natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical⟩
-          chemicalGrowth chemicalGrowthPositive countingSpeed depth (initial depth) (sources depth)) atTop (𝓝 ((continuousCadlagProbabilityCompletion20261011 limitLaw
-          (fun path time => countableTimeContinuousSampleCompletion20261011 times dense path ((Real.toNNReal (1 / (if countingSpeed then vertexCoefficient * mass marks else 2 * (edgeCoefficient * mass marks)))) * time))
-          (fun path => (countableTimeContinuousSample_continuous_completion20261011 times dense path).comp (continuous_const.mul continuous_id))
-          (fun time => countableTimeContinuousSample_evaluation_measurable_completion20261011 times dense ((Real.toNNReal (1 / (if countingSpeed then vertexCoefficient * mass marks else 2 * (edgeCoefficient * mass marks)))) * time))).map
-          (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011 (target ∘ homeomorph.symm) (targetIsometry.continuous.comp homeomorph.symm.continuous)).measurable.aemeasurable)) ∧
+          chemicalGrowth chemicalGrowthPositive countingSpeed depth (initial depth) (sources depth)) atTop (𝓝 ((continuousCadlagProbabilityCompletion limitLaw
+          (fun path time => countableTimeContinuousSampleCompletion times dense path ((Real.toNNReal (1 / (if countingSpeed then vertexCoefficient * mass marks else 2 * (edgeCoefficient * mass marks)))) * time))
+          (fun path => (countableTimeContinuousSample_continuous_completion times dense path).comp (continuous_const.mul continuous_id))
+          (fun time => countableTimeContinuousSample_evaluation_measurable_completion times dense ((Real.toNNReal (1 / (if countingSpeed then vertexCoefficient * mass marks else 2 * (edgeCoefficient * mass marks)))) * time))).map
+          (skorokhodCadlagContinuousCarrierMap_continuous_completion (target ∘ homeomorph.symm) (targetIsometry.continuous.comp homeomorph.symm.continuous)).measurable.aemeasurable)) ∧
         Tendsto (fun depth => usualLocalJ1PathProbability (actualPaperDeterministicPlacedCadlagLaw rule classicalRule p positive belowOne fixedPoint
           natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical⟩
           chemicalGrowth chemicalGrowthPositive countingSpeed depth (initial depth) (sources depth))) atTop
-          (𝓝 (usualLocalJ1PathProbability ((continuousCadlagProbabilityCompletion20261011 limitLaw
-          (fun path time => countableTimeContinuousSampleCompletion20261011 times dense path ((Real.toNNReal (1 / (if countingSpeed then vertexCoefficient * mass marks else 2 * (edgeCoefficient * mass marks)))) * time))
-          (fun path => (countableTimeContinuousSample_continuous_completion20261011 times dense path).comp (continuous_const.mul continuous_id))
-          (fun time => countableTimeContinuousSample_evaluation_measurable_completion20261011 times dense ((Real.toNNReal (1 / (if countingSpeed then vertexCoefficient * mass marks else 2 * (edgeCoefficient * mass marks)))) * time))).map
-          (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011 (target ∘ homeomorph.symm) (targetIsometry.continuous.comp homeomorph.symm.continuous)).measurable.aemeasurable)))) ∧
+          (𝓝 (usualLocalJ1PathProbability ((continuousCadlagProbabilityCompletion limitLaw
+          (fun path time => countableTimeContinuousSampleCompletion times dense path ((Real.toNNReal (1 / (if countingSpeed then vertexCoefficient * mass marks else 2 * (edgeCoefficient * mass marks)))) * time))
+          (fun path => (countableTimeContinuousSample_continuous_completion times dense path).comp (continuous_const.mul continuous_id))
+          (fun time => countableTimeContinuousSample_evaluation_measurable_completion times dense ((Real.toNNReal (1 / (if countingSpeed then vertexCoefficient * mass marks else 2 * (edgeCoefficient * mass marks)))) * time))).map
+          (skorokhodCadlagContinuousCarrierMap_continuous_completion (target ∘ homeomorph.symm) (targetIsometry.continuous.comp homeomorph.symm.continuous)).measurable.aemeasurable)))) ∧
       (Tendsto (fun depth => actualPaperDiscreteDeterministicPlacedCadlagLaw rule classicalRule p positive belowOne fixedPoint
           natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical⟩
-          chemicalGrowth chemicalGrowthPositive depth (initial depth) (sources depth)) atTop (𝓝 ((continuousCadlagProbabilityCompletion20261011 limitLaw
-          (fun path time => countableTimeContinuousSampleCompletion20261011 times dense path ((Real.toNNReal (1 / (2 * (edgeCoefficient * mass marks)))) * time))
-          (fun path => (countableTimeContinuousSample_continuous_completion20261011 times dense path).comp (continuous_const.mul continuous_id))
-          (fun time => countableTimeContinuousSample_evaluation_measurable_completion20261011 times dense ((Real.toNNReal (1 / (2 * (edgeCoefficient * mass marks)))) * time))).map
-          (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011 (target ∘ homeomorph.symm) (targetIsometry.continuous.comp homeomorph.symm.continuous)).measurable.aemeasurable)) ∧
+          chemicalGrowth chemicalGrowthPositive depth (initial depth) (sources depth)) atTop (𝓝 ((continuousCadlagProbabilityCompletion limitLaw
+          (fun path time => countableTimeContinuousSampleCompletion times dense path ((Real.toNNReal (1 / (2 * (edgeCoefficient * mass marks)))) * time))
+          (fun path => (countableTimeContinuousSample_continuous_completion times dense path).comp (continuous_const.mul continuous_id))
+          (fun time => countableTimeContinuousSample_evaluation_measurable_completion times dense ((Real.toNNReal (1 / (2 * (edgeCoefficient * mass marks)))) * time))).map
+          (skorokhodCadlagContinuousCarrierMap_continuous_completion (target ∘ homeomorph.symm) (targetIsometry.continuous.comp homeomorph.symm.continuous)).measurable.aemeasurable)) ∧
         Tendsto (fun depth => usualLocalJ1PathProbability (actualPaperDiscreteDeterministicPlacedCadlagLaw rule classicalRule p positive belowOne fixedPoint
           natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical⟩
           chemicalGrowth chemicalGrowthPositive depth (initial depth) (sources depth))) atTop
-          (𝓝 (usualLocalJ1PathProbability ((continuousCadlagProbabilityCompletion20261011 limitLaw
-          (fun path time => countableTimeContinuousSampleCompletion20261011 times dense path ((Real.toNNReal (1 / (2 * (edgeCoefficient * mass marks)))) * time))
-          (fun path => (countableTimeContinuousSample_continuous_completion20261011 times dense path).comp (continuous_const.mul continuous_id))
-          (fun time => countableTimeContinuousSample_evaluation_measurable_completion20261011 times dense ((Real.toNNReal (1 / (2 * (edgeCoefficient * mass marks)))) * time))).map
-          (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011 (target ∘ homeomorph.symm) (targetIsometry.continuous.comp homeomorph.symm.continuous)).measurable.aemeasurable))))) ∧
+          (𝓝 (usualLocalJ1PathProbability ((continuousCadlagProbabilityCompletion limitLaw
+          (fun path time => countableTimeContinuousSampleCompletion times dense path ((Real.toNNReal (1 / (2 * (edgeCoefficient * mass marks)))) * time))
+          (fun path => (countableTimeContinuousSample_continuous_completion times dense path).comp (continuous_const.mul continuous_id))
+          (fun time => countableTimeContinuousSample_evaluation_measurable_completion times dense ((Real.toNNReal (1 / (2 * (edgeCoefficient * mass marks)))) * time))).map
+          (skorokhodCadlagContinuousCarrierMap_continuous_completion (target ∘ homeomorph.symm) (targetIsometry.continuous.comp homeomorph.symm.continuous)).measurable.aemeasurable))))) ∧
       (limitLaw : Measure (ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth
         (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks,typical.1.1⟩)).map
-        (fun path => countableTimeContinuousSampleCompletion20261011 times dense path 0) = (initialLimit : Measure _) ∧
-      (∀ᵐ sample ∂(limitLaw : Measure (ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩)), countableTimeLocalUniformContinuityCompletion20261011 times sample) ∧
-      (∀ sample : ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩, Continuous (countableTimeContinuousSampleCompletion20261011 times dense sample)) ∧
-      Tendsto (fun depth => actualPaperContinuousElectricalGlobalJ1LawCompletion20261011 rule p positive belowOne fixedPoint
+        (fun path => countableTimeContinuousSampleCompletion times dense path 0) = (initialLimit : Measure _) ∧
+      (∀ᵐ sample ∂(limitLaw : Measure (ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩)), countableTimeLocalUniformContinuityCompletion times sample) ∧
+      (∀ sample : ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩, Continuous (countableTimeContinuousSampleCompletion times dense sample)) ∧
+      Tendsto (fun depth => actualPaperContinuousElectricalGlobalJ1LawCompletion rule p positive belowOne fixedPoint
         natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical⟩ chemicalGrowth chemicalGrowthPositive initial depth) atTop
-        (𝓝 (limitLaw.map (countableSkorokhodGlobalSample_measurable_completion20261011 times dense).aemeasurable)) ∧
-      Tendsto (fun depth => actualPaperDiscreteElectricalCadlagLawCompletion20261011 rule p positive belowOne fixedPoint
+        (𝓝 (limitLaw.map (countableSkorokhodGlobalSample_measurable_completion times dense).aemeasurable)) ∧
+      Tendsto (fun depth => actualPaperDiscreteElectricalCadlagLawCompletion rule p positive belowOne fixedPoint
         natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks,typical⟩
         chemicalGrowth chemicalGrowthPositive initial depth) atTop
-        (𝓝 (continuousCadlagProbabilityCompletion20261011 limitLaw (countableTimeContinuousSampleCompletion20261011 times dense)
-          (countableTimeContinuousSample_continuous_completion20261011 times dense)
-          (countableTimeContinuousSample_evaluation_measurable_completion20261011 times dense))) ∧
+        (𝓝 (continuousCadlagProbabilityCompletion limitLaw (countableTimeContinuousSampleCompletion times dense)
+          (countableTimeContinuousSample_continuous_completion times dense)
+          (countableTimeContinuousSample_evaluation_measurable_completion times dense))) ∧
       Tendsto (fun depth => actualPaperPlacedDiscreteCadlagLaw rule p positive belowOne fixedPoint
         natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks,typical⟩
         chemicalGrowth chemicalGrowthPositive initial sources depth) atTop
-        (𝓝 ((continuousCadlagProbabilityCompletion20261011 limitLaw (countableTimeContinuousSampleCompletion20261011 times dense)
-          (countableTimeContinuousSample_continuous_completion20261011 times dense)
-          (countableTimeContinuousSample_evaluation_measurable_completion20261011 times dense)).map
-          (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011
+        (𝓝 ((continuousCadlagProbabilityCompletion limitLaw (countableTimeContinuousSampleCompletion times dense)
+          (countableTimeContinuousSample_continuous_completion times dense)
+          (countableTimeContinuousSample_evaluation_measurable_completion times dense)).map
+          (skorokhodCadlagContinuousCarrierMap_continuous_completion
             (target ∘ homeomorph.symm) (targetIsometry.continuous.comp homeomorph.symm.continuous)).measurable.aemeasurable)) ∧
       Tendsto (fun depth => actualPaperPlacedContinuousCadlagLaw rule p positive belowOne fixedPoint
         natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks,typical⟩
         chemicalGrowth chemicalGrowthPositive initial sources depth) atTop
-        (𝓝 ((continuousCadlagProbabilityCompletion20261011 limitLaw (countableTimeContinuousSampleCompletion20261011 times dense)
-          (countableTimeContinuousSample_continuous_completion20261011 times dense)
-          (countableTimeContinuousSample_evaluation_measurable_completion20261011 times dense)).map
-          (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011
+        (𝓝 ((continuousCadlagProbabilityCompletion limitLaw (countableTimeContinuousSampleCompletion times dense)
+          (countableTimeContinuousSample_continuous_completion times dense)
+          (countableTimeContinuousSample_evaluation_measurable_completion times dense)).map
+          (skorokhodCadlagContinuousCarrierMap_continuous_completion
             (target ∘ homeomorph.symm) (targetIsometry.continuous.comp homeomorph.symm.continuous)).measurable.aemeasurable)) ∧
-      Tendsto (fun depth => actualVertexVariableSpeedPlacedCadlagLawCompletion20261011 rule p positive belowOne fixedPoint
+      Tendsto (fun depth => actualVertexVariableSpeedPlacedCadlagLawCompletion rule p positive belowOne fixedPoint
         natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks,typical⟩
         chemicalGrowth chemicalGrowthPositive depth (initial depth) (sources depth)) atTop
-        (𝓝 ((continuousCadlagProbabilityCompletion20261011 limitLaw (countableTimeContinuousSampleCompletion20261011 times dense)
-          (countableTimeContinuousSample_continuous_completion20261011 times dense)
-          (countableTimeContinuousSample_evaluation_measurable_completion20261011 times dense)).map
-          (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011
+        (𝓝 ((continuousCadlagProbabilityCompletion limitLaw (countableTimeContinuousSampleCompletion times dense)
+          (countableTimeContinuousSample_continuous_completion times dense)
+          (countableTimeContinuousSample_evaluation_measurable_completion times dense)).map
+          (skorokhodCadlagContinuousCarrierMap_continuous_completion
             (target ∘ homeomorph.symm) (targetIsometry.continuous.comp homeomorph.symm.continuous)).measurable.aemeasurable)) ∧
       Tendsto (fun depth => usualLocalJ1PathProbability (actualPaperPlacedDiscreteCadlagLaw rule p positive belowOne fixedPoint
         natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks,typical⟩
         chemicalGrowth chemicalGrowthPositive initial sources depth)) atTop
-        (𝓝 (usualLocalJ1PathProbability ((continuousCadlagProbabilityCompletion20261011 limitLaw
-          (countableTimeContinuousSampleCompletion20261011 times dense)
-          (countableTimeContinuousSample_continuous_completion20261011 times dense)
-          (countableTimeContinuousSample_evaluation_measurable_completion20261011 times dense)).map
-          (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011
+        (𝓝 (usualLocalJ1PathProbability ((continuousCadlagProbabilityCompletion limitLaw
+          (countableTimeContinuousSampleCompletion times dense)
+          (countableTimeContinuousSample_continuous_completion times dense)
+          (countableTimeContinuousSample_evaluation_measurable_completion times dense)).map
+          (skorokhodCadlagContinuousCarrierMap_continuous_completion
             (target ∘ homeomorph.symm) (targetIsometry.continuous.comp homeomorph.symm.continuous)).measurable.aemeasurable))) ∧
       Tendsto (fun depth => usualLocalJ1PathProbability (actualPaperPlacedContinuousCadlagLaw rule p positive belowOne fixedPoint
         natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks,typical⟩
         chemicalGrowth chemicalGrowthPositive initial sources depth)) atTop
-        (𝓝 (usualLocalJ1PathProbability ((continuousCadlagProbabilityCompletion20261011 limitLaw
-          (countableTimeContinuousSampleCompletion20261011 times dense)
-          (countableTimeContinuousSample_continuous_completion20261011 times dense)
-          (countableTimeContinuousSample_evaluation_measurable_completion20261011 times dense)).map
-          (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011
+        (𝓝 (usualLocalJ1PathProbability ((continuousCadlagProbabilityCompletion limitLaw
+          (countableTimeContinuousSampleCompletion times dense)
+          (countableTimeContinuousSample_continuous_completion times dense)
+          (countableTimeContinuousSample_evaluation_measurable_completion times dense)).map
+          (skorokhodCadlagContinuousCarrierMap_continuous_completion
             (target ∘ homeomorph.symm) (targetIsometry.continuous.comp homeomorph.symm.continuous)).measurable.aemeasurable))) ∧
-      Tendsto (fun depth => usualLocalJ1PathProbability (actualVertexVariableSpeedPlacedCadlagLawCompletion20261011 rule p positive belowOne fixedPoint
+      Tendsto (fun depth => usualLocalJ1PathProbability (actualVertexVariableSpeedPlacedCadlagLawCompletion rule p positive belowOne fixedPoint
         natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks,typical⟩
         chemicalGrowth chemicalGrowthPositive depth (initial depth) (sources depth))) atTop
-        (𝓝 (usualLocalJ1PathProbability ((continuousCadlagProbabilityCompletion20261011 limitLaw
-          (countableTimeContinuousSampleCompletion20261011 times dense)
-          (countableTimeContinuousSample_continuous_completion20261011 times dense)
-          (countableTimeContinuousSample_evaluation_measurable_completion20261011 times dense)).map
-          (skorokhodCadlagContinuousCarrierMap_continuous_completion20261011
+        (𝓝 (usualLocalJ1PathProbability ((continuousCadlagProbabilityCompletion limitLaw
+          (countableTimeContinuousSampleCompletion times dense)
+          (countableTimeContinuousSample_continuous_completion times dense)
+          (countableTimeContinuousSample_evaluation_measurable_completion times dense)).map
+          (skorokhodCadlagContinuousCarrierMap_continuous_completion
             (target ∘ homeomorph.symm) (targetIsometry.continuous.comp homeomorph.symm.continuous)).measurable.aemeasurable))) ∧
       ∀ (time : (ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩) → WithTop ℝ≥0),
       ∀ stopping : IsStoppingTime
-        (Filtration.natural (fun present (path : ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩) => countableTimeContinuousSampleCompletion20261011 times dense path present)
-          (fun present => (countableTimeContinuousSample_evaluation_measurable_completion20261011 times dense present).stronglyMeasurable)) time,
+        (Filtration.natural (fun present (path : ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩) => countableTimeContinuousSampleCompletion times dense path present)
+          (fun present => (countableTimeContinuousSample_evaluation_measurable_completion times dense present).stronglyMeasurable)) time,
       (∀ᵐ path ∂(limitLaw : Measure (ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩)), time path ≠ ⊤) → ∀ future : ℝ≥0,
       ∀ event : Set (ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩),
       MeasurableSet[stopping.measurableSpace] event →
       ((limitLaw : Measure (ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩)).restrict event).map
-        (fun path => countableTimeContinuousSampleCompletion20261011 times dense path ((time path).untopA + future)) =
-        (actualTransitionKernelCompletion20261011 rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne)
+        (fun path => countableTimeContinuousSampleCompletion times dense path ((time path).untopA + future)) =
+        (actualTransitionKernelCompletion rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne)
           (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) ⟨marks, typical⟩) anchor (boundary.map realization) data future) ∘ₘ
         (((limitLaw : Measure (ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩)).restrict event).map
-          (fun path => countableTimeContinuousSampleCompletion20261011 times dense path (time path).untopA))) ∧
+          (fun path => countableTimeContinuousSampleCompletion times dense path (time path).untopA))) ∧
 
       ∀ anchor : ActualStationaryEnergySkeleton rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
         (zero_lt_one.trans natural.aboveOne)
         (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) ⟨marks, typical⟩),
-      ∃ data : ActualSpectralDataCompletion20261011 rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
+      ∃ data : ActualSpectralDataCompletion rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
         (zero_lt_one.trans natural.aboveOne)
         (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) ⟨marks, typical⟩)
         anchor (boundary.map realization),
       ∀ᵐ point ∂boundary.map realization,
-        Tendsto (fun time => -2 * Real.log (actualSpectralHeatKernelCompletion20261011
+        Tendsto (fun time => -2 * Real.log (actualSpectralHeatKernelCompletion
           rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
           (zero_lt_one.trans natural.aboveOne)
           (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth
@@ -474,7 +474,7 @@ theorem exists_ae_actual_natural_common_section_three_all_clocks
     intro address
     exact ge_of_tendsto (limits address) (Eventually.of_forall (fun depth =>
       div_nonneg (Nat.cast_nonneg _) (Nat.cast_nonneg _)))
-  obtain ⟨continuation⟩ := exists_actual_mass_continuation_completion20261011
+  obtain ⟨continuation⟩ := exists_actual_mass_continuation_completion
     rule classicalRule p positive belowOne fixedPoint
   have atomless := actual_physical_mass_null_singletons rule classicalRule p positive belowOne fixedPoint
     natural continuation weight ratios nonnegative
@@ -483,8 +483,8 @@ theorem exists_ae_actual_natural_common_section_three_all_clocks
   have logEvents := actual_boundary_vertex_ratio_typical_log_mass rule classicalRule p positive belowOne fixedPoint weight ratios
   have rawEvents := ae_actual_natural_raw_electrical_markedGHP rule classicalRule p positive belowOne fixedPoint natural weight ratios nonnegative
   have comparisonEvents := ae_actual_degree_counting_for_any_component_mesh rule classicalRule p positive belowOne fixedPoint
-  have countEvents := ae_actual_natural_counting_mass_tendsto_completion20261011 rule classicalRule p positive belowOne fixedPoint natural weight ratios nonnegative
-  have degreeEvents := ae_actual_natural_degree_mass_tendsto_completion20261011 rule classicalRule p positive belowOne fixedPoint natural weight ratios nonnegative
+  have countEvents := ae_actual_natural_counting_mass_tendsto_completion rule classicalRule p positive belowOne fixedPoint natural weight ratios nonnegative
+  have degreeEvents := ae_actual_natural_degree_mass_tendsto_completion rule classicalRule p positive belowOne fixedPoint natural weight ratios nonnegative
   refine ⟨chemicalGrowth, chemicalGrowthPositive, amplitude, amplitudeAtLeastOne, chemicalValue,
     weight, ratios, edgeCoefficient, vertexCoefficient, mass, edgePositive, vertexPositive, ?_⟩
   filter_upwards [master, ratios, atomless, clockEvents, rawEvents, comparisonEvents, countEvents, degreeEvents, logEvents,
@@ -500,11 +500,11 @@ theorem exists_ae_actual_natural_common_section_three_all_clocks
   letI := probability
   letI := massProbability
   letI := massOpenPositive
-  letI : MeasurableSpace (actualStationaryChemicalSpaceCompletion20261011 rule p positive belowOne fixedPoint
+  letI : MeasurableSpace (actualStationaryChemicalSpaceCompletion rule p positive belowOne fixedPoint
         natural.growth (natural.amplitude • natural.field) ⟨marks,typical⟩ classicalRule chemicalGrowth chemicalGrowthPositive
         (chemicalBlockLimitLength rule p positive belowOne fixedPoint chemicalGrowth amplitude chemicalValue marks)
         lengthNonnegative lengthPositive childConvergence) := borel _
-  letI : BorelSpace (actualStationaryChemicalSpaceCompletion20261011 rule p positive belowOne fixedPoint
+  letI : BorelSpace (actualStationaryChemicalSpaceCompletion rule p positive belowOne fixedPoint
         natural.growth (natural.amplitude • natural.field) ⟨marks,typical⟩ classicalRule chemicalGrowth chemicalGrowthPositive
         (chemicalBlockLimitLength rule p positive belowOne fixedPoint chemicalGrowth amplitude chemicalValue marks)
         lengthNonnegative lengthPositive childConvergence) := ⟨rfl⟩

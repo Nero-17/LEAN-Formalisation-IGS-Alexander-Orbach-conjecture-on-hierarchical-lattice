@@ -22,7 +22,7 @@ theorem actualFiniteAnnealedPlacedPathLaw_discrete_configuration_transport
     (placement : ActualFiniteCluster rule configuration scale scalePositive depth → Space) :
     actualFiniteAnnealedPlacedPathLaw rule scale scalePositive depth (configuration depth) crossing initial.val
       clock clockPositive 0 (placement ∘ actualAnnealedFiniteVertexEquiv rule configuration scale scalePositive depth) =
-    discreteCadlagProbabilityCompletion20261011
+    discreteCadlagProbabilityCompletion
       (Vertex := ActualFiniteCluster rule configuration scale scalePositive depth)
       (⟨finiteDiscreteWalkLaw
         (Vertex := ActualFiniteCluster rule configuration scale scalePositive depth)
@@ -58,7 +58,7 @@ theorem actualFiniteAnnealedPlacedPathLaw_weighted_configuration_transport
     (placement : ActualFiniteCluster rule configuration scale scalePositive depth → Space) :
     actualFiniteAnnealedPlacedPathLaw rule scale scalePositive depth (configuration depth) crossing initial.val
       clock clockPositive kind (placement ∘ actualAnnealedFiniteVertexEquiv rule configuration scale scalePositive depth) =
-    finiteWeightedCadlagProbabilityCompletion20261011
+    finiteWeightedCadlagProbabilityCompletion
       (Vertex := ActualFiniteCluster rule configuration scale scalePositive depth)
       (clusterRetainedEndpoint (rule.generation depth).network (configuration depth))
       (cluster_degree_positive (rule.generation depth).network (configuration depth) crossing)

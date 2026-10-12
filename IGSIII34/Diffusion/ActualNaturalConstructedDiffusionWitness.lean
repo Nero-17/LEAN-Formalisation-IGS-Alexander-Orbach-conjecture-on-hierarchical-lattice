@@ -1,10 +1,10 @@
 import IGSIII34.Diffusion.ActualNaturalConstructedDiffusion
-import IGSIII34.Diffusion.ActualNaturalContinuousGlobalSkorokhodCompletion20261011
-import IGSIII34.Spectral.ActualNaturalTypicalSpectralCompletion20261011
-import IGSIII34.Spectral.ActualSpectralDataCompletion20261011
-import IGSIII34.Forms.ActualFormMassWitnessCompletion20261011
-import IGSIII34.ResistanceLimit.ActualElectricalMassRetainedCompletion20261011
-import IGSIII34.Percolation.Continuation.NaturalPhysicalOmegaCompletion20261011
+import IGSIII34.Diffusion.ActualNaturalContinuousGlobalSkorokhodCompletion
+import IGSIII34.Spectral.ActualNaturalTypicalSpectralCompletion
+import IGSIII34.Spectral.ActualSpectralDataCompletion
+import IGSIII34.Forms.ActualFormMassWitnessCompletion
+import IGSIII34.ResistanceLimit.ActualElectricalMassRetainedCompletion
+import IGSIII34.Percolation.Continuation.NaturalPhysicalOmegaCompletion
 
 /-! The actual physical natural endpoint, Perron mass and spectral data
 are assembled on one event of the original critical innovation law.
@@ -31,9 +31,9 @@ variable (rule : Rule) (p : ℝ) (positive : 0 < p) (belowOne : p < 1)
   (growthPositive : 0 < growth)
   (marks : {marks // StationaryHarmonicTypical rule p positive belowOne fixedPoint growth value marks})
 
-local instance actualNaturalConstructedDiffusionWitnessCarrierMeasurableCompletion20261011 : MeasurableSpace
+local instance actualNaturalConstructedDiffusionWitnessCarrierMeasurableCompletion : MeasurableSpace
     (ActualStationaryElectricalSpace rule p positive belowOne fixedPoint growth value growthPositive ⟨marks.val, marks.property.1.1⟩) := borel _
-local instance actualNaturalConstructedDiffusionWitnessCarrierBorelCompletion20261011 : BorelSpace
+local instance actualNaturalConstructedDiffusionWitnessCarrierBorelCompletion : BorelSpace
     (ActualStationaryElectricalSpace rule p positive belowOne fixedPoint growth value growthPositive ⟨marks.val, marks.property.1.1⟩) := ⟨rfl⟩
 
 variable [CompactSpace (ActualStationaryElectricalSpace rule p positive belowOne fixedPoint growth value growthPositive ⟨marks.val, marks.property.1.1⟩)]
@@ -44,40 +44,40 @@ variable (anchor : ActualStationaryEnergySkeleton rule p positive belowOne fixed
   (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint growth value marks))
   [(measure : Measure (ActualStationaryElectricalSpace rule p positive belowOne fixedPoint growth value growthPositive ⟨marks.val, marks.property.1.1⟩)).IsOpenPosMeasure]
 
-local instance ActualNaturalConstructedDiffusionWitnessCompletion20261011Compact : CompactSpace
+local instance ActualNaturalConstructedDiffusionWitnessCompletionCompact : CompactSpace
     (UniformSpace.Completion (ActualStationaryEnergySkeleton rule p positive belowOne fixedPoint growth value growthPositive
       (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint growth value marks))) := by
   change CompactSpace (ActualStationaryElectricalSpace rule p positive belowOne fixedPoint growth value growthPositive ⟨marks.val, marks.property.1.1⟩)
   infer_instance
-local instance ActualNaturalConstructedDiffusionWitnessCompletion20261011Measurable : MeasurableSpace
+local instance ActualNaturalConstructedDiffusionWitnessCompletionMeasurable : MeasurableSpace
     (UniformSpace.Completion (ActualStationaryEnergySkeleton rule p positive belowOne fixedPoint growth value growthPositive
       (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint growth value marks))) := borel _
-local instance ActualNaturalConstructedDiffusionWitnessCompletion20261011Borel : BorelSpace
+local instance ActualNaturalConstructedDiffusionWitnessCompletionBorel : BorelSpace
     (UniformSpace.Completion (ActualStationaryEnergySkeleton rule p positive belowOne fixedPoint growth value growthPositive
       (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint growth value marks))) := ⟨rfl⟩
 
 open IGSIII34.Spectral ProbabilityTheory
-local instance actualNaturalConstructedDiffusionWitnessNormCompletion20261011 : NormedAddCommGroup
-    (actualAnchoredEnergyDomainCompletion20261011 rule p positive belowOne fixedPoint growth value growthPositive
+local instance actualNaturalConstructedDiffusionWitnessNormCompletion : NormedAddCommGroup
+    (actualAnchoredEnergyDomainCompletion rule p positive belowOne fixedPoint growth value growthPositive
       (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint growth value marks) anchor) :=
   actualAnchoredNormedAddCommGroup rule p positive belowOne fixedPoint growth value growthPositive
     (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint growth value marks) anchor
-local instance actualNaturalConstructedDiffusionWitnessCutoffApproximationCompletion20261011 : UniformSpace
-    (actualAnchoredEnergyDomainCompletion20261011 rule p positive belowOne fixedPoint growth value growthPositive
+local instance actualNaturalConstructedDiffusionWitnessCutoffApproximationCompletion : UniformSpace
+    (actualAnchoredEnergyDomainCompletion rule p positive belowOne fixedPoint growth value growthPositive
       (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint growth value marks) anchor) :=
-  (actualNaturalConstructedDiffusionWitnessNormCompletion20261011 rule p positive belowOne fixedPoint growth value growthPositive marks anchor).toMetricSpace.toUniformSpace
-local instance actualNaturalConstructedDiffusionWitnessTopologyCompletion20261011 : TopologicalSpace
-    (actualAnchoredEnergyDomainCompletion20261011 rule p positive belowOne fixedPoint growth value growthPositive
+  (actualNaturalConstructedDiffusionWitnessNormCompletion rule p positive belowOne fixedPoint growth value growthPositive marks anchor).toMetricSpace.toUniformSpace
+local instance actualNaturalConstructedDiffusionWitnessTopologyCompletion : TopologicalSpace
+    (actualAnchoredEnergyDomainCompletion rule p positive belowOne fixedPoint growth value growthPositive
       (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint growth value marks) anchor) :=
-  (actualNaturalConstructedDiffusionWitnessNormCompletion20261011 rule p positive belowOne fixedPoint growth value growthPositive marks anchor).toMetricSpace.toUniformSpace.toTopologicalSpace
-local instance actualNaturalConstructedDiffusionWitnessInnerCompletion20261011 : InnerProductSpace ℝ
-    (actualAnchoredEnergyDomainCompletion20261011 rule p positive belowOne fixedPoint growth value growthPositive
+  (actualNaturalConstructedDiffusionWitnessNormCompletion rule p positive belowOne fixedPoint growth value growthPositive marks anchor).toMetricSpace.toUniformSpace.toTopologicalSpace
+local instance actualNaturalConstructedDiffusionWitnessInnerCompletion : InnerProductSpace ℝ
+    (actualAnchoredEnergyDomainCompletion rule p positive belowOne fixedPoint growth value growthPositive
       (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint growth value marks) anchor) :=
   actualAnchoredInnerProductSpace rule p positive belowOne fixedPoint growth value growthPositive
     (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint growth value marks) anchor
 
-local instance actualNaturalConstructedDiffusionWitnessCompleteCompletion20261011 : CompleteSpace
-    (actualAnchoredEnergyDomainCompletion20261011 rule p positive belowOne fixedPoint growth value growthPositive
+local instance actualNaturalConstructedDiffusionWitnessCompleteCompletion : CompleteSpace
+    (actualAnchoredEnergyDomainCompletion rule p positive belowOne fixedPoint growth value growthPositive
       (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint growth value marks) anchor) :=
   actual_anchored_completeSpace rule p positive belowOne fixedPoint growth value growthPositive
     (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint growth value marks) anchor
@@ -86,7 +86,7 @@ local instance actualNaturalConstructedDiffusionWitnessCompleteCompletion2026101
 theorem exists_ae_actual_natural_constructed_diffusion_spectral_witness
     (rule : Rule) (classicalRule : rule.Classical) (p : ℝ)
     (positive : 0 < p) (belowOne : p < 1) (fixedPoint : rule.network.reliability p = p)
-    (natural : NaturalResistanceCompletion20261011 rule p positive belowOne fixedPoint) :
+    (natural : NaturalResistanceCompletion rule p positive belowOne fixedPoint) :
     ∃ weight : List (Fin rule.edges × Bool) → (((List (Fin rule.edges) × Bool) → Configuration rule.edges) → ℝ),
       (∀ᵐ marks ∂independentInnovationLaw rule p positive belowOne fixedPoint,
         ∀ address, Tendsto (fun depth =>
@@ -128,7 +128,7 @@ theorem exists_ae_actual_natural_constructed_diffusion_spectral_witness
       (boundary.map realization).support = Set.univ ∧
       (∀ (chemicalScale : ℝ) (chemicalScalePositive : 0 < chemicalScale),
       ∀ anchor : ActualStationaryEnergySkeleton rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) ⟨marks, typical⟩),
-      ∀ data : ActualSpectralDataCompletion20261011 rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
+      ∀ data : ActualSpectralDataCompletion rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
         (zero_lt_one.trans natural.aboveOne)
         (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) ⟨marks, typical⟩) anchor (boundary.map realization),
       ∀ initial : ∀ depth, ProbabilityMeasure (ActualFiniteCluster rule (stationaryConfiguration rule marks) chemicalScale chemicalScalePositive depth),
@@ -141,44 +141,44 @@ theorem exists_ae_actual_natural_constructed_diffusion_spectral_witness
             (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩ depth vertex)).aemeasurable)
         atTop (𝓝 initialLimit) →
     ∃ limitLaw : ProbabilityMeasure (ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩),
-      Tendsto (fun depth => actualPaperDiscreteElectricalObservationLawCompletion20261011
+      Tendsto (fun depth => actualPaperDiscreteElectricalObservationLawCompletion
         rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩
         chemicalScale chemicalScalePositive times initial depth) atTop (𝓝 limitLaw) ∧
-      (∀ᵐ sample ∂(limitLaw : Measure (ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩)), countableTimeLocalUniformContinuityCompletion20261011 times sample) ∧
-      (∀ sample : ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩, Continuous (countableTimeContinuousSampleCompletion20261011 times dense sample)) ∧
-      Tendsto (fun depth => actualPaperContinuousElectricalGlobalJ1LawCompletion20261011 rule p positive belowOne fixedPoint
+      (∀ᵐ sample ∂(limitLaw : Measure (ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩)), countableTimeLocalUniformContinuityCompletion times sample) ∧
+      (∀ sample : ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩, Continuous (countableTimeContinuousSampleCompletion times dense sample)) ∧
+      Tendsto (fun depth => actualPaperContinuousElectricalGlobalJ1LawCompletion rule p positive belowOne fixedPoint
         natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical⟩ chemicalScale chemicalScalePositive initial depth) atTop
-        (𝓝 (limitLaw.map (countableSkorokhodGlobalSample_measurable_completion20261011 times dense).aemeasurable)) ∧
+        (𝓝 (limitLaw.map (countableSkorokhodGlobalSample_measurable_completion times dense).aemeasurable)) ∧
       ∀ (time : (ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩) → WithTop ℝ≥0),
       ∀ stopping : IsStoppingTime
-        (Filtration.natural (fun present (path : ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩) => countableTimeContinuousSampleCompletion20261011 times dense path present)
-          (fun present => (countableTimeContinuousSample_evaluation_measurable_completion20261011 times dense present).stronglyMeasurable)) time,
+        (Filtration.natural (fun present (path : ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩) => countableTimeContinuousSampleCompletion times dense path present)
+          (fun present => (countableTimeContinuousSample_evaluation_measurable_completion times dense present).stronglyMeasurable)) time,
       (∀ᵐ path ∂(limitLaw : Measure (ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩)), time path ≠ ⊤) → ∀ future : ℝ≥0,
       ∀ event : Set (ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩),
       MeasurableSet[stopping.measurableSpace] event →
       ((limitLaw : Measure (ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩)).restrict event).map
-        (fun path => countableTimeContinuousSampleCompletion20261011 times dense path ((time path).untopA + future)) =
-        (actualTransitionKernelCompletion20261011 rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne)
+        (fun path => countableTimeContinuousSampleCompletion times dense path ((time path).untopA + future)) =
+        (actualTransitionKernelCompletion rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne)
           (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) ⟨marks, typical⟩) anchor (boundary.map realization) data future) ∘ₘ
         (((limitLaw : Measure (ℕ → ActualStationaryElectricalSpace rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) (zero_lt_one.trans natural.aboveOne) ⟨marks, typical.1.1⟩)).restrict event).map
-          (fun path => countableTimeContinuousSampleCompletion20261011 times dense path (time path).untopA))) ∧
+          (fun path => countableTimeContinuousSampleCompletion times dense path (time path).untopA))) ∧
 
       ∀ anchor : ActualStationaryEnergySkeleton rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
         (zero_lt_one.trans natural.aboveOne)
         (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) ⟨marks, typical⟩),
-      ∃ data : ActualSpectralDataCompletion20261011 rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
+      ∃ data : ActualSpectralDataCompletion rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
         (zero_lt_one.trans natural.aboveOne)
         (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field) ⟨marks, typical⟩)
         anchor (boundary.map realization),
       ∀ᵐ point ∂boundary.map realization,
-        Tendsto (fun time => -2 * Real.log (actualSpectralHeatKernelCompletion20261011
+        Tendsto (fun time => -2 * Real.log (actualSpectralHeatKernelCompletion
           rule p positive belowOne fixedPoint natural.growth (natural.amplitude • natural.field)
           (zero_lt_one.trans natural.aboveOne)
           (harmonicTypicalEnergyMarks rule p positive belowOne fixedPoint natural.growth
             (natural.amplitude • natural.field) ⟨marks, typical⟩) anchor (boundary.map realization) data time point point) / Real.log time)
           (𝓝[>] 0) (𝓝 (2 * Real.log ((spectralRadius ℂ ((rule.network.massMatrix p).map Complex.ofReal)).toReal) /
             Real.log (((spectralRadius ℂ ((rule.network.massMatrix p).map Complex.ofReal)).toReal) * natural.growth))) := by
-  obtain ⟨weight, actualRatios, witnesses⟩ := exists_ae_actual_natural_typical_spectral_completion20261011
+  obtain ⟨weight, actualRatios, witnesses⟩ := exists_ae_actual_natural_typical_spectral_completion
     rule classicalRule p positive belowOne fixedPoint natural
   have nonnegative : ∀ᵐ marks ∂independentInnovationLaw rule p positive belowOne fixedPoint,
       ∀ address, 0 ≤ weight address marks := by

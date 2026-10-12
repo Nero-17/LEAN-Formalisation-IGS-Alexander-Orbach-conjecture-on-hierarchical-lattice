@@ -34,7 +34,7 @@ local instance actualCommonStartingElectricalBorel : BorelSpace
 chemical common realization supplies the true electrical Dirac initial law. -/
 theorem actual_common_chemical_dirac_starting_laws_tendsto
     {Ambient : Type*} [MetricSpace Ambient]
-    (homeomorph : actualStationaryChemicalSpaceCompletion20261011 rule p positive belowOne fixedPoint growth value marks
+    (homeomorph : actualStationaryChemicalSpaceCompletion rule p positive belowOne fixedPoint growth value marks
       classicalRule chemicalScale chemicalScalePositive lengths lengthNonnegative lengthPositive childConvergence ≃ₜ
       ActualStationaryElectricalSpace rule p positive belowOne fixedPoint growth value growthPositive ⟨marks.val,marks.property.1.1⟩)
     (birthIdentity : ∀ depth (vertex : ActualFiniteCluster rule (stationaryConfiguration rule marks.val) chemicalScale chemicalScalePositive depth),
@@ -43,7 +43,7 @@ theorem actual_common_chemical_dirac_starting_laws_tendsto
       actualChemicalVertex rule classicalRule (stationaryConfiguration rule marks.val)
         (typicalStationaryCoherent rule p positive belowOne fixedPoint growth value ⟨marks.val,marks.property.1.1⟩)
         chemicalScale chemicalScalePositive lengths lengthNonnegative lengthPositive childConvergence depth vertex)
-    (target : actualStationaryChemicalSpaceCompletion20261011 rule p positive belowOne fixedPoint growth value marks
+    (target : actualStationaryChemicalSpaceCompletion rule p positive belowOne fixedPoint growth value marks
       classicalRule chemicalScale chemicalScalePositive lengths lengthNonnegative lengthPositive childConvergence → Ambient)
     (targetIsometry : Isometry target)
     (sources : ∀ depth, ActualFiniteCluster rule (stationaryConfiguration rule marks.val) chemicalScale chemicalScalePositive depth → Ambient)
@@ -52,7 +52,7 @@ theorem actual_common_chemical_dirac_starting_laws_tendsto
         (typicalStationaryCoherent rule p positive belowOne fixedPoint growth value ⟨marks.val,marks.property.1.1⟩)
         chemicalScale chemicalScalePositive lengths lengthNonnegative lengthPositive childConvergence depth vertex)) < tolerance)
     (vertices : ∀ depth, ActualFiniteCluster rule (stationaryConfiguration rule marks.val) chemicalScale chemicalScalePositive depth)
-    (point : actualStationaryChemicalSpaceCompletion20261011 rule p positive belowOne fixedPoint growth value marks
+    (point : actualStationaryChemicalSpaceCompletion rule p positive belowOne fixedPoint growth value marks
       classicalRule chemicalScale chemicalScalePositive lengths lengthNonnegative lengthPositive childConvergence)
     (convergence : Tendsto (fun depth => sources depth (vertices depth)) atTop (𝓝 (target point))) :
     Tendsto (fun depth => (diracProba (vertices depth)).map

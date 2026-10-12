@@ -1,6 +1,6 @@
 import IGSIII34.Diffusion.IntervalTimeChangeRestriction
-import IGSIII34.Diffusion.IntervalFiniteKnotsCompletion20261011
-import IGSIII34.Diffusion.SkorokhodContinuousLimitCompletion20261011
+import IGSIII34.Diffusion.IntervalFiniteKnotsCompletion
+import IGSIII34.Diffusion.SkorokhodContinuousLimitCompletion
 
 set_option autoImplicit false
 set_option maxHeartbeats 4200000
@@ -11,18 +11,18 @@ open Filter Set
 open scoped Topology NNReal ENNReal
 variable {Space : Type*} [MetricSpace Space] [CompactSpace Space]
 
-def intervalPathRestriction (terminal : SkorokhodIntervalTimeCompletion20261011)
-    (path : SkorokhodIntervalPathCompletion20261011 Space) :
-    SkorokhodIntervalPathCompletion20261011 Space :=
+def intervalPathRestriction (terminal : SkorokhodIntervalTimeCompletion)
+    (path : SkorokhodIntervalPathCompletion Space) :
+    SkorokhodIntervalPathCompletion Space :=
   ⟨fun time => path (intervalScaledTime terminal time)⟩
 
 /-- Restriction in J1 needs continuity only at the new endpoint, not on
 the whole path. A small tail correction to the actual time change fixes
 the endpoint and leaves the entire earlier part of the path unchanged. -/
 theorem intervalPathRestriction_continuousAt_endpoint
-    (terminal : SkorokhodIntervalTimeCompletion20261011)
+    (terminal : SkorokhodIntervalTimeCompletion)
     (terminalPositive : 0 < terminal.val) (terminalInterior : terminal.val < 1)
-    (path : SkorokhodIntervalPathCompletion20261011 Space)
+    (path : SkorokhodIntervalPathCompletion Space)
     (endpointContinuous : ContinuousAt path.toFun terminal) :
     ContinuousAt (intervalPathRestriction terminal) path := by
   apply Metric.continuousAt_iff.mpr
@@ -33,7 +33,7 @@ theorem intervalPathRestriction_continuousAt_endpoint
   have tailPositive : 0 < tailLength := lt_min (by positivity) (by positivity)
   have tailDuration : tailLength ≤ duration / 4 := min_le_left _ _
   have tailTerminal : tailLength ≤ terminal.val / 4 := min_le_right _ _
-  let pivot : SkorokhodIntervalTimeCompletion20261011 :=
+  let pivot : SkorokhodIntervalTimeCompletion :=
     ⟨terminal.val - tailLength, ⟨by linarith, by linarith [terminal.property.2]⟩⟩
   let error := min (tailLength / 2) (min (terminal.val * tolerance / 8) (tolerance / 8))
   have errorPositive : 0 < error := lt_min (by positivity) (lt_min (by positivity) (by positivity))
@@ -42,12 +42,12 @@ theorem intervalPathRestriction_continuousAt_endpoint
   have errorSpatial : error ≤ tolerance / 8 := (min_le_right _ _).trans (min_le_right _ _)
   refine ⟨error, errorPositive, ?_⟩
   intro first near
-  have nearEDistance : skorokhodJ1EDistCompletion20261011 first path < ENNReal.ofReal error := edist_lt_ofReal.mpr near
+  have nearEDistance : skorokhodJ1EDistCompletion first path < ENNReal.ofReal error := edist_lt_ofReal.mpr near
   obtain ⟨change, changeSmall⟩ := iInf_lt_iff.mp nearEDistance
-  have timeSmall (time : SkorokhodIntervalTimeCompletion20261011) : dist (change time) time < error := by
+  have timeSmall (time : SkorokhodIntervalTimeCompletion) : dist (change time) time < error := by
     apply edist_lt_ofReal.mp
     exact ((le_iSup (fun next => edist (change next) next) time).trans (le_max_left _ _)).trans_lt changeSmall
-  have spatialSmall (time : SkorokhodIntervalTimeCompletion20261011) : dist (first (change time)) (path time) < error := by
+  have spatialSmall (time : SkorokhodIntervalTimeCompletion) : dist (first (change time)) (path time) < error := by
     apply edist_lt_ofReal.mp
     exact ((le_iSup (fun next => edist (first (change next)) (path next)) time).trans (le_max_right _ _)).trans_lt changeSmall
   have inverseNear : dist (change.symm terminal) terminal < error := by
@@ -61,22 +61,22 @@ theorem intervalPathRestriction_continuousAt_endpoint
     linarith
   have inverseInterior : (change.symm terminal).val < 1 := by
     have upper := change.symm.strictMono
-      (show terminal < (⟨1, by norm_num⟩ : SkorokhodIntervalTimeCompletion20261011) from terminalInterior)
-    rwa [intervalOrderIso_one_fixed_completion20261011] at upper
+      (show terminal < (⟨1, by norm_num⟩ : SkorokhodIntervalTimeCompletion) from terminalInterior)
+    rwa [intervalOrderIso_one_fixed_completion] at upper
   obtain ⟨correction, correctionTerminal, correctionFixed, correctionBound⟩ :=
-    interval_single_knot_orderIso_completion20261011 pivot terminal (change.symm terminal)
+    interval_single_knot_orderIso_completion pivot terminal (change.symm terminal)
       pivotBefore pivotBeforeInverse terminalInterior inverseInterior
   let corrected := correction.trans change
   have correctedTerminal : corrected terminal = terminal := by
     change change (correction terminal) = terminal
     rw [correctionTerminal, change.apply_symm_apply]
-  have correctedNear (time : SkorokhodIntervalTimeCompletion20261011) : dist (corrected time) time < 2 * error := by
+  have correctedNear (time : SkorokhodIntervalTimeCompletion) : dist (corrected time) time < 2 * error := by
     have correctionNear : dist (correction time) time < error :=
       (correctionBound time).trans_lt (by simpa only [dist_comm] using inverseNear)
     have triangle := dist_triangle (change (correction time)) (correction time) time
     change dist (change (correction time)) time < _
     linarith [timeSmall (correction time)]
-  have restrictedTime (time : SkorokhodIntervalTimeCompletion20261011) :
+  have restrictedTime (time : SkorokhodIntervalTimeCompletion) :
       dist (intervalRestrictedOrderIso corrected terminal terminalPositive correctedTerminal time) time ≤ tolerance / 2 := by
     have numerator := (correctedNear (intervalScaledTime terminal time)).le
     change |(corrected (intervalScaledTime terminal time)).val - terminal.val * time.val| ≤ 2 * error at numerator
@@ -87,7 +87,7 @@ theorem intervalPathRestriction_continuousAt_endpoint
     rw [identity, abs_div, abs_of_pos terminalPositive]
     apply (div_le_iff₀ terminalPositive).mpr
     nlinarith
-  have restrictedSpatial (time : SkorokhodIntervalTimeCompletion20261011) :
+  have restrictedSpatial (time : SkorokhodIntervalTimeCompletion) :
       dist (intervalPathRestriction terminal first
         (intervalRestrictedOrderIso corrected terminal terminalPositive correctedTerminal time))
         (intervalPathRestriction terminal path time) ≤ tolerance / 2 := by

@@ -1,4 +1,4 @@
-import IGSIII34.Diffusion.PathWeakAECouplingTransferCompletion20261011
+import IGSIII34.Diffusion.PathWeakAECouplingTransferCompletion
 
 set_option autoImplicit false
 set_option maxHeartbeats 1600000
@@ -38,7 +38,7 @@ theorem common_chemical_measure_transfer
     apply ProbabilityMeasure.toMeasure_injective
     exact AEMeasurable.map_map_of_aemeasurable targetContinuous.measurable.aemeasurable
       (projectionsMeasurable depth).aemeasurable
-  apply IGSIII34.Diffusion.probability_ae_sample_weak_transfer_completion20261011
+  apply IGSIII34.Diffusion.probability_ae_sample_weak_transfer_completion
     (fun depth => (measures depth : Measure (Vertices depth))) (measure : Measure Target)
     placements approximations target (fun depth => (placementsMeasurable depth).aemeasurable)
     (fun depth => (approximationsMeasurable depth).aemeasurable) targetContinuous.measurable.aemeasurable approximationsWeak

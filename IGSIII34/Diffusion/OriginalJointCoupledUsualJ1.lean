@@ -22,10 +22,10 @@ def OriginalJointCompactCoupling.geometryCost
 def OriginalJointCompactCoupling.horizonPathDistance
     {first last : OriginalJointCompactRepresentative}
     (coupling : OriginalJointCompactCoupling first last) (horizon : ℝ≥0) : ℝ :=
-  dist (skorokhodHorizonRestrictionCompletion20261011 horizon
-      (skorokhodGlobalCarrierMapCompletion20261011 coupling.firstPlacement first.path.val))
-    (skorokhodHorizonRestrictionCompletion20261011 horizon
-      (skorokhodGlobalCarrierMapCompletion20261011 coupling.lastPlacement last.path.val))
+  dist (skorokhodHorizonRestrictionCompletion horizon
+      (skorokhodGlobalCarrierMapCompletion coupling.firstPlacement first.path.val))
+    (skorokhodHorizonRestrictionCompletion horizon
+      (skorokhodGlobalCarrierMapCompletion coupling.lastPlacement last.path.val))
 
 /-- This criterion explicitly uses the original carrier metric, physical
 probability masses, planted marks and genuine J1 restrictions of the whole
@@ -65,10 +65,10 @@ theorem originalJointCoupledUsualJ1_of_integer_cost_continuous_limit
     rw [abs_of_nonneg dist_nonneg]
     apply close (couplings index).ambient (couplings index).lastPlacement
       (couplings index).lastIsometry
-      (skorokhodGlobalCarrierMapCompletion20261011 (couplings index).firstPlacement (sequence index).path.val)
+      (skorokhodGlobalCarrierMapCompletion (couplings index).firstPlacement (sequence index).path.val)
     have pathBound : dist
-        (skorokhodGlobalCarrierMapCompletion20261011 (couplings index).firstPlacement (sequence index).path.val)
-        (skorokhodGlobalCarrierMapCompletion20261011 (couplings index).lastPlacement limit.path.val) ≤
+        (skorokhodGlobalCarrierMapCompletion (couplings index).firstPlacement (sequence index).path.val)
+        (skorokhodGlobalCarrierMapCompletion (couplings index).lastPlacement limit.path.val) ≤
         (couplings index).cost := by
       exact le_add_of_nonneg_left (geometryNonnegative index)
     exact pathBound.trans_lt small

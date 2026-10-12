@@ -23,8 +23,8 @@ open scoped BigOperators
 
 @[simp] theorem skorokhodCadlagContinuousCarrierMap_id
     {Space : Type*} [MetricSpace Space] [CompactSpace Space]
-    (path : SkorokhodCadlagPathCompletion20261011 Space) :
-    skorokhodCadlagContinuousCarrierMapCompletion20261011 id continuous_id path = path := by
+    (path : SkorokhodCadlagPathCompletion Space) :
+    skorokhodCadlagContinuousCarrierMapCompletion id continuous_id path = path := by
   apply Subtype.ext
   rfl
 
@@ -43,7 +43,7 @@ def ExtendedJointCompactCoupling.sameCompactSpace
     {Space : Type} [MetricSpace Space] [CompactSpace Space]
     [MeasurableSpace Space] [BorelSpace Space]
     (first last : JointMeasuredMarkedState Space)
-    (firstPath lastPath : SkorokhodCadlagPathCompletion20261011 Space) :
+    (firstPath lastPath : SkorokhodCadlagPathCompletion Space) :
     ExtendedJointCompactCoupling
       (.ofCompactSpace first firstPath) (.ofCompactSpace last lastPath) where
   ambient := (ExtendedJointCompactRepresentative.ofCompactSpace first firstPath).ambient
@@ -56,7 +56,7 @@ theorem ExtendedJointCompactCoupling.sameCompactSpace_cost
     {Space : Type} [MetricSpace Space] [CompactSpace Space]
     [MeasurableSpace Space] [BorelSpace Space]
     (first last : JointMeasuredMarkedState Space)
-    (firstPath lastPath : SkorokhodCadlagPathCompletion20261011 Space) :
+    (firstPath lastPath : SkorokhodCadlagPathCompletion Space) :
     (sameCompactSpace first last firstPath lastPath).cost =
       jointMeasuredMarkedStateCost first last + dist firstPath lastPath := by
   letI : Nonempty Space := first.1.nonempty.to_subtype.map Subtype.val
@@ -68,9 +68,9 @@ theorem ExtendedJointCompactCoupling.sameCompactSpace_cost
   change jointMeasuredMarkedStateCost
       (jointMeasuredMarkedStateMap embedding embedding.isometry.continuous first)
       (jointMeasuredMarkedStateMap embedding embedding.isometry.continuous last) +
-    dist (skorokhodCadlagContinuousCarrierMapCompletion20261011
+    dist (skorokhodCadlagContinuousCarrierMapCompletion
       embedding embedding.isometry.continuous firstPath)
-      (skorokhodCadlagContinuousCarrierMapCompletion20261011
+      (skorokhodCadlagContinuousCarrierMapCompletion
         embedding embedding.isometry.continuous lastPath) = _
   rw [jointMeasuredMarkedStateCost_isometric_map embedding embedding.isometry,
     (skorokhodCadlagCarrierMap_isometry embedding embedding.isometry).dist_eq]
@@ -79,7 +79,7 @@ theorem ExtendedJointCompactCoupling.sameCompactSpace_same_path_cost
     {Space : Type} [MetricSpace Space] [CompactSpace Space]
     [MeasurableSpace Space] [BorelSpace Space]
     (first last : JointMeasuredMarkedState Space)
-    (path : SkorokhodCadlagPathCompletion20261011 Space) :
+    (path : SkorokhodCadlagPathCompletion Space) :
     (sameCompactSpace first last path path).cost = jointMeasuredMarkedStateCost first last := by
   rw [sameCompactSpace_cost, dist_self, add_zero]
 
@@ -87,7 +87,7 @@ theorem ExtendedJointCompactCoupling.sameCompactSpace_same_state_cost
     {Space : Type} [MetricSpace Space] [CompactSpace Space]
     [MeasurableSpace Space] [BorelSpace Space]
     (state : JointMeasuredMarkedState Space)
-    (firstPath lastPath : SkorokhodCadlagPathCompletion20261011 Space) :
+    (firstPath lastPath : SkorokhodCadlagPathCompletion Space) :
     (sameCompactSpace state state firstPath lastPath).cost = dist firstPath lastPath := by
   rw [sameCompactSpace_cost]
   simp [jointMeasuredMarkedStateCost, levyProkhorovDist_self]
@@ -120,10 +120,10 @@ def ExtendedJointCompactCoupling.isometricTransport
     [MeasurableSpace Last] [BorelSpace Last]
     (mapping : First → Last) (isometry : Isometry mapping)
     (state : JointMeasuredMarkedState First)
-    (path : SkorokhodCadlagPathCompletion20261011 First) :
+    (path : SkorokhodCadlagPathCompletion First) :
     ExtendedJointCompactCoupling (.ofCompactSpace state path)
       (.ofCompactSpace (jointMeasuredMarkedStateMap mapping isometry.continuous state)
-        (skorokhodCadlagContinuousCarrierMapCompletion20261011 mapping isometry.continuous path)) := by
+        (skorokhodCadlagContinuousCarrierMapCompletion mapping isometry.continuous path)) := by
   letI : Nonempty First := state.1.nonempty.to_subtype.map Subtype.val
   letI : Nonempty Last := (show Nonempty First from inferInstance).map mapping
   let firstCompact : NonemptyCompacts OriginalJointUniversalSpace := NonemptyCompacts.kuratowskiEmbedding First
@@ -146,7 +146,7 @@ theorem ExtendedJointCompactCoupling.isometricTransport_cost
     [MeasurableSpace Last] [BorelSpace Last]
     (mapping : First → Last) (isometry : Isometry mapping)
     (state : JointMeasuredMarkedState First)
-    (path : SkorokhodCadlagPathCompletion20261011 First) :
+    (path : SkorokhodCadlagPathCompletion First) :
     (isometricTransport mapping isometry state path).cost = 0 := by
   letI : Nonempty First := state.1.nonempty.to_subtype.map Subtype.val
   letI : Nonempty Last := (show Nonempty First from inferInstance).map mapping
@@ -169,13 +169,13 @@ theorem ExtendedJointCompactCoupling.isometricTransport_cost
         (jointMeasuredMarkedStateMap mapping isometry.continuous state) := by
     rw [jointMeasuredMarkedStateMap_comp, jointMeasuredMarkedStateMap_comp]
     simp only [composition]
-  have paths : skorokhodCadlagContinuousCarrierMapCompletion20261011
+  have paths : skorokhodCadlagContinuousCarrierMapCompletion
       (lastEmbedding ∘ mapping ∘ firstEmbedding.symm)
       (lastEmbedding.isometry.comp (isometry.comp firstEmbedding.symm.isometry)).continuous
-      (skorokhodCadlagContinuousCarrierMapCompletion20261011
+      (skorokhodCadlagContinuousCarrierMapCompletion
         firstEmbedding firstEmbedding.isometry.continuous path) =
-      skorokhodCadlagContinuousCarrierMapCompletion20261011 lastEmbedding lastEmbedding.isometry.continuous
-        (skorokhodCadlagContinuousCarrierMapCompletion20261011 mapping isometry.continuous path) := by
+      skorokhodCadlagContinuousCarrierMapCompletion lastEmbedding lastEmbedding.isometry.continuous
+        (skorokhodCadlagContinuousCarrierMapCompletion mapping isometry.continuous path) := by
     rw [skorokhodCadlagCarrierMap_comp, skorokhodCadlagCarrierMap_comp]
     simp only [composition]
   simp only [cost, isometricTransport, ExtendedJointCompactRepresentative.ofCompactSpace,
@@ -186,14 +186,14 @@ theorem ExtendedJointCompactCoupling.isometricTransport_cost
         (jointMeasuredMarkedStateMap firstEmbedding firstEmbedding.isometry.continuous state))
       (jointMeasuredMarkedStateMap lastEmbedding lastEmbedding.isometry.continuous
         (jointMeasuredMarkedStateMap mapping isometry.continuous state)) +
-      dist (skorokhodCadlagContinuousCarrierMapCompletion20261011
+      dist (skorokhodCadlagContinuousCarrierMapCompletion
         (lastEmbedding ∘ mapping ∘ firstEmbedding.symm)
         (lastEmbedding.isometry.comp (isometry.comp firstEmbedding.symm.isometry)).continuous
-        (skorokhodCadlagContinuousCarrierMapCompletion20261011
+        (skorokhodCadlagContinuousCarrierMapCompletion
           firstEmbedding firstEmbedding.isometry.continuous path))
-      (skorokhodCadlagContinuousCarrierMapCompletion20261011
+      (skorokhodCadlagContinuousCarrierMapCompletion
         lastEmbedding lastEmbedding.isometry.continuous
-        (skorokhodCadlagContinuousCarrierMapCompletion20261011 mapping isometry.continuous path)) = 0
+        (skorokhodCadlagContinuousCarrierMapCompletion mapping isometry.continuous path)) = 0
   rw [states, paths]
   simp [jointMeasuredMarkedStateCost, levyProkhorovDist_self]
 

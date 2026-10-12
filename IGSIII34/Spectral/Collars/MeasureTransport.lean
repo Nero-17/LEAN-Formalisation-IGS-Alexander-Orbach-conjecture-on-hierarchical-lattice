@@ -1,4 +1,4 @@
-import IGSIII34.Diffusion.ProbabilityWeakMetricCompletion20261011
+import IGSIII34.Diffusion.ProbabilityWeakMetricCompletion
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false
@@ -33,7 +33,7 @@ theorem levyProkhorovEDist_map_continuous_tendsto_zero
       atTop (𝓝 0) := by
   let probabilities : ℕ → ProbabilityMeasure First := fun depth => ⟨measures depth, inferInstance⟩
   let probability : ProbabilityMeasure First := ⟨limitMeasure, inferInstance⟩
-  have weak := IGSIII34.Diffusion.probability_weak_of_levyProkhorov_completion20261011 probabilities probability convergence
+  have weak := IGSIII34.Diffusion.probability_weak_of_levyProkhorov_completion probabilities probability convergence
   have mapped : Tendsto
       (fun depth => (probabilities depth).map continuous.measurable.aemeasurable) atTop
       (𝓝 (probability.map continuous.measurable.aemeasurable)) :=

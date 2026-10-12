@@ -1,4 +1,4 @@
-import IGSIII34.Percolation.Continuation.NaturalPhysicalOmegaCompletion20261011
+import IGSIII34.Percolation.Continuation.NaturalPhysicalOmegaCompletion
 import IGSIII34.Percolation.Continuation.ElectricalReciprocal
 import IGSIII34.Resistance.IIDComparison
 
@@ -14,7 +14,7 @@ open scoped _root_.Topology ENNReal
 
 variable (rule : Rule) (p : ℝ) (positive : 0 < p) (belowOne : p < 1)
   (fixedPoint : rule.network.reliability p = p)
-  (natural : NaturalResistanceCompletion20261011 rule p positive belowOne fixedPoint)
+  (natural : NaturalResistanceCompletion rule p positive belowOne fixedPoint)
 
 /-- The full conditional reciprocal sandwich on the original generation graph,
 for the SAME natural mean-one stationary electrical field. -/
@@ -70,7 +70,7 @@ theorem actual_natural_unit_graph_L2_compact_closure
     IsCompact (closure (markedGrowthScaledResistanceFamily
       rule p positive belowOne fixedPoint address natural.growth)) := by
   obtain ⟨constant, _, growthBounds, _, _⟩ :=
-    natural_physical_omega_witness_completion20261011 rule classicalRule p positive belowOne fixedPoint natural
+    natural_physical_omega_witness_completion rule classicalRule p positive belowOne fixedPoint natural
   exact markedGrowthScaledResistanceFamily_compact_closure rule classicalRule p positive belowOne fixedPoint
     address constant natural.growth (zero_lt_one.trans natural.aboveOne) growthBounds
 
@@ -84,7 +84,7 @@ theorem actual_natural_electrical_iteration_uniform_real_moment
       (∫ marks, (natural.growth⁻¹ ^ depth * electricalIteration rule marks depth []) ^ exponent
         ∂independentInnovationLaw rule p positive belowOne fixedPoint) ≤ bound := by
   obtain ⟨constant, constantPositive, growthBounds, _, _⟩ :=
-    natural_physical_omega_witness_completion20261011 rule classicalRule p positive belowOne fixedPoint natural
+    natural_physical_omega_witness_completion rule classicalRule p positive belowOne fixedPoint natural
   obtain ⟨bound, bounds⟩ := electricalOrbit_uniform_integrable_real_moment rule classicalRule
     p positive belowOne fixedPoint constant natural.growth constantPositive
     (zero_lt_one.trans natural.aboveOne) growthBounds exponent

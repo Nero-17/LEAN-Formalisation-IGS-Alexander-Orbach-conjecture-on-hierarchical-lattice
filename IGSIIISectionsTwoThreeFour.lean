@@ -1,0 +1,19 @@
+import IGSIIISectionsThreeFour
+import IGSIII.LatestSectionTwoSemanticAudit20261011
+import IGSIII.LatestSectionTwoDeclarationChecks20261011
+import IGSIII34.Spectral.ActualPositiveParameterResolvent20261011
+import IGSIII34.Spectral.PositiveResolventNonzeroSupremum20261011
+import IGSIII34.Diffusion.ActualIntrinsicResistanceDiameter20261011
+import IGSIII34.Spectral.ActualIntrinsicComponentResolvent20261011
+import IGSIII.Chemical.SubstitutionPaths.AllConfigurationBounds20261011
+import IGSIII.Geometry.ExpectedChemicalMassDimension20261011
+import IGSIII.ActualChemicalCellRouteCompletion20261011
+import IGSIII.Chemical.SubstitutionPaths.ActualPrefixVarianceRate20261011
+import IGSIII.Chemical.SubstitutionPaths.PrefixDepthMonotonicity20261011
+import IGSIII.Mass.RetainedStateDefinitions20261011
+
+/-! The original Sections 2–4 topics now occupy Sections 2–5. This aggregate
+contains the reviewed corrected statements, including exact chemical routes
+and raw-prefix variance rates. The manuscript correspondence records the
+necessary Chernoff and conditional AO corrections; the global AO assertion
+remains a conjecture. The historical aggregate filename is retained. -/

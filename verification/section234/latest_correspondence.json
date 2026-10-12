@@ -1,0 +1,3077 @@
+{
+  "status": "complete",
+  "reviewedUtc": "2026-10-11T15:12:36.328835+00:00",
+  "sourcePaperCommit": "72298e5c47d6f5451dd8ed2e91d0b82dcd3777a3",
+  "sourcePaperSha256": "84a8d1625fe80b5472f0ecd8938ffdcfbfb8bc62c3dff27f8e091bf473f8dc2e",
+  "scope": "Original Sections2–4 task topics, now Sections2–5 and supporting AppendixA/B. Certifies corrected positive-theta and conditional AO statements. Literal uncorrected source is not certified; the global conjecture remains unproved.",
+  "unresolvedLeanObligations": [],
+  "manuscriptClarifications": [
+    {
+      "claimId": "S234-THETA",
+      "label": "lem:chemical-paths",
+      "kind": "necessary_missing_sign_hypothesis_in_supporting_appendix",
+      "correction": "Declare theta > 0 for both exponential path-barrier clauses.",
+      "evidence": "Signed deterministic costs U=2,V=1,c=1, theta=-log(4*C_R) satisfy the displayed ratio bound but violate the claimed probability bound. Lean retains the necessary positivity."
+    },
+    {
+      "claimId": "S235-AO-CONDITIONAL",
+      "label": "thm:ao-region",
+      "kind": "necessary_restoration_of_deleted_spectral_dimension_conditional",
+      "correction": "Restore: typical spectral dimension differs from4/3 whenever the dimension pair lies outside the open rectangle.",
+      "evidence": "Introduction and proof establish equality-forces-inside, not universal-outside. The literal stronger assertion would resolve the still-open global conjecture and is not certified.",
+      "literalSourceDisposition": "REJECT"
+    },
+    {
+      "claimId": "S235-CONJECTURE-NOTATION",
+      "label": "conj:ao-global",
+      "kind": "clarify_scope_of_unproved_conjecture",
+      "correction": "Interpret the conjecture as natural limiting-diffusion spectral dimension at physical-mass typical points and the rule own critical point.",
+      "evidence": "Latest body uses undefined bare spectral-dimension notation; its introduction retains the precise natural typical formulation. Neither interpretation is claimed proved."
+    }
+  ],
+  "semanticClarifications": [
+    {
+      "claimId": "S234-SOCKETS",
+      "label": "lem:cell-scaling-law",
+      "disposition": "ACCEPT_EXPLICIT_CONNECTED_COMPONENT_STATEMENT",
+      "meaning": "Latest lemma explicitly names connected cells at distinct socket addresses. Independence is conditional on ancestor raw innovations; one B socket retains the joint N continuation law of its two sides.",
+      "widerReadingCounterexample": "Diamond middle-vertex source/target membership under N has each conditional probability p/(1+p), but zero intersection probability."
+    }
+  ],
+  "standardConventions": [
+    "The exact nonzero variational supremum is formally identified with the all-potentials supremum by actual_positive_variational_supremum_nonzero_completion20261011; actual_positive_laplace_variational_nonzero_completion20261011 proves the literal formula for every positive parameter.",
+    "Library generation depth corresponds to manuscript n=depth+1; seed is explicitly indexed.",
+    "Four oriented live types and three-state manuscript matrix have proved identical Perron root.",
+    "Small-time compact diffusion at physical-mass typical points; all-start quenched law convergence and continuous-limit usual-local J1; no every-born-vertex or infinite microscopic long-time claim."
+  ],
+  "latestEnvironmentCount": 60,
+  "latestEnvironmentLabelCount": 61,
+  "latestEnvironmentInventory": [
+    {
+      "label": "def:critical-cluster",
+      "kind": "definition",
+      "line": 292,
+      "statementSha256": "1464dbc619a438673cc58c452a813427b666c1ead115718b1b313d399863f5e6"
+    },
+    {
+      "label": "lem:chemical-elementary-bounds",
+      "kind": "lemma",
+      "line": 299,
+      "statementSha256": "f5c8100e4cff72cccd22f42c1a8ae50b9af957268dc56e4aebce5338e71d4908"
+    },
+    {
+      "label": "def:chemical-recursion",
+      "kind": "definition",
+      "line": 314,
+      "statementSha256": "b374af4fac7d4100627a637c7d68d3e785887bf38fe3db8e866290973650b2fb"
+    },
+    {
+      "label": "lem:chemical-path-functional",
+      "kind": "lemma",
+      "line": 323,
+      "statementSha256": "0f60090673079a56a82789d527554bd918fe8744e10308d8be79fc5371196cff"
+    },
+    {
+      "label": "thm:chemical-field",
+      "kind": "theorem",
+      "line": 348,
+      "statementSha256": "57828f7ac1285bc59c431b7fad9158c49506e0c5fae6a821be4efcd7eedcb2a6"
+    },
+    {
+      "label": "lem:chemical-field-integrability",
+      "kind": "lemma",
+      "line": 363,
+      "statementSha256": "eef80b1dacf52500f0a332be9cdbdd806fb11359792d30c648337f2631c838ca"
+    },
+    {
+      "label": "thm:chemical-scalar",
+      "kind": "theorem",
+      "line": 375,
+      "statementSha256": "89c74341ac37913faaee7cd7ad4ba480164f329b425905b38dc86fa65b1cbef4"
+    },
+    {
+      "label": "ex:chemical-scales",
+      "kind": "example",
+      "line": 408,
+      "statementSha256": "82b11ed4c6b83dd6334378263dedb9cf4930d8824523bb5f2a3170a61c2dae16"
+    },
+    {
+      "label": "def:retained-states",
+      "kind": "definition",
+      "line": 436,
+      "statementSha256": "6e144a459c500df84a0171c2843202fb1272d050a880c5a36443f5cb976b0e4a"
+    },
+    {
+      "label": "lem:mass-matrix",
+      "kind": "lemma",
+      "line": 451,
+      "statementSha256": "c1a10e7ea6399c8d72a834d0674226c58b2e345d6ce51d293c38d55d2e27ce0c"
+    },
+    {
+      "label": "lem:population-limit",
+      "kind": "lemma",
+      "line": 470,
+      "statementSha256": "bb2e3bd1fc3737e215aa6912433a7952f2624287886f64eec2fd6c1fee2d550f"
+    },
+    {
+      "label": "lem:vertex-mass-limit",
+      "kind": "lemma",
+      "line": 490,
+      "statementSha256": "40b84bdf997fe73ff425c5ae236af7be2adc31091fb7a09125fd5e3e95ba573c"
+    },
+    {
+      "label": "lem:mass-perron",
+      "kind": "lemma",
+      "line": 512,
+      "statementSha256": "9e8715220ce3810b7c1223f6305910c2d432ca369460b23fea3587220cfb8081"
+    },
+    {
+      "label": "thm:full-ghp",
+      "kind": "theorem",
+      "line": 535,
+      "statementSha256": "08051c37447328fdafb9d046ee17e014eaa9a63aab47f1a3628b0c8d4d1648ec"
+    },
+    {
+      "label": "lem:cell-localisation",
+      "kind": "lemma",
+      "line": 589,
+      "statementSha256": "22f7c4cd06f670f19a88cc7d13206d9192cda93e31a1850247d162e7c4c313b1"
+    },
+    {
+      "label": "lem:cell-separation",
+      "kind": "lemma",
+      "line": 611,
+      "statementSha256": "9b214d9ee66295ed64f19ace2631a06c38f8dae09598d400c35c74ff00d70c3f"
+    },
+    {
+      "label": "lem:cell-scaling-law",
+      "kind": "lemma",
+      "line": 625,
+      "statementSha256": "09a21689dd699332429a016de218d2b6af22e2a5e81f90df16ac328b34e64ba4"
+    },
+    {
+      "label": "def:chemical-dimension",
+      "kind": "definition",
+      "line": 637,
+      "statementSha256": "f4cc30bce470de9d519d48d64ec1795e80903c9be8c075fdc8ed3024fa4d25d6"
+    },
+    {
+      "label": "prop:chemical-minkowski-dimension",
+      "kind": "theorem",
+      "line": 643,
+      "statementSha256": "13ae29cce8afbb648b6812e3b2cc5fd085c15a6e249a6a1e4b26aba420e5cb39"
+    },
+    {
+      "label": "lem:electrical-eigenlaw",
+      "kind": "lemma",
+      "line": 709,
+      "statementSha256": "616fa17f461530c6efd9549ec10a10a36045eff1af79b0d6ccb4d249267a22b3"
+    },
+    {
+      "label": "lem:electrical-field",
+      "kind": "lemma",
+      "line": 760,
+      "statementSha256": "787267693021075a290d3a28c8811f2da9f0eb877713e36576f3e3309c823ed6"
+    },
+    {
+      "label": "lem:electrical-sandwich",
+      "kind": "lemma",
+      "line": 784,
+      "statementSha256": "87e113e7fc97c53f78948e4cd0dc1b62448e71971e758e78fd4eb2f66a2aff2b"
+    },
+    {
+      "label": "lem:electrical-uniform-moments",
+      "kind": "lemma",
+      "line": 798,
+      "statementSha256": "27e691a69170cde43de745ae55b6823dd232f20c70284146423dcfa97db60c8d"
+    },
+    {
+      "label": "thm:resistance-exponent",
+      "kind": "theorem",
+      "line": 817,
+      "statementSha256": "9e6509984b0cd0408edfb29ca53ae0c1331c35dbed9277045effc55d0bd982d6"
+    },
+    {
+      "label": "cor:resistance-moment-exponents",
+      "kind": "corollary",
+      "line": 846,
+      "statementSha256": "0899ed03bd424e016f4ccb4913059fb2f1baee33369b61bc6af2cc595519c103"
+    },
+    {
+      "label": "lem:electrical-compactness",
+      "kind": "lemma",
+      "line": 876,
+      "statementSha256": "433f1d3448e0a9c4893dce3fee18dfdc3ab405c9b46d2e750b31fac53f4ba800"
+    },
+    {
+      "label": "lem:electrical-comparison",
+      "kind": "lemma",
+      "line": 926,
+      "statementSha256": "c0024daedd671f4cf693935f9afef3bbd85994278edf84e1ffe155bc2af0217f"
+    },
+    {
+      "label": "thm:electrical-amplitudes",
+      "kind": "theorem",
+      "line": 963,
+      "statementSha256": "cfbba5a726cadab8ec42d7853c10d73e048a1ba32e16422239f24d9a4f847ebd"
+    },
+    {
+      "label": "cor:electrical-moment-limits",
+      "kind": "corollary",
+      "line": 1007,
+      "statementSha256": "5ba647916e2248680729efcf5b263d6aebdaa05d7ca465eb5a18c712e223af16"
+    },
+    {
+      "label": "thm:electrical-uniqueness",
+      "kind": "theorem",
+      "line": 1016,
+      "statementSha256": "8b2c93f73181e25a55559a737e3340bb276aa885f6fb6a713dc1fdf9737aac21"
+    },
+    {
+      "label": "lem:full-resistance-mesh",
+      "kind": "lemma",
+      "line": 1037,
+      "statementSha256": "7833f0d7020460af8e572c4c99c7a3bcbf86b303dc53d92a260e2ab03d662f8f"
+    },
+    {
+      "label": "thm:resistance-metric",
+      "kind": "theorem",
+      "line": 1078,
+      "statementSha256": "619ef577706ec8a342bd9b6c0f1e474b6277b5f31e0002a835fadc5616e9fcdc"
+    },
+    {
+      "label": "thm:full-resistance-form",
+      "kind": "theorem",
+      "line": 1152,
+      "statementSha256": "a1bea5a0cf80f8cac9051ab6fa6bdf413bfa65252d6dc90291d8dc6f23b7dc64"
+    },
+    {
+      "label": "lem:degree-measure",
+      "kind": "lemma",
+      "line": 1192,
+      "statementSha256": "252993b65a7c8d630f97151900145339660d673461e4676b2f0063955d269ad1"
+    },
+    {
+      "label": "thm:natural-process",
+      "kind": "theorem",
+      "line": 1230,
+      "statementSha256": "ee1aa1d3d37cc4cc1a81716d058bb50d1e59ca2a9c8e52d87958569c412042ce"
+    },
+    {
+      "label": "cor:continuous-time-walk",
+      "kind": "corollary",
+      "line": 1278,
+      "statementSha256": "88a0314b50ad9e33832c524b5ec0b2b42fa84bbfd9c8bc34ae904037bd8e865b"
+    },
+    {
+      "label": "cor:variable-speed-walk",
+      "kind": "corollary",
+      "line": 1286,
+      "statementSha256": "f54faebfff74b3d08b8fa432cc69fd80300035163a0ab1e7f2fcf3bbcc20c667"
+    },
+    {
+      "label": "cor:deterministic-clock",
+      "kind": "corollary",
+      "line": 1296,
+      "statementSha256": "555c4c6ac70d1ce8008afe92b02ea455249aed33623a9ebf323da88e779e4024"
+    },
+    {
+      "label": "def:spectral-dimension",
+      "kind": "definition",
+      "line": 1320,
+      "statementSha256": "8476775e1facd8bf393d16fe0c46773b81a88b3a1f2b78851de5df2cd56372d0"
+    },
+    {
+      "label": "thm:heat-kernels",
+      "kind": "theorem",
+      "line": 1336,
+      "statementSha256": "b79497a4df9ef913e4c643c820b55c917cf22832627429e7e356fd5b98a909df"
+    },
+    {
+      "label": "lem:spectral-typical",
+      "kind": "theorem",
+      "line": 1336,
+      "statementSha256": "b79497a4df9ef913e4c643c820b55c917cf22832627429e7e356fd5b98a909df"
+    },
+    {
+      "label": "ex:spectral-threshold",
+      "kind": "example",
+      "line": 1385,
+      "statementSha256": "632fa62b5faece404a40e283e0e7b0281f64851b73913f6d9629c0ec27494b98"
+    },
+    {
+      "label": "lem:critical-supersolution",
+      "kind": "lemma",
+      "line": 1427,
+      "statementSha256": "e8ff489c2e4229ddc211e9ddbfeef6a82ceae0dc16a36de5b464db1f5b54bd68"
+    },
+    {
+      "label": "lem:strict-chemical-resistance",
+      "kind": "lemma",
+      "line": 1464,
+      "statementSha256": "20c0fb808842798d94f62c45913f0ffc0a250f7147443e4fa62b85c3a71038fe"
+    },
+    {
+      "label": "lem:mass-core-clock",
+      "kind": "lemma",
+      "line": 1484,
+      "statementSha256": "3dafda35526d19f65c9ae94a8f704c9b3934d9bbc3aa8633c466963f2c99d080"
+    },
+    {
+      "label": "thm:ao-region",
+      "kind": "aoresult",
+      "line": 1511,
+      "statementSha256": "50689579de3ba2b17f68713c5be7fc477df649356acbb315659e55232aebd451"
+    },
+    {
+      "label": "ex:long-diamond-region",
+      "kind": "example",
+      "line": 1531,
+      "statementSha256": "7a07b5842d0869da8ffc4f2e0d370cb489eaaa52ca923aa6781560b18aabf093"
+    },
+    {
+      "label": "conj:ao-global",
+      "kind": "aoconjecture",
+      "line": 1546,
+      "statementSha256": "c4a2d66c26d1f59cc3b42cd49c00eb90e383253ea65115891e440e0daedf2ea3"
+    },
+    {
+      "label": "lem:chemical-moments",
+      "kind": "lemma",
+      "line": 1698,
+      "statementSha256": "f2be3e97b071a8e163070e91d66545392d36f147f1ede1ccc9b35d1fd5dbc1cd"
+    },
+    {
+      "label": "lem:chemical-paths",
+      "kind": "lemma",
+      "line": 1784,
+      "statementSha256": "14345aa7e53f72da93438499ead3ceae0c6d9dfe48c9d99ec80813ee32c5b4d4"
+    },
+    {
+      "label": "lem:chemical-compactness",
+      "kind": "lemma",
+      "line": 1811,
+      "statementSha256": "6a1dace6238cf7551fef087288faa6b6550c1a92602d65f9344b63b85a76f3b3"
+    },
+    {
+      "label": "lem:chemical-endpoint",
+      "kind": "lemma",
+      "line": 1885,
+      "statementSha256": "891055a97bac715e809c42a4382ebb9772c9a112a0b6c80789954d653616840e"
+    },
+    {
+      "label": "lem:full-mesh",
+      "kind": "lemma",
+      "line": 1921,
+      "statementSha256": "2b9781a8ec5f1d0f5ea8bbd1f1e5eda3c13fb5f1f4fe5bb0fe63d8755e155807"
+    },
+    {
+      "label": "lem:spectral-moments",
+      "kind": "lemma",
+      "line": 1988,
+      "statementSha256": "86d880095c39fc526516d6eccc3985c976c7c37b91755ea6a295f50f772e4da4"
+    },
+    {
+      "label": "lem:collar-expected-mass",
+      "kind": "lemma",
+      "line": 2012,
+      "statementSha256": "52675f67e94f79f9b1be561b795ed59920a19c5a49d8f7959a45c6a08af5d5cb"
+    },
+    {
+      "label": "lem:skeleton-zero-mass",
+      "kind": "lemma",
+      "line": 2029,
+      "statementSha256": "d0231ca38d7c7c9cda5f17144e62a293711c738b0a57a360f0118c3ee7821a86"
+    },
+    {
+      "label": "lem:spectral-collars",
+      "kind": "lemma",
+      "line": 2040,
+      "statementSha256": "2a71c20d450f52e8e8d5164310aa5091715e000a60ea291a7197269c36c34775"
+    },
+    {
+      "label": "lem:heat-kernel-continuity",
+      "kind": "lemma",
+      "line": 2068,
+      "statementSha256": "98490bda24a38a0f3775f647aaace34ef7980cd29e65de9d5861ba5707f8a7df"
+    },
+    {
+      "label": "lem:resolvent-variational",
+      "kind": "lemma",
+      "line": 2089,
+      "statementSha256": "8f43b9e40fe39821e165eeb89ea1e518fcf63da4ee3347638d4fe23b57df82a9"
+    },
+    {
+      "label": "lem:resolvent-component-bound",
+      "kind": "lemma",
+      "line": 2102,
+      "statementSha256": "57f9d992a8563ec4c92a22fdecfe2ccc75357d1c0ba60ae50cbf78d703c62fd0"
+    },
+    {
+      "label": "lem:spectral-resolvent",
+      "kind": "lemma",
+      "line": 2120,
+      "statementSha256": "f93b956b6c024b156e9e099b7b3d9a6e0c8b1388d41535fa93a941c0ad6a680a"
+    }
+  ],
+  "obligations": [
+    {
+      "label": "def:critical-cluster",
+      "section": 2,
+      "manuscriptLines": [
+        292,
+        296
+      ],
+      "kind": "definition",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "The metric instance actualFiniteClusterMetricSpace uses actual graph distance/growth^(depth+1). Library generation0 = manuscript level1.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII.Geometry.ActualFiniteCluster",
+          "source": "IGSIII/Geometry/ActualFiniteCluster.lean",
+          "sha256": "7bbc90b2ad97de477c797f75b18e6b76709c9137ba00b4afcbd0d358103b4032",
+          "clause": "actual_full_source_reachable_cluster"
+        },
+        {
+          "declaration": "IGSIII.Geometry.actualFiniteClusterMeasure",
+          "source": "IGSIII/Geometry/ActualFiniteMass.lean",
+          "sha256": "defcbf30d91e10afb86478ca00fdfc23bf6137ec2604b839be65c63f595ada82",
+          "clause": "uniform_all_vertices"
+        },
+        {
+          "declaration": "IGSIII.Geometry.actualFiniteCluster_card",
+          "source": "IGSIII/Geometry/ActualFiniteMass.lean",
+          "sha256": "defcbf30d91e10afb86478ca00fdfc23bf6137ec2604b839be65c63f595ada82",
+          "clause": "terminals_included"
+        }
+      ]
+    },
+    {
+      "label": "lem:chemical-elementary-bounds",
+      "section": 2,
+      "manuscriptLines": [
+        299,
+        304
+      ],
+      "kind": "lemma",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "New isolated induction covers every actual crossing configuration; library generation depth equals manuscript depth+1. The manuscript depth-zero seed is treated separately.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII.Chemical.Substitution.actual_configuration_terminal_distance_bounds20261011",
+          "source": "IGSIII/Chemical/SubstitutionPaths/AllConfigurationBounds20261011.lean",
+          "sha256": "7c69cfdb8a27acf570ce8549049c9b9da619b176c03d76fffa3f7743ae3519a8",
+          "clause": "all_actual_crossing_configurations"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.actual_seed_terminal_distance_bounds20261011",
+          "source": "IGSIII/Chemical/SubstitutionPaths/AllConfigurationBounds20261011.lean",
+          "sha256": "7c69cfdb8a27acf570ce8549049c9b9da619b176c03d76fffa3f7743ae3519a8",
+          "clause": "manuscript_seed_generation_zero"
+        }
+      ]
+    },
+    {
+      "label": "def:chemical-recursion",
+      "section": 2,
+      "manuscriptLines": [
+        314,
+        321
+      ],
+      "kind": "definition",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "The library zero-distance convention on noncrossing configurations is excluded by the manuscript crossing law; the actual path family retains every simple terminal path.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII.Chemical.Substitution.edgePathFamily",
+          "source": "IGSIII/Chemical/SubstitutionPaths/IndexedPaths.lean",
+          "sha256": "65cad0a78b1e758595e2dbe90bf2c99e1c43be96a1b052f86206621706a831ca",
+          "clause": "actual_simple_terminal_path_family"
+        },
+        {
+          "declaration": "IGSIII.Chemical.PathFamily.shortest",
+          "source": "IGSIII/Chemical/PathFunctional.lean",
+          "sha256": "d5ab77dfe51471b731a90778c4ac21e2dc685c0c38bd8818995b9155e47139b2",
+          "clause": "minimum_sum_of_edge_lengths"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.generation_distance_eq_cellMinPlus",
+          "source": "IGSIII/Chemical/SubstitutionPaths/History.lean",
+          "sha256": "3c56830d615eef092810e449db7e0a94b78bdac2dad13ce681c51b4730e9a168",
+          "clause": "arbitrary_actual_configuration_exact_recursion"
+        }
+      ]
+    },
+    {
+      "label": "lem:chemical-path-functional",
+      "section": 2,
+      "manuscriptLines": [
+        323,
+        328
+      ],
+      "kind": "lemma",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "All five properties hold for any finite nonempty path family, hence for actual crossing cores. Nonnegative scaling is explicit in shortest_scale.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII.Chemical.PathFamily.shortest_mono",
+          "source": "IGSIII/Chemical/PathFunctional.lean",
+          "sha256": "d5ab77dfe51471b731a90778c4ac21e2dc685c0c38bd8818995b9155e47139b2",
+          "clause": "increasing"
+        },
+        {
+          "declaration": "IGSIII.Chemical.PathFamily.shortest_concaveOn",
+          "source": "IGSIII/Chemical/PathFunctional.lean",
+          "sha256": "d5ab77dfe51471b731a90778c4ac21e2dc685c0c38bd8818995b9155e47139b2",
+          "clause": "concave"
+        },
+        {
+          "declaration": "IGSIII.Chemical.PathFamily.shortest_scale",
+          "source": "IGSIII/Chemical/PathFunctional.lean",
+          "sha256": "d5ab77dfe51471b731a90778c4ac21e2dc685c0c38bd8818995b9155e47139b2",
+          "clause": "positive_homogeneity"
+        },
+        {
+          "declaration": "IGSIII.Chemical.PathFamily.shortest_superadditive",
+          "source": "IGSIII/Chemical/PathFunctional.lean",
+          "sha256": "d5ab77dfe51471b731a90778c4ac21e2dc685c0c38bd8818995b9155e47139b2",
+          "clause": "superadditivity"
+        },
+        {
+          "declaration": "IGSIII.Chemical.PathFamily.shortest_lipschitz",
+          "source": "IGSIII/Chemical/PathFunctional.lean",
+          "sha256": "d5ab77dfe51471b731a90778c4ac21e2dc685c0c38bd8818995b9155e47139b2",
+          "clause": "sum_absolute_differences_bound"
+        }
+      ]
+    },
+    {
+      "label": "thm:chemical-field",
+      "section": 2,
+      "manuscriptLines": [
+        348,
+        354
+      ],
+      "kind": "theorem",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII.Chemical.Substitution.exists_actual_chemical_scalar",
+          "source": "IGSIII/Chemical/ChemicalScalar.lean",
+          "sha256": "b994ad771f32966d07a41692c35aa140546495058157cd6c763a658e8abcef6e",
+          "clause": "growth_in_shortest_longest_interval"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.exists_actual_chemical_scalar",
+          "source": "IGSIII/Chemical/ChemicalScalar.lean",
+          "sha256": "b994ad771f32966d07a41692c35aa140546495058157cd6c763a658e8abcef6e",
+          "clause": "same_endogenous_positive_mean_one_field"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.exists_actual_chemical_scalar",
+          "source": "IGSIII/Chemical/ChemicalScalar.lean",
+          "sha256": "b994ad771f32966d07a41692c35aa140546495058157cd6c763a658e8abcef6e",
+          "clause": "simultaneous_stationary_recursion"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.chemicalField_measurable",
+          "source": "IGSIII/Chemical/StationaryField.lean",
+          "sha256": "916ddc2bcad2ca8f26ac43921e8e7bd93bb75f0f073b11f90887ac4ad8526c77",
+          "clause": "original_innovation_measurability"
+        }
+      ]
+    },
+    {
+      "label": "lem:chemical-field-integrability",
+      "section": 2,
+      "manuscriptLines": [
+        363,
+        365
+      ],
+      "kind": "lemma",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII.Chemical.Substitution.exists_actual_chemical_scalar",
+          "source": "IGSIII/Chemical/ChemicalScalar.lean",
+          "sha256": "b994ad771f32966d07a41692c35aa140546495058157cd6c763a658e8abcef6e",
+          "clause": "all_positive_finite_moments"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.exists_actual_chemical_scalar",
+          "source": "IGSIII/Chemical/ChemicalScalar.lean",
+          "sha256": "b994ad771f32966d07a41692c35aa140546495058157cd6c763a658e8abcef6e",
+          "clause": "all_negative_finite_moments"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.exists_actual_chemical_scalar",
+          "source": "IGSIII/Chemical/ChemicalScalar.lean",
+          "sha256": "b994ad771f32966d07a41692c35aa140546495058157cd6c763a658e8abcef6e",
+          "clause": "all_nonnegative_exponential_parameters"
+        }
+      ]
+    },
+    {
+      "label": "thm:chemical-scalar",
+      "section": 2,
+      "manuscriptLines": [
+        375,
+        383
+      ],
+      "kind": "theorem",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII.Chemical.Substitution.exists_actual_chemical_scalar",
+          "source": "IGSIII/Chemical/ChemicalScalar.lean",
+          "sha256": "b994ad771f32966d07a41692c35aa140546495058157cd6c763a658e8abcef6e",
+          "clause": "same_field_common_deterministic_amplitude"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.exists_actual_chemical_scalar",
+          "source": "IGSIII/Chemical/ChemicalScalar.lean",
+          "sha256": "b994ad771f32966d07a41692c35aa140546495058157cd6c763a658e8abcef6e",
+          "clause": "all_addresses_whole_sequence_ae_limit"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.exists_actual_chemical_scalar",
+          "source": "IGSIII/Chemical/ChemicalScalar.lean",
+          "sha256": "b994ad771f32966d07a41692c35aa140546495058157cd6c763a658e8abcef6e",
+          "clause": "every_positive_finite_lp_order"
+        }
+      ]
+    },
+    {
+      "label": "ex:chemical-scales",
+      "section": 2,
+      "manuscriptLines": [
+        408,
+        431
+      ],
+      "kind": "example",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Exact algebraic lower bound is certified; displayed decimal approximately2.0536 is illustrative, not a separate certified rounding claim. Generic equal-path module imported explicitly by fresh audit entrypoint.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII.Chemical.Substitution.actual_marked_distance_eq_pow_of_equal_paths",
+          "source": "IGSIII/Chemical/EqualLengthActual.lean",
+          "sha256": "baa45467a7e05f2c8c81cd6574c2e4160e1b1b717766d65bbaf5ebf692181399",
+          "clause": "generic_equal_paths_exact_distance"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.equal_paths_scalar_rigidity",
+          "source": "IGSIII/Chemical/EqualLengthScalar.lean",
+          "sha256": "f7144bd81e88b80ee6a3fc1ff4eb7adb4e5a2e3fab92edde65710f456849734e",
+          "clause": "generic_growth_amplitude_and_field_rigidity"
+        },
+        {
+          "declaration": "IGSIII.Chemical.SmallBall.exists_actual_diamond_critical_scalar",
+          "source": "IGSIII/Chemical/SmallBall/DiamondScalar.lean",
+          "sha256": "ff0b82e150e8a52e073966572bcfbfad971897a621cca1ff9ae5427f2e9df954",
+          "clause": "actual_diamond_scale_two"
+        },
+        {
+          "declaration": "IGSIII.Chemical.FiveCycle.rule_classical",
+          "source": "IGSIII/Chemical/SubstitutionPaths/FiveCycleActual.lean",
+          "sha256": "b5793b66a6243b01416b8c6fd9de2891cffe3392cd2d25e427200731f00812ee",
+          "clause": "actual_five_cycle_classical"
+        },
+        {
+          "declaration": "IGSIII.Chemical.FiveCycle.actual_reliability",
+          "source": "IGSIII/Chemical/SubstitutionPaths/FiveCycleActual.lean",
+          "sha256": "b5793b66a6243b01416b8c6fd9de2891cffe3392cd2d25e427200731f00812ee",
+          "clause": "actual_five_cycle_reliability"
+        },
+        {
+          "declaration": "IGSIII.Chemical.FiveCycle.actual_fixedPoint_iff",
+          "source": "IGSIII/Chemical/SubstitutionPaths/FiveCycleActual.lean",
+          "sha256": "b5793b66a6243b01416b8c6fd9de2891cffe3392cd2d25e427200731f00812ee",
+          "clause": "actual_five_cycle_critical_equation"
+        },
+        {
+          "declaration": "IGSIII.Chemical.FiveCycle.short_branch_probability",
+          "source": "IGSIII/Chemical/SubstitutionPaths/FiveCycleBranchLaw.lean",
+          "sha256": "c56036b31da961ed5952befade8db41df6754a1b4a2a3bc697a4499cf2b3e23b",
+          "clause": "conditional_short_branch_probability"
+        },
+        {
+          "declaration": "IGSIII.Chemical.FiveCycle.long_branch_probability",
+          "source": "IGSIII/Chemical/SubstitutionPaths/FiveCycleBranchLaw.lean",
+          "sha256": "c56036b31da961ed5952befade8db41df6754a1b4a2a3bc697a4499cf2b3e23b",
+          "clause": "conditional_long_branch_probability"
+        },
+        {
+          "declaration": "IGSIII.Chemical.FiveCycle.actual_inverse_third_moment_recursion",
+          "source": "IGSIII/Chemical/SubstitutionPaths/FiveCycleInverseMoments.lean",
+          "sha256": "67047403532d599c2283e79862ded824555566024e25627857474c838ddd700f",
+          "clause": "inverse_cube_recursion"
+        },
+        {
+          "declaration": "IGSIII.Chemical.FiveCycle.actual_growth_lower_bound",
+          "source": "IGSIII/Chemical/SubstitutionPaths/FiveCycleGrowth.lean",
+          "sha256": "67205d7961c4015e32701ccedbe8e0867458e0d70a5783f4e4da700c0820f14e",
+          "clause": "explicit_cubic_root_bound_and_strict_growth"
+        },
+        {
+          "declaration": "IGSIII.Chemical.FiveCycle.inverse_third_moment_coefficient_bounds",
+          "source": "IGSIII/Chemical/FiveCycle.lean",
+          "sha256": "aea9884ec050b5410ced81e1f3ad167e6b98b9cd994cbb410e87cfc393653aeb",
+          "clause": "rational_strict_coefficient_bound"
+        }
+      ]
+    },
+    {
+      "label": "def:retained-states",
+      "section": 2,
+      "manuscriptLines": [
+        436,
+        441
+      ],
+      "kind": "definition",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Four live oriented states plus an inactive state are represented explicitly. The two sides of one B socket retain their joint innovation.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII.Mass.actual_retained_state_classifier20261011",
+          "source": "IGSIII/Mass/RetainedStateDefinitions20261011.lean",
+          "sha256": "7062b4bb71f855923334ad468cfbade82af8a84595b1e155902a8472f14fa722",
+          "clause": "separate_connected_both_and_two_one_arm_states"
+        },
+        {
+          "declaration": "IGSIII.Mass.actual_retained_child_state_definition20261011",
+          "source": "IGSIII/Mass/RetainedStateDefinitions20261011.lean",
+          "sha256": "7062b4bb71f855923334ad468cfbade82af8a84595b1e155902a8472f14fa722",
+          "clause": "child_state_from_actual_parent_configuration"
+        },
+        {
+          "declaration": "IGSIII.Mass.actual_retained_selection_definition20261011",
+          "source": "IGSIII/Mass/RetainedStateDefinitions20261011.lean",
+          "sha256": "7062b4bb71f855923334ad468cfbade82af8a84595b1e155902a8472f14fa722",
+          "clause": "union_of_selected_terminal_components"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.independentInnovationLaw",
+          "source": "IGSIII/Chemical/SubstitutionPaths/IndependentInnovations.lean",
+          "sha256": "a774ff6f363659086ac4168732c853ffb26e10381970e9910aebb253add0b56f",
+          "clause": "independent_crossing_noncrossing_innovation_pairs"
+        }
+      ]
+    },
+    {
+      "label": "lem:mass-matrix",
+      "section": 2,
+      "manuscriptLines": [
+        451,
+        453
+      ],
+      "kind": "lemma",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "",
+      "entryPoints": [
+        {
+          "declaration": "Universality.Rule.Classical.four_state_mass_perron",
+          "source": "IGSIII/Mass/FourStateMassPerron.lean",
+          "sha256": "ae3c592f143eeda2b0f421c6a00e5115b59a72e3d06ae7f77bd4fda198eb9fc9",
+          "clause": "positive_fourth_power"
+        },
+        {
+          "declaration": "Universality.Rule.Classical.four_state_mass_perron",
+          "source": "IGSIII/Mass/FourStateMassPerron.lean",
+          "sha256": "ae3c592f143eeda2b0f421c6a00e5115b59a72e3d06ae7f77bd4fda198eb9fc9",
+          "clause": "actual_three_four_state_spectral_radius_equality"
+        },
+        {
+          "declaration": "Universality.Rule.Classical.distance_le_mass_spectralRadius",
+          "source": "IGSIII/Mass/ShortestRouteBound.lean",
+          "sha256": "7d96a03a25b124ae3d59aa70587473482591229a1dcac25229f7ef1f01c05616",
+          "clause": "spectral_radius_ge_terminal_distance"
+        }
+      ]
+    },
+    {
+      "label": "lem:population-limit",
+      "section": 2,
+      "manuscriptLines": [
+        470,
+        477
+      ],
+      "kind": "lemma",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Descendant four-coordinate martingale limits are the universal root theorem pulled back through each markedHistoryPath; countable address intersection supplies simultaneous versions. The mapped vertex limits retain B-side coupling.",
+      "entryPoints": [
+        {
+          "declaration": "Universality.Rule.Classical.four_state_mass_perron",
+          "source": "IGSIII/Mass/FourStateMassPerron.lean",
+          "sha256": "ae3c592f143eeda2b0f421c6a00e5115b59a72e3d06ae7f77bd4fda198eb9fc9",
+          "clause": "one_common_positive_mean_one_random_limit"
+        },
+        {
+          "declaration": "Universality.Rule.Classical.four_state_mass_perron",
+          "source": "IGSIII/Mass/FourStateMassPerron.lean",
+          "sha256": "ae3c592f143eeda2b0f421c6a00e5115b59a72e3d06ae7f77bd4fda198eb9fc9",
+          "clause": "all_four_oriented_population_coordinates"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.independentInnovationLaw_history_path",
+          "source": "IGSIII/Mass/HistoryPathLaw.lean",
+          "sha256": "c920047ec192ab20a3d4cb1d24b52cad6e0e9fd86f1dd6deb0a77eb3672d63e4",
+          "clause": "pullback_actual_descendant_law"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.marked_oriented_vertex_limits",
+          "source": "IGSIII/Mass/CylinderMassLimits.lean",
+          "sha256": "3f8846db3d9a76f429c807ca3f60bb8e05625603e57f9678d51620bdcd0a7fc8",
+          "clause": "simultaneous_all_descendant_masks"
+        }
+      ]
+    },
+    {
+      "label": "lem:vertex-mass-limit",
+      "section": 2,
+      "manuscriptLines": [
+        490,
+        493
+      ],
+      "kind": "lemma",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "",
+      "entryPoints": [
+        {
+          "declaration": "Universality.Rule.Classical.four_state_mass_perron",
+          "source": "IGSIII/Mass/FourStateMassPerron.lean",
+          "sha256": "ae3c592f143eeda2b0f421c6a00e5115b59a72e3d06ae7f77bd4fda198eb9fc9",
+          "clause": "same_W_actual_root_vertex_count_limit"
+        },
+        {
+          "declaration": "Universality.Rule.Classical.four_state_mass_perron",
+          "source": "IGSIII/Mass/FourStateMassPerron.lean",
+          "sha256": "ae3c592f143eeda2b0f421c6a00e5115b59a72e3d06ae7f77bd4fda198eb9fc9",
+          "clause": "positive_actual_birth_reward_coefficient"
+        },
+        {
+          "declaration": "Universality.Rule.ConfigurationHistory.rootLevelVertexCount",
+          "source": "IGSIII/Mass/RootLevel.lean",
+          "sha256": "994b9419981a33ee4fdb0c5776f7fca86ab6ee979b1cdd9045fe5638985c15c7",
+          "clause": "seed_and_two_terminals_corrected_observable"
+        }
+      ]
+    },
+    {
+      "label": "lem:mass-perron",
+      "section": 2,
+      "manuscriptLines": [
+        512,
+        515
+      ],
+      "kind": "lemma",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII.Chemical.Substitution.actual_component_cylinder_probability_weights",
+          "source": "IGSIII/Mass/ComponentCylinderWeights.lean",
+          "sha256": "ec41bd4cf89a0ae9f9e04a788652a93d32273e3f1e7f9dfd0ad2483b80c9d6f7",
+          "clause": "all_cylinders_actual_normalized_counting_limits"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.componentCylinderWeight_compatible",
+          "source": "IGSIII/Mass/ComponentCylinderWeights.lean",
+          "sha256": "ec41bd4cf89a0ae9f9e04a788652a93d32273e3f1e7f9dfd0ad2483b80c9d6f7",
+          "clause": "parent_equals_sum_children"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.marked_oriented_vertex_limits",
+          "source": "IGSIII/Mass/CylinderMassLimits.lean",
+          "sha256": "3f8846db3d9a76f429c807ca3f60bb8e05625603e57f9678d51620bdcd0a7fc8",
+          "clause": "original_joint_B_and_connected_positive"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.actual_component_finite_partition",
+          "source": "IGSIII/Mass/ComponentFinitePartition.lean",
+          "sha256": "007dfffe1edecf426b407b76af1863ef5db2badff7dac127cf974482df24ca14",
+          "clause": "finite_junction_allocation_identity"
+        }
+      ]
+    },
+    {
+      "label": "thm:full-ghp",
+      "section": 2,
+      "manuscriptLines": [
+        535,
+        547
+      ],
+      "kind": "theorem",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Random-object measurability implemented by a faithful countable labelled code, not a native marked-GHP quotient Borel type. Same final theorem identifies actual terminal distance with positive amplitude*root field.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII.Geometry.exists_actual_critical_section_two_geometry",
+          "source": "IGSIII/SectionTwo.lean",
+          "sha256": "171f2022223914050e029c1d71ab90ec58728d05d47675ead861ebbb8704bfaa",
+          "clause": "compact_same_chemical_completion"
+        },
+        {
+          "declaration": "IGSIII.Geometry.exists_actual_critical_section_two_geometry",
+          "source": "IGSIII/SectionTwo.lean",
+          "sha256": "171f2022223914050e029c1d71ab90ec58728d05d47675ead861ebbb8704bfaa",
+          "clause": "boundary_probability_and_realization_measure"
+        },
+        {
+          "declaration": "IGSIII.Geometry.exists_actual_critical_section_two_geometry",
+          "source": "IGSIII/SectionTwo.lean",
+          "sha256": "171f2022223914050e029c1d71ab90ec58728d05d47675ead861ebbb8704bfaa",
+          "clause": "full_support"
+        },
+        {
+          "declaration": "IGSIII.Geometry.exists_actual_critical_section_two_geometry",
+          "source": "IGSIII/SectionTwo.lean",
+          "sha256": "171f2022223914050e029c1d71ab90ec58728d05d47675ead861ebbb8704bfaa",
+          "clause": "genuine_whole_sequence_two_marked_GHP"
+        },
+        {
+          "declaration": "IGSIII.Geometry.MarkedGHPConverges",
+          "source": "IGSIII/Geometry/MarkedGromovHausdorffProkhorov.lean",
+          "sha256": "f0932f16cef964dcf44f7990f936d6b76d27459cd3f62dc8487faeeead9c74d6",
+          "clause": "common_metric_isometries_Hausdorff_Prokhorov_ordered_marks"
+        },
+        {
+          "declaration": "IGSIII.Geometry.chemicalMarkedMetricMeasureCode_measurable",
+          "source": "IGSIII/Geometry/ChemicalMeasureCodeFaithfulness.lean",
+          "sha256": "808619dc40613bc9df2d0675eb4bd7dd3bfd5ab5d59d506fbb1cb1b92ea46e78",
+          "clause": "measurable_labelled_random_space_representation"
+        },
+        {
+          "declaration": "IGSIII.Geometry.exists_actual_marked_measure_isometryEquiv_of_code_eq",
+          "source": "IGSIII/Geometry/ChemicalMeasureCodeFaithfulness.lean",
+          "sha256": "808619dc40613bc9df2d0675eb4bd7dd3bfd5ab5d59d506fbb1cb1b92ea46e78",
+          "clause": "representation_faithful_for_marks_metric_measure"
+        }
+      ]
+    },
+    {
+      "label": "lem:cell-localisation",
+      "section": 2,
+      "manuscriptLines": [
+        589,
+        591
+      ],
+      "kind": "lemma",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Continuous injective inclusion and both distinct-socket and same-B boundary intersection conclusions are certified. The separate displayed exact route identity is reviewed independently as eq:cell-route.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII.Geometry.actualChemicalCellInclusion_lipschitz",
+          "source": "IGSIII/Geometry/ActualCellLocalisation.lean",
+          "sha256": "acdcd2c6f7d6e2c7a055e7c8b560f56501eb94514a3f86effe8f340b6d20ceb1",
+          "clause": "continuous_actual_inclusion"
+        },
+        {
+          "declaration": "IGSIII.Geometry.actualChemicalCellInclusion_injective",
+          "source": "IGSIII/Geometry/ActualCellLocalisation.lean",
+          "sha256": "acdcd2c6f7d6e2c7a055e7c8b560f56501eb94514a3f86effe8f340b6d20ceb1",
+          "clause": "injective_actual_inclusion"
+        },
+        {
+          "declaration": "IGSIII.Geometry.actualChemicalCellInclusion_intersection_boundary",
+          "source": "IGSIII/Geometry/CellLocalisationActualSeparation.lean",
+          "sha256": "f5fbd0de2356047e6413e7a345e7ce1fe6a0510a1df43124dc3d37c54021b260",
+          "clause": "distinct_socket_only_boundary_intersections"
+        },
+        {
+          "declaration": "IGSIII.Geometry.actualChemicalCellInclusion_noncrossing_intersection_boundary",
+          "source": "IGSIII/Geometry/CellLocalisationActualSeparation.lean",
+          "sha256": "f5fbd0de2356047e6413e7a345e7ce1fe6a0510a1df43124dc3d37c54021b260",
+          "clause": "same_B_socket_only_boundary_intersections"
+        },
+        {
+          "declaration": "IGSIII.Geometry.actualChemicalCellSpace_positive_interior_radius",
+          "source": "IGSIII/Geometry/ActualCellLocalisation.lean",
+          "sha256": "acdcd2c6f7d6e2c7a055e7c8b560f56501eb94514a3f86effe8f340b6d20ceb1",
+          "clause": "positive_intrinsic_interior_radius"
+        }
+      ]
+    },
+    {
+      "label": "eq:cell-route",
+      "section": 2,
+      "manuscriptLines": [
+        597,
+        602
+      ],
+      "kind": "equation",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "The literal equality is proved on every actual microscopic retained block, passed through the same normalized microscopic distances to the finite limiting skeleton, then extended by Completion.induction_on₂ and DirectLimit.induction₂ to the actual completed intrinsic carrier. The canonical original-tree inclusion wrapper discharges length compatibility from the actual scalar field. One-arm boundaries repeat their sole planted point; root generation zero is the identity case.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII.Geometry.weighted_graph_two_boundary_route_equality20261011",
+          "source": "IGSIII/ActualChemicalCellRouteEquality20261011.lean",
+          "sha256": "f7b58e171f13769e3c5b92b648ad4f4e1da9b7ae2cab2e759a77f71d25772f69",
+          "clause": "generic_actual_weighted_graph_first_exit_last_entrance_equality"
+        },
+        {
+          "declaration": "IGSIII.Geometry.generationBlockCellEmbedding_route_equality20261011",
+          "source": "IGSIII/ActualChemicalCellRouteFinite20261011.lean",
+          "sha256": "afa56898aa6a42a16c96485899edd31b2cc2324c0ad5b934768a7334c8e7ccec",
+          "clause": "every_actual_finite_retained_block_exact_route_equality"
+        },
+        {
+          "declaration": "IGSIII.Geometry.actualComponentFiniteInclusion_route_equality20261011",
+          "source": "IGSIII/ActualChemicalCellRouteLimit20261011.lean",
+          "sha256": "7bb18e47e7fdefc2068103c9de732b4054a0a47433b81519e8e25e5a67873f14",
+          "clause": "same_microscopic_normalized_limits_exact_route_equality"
+        },
+        {
+          "declaration": "IGSIII.Geometry.rootedComponentCompletionInclusion_route_equality20261011",
+          "source": "IGSIII/ActualChemicalCellRouteCompletion20261011.lean",
+          "sha256": "a93835faa3ab6d7e46e1cc0a998ec078519eadd55e3ff7a50d1fc6f8532b064a",
+          "clause": "Completion_induction_on_two_actual_intrinsic_completed_carrier"
+        },
+        {
+          "declaration": "IGSIII.Geometry.actualChemicalCellInclusion_route_equality20261011",
+          "source": "IGSIII/ActualChemicalCellRouteCompletion20261011.lean",
+          "sha256": "a93835faa3ab6d7e46e1cc0a998ec078519eadd55e3ff7a50d1fc6f8532b064a",
+          "clause": "canonical_original_innovation_chemical_cell_exact_route_equality"
+        },
+        {
+          "declaration": "IGSIII.Geometry.wholeSpace_twoBoundaryRoute_equality20261011",
+          "source": "IGSIII/ActualChemicalCellRouteCompletion20261011.lean",
+          "sha256": "a93835faa3ab6d7e46e1cc0a998ec078519eadd55e3ff7a50d1fc6f8532b064a",
+          "clause": "root_generation_zero_identity_case"
+        }
+      ]
+    },
+    {
+      "label": "lem:cell-separation",
+      "section": 2,
+      "manuscriptLines": [
+        611,
+        616
+      ],
+      "kind": "lemma",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Both different sockets and the two components of a common noncrossing socket have the required sum of intrinsic boundary distances bound.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII.Geometry.actualChemicalCellInclusion_boundary_separation",
+          "source": "IGSIII/Geometry/CellLocalisationActualSeparation.lean",
+          "sha256": "f5fbd0de2356047e6413e7a345e7ce1fe6a0510a1df43124dc3d37c54021b260",
+          "clause": "distinct_socket_ambient_boundary_separation"
+        },
+        {
+          "declaration": "IGSIII.Geometry.actualChemicalCellInclusion_noncrossing_boundary_separation",
+          "source": "IGSIII/Geometry/CellLocalisationActualSeparation.lean",
+          "sha256": "f5fbd0de2356047e6413e7a345e7ce1fe6a0510a1df43124dc3d37c54021b260",
+          "clause": "same_B_socket_ambient_boundary_separation"
+        }
+      ]
+    },
+    {
+      "label": "lem:cell-scaling-law",
+      "section": 2,
+      "manuscriptLines": [
+        625,
+        627
+      ],
+      "kind": "lemma",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Only connected generation-k components are asserted independent. They occupy distinct sockets; the marked completion code conditional product law matches this conditioning. No independence of B sides is claimed.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII.Geometry.actualChemicalCellSimilarity_distance",
+          "source": "IGSIII/Geometry/CellLocalisationActualSimilarity.lean",
+          "sha256": "04ca9c5f465f64cac79e0d338e641f2320878088e947b4d0274b0de833946e16",
+          "clause": "exact_scaled_actual_shifted_root_metric"
+        },
+        {
+          "declaration": "IGSIII.Geometry.actualChemicalCellSimilarity_vertex",
+          "source": "IGSIII/Geometry/CellLocalisationActualSimilarity.lean",
+          "sha256": "04ca9c5f465f64cac79e0d338e641f2320878088e947b4d0274b0de833946e16",
+          "clause": "similarity_preserves_original_vertex_labels"
+        },
+        {
+          "declaration": "IGSIII.Geometry.exists_actual_critical_marked_completed_cell_family",
+          "source": "IGSIII/Geometry/CellLocalisationCriticalMarkedLaw.lean",
+          "sha256": "939d4a70a11944c270b8609ebefcb53dd51109f8e8176800405b42e39ab46c65",
+          "clause": "same_scalar_witness_completed_family_law"
+        },
+        {
+          "declaration": "IGSIII.Geometry.markedChemicalCompletionCode_prefix_frontier_law",
+          "source": "IGSIII/Geometry/CellLocalisationMarkedCompletionLaw.lean",
+          "sha256": "9ddea045fc0eb217e3b9b335717531473f90fc69552ab7a1035cd31629d3296c",
+          "clause": "conditional_product_law_DISTINCT_SOCKETS_ONLY"
+        }
+      ]
+    },
+    {
+      "label": "def:chemical-dimension",
+      "section": 2,
+      "manuscriptLines": [
+        637,
+        641
+      ],
+      "kind": "definition",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII.Geometry.boxCountingRatio",
+          "source": "IGSIII/Geometry/BoxDimensionDefinition.lean",
+          "sha256": "6cc43cf3d1a75d630a13a331f92df3c608a62bf8571010b9c969b62d6476cfba",
+          "clause": "actual_covering_number_logarithmic_ratio"
+        },
+        {
+          "declaration": "IGSIII.Geometry.lowerBoxDimension",
+          "source": "IGSIII/Geometry/BoxDimensionDefinition.lean",
+          "sha256": "6cc43cf3d1a75d630a13a331f92df3c608a62bf8571010b9c969b62d6476cfba",
+          "clause": "liminf_radius_to_zero"
+        },
+        {
+          "declaration": "IGSIII.Geometry.upperBoxDimension",
+          "source": "IGSIII/Geometry/BoxDimensionDefinition.lean",
+          "sha256": "6cc43cf3d1a75d630a13a331f92df3c608a62bf8571010b9c969b62d6476cfba",
+          "clause": "limsup_radius_to_zero"
+        }
+      ]
+    },
+    {
+      "label": "prop:chemical-minkowski-dimension",
+      "section": 2,
+      "manuscriptLines": [
+        643,
+        648
+      ],
+      "kind": "theorem",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "The lower and upper covering-number dimensions of the same actual marked GHP witness coincide; updated manuscript terminology Minkowski replaces box.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII.Geometry.exists_actual_critical_section_two_geometry",
+          "source": "IGSIII/SectionTwo.lean",
+          "sha256": "171f2022223914050e029c1d71ab90ec58728d05d47675ead861ebbb8704bfaa",
+          "clause": "same_GHP_witness_lower_box_dimension"
+        },
+        {
+          "declaration": "IGSIII.Geometry.exists_actual_critical_section_two_geometry",
+          "source": "IGSIII/SectionTwo.lean",
+          "sha256": "171f2022223914050e029c1d71ab90ec58728d05d47675ead861ebbb8704bfaa",
+          "clause": "same_GHP_witness_upper_box_dimension"
+        },
+        {
+          "declaration": "IGSIII.Geometry.actual_critical_box_dimension_of_mean_bounds_and_positive_field",
+          "source": "IGSIII/Geometry/BoxDimensionSameWitness.lean",
+          "sha256": "478b2878371194c84625ffa49d86720954b41ff9c35153b270863842c355665d",
+          "clause": "dimension_for_any_actual_constructed_same_scalar_witness"
+        }
+      ]
+    },
+    {
+      "label": "unlabelled:expected-chemical-mass-dimension",
+      "section": 2,
+      "manuscriptLines": [
+        672
+      ],
+      "kind": "unlabelled-result",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Actual finite conditional open-edge expectation has logarithmic chemical growth logrho/loggrowth. Library depth+1 is manuscript n; same-witness Minkowski theorem identifies this ratio with dimension.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII.Geometry.actual_expected_chemical_mass_dimension20261011",
+          "source": "IGSIII/Geometry/ExpectedChemicalMassDimension20261011.lean",
+          "sha256": "07b630ca8dc426d5c89879bb495fb8ac9ba2e6f3b070f6aac0f185f58f272fe1",
+          "clause": "actual_expected_edge_mass_chemical_growth"
+        },
+        {
+          "declaration": "IGSIII.Geometry.exists_actual_critical_section_two_geometry",
+          "source": "IGSIII/SectionTwo.lean",
+          "sha256": "171f2022223914050e029c1d71ab90ec58728d05d47675ead861ebbb8704bfaa",
+          "clause": "same_ratio_equals_actual_Minkowski_dimension"
+        }
+      ]
+    },
+    {
+      "label": "lem:electrical-eigenlaw",
+      "section": 3,
+      "manuscriptLines": [
+        709,
+        711
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Percolation.exists_natural_resistance_completion20261011",
+          "source": "IGSIII34/Percolation/Continuation/NaturalResistanceCompletion20261011.lean",
+          "sha256": "5b13a0df3293a8e24533b1c9226703ddc116eabc4ae9694b73c1bdb43de0d024",
+          "clause": "Constructed positive mean-one field, moments and eigenpair. The path upper bound accepts any path-length function dominating terminal distance; choosing a simple terminal path satisfies it."
+        },
+        {
+          "declaration": "IGSIII34.Percolation.natural_resistance_exponents",
+          "source": "IGSIII34/Percolation/Continuation/NaturalResistanceExponents.lean",
+          "sha256": "ce8b034fd41034ade2613ede453658400e9dad5a57f9bdc07c6f34a87ff08e2d",
+          "clause": "Constructed positive mean-one field, moments and eigenpair. The path upper bound accepts any path-length function dominating terminal distance; choosing a simple terminal path satisfies it."
+        }
+      ]
+    },
+    {
+      "label": "lem:electrical-field",
+      "section": 3,
+      "manuscriptLines": [
+        760,
+        762
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Percolation.exists_natural_resistance_completion20261011",
+          "source": "IGSIII34/Percolation/Continuation/NaturalResistanceCompletion20261011.lean",
+          "sha256": "5b13a0df3293a8e24533b1c9226703ddc116eabc4ae9694b73c1bdb43de0d024",
+          "clause": "Constructed NaturalResistanceCompletion20261011; project the identified record fields."
+        },
+        {
+          "declaration": "IGSIII34.Percolation.electricalField_stationary_of_fixed",
+          "source": "IGSIII34/Percolation/ElectricalStationaryField.lean",
+          "sha256": "2f4e123f5ad3df214f8b2a19c8d2d20d03a1b8e91adb0472e582b6e03780c3b6",
+          "clause": "Original innovation Lp field and AE recursion at every address."
+        }
+      ]
+    },
+    {
+      "label": "lem:electrical-sandwich",
+      "section": 3,
+      "manuscriptLines": [
+        784,
+        788
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Diffusion.actual_natural_unit_graph_conditional_reciprocal_sandwich",
+          "source": "IGSIII34/Diffusion/ActualNaturalElectricalPreFormCertificates.lean",
+          "sha256": "fdc3ea66b399f5fa4ec4dbb487425d7a8e76a0289f7253105089c46ca865fec2",
+          "clause": "Explicit four-part conditional reciprocal sandwich for the same natural field and literal unit-edge graph resistance."
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.actual_natural_electrical_iteration_uniform_real_moment",
+          "source": "IGSIII34/Diffusion/ActualNaturalElectricalPreFormCertificates.lean",
+          "sha256": "fdc3ea66b399f5fa4ec4dbb487425d7a8e76a0289f7253105089c46ca865fec2",
+          "clause": "Explicit four-part conditional reciprocal sandwich for the same natural field and literal unit-edge graph resistance."
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.actual_natural_electrical_iteration_supremum_moment",
+          "source": "IGSIII34/Diffusion/ActualNaturalElectricalPreFormCertificates.lean",
+          "sha256": "fdc3ea66b399f5fa4ec4dbb487425d7a8e76a0289f7253105089c46ca865fec2",
+          "clause": "Explicit four-part conditional reciprocal sandwich for the same natural field and literal unit-edge graph resistance."
+        }
+      ]
+    },
+    {
+      "label": "lem:electrical-uniform-moments",
+      "section": 3,
+      "manuscriptLines": [
+        798,
+        800
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Diffusion.actual_natural_electrical_iteration_uniform_real_moment",
+          "source": "IGSIII34/Diffusion/ActualNaturalElectricalPreFormCertificates.lean",
+          "sha256": "fdc3ea66b399f5fa4ec4dbb487425d7a8e76a0289f7253105089c46ca865fec2",
+          "clause": "Uniform integral upper bound and integrability for every real exponent."
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.actual_natural_electrical_iteration_supremum_moment",
+          "source": "IGSIII34/Diffusion/ActualNaturalElectricalPreFormCertificates.lean",
+          "sha256": "fdc3ea66b399f5fa4ec4dbb487425d7a8e76a0289f7253105089c46ca865fec2",
+          "clause": "Finite positive moments of the entire depth supremum."
+        }
+      ]
+    },
+    {
+      "label": "thm:resistance-exponent",
+      "section": 3,
+      "manuscriptLines": [
+        817,
+        827
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Percolation.natural_resistance_exponents",
+          "source": "IGSIII34/Percolation/Continuation/NaturalResistanceExponents.lean",
+          "sha256": "ce8b034fd41034ade2613ede453658400e9dad5a57f9bdc07c6f34a87ff08e2d",
+          "clause": "AE/address-wise log, mean-log and log-mean limits, with growth interval."
+        }
+      ]
+    },
+    {
+      "label": "cor:resistance-moment-exponents",
+      "section": 3,
+      "manuscriptLines": [
+        846,
+        850
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Only the limit display changed: lim_n n^-1 log E R_n^t is now lim_{n→∞}(1/n) log E R_n^t. Quantifier every fixed real t and conclusion t log growth are identical.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Percolation.natural_resistance_exponents",
+          "source": "IGSIII34/Percolation/Continuation/NaturalResistanceExponents.lean",
+          "sha256": "ce8b034fd41034ade2613ede453658400e9dad5a57f9bdc07c6f34a87ff08e2d",
+          "clause": "Final conjunction: every address and real exponent has logarithmic moment growth."
+        }
+      ]
+    },
+    {
+      "label": "lem:electrical-compactness",
+      "section": 3,
+      "manuscriptLines": [
+        876,
+        879
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Diffusion.actual_natural_unit_graph_L2_compact_closure",
+          "source": "IGSIII34/Diffusion/ActualNaturalElectricalPreFormCertificates.lean",
+          "sha256": "fdc3ea66b399f5fa4ec4dbb487425d7a8e76a0289f7253105089c46ca865fec2",
+          "clause": "Literal original L2 compact closure and physical endpoint; amplitude interval tied to the same field."
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.natural_electrical_amplitude_bounds",
+          "source": "IGSIII34/Diffusion/NaturalResistanceAmplitudeBounds.lean",
+          "sha256": "8ce0b84bcd6991d3a2011566d77c16f8b849d4c7cc7f9b1aec96eba49bd165e9",
+          "clause": "Literal original L2 compact closure and physical endpoint; amplitude interval tied to the same field."
+        },
+        {
+          "declaration": "IGSIII34.Percolation.natural_physical_omega_witness_completion20261011",
+          "source": "IGSIII34/Percolation/Continuation/NaturalPhysicalOmegaCompletion20261011.lean",
+          "sha256": "800b0102425c2db48af60185769c8cd1512da8de1791a09fa5f627295d87862e",
+          "clause": "Literal original L2 compact closure and physical endpoint; amplitude interval tied to the same field."
+        }
+      ]
+    },
+    {
+      "label": "lem:electrical-comparison",
+      "section": 3,
+      "manuscriptLines": [
+        926,
+        935
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Resistance.FiniteNetwork.iid_resistance_integral_comparison",
+          "source": "IGSIII34/Resistance/IIDComparison.lean",
+          "sha256": "6851313046513e30aa5c08e100d3ac8d05bbeace0788feb612688d44ad914181",
+          "clause": "Genuine IID-pair comparison using finite current/resistance objects; no graph-uniform estimate supplied as a premise."
+        }
+      ]
+    },
+    {
+      "label": "thm:electrical-amplitudes",
+      "section": 3,
+      "manuscriptLines": [
+        963,
+        966
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Percolation.exists_natural_resistance_completion20261011",
+          "source": "IGSIII34/Percolation/Continuation/NaturalResistanceCompletion20261011.lean",
+          "sha256": "5b13a0df3293a8e24533b1c9226703ddc116eabc4ae9694b73c1bdb43de0d024",
+          "clause": "AE all addresses and every finite positive Lp, for the literal electrical iteration."
+        },
+        {
+          "declaration": "IGSIII34.Percolation.natural_physical_omega_witness_completion20261011",
+          "source": "IGSIII34/Percolation/Continuation/NaturalPhysicalOmegaCompletion20261011.lean",
+          "sha256": "800b0102425c2db48af60185769c8cd1512da8de1791a09fa5f627295d87862e",
+          "clause": "AE all addresses and every finite positive Lp, for the literal electrical iteration."
+        }
+      ]
+    },
+    {
+      "label": "cor:electrical-moment-limits",
+      "section": 3,
+      "manuscriptLines": [
+        1007,
+        1010
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Percolation.exists_natural_resistance_completion20261011",
+          "source": "IGSIII34/Percolation/Continuation/NaturalResistanceCompletion20261011.lean",
+          "sha256": "5b13a0df3293a8e24533b1c9226703ddc116eabc4ae9694b73c1bdb43de0d024",
+          "clause": "Constructed record realMoments: normalized iteration powers converge in integral to (amplitude*field)^t; positivity permits scalar rpow factorization."
+        }
+      ]
+    },
+    {
+      "label": "thm:electrical-uniqueness",
+      "section": 3,
+      "manuscriptLines": [
+        1016,
+        1018
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Percolation.exists_unique_actual_electrical_eigenpair_completion20261011",
+          "source": "IGSIII34/Percolation/Continuation/EigenlawCompletion20261011.lean",
+          "sha256": "089d42f71b9b2777dae40410aee36f7b45363787d0d72427b328f29eb08de827",
+          "clause": "Unique positive mean-one all-real-moment eigenpair from finite classical rule assumptions."
+        }
+      ]
+    },
+    {
+      "label": "lem:full-resistance-mesh",
+      "section": 3,
+      "manuscriptLines": [
+        1037,
+        1041
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.ResistanceLimit.actual_stationary_local_resistance_mesh_completion20261011",
+          "source": "IGSIII34/ResistanceLimit/ActualElectricalLocalMeshCompletion20261011.lean",
+          "sha256": "9d75151e35d552301f20c845f30c56ac642c7e42690cf58ce9498488e187b06b",
+          "clause": "Intrinsic retained-component meshes, address-wise uniform radius control and moments. Includes planted/one-root retained components, not only the terminal core."
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.ae_uniform_actual_electrical_mesh_fixed_cluster",
+          "source": "IGSIII34/ResistanceLimit/RadiusMesh.lean",
+          "sha256": "da93dd8d4eee3de13b75ca77c43f7b543e40f240f862c355361f839dd514442b",
+          "clause": "Intrinsic retained-component meshes, address-wise uniform radius control and moments. Includes planted/one-root retained components, not only the terminal core."
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.actual_markedElectricalRadiusSupremum_memLp_fixed_cluster",
+          "source": "IGSIII34/ResistanceLimit/RadiusMoments.lean",
+          "sha256": "97ebea7876a8d4a7c4c80e652b70b7f1f89aea79bd0b4dc00707e3940bd6ae5b",
+          "clause": "Intrinsic retained-component meshes, address-wise uniform radius control and moments. Includes planted/one-root retained components, not only the terminal core."
+        },
+        {
+          "declaration": "IGSIII34.Percolation.natural_physical_omega_witness_completion20261011",
+          "source": "IGSIII34/Percolation/Continuation/NaturalPhysicalOmegaCompletion20261011.lean",
+          "sha256": "800b0102425c2db48af60185769c8cd1512da8de1791a09fa5f627295d87862e",
+          "clause": "Intrinsic retained-component meshes, address-wise uniform radius control and moments. Includes planted/one-root retained components, not only the terminal core."
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_ae_actual_natural_common_section_three_all_clocks",
+          "source": "IGSIII34/Spectral/Collars/ActualSameMasterAllClocks.lean",
+          "sha256": "3df78a1775210aede16ebd9b363630c2078af6d05b40d7f0efe70143c5dcadd4",
+          "clause": "Intrinsic retained-component meshes, address-wise uniform radius control and moments. Includes planted/one-root retained components, not only the terminal core."
+        }
+      ]
+    },
+    {
+      "label": "thm:resistance-metric",
+      "section": 3,
+      "manuscriptLines": [
+        1078,
+        1082
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_ae_actual_natural_common_section_three_all_clocks",
+          "source": "IGSIII34/Spectral/Collars/ActualSameMasterAllClocks.lean",
+          "sha256": "3df78a1775210aede16ebd9b363630c2078af6d05b40d7f0efe70143c5dcadd4",
+          "clause": "After the fixed AE environment, all initial laws and genuine converging initial distributions; respective whole-path usual-J1 clauses."
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_actual_natural_chemical_carrier_identification",
+          "source": "IGSIII34/ResistanceLimit/ActualNaturalChemicalCarrier.lean",
+          "sha256": "b1c55749b65fa1c247c71c9d13a72d167e10790ba4eee12c4eb185dacb419890",
+          "clause": "Raw finite electrical marked GHP implies GH. Homeomorphism identifies the same chemical carrier, preserving born vertices."
+        }
+      ]
+    },
+    {
+      "label": "eq:limiting-trace",
+      "section": 3,
+      "manuscriptLines": [
+        1101,
+        1101
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_ae_actual_natural_common_section_three_all_clocks",
+          "source": "IGSIII34/Spectral/Collars/ActualSameMasterAllClocks.lean",
+          "sha256": "3df78a1775210aede16ebd9b363630c2078af6d05b40d7f0efe70143c5dcadd4",
+          "clause": "After the fixed AE environment, all initial laws and genuine converging initial distributions; respective whole-path usual-J1 clauses."
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_actual_natural_chemical_carrier_identification",
+          "source": "IGSIII34/ResistanceLimit/ActualNaturalChemicalCarrier.lean",
+          "sha256": "b1c55749b65fa1c247c71c9d13a72d167e10790ba4eee12c4eb185dacb419890",
+          "clause": "Raw finite electrical marked GHP implies GH. Homeomorphism identifies the same chemical carrier, preserving born vertices."
+        }
+      ]
+    },
+    {
+      "label": "thm:full-resistance-form",
+      "section": 3,
+      "manuscriptLines": [
+        1152,
+        1154
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.ResistanceLimit.actual_finite_trace_minimum_attained",
+          "source": "IGSIII34/ResistanceLimit/ActualTraceMinimum.lean",
+          "sha256": "75869408f30b3f8c19e17affcc9b74f924c1933bebd8f87b735ca12ca7c1d432",
+          "clause": "Exact trace minima, uniqueness, variational resistance equality, density and strong locality are separately proved."
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.actual_form_unique_from_finite_traces",
+          "source": "IGSIII34/ResistanceLimit/ActualTraceUniqueness.lean",
+          "sha256": "785bf56519f03ee213ae2ec2479bca7d4f661aaa298c39060f4cd32a96395446",
+          "clause": "Exact trace minima, uniqueness, variational resistance equality, density and strong locality are separately proved."
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.actual_completed_form_unique_from_finite_traces",
+          "source": "IGSIII34/ResistanceLimit/ActualCompletionTraceUniqueness.lean",
+          "sha256": "b826ef75e848aa0b4f5140355399d72e47fdca5930615fb2d60d813f666d4164",
+          "clause": "Exact trace minima, uniqueness, variational resistance equality, density and strong locality are separately proved."
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.actual_completion_variational_resistance_eq",
+          "source": "IGSIII34/ResistanceLimit/ActualCompletionResistance.lean",
+          "sha256": "b77731a7d75b4ccb1dfa490ac7adca9d62a0a5d55ac30c4585ba07aefc7135a4",
+          "clause": "Exact trace minima, uniqueness, variational resistance equality, density and strong locality are separately proved."
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_actual_natural_chemical_carrier_identification",
+          "source": "IGSIII34/ResistanceLimit/ActualNaturalChemicalCarrier.lean",
+          "sha256": "b1c55749b65fa1c247c71c9d13a72d167e10790ba4eee12c4eb185dacb419890",
+          "clause": "Exact trace minima, uniqueness, variational resistance equality, density and strong locality are separately proved."
+        },
+        {
+          "declaration": "IGSIII34.Forms.actualCompletionEnergyDomain_dense",
+          "source": "IGSIII34/Forms/ActualRegularityCompletion20261011.lean",
+          "sha256": "05be0361b6880b55708b38a699146f30c4107a56eb749a25e24bd90bc090fc66",
+          "clause": "Exact trace minima, uniqueness, variational resistance equality, density and strong locality are separately proved."
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.ae_actual_completion_strongly_local_fixed_cluster",
+          "source": "IGSIII34/ResistanceLimit/ActualStrongLocality.lean",
+          "sha256": "d26d011450961426b605fbc3518993ae0e84ebeb71acbc5856f0d1343ab02804",
+          "clause": "Exact trace minima, uniqueness, variational resistance equality, density and strong locality are separately proved."
+        }
+      ]
+    },
+    {
+      "label": "lem:degree-measure",
+      "section": 4,
+      "manuscriptLines": [
+        1192,
+        1194
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Diffusion.actual_joint_edge_vertex_limits",
+          "source": "IGSIII34/Diffusion/ActualDegreeRewards.lean",
+          "sha256": "b19a0d670c1f7cfb9c1fac2146d115888296fab84a85ad69fece6b2eb342c440",
+          "clause": "Both actual vertex counting and degree measures converge on the same chemical carrier; electrical marked GHP is separately present on the same event."
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_ae_actual_natural_common_section_three_all_clocks",
+          "source": "IGSIII34/Spectral/Collars/ActualSameMasterAllClocks.lean",
+          "sha256": "3df78a1775210aede16ebd9b363630c2078af6d05b40d7f0efe70143c5dcadd4",
+          "clause": "Both actual vertex counting and degree measures converge on the same chemical carrier; electrical marked GHP is separately present on the same event."
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.ae_actual_natural_raw_electrical_markedGHP",
+          "source": "IGSIII34/ResistanceLimit/ActualNaturalRawElectricalMarkedGHP.lean",
+          "sha256": "f26f1de90a2e42695a1a1bc336533f5e072a1c13d5ae9e77d1487fc5e3e32ac8",
+          "clause": "Both actual vertex counting and degree measures converge on the same chemical carrier; electrical marked GHP is separately present on the same event."
+        }
+      ]
+    },
+    {
+      "label": "thm:natural-process",
+      "section": 4,
+      "manuscriptLines": [
+        1230,
+        1234
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_ae_actual_natural_common_section_three_all_clocks",
+          "source": "IGSIII34/Spectral/Collars/ActualSameMasterAllClocks.lean",
+          "sha256": "3df78a1775210aede16ebd9b363630c2078af6d05b40d7f0efe70143c5dcadd4",
+          "clause": "After the fixed AE environment, all initial laws and genuine converging initial distributions; respective whole-path usual-J1 clauses."
+        }
+      ]
+    },
+    {
+      "label": "cor:continuous-time-walk",
+      "section": 4,
+      "manuscriptLines": [
+        1278,
+        1280
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_ae_actual_natural_common_section_three_all_clocks",
+          "source": "IGSIII34/Spectral/Collars/ActualSameMasterAllClocks.lean",
+          "sha256": "3df78a1775210aede16ebd9b363630c2078af6d05b40d7f0efe70143c5dcadd4",
+          "clause": "ActualPaperPlacedContinuousCadlagLaw usualLocalJ1PathProbability convergence to the same constructed continuous limit; clock 2*fullRetainedEdgeCount*growth^(depth+1)."
+        }
+      ]
+    },
+    {
+      "label": "cor:variable-speed-walk",
+      "section": 4,
+      "manuscriptLines": [
+        1286,
+        1288
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_ae_actual_natural_common_section_three_all_clocks",
+          "source": "IGSIII34/Spectral/Collars/ActualSameMasterAllClocks.lean",
+          "sha256": "3df78a1775210aede16ebd9b363630c2078af6d05b40d7f0efe70143c5dcadd4",
+          "clause": "actualVertexVariableSpeedPlacedCadlagLawCompletion20261011 usualLocalJ1PathProbability convergence; inverse-degree holding times, clock fullRetainedVertexCount*growth^(depth+1)."
+        }
+      ]
+    },
+    {
+      "label": "cor:deterministic-clock",
+      "section": 4,
+      "manuscriptLines": [
+        1296,
+        1299
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_ae_actual_natural_common_section_three_all_clocks",
+          "source": "IGSIII34/Spectral/Collars/ActualSameMasterAllClocks.lean",
+          "sha256": "3df78a1775210aede16ebd9b363630c2078af6d05b40d7f0efe70143c5dcadd4",
+          "clause": "Deterministic clock and explicit reciprocal Perron/vertex random factors; scalar speed-measure identification is proved separately."
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_ae_actual_all_clocks_original_joint_limits",
+          "source": "IGSIII34/Spectral/Collars/ActualSameMasterAllClocksOriginalJointExistence.lean",
+          "sha256": "63e6934c51a92f6e8e2b3f4c7bcf825218c124b63daac6d5139f7464694ef29e",
+          "clause": "Deterministic clock and explicit reciprocal Perron/vertex random factors; scalar speed-measure identification is proved separately."
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_actual_all_clocks_annealed_original_joint",
+          "source": "IGSIII34/Spectral/Collars/ActualAllClocksAnnealedOriginalJoint.lean",
+          "sha256": "fc4fc8307ebecd4150297555ec0928aa17a6d62c159302528f4da754e3550145",
+          "clause": "Deterministic clock and explicit reciprocal Perron/vertex random factors; scalar speed-measure identification is proved separately."
+        },
+        {
+          "declaration": "IGSIII34.Spectral.scalarSpeedGlobalTimeScale_evaluation_completion20261011",
+          "source": "IGSIII34/Spectral/ActualScalarSpeedProcessCompletion20261011.lean",
+          "sha256": "33772908aa0bf4bf4865d2eb6572d987f8e6a4886c2463c46358e0c412ec4ff6",
+          "clause": "Deterministic clock and explicit reciprocal Perron/vertex random factors; scalar speed-measure identification is proved separately."
+        },
+        {
+          "declaration": "IGSIII34.Spectral.actualScalarSpeedTransitionKernel_identity_completion20261011",
+          "source": "IGSIII34/Spectral/ActualScalarSpeedKernelCompletion20261011.lean",
+          "sha256": "679fca1cdd65f31d9edfe58ee4080a3d34b1e5c97a51930d04922c8e0f63ed2e",
+          "clause": "Deterministic clock and explicit reciprocal Perron/vertex random factors; scalar speed-measure identification is proved separately."
+        },
+        {
+          "declaration": "IGSIII34.Spectral.scalarSpeedMeasure_variational_equivalence_completion20261011",
+          "source": "IGSIII34/Spectral/ScalarSpeedMeasureCompletion20261011.lean",
+          "sha256": "ad7cc83b34b0a4689157d7bac74585b664d88ddc6d74b847234f64f7b50a72c4",
+          "clause": "Deterministic clock and explicit reciprocal Perron/vertex random factors; scalar speed-measure identification is proved separately."
+        }
+      ]
+    },
+    {
+      "label": "def:spectral-dimension",
+      "section": 4,
+      "manuscriptLines": [
+        1320,
+        1329
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Spectral.ae_actual_typical_spectral_dimension_completion20261011",
+          "source": "IGSIII34/Spectral/ActualTypicalSpectralDimensionCompletion20261011.lean",
+          "sha256": "e6257916f540c11eda761a9d8a62cb68e216f4de34e776db1aa36be59fbbb91b",
+          "clause": "Definition correspondence only: -2*log heat(time,point,point)/log(time) equals 2*log heat/log(1/time) for positive time; resistance dimension is explicit ratio."
+        }
+      ]
+    },
+    {
+      "label": "thm:heat-kernels",
+      "section": 4,
+      "manuscriptLines": [
+        1336,
+        1342
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Only box-to-Minkowski naming changed; both manuscript definitions use equal lower/upper covering-number logarithmic limits. The event, measure-a.e. point quantifier and both spectral formulae are unchanged.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Spectral.ae_actual_typical_spectral_dimension_completion20261011",
+          "source": "IGSIII34/Spectral/ActualTypicalSpectralDimensionCompletion20261011.lean",
+          "sha256": "e6257916f540c11eda761a9d8a62cb68e216f4de34e776db1aa36be59fbbb91b",
+          "clause": "Literal diagonal small-time limit; second displayed dimension formula is algebraic with Section2 box dimension."
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_ae_actual_natural_common_section_three_all_clocks",
+          "source": "IGSIII34/Spectral/Collars/ActualSameMasterAllClocks.lean",
+          "sha256": "3df78a1775210aede16ebd9b363630c2078af6d05b40d7f0efe70143c5dcadd4",
+          "clause": "After the fixed AE environment, all initial laws and genuine converging initial distributions; respective whole-path usual-J1 clauses."
+        }
+      ]
+    },
+    {
+      "label": "lem:spectral-typical",
+      "section": 4,
+      "manuscriptLines": [
+        1336,
+        1342
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Only box-to-Minkowski naming changed; both manuscript definitions use equal lower/upper covering-number logarithmic limits. The event, measure-a.e. point quantifier and both spectral formulae are unchanged.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Spectral.ae_actual_typical_spectral_dimension_completion20261011",
+          "source": "IGSIII34/Spectral/ActualTypicalSpectralDimensionCompletion20261011.lean",
+          "sha256": "e6257916f540c11eda761a9d8a62cb68e216f4de34e776db1aa36be59fbbb91b",
+          "clause": "Literal diagonal small-time limit; second displayed dimension formula is algebraic with Section2 box dimension."
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_ae_actual_natural_common_section_three_all_clocks",
+          "source": "IGSIII34/Spectral/Collars/ActualSameMasterAllClocks.lean",
+          "sha256": "3df78a1775210aede16ebd9b363630c2078af6d05b40d7f0efe70143c5dcadd4",
+          "clause": "After the fixed AE environment, all initial laws and genuine converging initial distributions; respective whole-path usual-J1 clauses."
+        }
+      ]
+    },
+    {
+      "label": "eq:spectral-dimension-form",
+      "section": 4,
+      "manuscriptLines": [
+        1336,
+        1342
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Only box-to-Minkowski naming changed; both manuscript definitions use equal lower/upper covering-number logarithmic limits. The event, measure-a.e. point quantifier and both spectral formulae are unchanged.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Spectral.ae_actual_typical_spectral_dimension_completion20261011",
+          "source": "IGSIII34/Spectral/ActualTypicalSpectralDimensionCompletion20261011.lean",
+          "sha256": "e6257916f540c11eda761a9d8a62cb68e216f4de34e776db1aa36be59fbbb91b",
+          "clause": "Literal diagonal small-time limit; second displayed dimension formula is algebraic with Section2 box dimension."
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_ae_actual_natural_common_section_three_all_clocks",
+          "source": "IGSIII34/Spectral/Collars/ActualSameMasterAllClocks.lean",
+          "sha256": "3df78a1775210aede16ebd9b363630c2078af6d05b40d7f0efe70143c5dcadd4",
+          "clause": "After the fixed AE environment, all initial laws and genuine converging initial distributions; respective whole-path usual-J1 clauses."
+        }
+      ]
+    },
+    {
+      "label": "eq:typical-cutoff",
+      "section": 4,
+      "manuscriptLines": [
+        1359,
+        1359
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Spectral.ae_actual_typical_spectral_dimension_completion20261011",
+          "source": "IGSIII34/Spectral/ActualTypicalSpectralDimensionCompletion20261011.lean",
+          "sha256": "e6257916f540c11eda761a9d8a62cb68e216f4de34e776db1aa36be59fbbb91b",
+          "clause": "Literal diagonal small-time limit; second displayed dimension formula is algebraic with Section2 box dimension."
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.exists_ae_actual_natural_common_section_three_all_clocks",
+          "source": "IGSIII34/Spectral/Collars/ActualSameMasterAllClocks.lean",
+          "sha256": "3df78a1775210aede16ebd9b363630c2078af6d05b40d7f0efe70143c5dcadd4",
+          "clause": "After the fixed AE environment, all initial laws and genuine converging initial distributions; respective whole-path usual-J1 clauses."
+        }
+      ]
+    },
+    {
+      "label": "ex:spectral-threshold",
+      "section": 4,
+      "manuscriptLines": [
+        1385,
+        1395
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Spectral.fivefoldDiamond_actual_spectral_dimension_bound",
+          "source": "IGSIII34/Spectral/Collars/FivefoldDiamondSpectralBound.lean",
+          "sha256": "191861d8ce062fa7b7904e3f9d3720750f8eedea062bf0fb34962a5832cf8362",
+          "clause": "Actual fivefold diamond example, with lambda lower bound 5 and Perron upper bound 20; strict non-AO bound."
+        },
+        {
+          "declaration": "IGSIII34.Spectral.exists_fivefoldDiamond_strict_non_AO",
+          "source": "IGSIII34/Spectral/Collars/FivefoldDiamondSpectralBound.lean",
+          "sha256": "191861d8ce062fa7b7904e3f9d3720750f8eedea062bf0fb34962a5832cf8362",
+          "clause": "Actual fivefold diamond example, with lambda lower bound 5 and Perron upper bound 20; strict non-AO bound."
+        },
+        {
+          "declaration": "IGSIII34.Spectral.fivefoldDiamond_terminal_distance",
+          "source": "IGSIII34/Spectral/Collars/FivefoldDiamondGraph.lean",
+          "sha256": "0285f73eab9ca76b71189af480bd4c0e75c7cda32ff07da0bfc251271a3cee25",
+          "clause": "The explicitly enumerated two ten-edge terminal walks have terminal distance 10."
+        },
+        {
+          "declaration": "IGSIII34.Spectral.fivefoldDiamond_edges",
+          "source": "IGSIII34/Spectral/Collars/FivefoldDiamondGraph.lean",
+          "sha256": "0285f73eab9ca76b71189af480bd4c0e75c7cda32ff07da0bfc251271a3cee25",
+          "clause": "The finite replacement rule has exactly twenty edges."
+        },
+        {
+          "declaration": "IGSIII34.Spectral.fivefoldDiamond_full_open_resistance",
+          "source": "IGSIII34/Spectral/Collars/FivefoldDiamondResistance.lean",
+          "sha256": "b54ea9032b450e9c2cfc2455804f5bda317d882457d46ba78581ea36b0d6ea54",
+          "clause": "Literal fully open unit effective resistance equals five, proved by explicit half-unit flow and distance-squared lower estimate."
+        },
+        {
+          "declaration": "IGSIII34.Spectral.fivefoldDiamond_configuration_resistance_lower",
+          "source": "IGSIII34/Spectral/Collars/FivefoldDiamondResistance.lean",
+          "sha256": "b54ea9032b450e9c2cfc2455804f5bda317d882457d46ba78581ea36b0d6ea54",
+          "clause": "Every crossing Bernoulli configuration has unit effective resistance at least five."
+        },
+        {
+          "declaration": "IGSIII34.Spectral.fivefoldDiamond_electrical_iteration_lower",
+          "source": "IGSIII34/Spectral/Collars/FivefoldDiamondResistance.lean",
+          "sha256": "b54ea9032b450e9c2cfc2455804f5bda317d882457d46ba78581ea36b0d6ea54",
+          "clause": "At every connected innovation address the actual depth-n unit-input electrical iteration is at least 5^n."
+        },
+        {
+          "declaration": "IGSIII34.Spectral.fivefoldDiamond_natural_resistance_growth_lower",
+          "source": "IGSIII34/Spectral/Collars/FivefoldDiamondResistance.lean",
+          "sha256": "b54ea9032b450e9c2cfc2455804f5bda317d882457d46ba78581ea36b0d6ea54",
+          "clause": "Explicit conclusion 5 <= natural.growth, using iteration lower bound and actual almost-sure physical amplitude convergence."
+        },
+        {
+          "declaration": "IGSIII34.AO.classical_mass_spectralRadius_le_edges",
+          "source": "IGSIII34/AO/MassGrowthEdgeBound.lean",
+          "sha256": "de148791c59e7c13dc51776b7ca4f5445a97e31de47bad5f6f3ced821735bd8a",
+          "clause": "Actual mass-matrix spectral radius <= rule.edges; specialize the already proved classical fivefold diamond rule and edges=20."
+        },
+        {
+          "declaration": "IGSIII34.subdivided_diamond_logarithmic_bound_identity",
+          "source": "IGSIII34/AO/SubdividedDiamondBound.lean",
+          "sha256": "c6bb003513133944b2a65fb797a0e7acab293848bbabb166b285aa4a493a8f50",
+          "clause": "2 log20/(log20+log5)=log20/log10, with strict upper bound 4/3 separately proved in the same file."
+        }
+      ]
+    },
+    {
+      "label": "eq:ao-equality",
+      "section": 5,
+      "manuscriptLines": [
+        1410,
+        1416
+      ],
+      "kind": "equation",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Unchanged from the independently reviewed old Section4 claim after the global box/Minkowski notation rename. Existing exact entrypoints still match the mathematical content. Both equivalences concern the actual full mass radius and natural resistance multiplier. Final entrance constructs natural and chemical witnesses and actual mass-typical heat diagonal. Actual box dimension notation uses proved Section 2 identification.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII4.actual_ao_equalities",
+          "source": "IGSIII4/AlexanderOrbach.lean",
+          "sha256": "fe28f4767e72217497324e94bffdb3a871457d2fadae8be942d0fffd074699f4",
+          "clause": "both algebraic equivalences"
+        },
+        {
+          "declaration": "IGSIII4.exists_actual_section_four_and_typical_heat_kernel",
+          "source": "IGSIII4/ActualTypicalPointSectionFour.lean",
+          "sha256": "84ccdfdf00dce971fcbae39c711a6799edb5667f0ca5b1ebacdc1ed6d36a8526",
+          "clause": "final existential actual-model entrance"
+        }
+      ]
+    },
+    {
+      "label": "lem:critical-supersolution",
+      "section": 5,
+      "manuscriptLines": [
+        1427,
+        1431
+      ],
+      "kind": "lemma",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Unchanged from the independently reviewed old Section4 claim after the global box/Minkowski notation rename. Existing exact entrypoints still match the mathematical content. Only manuscript measurability, nonnegative integrability, positive mean, positive factor and actual transfer supersolution are assumed; multiplier inequality and equality rigidity are derived.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII4.natural_critical_supersolution",
+          "source": "IGSIII4/ActualSectionFour.lean",
+          "sha256": "287aa0a983119a8824e889a24d26c954593ccdc6956ca19da7b72df2fc23ac11",
+          "clause": "actual-natural supersolution and rigidity"
+        },
+        {
+          "declaration": "IGSIII4.critical_supersolution",
+          "source": "IGSIII4/CriticalSupersolution.lean",
+          "sha256": "98170f6c3f7fa933a0a5932d58cbb366ec0b1eba7f73da5f654892aab3026e1b",
+          "clause": "growth and rigidity proof"
+        }
+      ]
+    },
+    {
+      "label": "lem:strict-chemical-resistance",
+      "section": 5,
+      "manuscriptLines": [
+        1464,
+        1467
+      ],
+      "kind": "lemma",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Unchanged from the independently reviewed old Section4 claim after the global box/Minkowski notation rename. Existing exact entrypoints still match the mathematical content. Strictness follows from proved rigidity plus all-open electrical improvement; it is not packaged as input.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII4.actual_strict_chemical_resistance",
+          "source": "IGSIII4/ActualChemicalData.lean",
+          "sha256": "c4027c99ace1e93ec37f9250b4641bb0cc5e41cea8c65c9b2667d91724cfc6ee",
+          "clause": "strict multiplier comparison"
+        },
+        {
+          "declaration": "IGSIII4.strict_chemical_resistance_of_eigenfunction",
+          "source": "IGSIII4/StrictChemicalResistance.lean",
+          "sha256": "a08d64fea31397b9ece61e63d4a6a772f45aa119e0dc5c6cbc97791ffd36ba78",
+          "clause": "actual shortest electrical comparison and positive all-open atom"
+        },
+        {
+          "declaration": "IGSIII4.exists_section_four_from_proved_sections_two_three",
+          "source": "IGSIII4/ActualSectionFour.lean",
+          "sha256": "287aa0a983119a8824e889a24d26c954593ccdc6956ca19da7b72df2fc23ac11",
+          "clause": "discharge natural and chemical witnesses"
+        }
+      ]
+    },
+    {
+      "label": "lem:mass-core-clock",
+      "section": 5,
+      "manuscriptLines": [
+        1484,
+        1486
+      ],
+      "kind": "lemma",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Unchanged from the independently reviewed old Section4 claim after the global box/Minkowski notation rename. Existing exact entrypoints still match the mathematical content. Actual simple-terminal-path edge core is compared with connected mass count and Perron radius; unit-resistance pruning is proved and mean bounds are discharged at final entrance.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII4.actual_dimension_comparisons",
+          "source": "IGSIII4/AlexanderOrbach.lean",
+          "sha256": "fe28f4767e72217497324e94bffdb3a871457d2fadae8be942d0fffd074699f4",
+          "clause": "strict dimension clock"
+        },
+        {
+          "declaration": "IGSIII4.actual_strict_growth_clock",
+          "source": "IGSIII4/AlexanderOrbach.lean",
+          "sha256": "fe28f4767e72217497324e94bffdb3a871457d2fadae8be942d0fffd074699f4",
+          "clause": "strict exponential clock"
+        },
+        {
+          "declaration": "IGSIII4.terminalCoreMean_strictly_below_mass_radius",
+          "source": "IGSIII4/TerminalCore.lean",
+          "sha256": "db4726265bc4397acdca12c9ce0a15e44f918c32fd8fc82ab55a57a7c4804a49",
+          "clause": "actual path-core/full-mass strict inequality"
+        },
+        {
+          "declaration": "IGSIII4.actual_core_growth_clock",
+          "source": "IGSIII4/ActualCoreClock.lean",
+          "sha256": "07166be83ced7b545d22600853a2291d39406717d2ec7320431ae9c1149fd241",
+          "clause": "derived electrical/chemical/core clock"
+        },
+        {
+          "declaration": "IGSIII4.corePopulation_integral",
+          "source": "IGSIII4/CorePopulationMean.lean",
+          "sha256": "6ae8262b49f9be694863d4b9bbd2a42a40e5db3fda4e5b4342e650f7387e80a0",
+          "clause": "independent core reproduction expectation"
+        }
+      ]
+    },
+    {
+      "label": "thm:ao-region",
+      "section": 5,
+      "manuscriptLines": [
+        1511,
+        1517
+      ],
+      "kind": "aoresult",
+      "reviewed": true,
+      "status": "PROVED_AFTER_SOURCE_CORRECTION",
+      "semanticFinding": "The new statement universally excludes the open rectangle. The old conditional spectral-dimension conclusion was deleted. Existing Lean proves equality implies membership, hence outside implies spectral dimension differs from 4/3; it does not prove universal outside. The unchanged proof proves the conditional old theorem. Introduction lines248-254 retains the correct old conditional.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII4.actual_ao_region",
+          "source": "IGSIII4/AlexanderOrbach.lean",
+          "sha256": "fe28f4767e72217497324e94bffdb3a871457d2fadae8be942d0fffd074699f4",
+          "clause": "outside open rectangle including boundaries"
+        },
+        {
+          "declaration": "IGSIII4.exists_actual_section_four_and_typical_heat_kernel",
+          "source": "IGSIII4/ActualTypicalPointSectionFour.lean",
+          "sha256": "84ccdfdf00dce971fcbae39c711a6799edb5667f0ca5b1ebacdc1ed6d36a8526",
+          "clause": "final existential actual-model entrance"
+        },
+        {
+          "declaration": "IGSIII4.actual_spectral_above_ao_of_mass_at_least_two",
+          "source": "IGSIII4/AlexanderOrbach.lean",
+          "sha256": "fe28f4767e72217497324e94bffdb3a871457d2fadae8be942d0fffd074699f4",
+          "clause": "large mass sign"
+        },
+        {
+          "declaration": "IGSIII4.actual_spectral_below_ao_of_mass_at_most_four_thirds",
+          "source": "IGSIII4/AlexanderOrbach.lean",
+          "sha256": "fe28f4767e72217497324e94bffdb3a871457d2fadae8be942d0fffd074699f4",
+          "clause": "small mass sign"
+        }
+      ],
+      "literalSourceDisposition": "REJECT_UNSUPPORTED_UNCONDITIONAL_RECTANGLE_EXCLUSION",
+      "certifiedStatement": "For every classical rule, AO equality implies that the dimension pair lies inside the stated open rectangle; equivalently AO equality is excluded outside it, including its boundary.",
+      "unlabelledClauses": [
+        {
+          "claimId": "S5-06",
+          "manuscriptLine": 1526,
+          "reviewed": true
+        }
+      ]
+    },
+    {
+      "label": "ex:long-diamond-region",
+      "section": 5,
+      "manuscriptLines": [
+        1531,
+        1540
+      ],
+      "kind": "example",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Unchanged from the independently reviewed old Section4 claim after the global box/Minkowski notation rename. Existing exact entrypoints still match the mathematical content. The 20-cycle is exactly the standard four-edge diamond with each edge subdivided into five edges; final heat-kernel sign follows by specialization of actual-model entrance.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII4.LongDiamond.network",
+          "source": "IGSIII4/LongDiamondBase.lean",
+          "sha256": "0ad3c3d23cde3c85d94f4ebcaeac1f12e6f10686633e1bdacf369fd7a29c1aac",
+          "clause": "20-cycle, terminals 0 and 10, diamond corners 5 and 15"
+        },
+        {
+          "declaration": "IGSIII4.LongDiamond.own_critical_point",
+          "source": "IGSIII4/LongDiamondBase.lean",
+          "sha256": "0ad3c3d23cde3c85d94f4ebcaeac1f12e6f10686633e1bdacf369fd7a29c1aac",
+          "clause": "own interior reliability fixed point existence"
+        },
+        {
+          "declaration": "IGSIII4.LongDiamond.actual_chemical_factor_ten",
+          "source": "IGSIII4/LongDiamond.lean",
+          "sha256": "e7fe0b3bea66adaf2c0535b7f28c08bb5a18dc84d7216973984004d6e69cb2e4",
+          "clause": "actual chemical factor"
+        },
+        {
+          "declaration": "IGSIII4.LongDiamond.mass_growth_below_twenty",
+          "source": "IGSIII4/LongDiamond.lean",
+          "sha256": "e7fe0b3bea66adaf2c0535b7f28c08bb5a18dc84d7216973984004d6e69cb2e4",
+          "clause": "strict full mass radius bound"
+        },
+        {
+          "declaration": "IGSIII4.LongDiamond.log_twenty_over_log_ten_lt_four_thirds",
+          "source": "IGSIII4/LongDiamond.lean",
+          "sha256": "e7fe0b3bea66adaf2c0535b7f28c08bb5a18dc84d7216973984004d6e69cb2e4",
+          "clause": "exact logarithm inequality via 20^3<10^4"
+        },
+        {
+          "declaration": "IGSIII4.natural_long_diamond_spectral_dimension_strictly_below_four_thirds",
+          "source": "IGSIII4/ActualSectionFour.lean",
+          "sha256": "287aa0a983119a8824e889a24d26c954593ccdc6956ca19da7b72df2fc23ac11",
+          "clause": "natural multiplier spectral sign"
+        },
+        {
+          "declaration": "IGSIII4.exists_actual_section_four_and_typical_heat_kernel",
+          "source": "IGSIII4/ActualTypicalPointSectionFour.lean",
+          "sha256": "84ccdfdf00dce971fcbae39c711a6799edb5667f0ca5b1ebacdc1ed6d36a8526",
+          "clause": "final existential actual-model entrance"
+        }
+      ]
+    },
+    {
+      "label": "conj:ao-global",
+      "section": 5,
+      "manuscriptLines": [
+        1546,
+        1552
+      ],
+      "kind": "aoconjecture",
+      "reviewed": true,
+      "status": "OPEN_CONJECTURE",
+      "semanticFinding": "Still explicitly an aoconjecture, with no claimed Lean proof. New body uses unqualified dimspec(C) and removes natural/typical-point/own-critical-point clarification. The defined quantity in Definition def:spectral-dimension lines1320-1327 and Section5 line1417 is dimspec^(N); bare dimspec(C) is not separately defined. Introduction lines265-269 retains the precise typical spectral-dimension and actual mass-radius formulation.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII4.NaturalGlobalAlexanderOrbachConjecture",
+          "source": "IGSIII4/ActualTypicalPointSectionFour.lean",
+          "sha256": "84ccdfdf00dce971fcbae39c711a6799edb5667f0ca5b1ebacdc1ed6d36a8526",
+          "clause": "conjecture predicate, no theorem"
+        }
+      ]
+    },
+    {
+      "label": "lem:chemical-moments",
+      "section": "AppendixA",
+      "manuscriptLines": [
+        1698,
+        1703
+      ],
+      "kind": "lemma",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII.Chemical.SmallBall.exists_uniform_manuscript_real_moment",
+          "source": "IGSIII/Chemical/SmallBall/FiniteDepthIndexing.lean",
+          "sha256": "94dd1d6d9aff324e7027c2b862edbfa6430fdbcbf9d1bd5a88ba2ae5c6163988",
+          "clause": "uniform_all_real_positive_and_negative_orders"
+        },
+        {
+          "declaration": "IGSIII.Chemical.SmallBall.exists_uniform_manuscript_exponential_moment",
+          "source": "IGSIII/Chemical/SmallBall/FiniteDepthIndexing.lean",
+          "sha256": "94dd1d6d9aff324e7027c2b862edbfa6430fdbcbf9d1bd5a88ba2ae5c6163988",
+          "clause": "uniform_every_finite_nonnegative_exponential_parameter"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.exists_actual_chemical_scalar",
+          "source": "IGSIII/Chemical/ChemicalScalar.lean",
+          "sha256": "b994ad771f32966d07a41692c35aa140546495058157cd6c763a658e8abcef6e",
+          "clause": "positive_mean_one_eigenlaw_with_all_orders_and_exponentials"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.chemicalField_frontier_independent",
+          "source": "IGSIII/Chemical/StationaryField.lean",
+          "sha256": "916ddc2bcad2ca8f26ac43921e8e7bd93bb75f0f073b11f90887ac4ad8526c77",
+          "clause": "independent_child_copies"
+        }
+      ]
+    },
+    {
+      "label": "lem:chemical-paths",
+      "section": "AppendixA",
+      "manuscriptLines": [
+        1784,
+        1791
+      ],
+      "kind": "lemma",
+      "reviewed": true,
+      "status": "PROVED_AFTER_SOURCE_CORRECTION",
+      "semanticFinding": "Literal statement omits theta>0; negative theta makes signed assertion false. Lean correctly retains essential positive exponential parameter. Intended positive-parameter reading PASS, unqualified literal reading GAP.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII.Chemical.Substitution.actual_simple_terminal_path_count",
+          "source": "IGSIII/Chemical/SubstitutionPaths/ActualPathCounting.lean",
+          "sha256": "0f6b4cba5522d0ee1c6459d41a893c959d6a376bb9029e461786cbc80c288456",
+          "clause": "actual_exponential_path_count"
+        },
+        {
+          "declaration": "IGSIII.Chemical.SmallBall.finite_product_shortest_small_cost_bound",
+          "source": "IGSIII/Chemical/SmallBall/PathLaplace.lean",
+          "sha256": "59e11a28de90311f8e4084cb290bf39c8cc32a189c3be12cc449746f19f37960",
+          "clause": "independent_leaf_lower_tail_POSITIVE_THETA"
+        },
+        {
+          "declaration": "IGSIII.Chemical.SmallBall.path_sum_le_geometric_tail",
+          "source": "IGSIII/Chemical/SmallBall/PathCountMoments.lean",
+          "sha256": "53eba54317f11b559ad67cad482c4a53a5cb093a131860c944794f1864d12a20",
+          "clause": "path_count_geometric_sum"
+        },
+        {
+          "declaration": "IGSIII.Chemical.SmallBall.measure_product_paired_path_barrier",
+          "source": "IGSIII/Chemical/SmallBall/MeasurePairedBarrier.lean",
+          "sha256": "a9619d2fdd60aebf3cc6674702e629b930fa5c231aa8c7162dd3f6d8a6c49aa9",
+          "clause": "paired_coupling_POSITIVE_THETA"
+        },
+        {
+          "declaration": "IGSIII.Chemical.SmallBall.actual_generation_paired_child_barrier",
+          "source": "IGSIII/Chemical/SmallBall/FiniteDepthPairedBarrier.lean",
+          "sha256": "49aaa87f2b0403d77022a8a5f687ed5478bb394cf9b235ce72917f8d0a5b4f25",
+          "clause": "actual_generation_paired_barrier"
+        }
+      ]
+    },
+    {
+      "label": "lem:chemical-compactness",
+      "section": "AppendixA",
+      "manuscriptLines": [
+        1811,
+        1824
+      ],
+      "kind": "lemma",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Displayed sandwich follows from stronger actual convergence to amplitude*X and amplitude>=1, with deterministic Cprime=amplitude. Lean proof route differs from manuscript order.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII.Chemical.Substitution.exists_actual_positive_endogenous_chemical_field",
+          "source": "IGSIII/Chemical/EndogenousExistence.lean",
+          "sha256": "e1fe87477312cd5608b9a2bb770f06a8c8ceeb3cf9552c1c9e22851a8d40fedf",
+          "clause": "stationary_original_tree_realization"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.exists_actual_chemical_scalar",
+          "source": "IGSIII/Chemical/ChemicalScalar.lean",
+          "sha256": "b994ad771f32966d07a41692c35aa140546495058157cd6c763a658e8abcef6e",
+          "clause": "uniform_means_and_stronger_sandwich_via_actual_limit"
+        },
+        {
+          "declaration": "IGSIII.Chemical.SmallBall.exists_uniform_growth_scaled_exponential_moment",
+          "source": "IGSIII/Chemical/SmallBall/FiniteDepthScaledMoments.lean",
+          "sha256": "3b90104c4c475ddc46b675e1ecdcccf57de634e3c82b72447cf5b3c54e076546",
+          "clause": "uniform_growth_scaled_exponential_moments"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.chemicalOrbit_compact_closure",
+          "source": "IGSIII/Chemical/ChemicalOmega.lean",
+          "sha256": "bba5de09b868a27397ab7db5092f92828a924c03c250d3ade6443985d2bc93fc",
+          "clause": "same_L2_probability_space_relative_compactness"
+        }
+      ]
+    },
+    {
+      "label": "eq:chemical-endogeny",
+      "section": "AppendixA",
+      "manuscriptLines": [
+        1848,
+        1850
+      ],
+      "kind": "equation",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "The project-owned actual raw-prefix sigma field and orthogonal real conditional expectation residual represent E Var(X|F_k) by its squared L2 norm. The model-only constructor supplies a positive mean-one stationary original-tree field with the literal (m^(1/p)/lambda_ch)^k rate, using the same growth and scalar endpoint. No variance conclusion is an input.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII.Chemical.Substitution.rawPrefixResidual20261011",
+          "source": "IGSIII/Chemical/SubstitutionPaths/PrefixConditionalVariance20261011.lean",
+          "sha256": "3c505a0e8f94017d06683f5bb19049e645aa628d672a9bd86775ba2b58f60444",
+          "clause": "actual_raw_prefix_conditional_expectation_residual"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.exists_actual_raw_prefix_conditional_variance_rate20261011",
+          "source": "IGSIII/Chemical/SubstitutionPaths/ActualPrefixVarianceRate20261011.lean",
+          "sha256": "e42f329d9dac7b0469d3912c8d6fe9da1639b480a218b85565c1283ad6417d3e",
+          "clause": "same_actual_positive_mean_one_fixed_field_literal_chemical_growth_rate"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.exists_marked_growth_scaled_prefix_residual_rate20261011",
+          "source": "IGSIII/Chemical/SubstitutionPaths/ChemicalGrowthVariance20261011.lean",
+          "sha256": "556c4b2c809c7d937a1e298051680ef1d1847c4a33beb0ed577f11fd08267344",
+          "clause": "actual_finite_exact_chemical_rate_with_all_moments_discharged"
+        }
+      ]
+    },
+    {
+      "label": "eq:chemical-exception",
+      "section": "AppendixA",
+      "manuscriptLines": [
+        1859,
+        1861
+      ],
+      "kind": "equation",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII.Chemical.Substitution.chemicalOrbit_fixed_comparison_probability_bound",
+          "source": "IGSIII/Chemical/EndogenousEnvelopeBarrier.lean",
+          "sha256": "25f5a292853dcf50eba6aba8883dd33b2c0174e226c8e31d8cac77b801857d01",
+          "clause": "same_actual_field_signed_geometric_probability_bound"
+        }
+      ]
+    },
+    {
+      "label": "eq:chemical-compactness",
+      "section": "AppendixA",
+      "manuscriptLines": [
+        1872,
+        1874
+      ],
+      "kind": "equation",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "The model-only constructor proves one positive finite constant bounding squared actual raw-prefix conditional residuals at all k and every n>=k by C*(m^(1/p)/lambda_ch)^k. Uniform moments are derived from the model, improved block mean ratios use the actual chemical growth, k=0 is bounded globally, and n=k has zero residual. This is the literal chemical-growth rate, beyond the earlier derivative-based compactness proof.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII.Chemical.Substitution.rawPrefixResidual20261011",
+          "source": "IGSIII/Chemical/SubstitutionPaths/PrefixConditionalVariance20261011.lean",
+          "sha256": "3c505a0e8f94017d06683f5bb19049e645aa628d672a9bd86775ba2b58f60444",
+          "clause": "actual_raw_prefix_conditional_expectation_residual"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.exists_actual_raw_prefix_conditional_variance_rate20261011",
+          "source": "IGSIII/Chemical/SubstitutionPaths/ActualPrefixVarianceRate20261011.lean",
+          "sha256": "e42f329d9dac7b0469d3912c8d6fe9da1639b480a218b85565c1283ad6417d3e",
+          "clause": "all_n_ge_k_literal_chemical_growth_rate_no_target_hypotheses"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.exists_raw_prefix_variance_rate_of_mean_bounds20261011",
+          "source": "IGSIII/Chemical/SubstitutionPaths/ActualPrefixVarianceRate20261011.lean",
+          "sha256": "e42f329d9dac7b0469d3912c8d6fe9da1639b480a218b85565c1283ad6417d3e",
+          "clause": "uniform_growth_scaled_conditional_variance_all_k_n_including_zero_and_diagonal"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.exists_marked_growth_scaled_prefix_residual_rate20261011",
+          "source": "IGSIII/Chemical/SubstitutionPaths/ChemicalGrowthVariance20261011.lean",
+          "sha256": "556c4b2c809c7d937a1e298051680ef1d1847c4a33beb0ed577f11fd08267344",
+          "clause": "actual_finite_exact_chemical_rate_with_all_moments_discharged"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.rawInnovationPrefixSigma_mono20261011",
+          "source": "IGSIII/Chemical/SubstitutionPaths/PrefixDepthMonotonicity20261011.lean",
+          "sha256": "1ea59b4b59703aa8387c10346ec1151e98185540b088aa13ae12871358d34c76",
+          "clause": "actual_raw_prefix_sigma_algebra_monotonicity"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.chemicalOrbit_rawPrefix_measurable_of_le20261011",
+          "source": "IGSIII/Chemical/SubstitutionPaths/PrefixDepthMonotonicity20261011.lean",
+          "sha256": "1ea59b4b59703aa8387c10346ec1151e98185540b088aa13ae12871358d34c76",
+          "clause": "finite_orbit_measurable_when_n_le_k"
+        },
+        {
+          "declaration": "IGSIII.Chemical.Substitution.chemicalOrbit_rawPrefixResidual_zero_of_lt20261011",
+          "source": "IGSIII/Chemical/SubstitutionPaths/PrefixDepthMonotonicity20261011.lean",
+          "sha256": "1ea59b4b59703aa8387c10346ec1151e98185540b088aa13ae12871358d34c76",
+          "clause": "literal_n_lt_k_zero_conditional_variance_proof_clause"
+        }
+      ]
+    },
+    {
+      "label": "lem:chemical-endpoint",
+      "section": "AppendixA",
+      "manuscriptLines": [
+        1885,
+        1887
+      ],
+      "kind": "lemma",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII.Chemical.Substitution.chemicalOmegaSet",
+          "source": "IGSIII/Chemical/ChemicalOmega.lean",
+          "sha256": "bba5de09b868a27397ab7db5092f92828a924c03c250d3ade6443985d2bc93fc",
+          "clause": "actual_L2_orbit_omega_set"
+        },
+        {
+          "declaration": "IGSIII.Chemical.SmallBall.chemicalOmega_has_fixed_ray_upper_endpoint",
+          "source": "IGSIII/Chemical/SmallBall/ChemicalOmegaEndpoint.lean",
+          "sha256": "166dac55a81dbd415dc62b200a084a06ac71473ffbe89fd65402e2e5b1c70509",
+          "clause": "deterministic_scalar_ray_member_at_least_one"
+        }
+      ]
+    },
+    {
+      "label": "lem:full-mesh",
+      "section": "AppendixA",
+      "manuscriptLines": [
+        1921,
+        1924
+      ],
+      "kind": "lemma",
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII.Geometry.exists_actual_critical_full_component_mesh",
+          "source": "IGSIII/Geometry/FullComponentMesh.lean",
+          "sha256": "a3c366bdf2595231ee35e1061fd5e3ea4e94b8a119a65a94637975742c2bd251",
+          "clause": "supremum_before_moment_every_type_both_sides"
+        },
+        {
+          "declaration": "IGSIII.Geometry.exists_actual_critical_full_component_mesh",
+          "source": "IGSIII/Geometry/FullComponentMesh.lean",
+          "sha256": "a3c366bdf2595231ee35e1061fd5e3ea4e94b8a119a65a94637975742c2bd251",
+          "clause": "supremum_dominates_all_remaining_depths"
+        },
+        {
+          "declaration": "IGSIII.Geometry.exists_actual_critical_full_component_mesh",
+          "source": "IGSIII/Geometry/FullComponentMesh.lean",
+          "sha256": "a3c366bdf2595231ee35e1061fd5e3ea4e94b8a119a65a94637975742c2bd251",
+          "clause": "exponential_frontier_mesh_uniform_in_all_depths"
+        }
+      ]
+    },
+    {
+      "label": "lem:spectral-moments",
+      "section": "AppendixB",
+      "manuscriptLines": [
+        1988,
+        1996
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Spectral.actual_mass_continuation_alladdress_subexponential_completion20261011",
+          "source": "IGSIII34/Spectral/PhysicalSocketMassCompletion20261011.lean",
+          "sha256": "8c041709d33b036974e688739ef4d0910f73ef9419983c15fa9d7d82fe85af7d",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.actual_physical_socket_mass_subexponential_completion20261011",
+          "source": "IGSIII34/Spectral/PhysicalSocketMassCompletion20261011.lean",
+          "sha256": "8c041709d33b036974e688739ef4d0910f73ef9419983c15fa9d7d82fe85af7d",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.actual_electrical_inverse_alladdress_subexponential_completion20261011",
+          "source": "IGSIII34/Spectral/ElectricalInverseMaximaCompletion20261011.lean",
+          "sha256": "2605b7f73526b0cf5e489d2ce788c67966b477bc93ffcaa5ef3b7e619527e4f1",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.physical_electrical_inverse_alladdress_subexponential_completion20261011",
+          "source": "IGSIII34/Spectral/PhysicalElectricalInverseMaximaCompletion20261011.lean",
+          "sha256": "7d2ef7c87d0a77fcfb8e30c1b5c4c4d898e668e7bea54cc7e62171d3e3431eb9",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.exists_actual_mass_field_subexponential",
+          "source": "IGSIII34/Spectral/ActualMassMaximaCompletion20261011.lean",
+          "sha256": "3bd4459e47f3209e645768c2e74859addb062ad2a1681edf476f75c971216f5c",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.exists_actual_component_weight_subexponential_upper",
+          "source": "IGSIII34/Spectral/ActualCylinderMassCompletion20261011.lean",
+          "sha256": "cd04a9ec647ee4117d6ba691727d91d1e96d2ceff04a977250880d7d326b6f71",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.actualComponentIntrinsicDiameterEnvelope20261011",
+          "source": "IGSIII34/Diffusion/ActualIntrinsicResistanceDiameter20261011.lean",
+          "sha256": "b66ed7812def1c4fba8507a8c7df79a86ab846079d63617e10a0033cb7463585",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.actualElectricalComponent_intrinsic_diameter_le_radius_envelope20261011",
+          "source": "IGSIII34/Diffusion/ActualIntrinsicResistanceDiameter20261011.lean",
+          "sha256": "b66ed7812def1c4fba8507a8c7df79a86ab846079d63617e10a0033cb7463585",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.natural_actualComponentIntrinsicDiameterEnvelope_positive_moments20261011",
+          "source": "IGSIII34/Diffusion/ActualIntrinsicResistanceDiameter20261011.lean",
+          "sha256": "b66ed7812def1c4fba8507a8c7df79a86ab846079d63617e10a0033cb7463585",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.natural_actualElectricalComponent_intrinsic_diameter_subexponential20261011",
+          "source": "IGSIII34/Diffusion/ActualIntrinsicResistanceDiameter20261011.lean",
+          "sha256": "b66ed7812def1c4fba8507a8c7df79a86ab846079d63617e10a0033cb7463585",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.exists_actual_intrinsic_component_diameter_envelopes20261011",
+          "source": "IGSIII34/Diffusion/ActualIntrinsicResistanceDiameter20261011.lean",
+          "sha256": "b66ed7812def1c4fba8507a8c7df79a86ab846079d63617e10a0033cb7463585",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.ae_natural_markedElectricalRadiusSupremum_subexponential_completion20261011",
+          "source": "IGSIII34/ResistanceLimit/RadiusSupremumSubexponential20261011.lean",
+          "sha256": "890c9c81d7a8d335d3ae9394c8d8cb0620ff3241f728f6b359618cf1f6eef8dc",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.actualRetainedComponentEnergy_eq_intrinsic_restriction",
+          "source": "IGSIII34/ResistanceLimit/ActualComponentIntrinsicEnergyBridge.lean",
+          "sha256": "7e50e28db1cb12ad26512d20be21f54299fe32b3f85550c4d2e801c2cb94f2f9",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.actual_completed_component_resistance_bound",
+          "source": "IGSIII34/ResistanceLimit/ActualComponentIntrinsicEnergyBridge.lean",
+          "sha256": "7e50e28db1cb12ad26512d20be21f54299fe32b3f85550c4d2e801c2cb94f2f9",
+          "clause": ""
+        }
+      ],
+      "semanticFinding": "The repaired exact intrinsic completed-component H envelope, all positive H moments and one-event all-word subexponential bounds are included alongside Y and inverse-X maxima. No global shortened metric is substituted."
+    },
+    {
+      "label": "eq:spectral-maxima",
+      "section": "AppendixB",
+      "manuscriptLines": [
+        1988,
+        1996
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "The repaired exact intrinsic completed-component H envelope, all positive H moments and one-event all-word subexponential bounds are included alongside Y and inverse-X maxima. No global shortened metric is substituted.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Spectral.actual_mass_continuation_alladdress_subexponential_completion20261011",
+          "source": "IGSIII34/Spectral/PhysicalSocketMassCompletion20261011.lean",
+          "sha256": "8c041709d33b036974e688739ef4d0910f73ef9419983c15fa9d7d82fe85af7d",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.actual_physical_socket_mass_subexponential_completion20261011",
+          "source": "IGSIII34/Spectral/PhysicalSocketMassCompletion20261011.lean",
+          "sha256": "8c041709d33b036974e688739ef4d0910f73ef9419983c15fa9d7d82fe85af7d",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.actual_electrical_inverse_alladdress_subexponential_completion20261011",
+          "source": "IGSIII34/Spectral/ElectricalInverseMaximaCompletion20261011.lean",
+          "sha256": "2605b7f73526b0cf5e489d2ce788c67966b477bc93ffcaa5ef3b7e619527e4f1",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.physical_electrical_inverse_alladdress_subexponential_completion20261011",
+          "source": "IGSIII34/Spectral/PhysicalElectricalInverseMaximaCompletion20261011.lean",
+          "sha256": "7d2ef7c87d0a77fcfb8e30c1b5c4c4d898e668e7bea54cc7e62171d3e3431eb9",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.exists_actual_mass_field_subexponential",
+          "source": "IGSIII34/Spectral/ActualMassMaximaCompletion20261011.lean",
+          "sha256": "3bd4459e47f3209e645768c2e74859addb062ad2a1681edf476f75c971216f5c",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.exists_actual_component_weight_subexponential_upper",
+          "source": "IGSIII34/Spectral/ActualCylinderMassCompletion20261011.lean",
+          "sha256": "cd04a9ec647ee4117d6ba691727d91d1e96d2ceff04a977250880d7d326b6f71",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.actualComponentIntrinsicDiameterEnvelope20261011",
+          "source": "IGSIII34/Diffusion/ActualIntrinsicResistanceDiameter20261011.lean",
+          "sha256": "b66ed7812def1c4fba8507a8c7df79a86ab846079d63617e10a0033cb7463585",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.actualElectricalComponent_intrinsic_diameter_le_radius_envelope20261011",
+          "source": "IGSIII34/Diffusion/ActualIntrinsicResistanceDiameter20261011.lean",
+          "sha256": "b66ed7812def1c4fba8507a8c7df79a86ab846079d63617e10a0033cb7463585",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.natural_actualComponentIntrinsicDiameterEnvelope_positive_moments20261011",
+          "source": "IGSIII34/Diffusion/ActualIntrinsicResistanceDiameter20261011.lean",
+          "sha256": "b66ed7812def1c4fba8507a8c7df79a86ab846079d63617e10a0033cb7463585",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.natural_actualElectricalComponent_intrinsic_diameter_subexponential20261011",
+          "source": "IGSIII34/Diffusion/ActualIntrinsicResistanceDiameter20261011.lean",
+          "sha256": "b66ed7812def1c4fba8507a8c7df79a86ab846079d63617e10a0033cb7463585",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.exists_actual_intrinsic_component_diameter_envelopes20261011",
+          "source": "IGSIII34/Diffusion/ActualIntrinsicResistanceDiameter20261011.lean",
+          "sha256": "b66ed7812def1c4fba8507a8c7df79a86ab846079d63617e10a0033cb7463585",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.ae_natural_markedElectricalRadiusSupremum_subexponential_completion20261011",
+          "source": "IGSIII34/ResistanceLimit/RadiusSupremumSubexponential20261011.lean",
+          "sha256": "890c9c81d7a8d335d3ae9394c8d8cb0620ff3241f728f6b359618cf1f6eef8dc",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.actualRetainedComponentEnergy_eq_intrinsic_restriction",
+          "source": "IGSIII34/ResistanceLimit/ActualComponentIntrinsicEnergyBridge.lean",
+          "sha256": "7e50e28db1cb12ad26512d20be21f54299fe32b3f85550c4d2e801c2cb94f2f9",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.actual_completed_component_resistance_bound",
+          "source": "IGSIII34/ResistanceLimit/ActualComponentIntrinsicEnergyBridge.lean",
+          "sha256": "7e50e28db1cb12ad26512d20be21f54299fe32b3f85550c4d2e801c2cb94f2f9",
+          "clause": ""
+        }
+      ]
+    },
+    {
+      "label": "lem:collar-expected-mass",
+      "section": "AppendixB",
+      "manuscriptLines": [
+        2012,
+        2014
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Spectral.actual_terminal_collar_envelope_Perron_bound_completion20261011",
+          "source": "IGSIII34/Spectral/ActualCollarMassBoundCompletion20261011.lean",
+          "sha256": "80e116ec1736476fd6af97a8ebc1984c0cd7bcaf624724bad85472297285660a",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.actual_boundary_collar_mass_domination_completion20261011",
+          "source": "IGSIII34/Spectral/BoundaryCollarMassCompletion20261011.lean",
+          "sha256": "91c2822011a02cf11e2820a1fc20ff73cb267d666bddea865d115c2c1b4bac80",
+          "clause": ""
+        }
+      ],
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion."
+    },
+    {
+      "label": "eq:collar-mass",
+      "section": "AppendixB",
+      "manuscriptLines": [
+        2022,
+        2022
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Spectral.actual_terminal_collar_envelope_Perron_bound_completion20261011",
+          "source": "IGSIII34/Spectral/ActualCollarMassBoundCompletion20261011.lean",
+          "sha256": "80e116ec1736476fd6af97a8ebc1984c0cd7bcaf624724bad85472297285660a",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.actual_boundary_collar_mass_domination_completion20261011",
+          "source": "IGSIII34/Spectral/BoundaryCollarMassCompletion20261011.lean",
+          "sha256": "91c2822011a02cf11e2820a1fc20ff73cb267d666bddea865d115c2c1b4bac80",
+          "clause": ""
+        }
+      ]
+    },
+    {
+      "label": "lem:skeleton-zero-mass",
+      "section": "AppendixB",
+      "manuscriptLines": [
+        2029,
+        2031
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Spectral.actual_boundary_skeleton_zero_mass_completion20261011",
+          "source": "IGSIII34/Spectral/BoundarySkeletonCompletion20261011.lean",
+          "sha256": "893d1ef231d31fa88944681f5668566fa87a798d0672542ce30b322e88d09e1d",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.exists_actual_natural_mass_null_singletons_and_skeleton",
+          "source": "IGSIII34/Spectral/Collars/ActualAtomlessMass.lean",
+          "sha256": "38f18dde50ccfe91150b9a5ab4dedffc5513a61e62a6dc62d126cd97f633d631",
+          "clause": ""
+        }
+      ],
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion."
+    },
+    {
+      "label": "lem:spectral-collars",
+      "section": "AppendixB",
+      "manuscriptLines": [
+        2040,
+        2043
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Spectral.exists_actual_typical_log_mass_and_linear_collars",
+          "source": "IGSIII34/Spectral/Collars/ActualMassCollars.lean",
+          "sha256": "f5498f7daf13b4dff9083ce2b70b2cf88b3233dcd318615538fc659d8c386a01",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.actual_boundary_all_rational_linear_collars_avoided",
+          "source": "IGSIII34/Spectral/Collars/LinearWidths.lean",
+          "sha256": "5b13d2f74e89090d69dc0d106db734594062adc066c2c820ded48c97ed826fc8",
+          "clause": ""
+        }
+      ],
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion."
+    },
+    {
+      "label": "lem:heat-kernel-continuity",
+      "section": "AppendixB",
+      "manuscriptLines": [
+        2068,
+        2070
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Spectral.actualSpectralData_heat_continuousOn_completion20261011",
+          "source": "IGSIII34/Spectral/ActualSpectralDataCompletion20261011.lean",
+          "sha256": "0379341ed1cf4a192a9b4df48105530d43407a56139b1158ca5ff4ecd43cf2a2",
+          "clause": ""
+        }
+      ],
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion."
+    },
+    {
+      "label": "lem:resolvent-variational",
+      "section": "AppendixB",
+      "manuscriptLines": [
+        2089,
+        2095
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Spectral.actualSpectralData_positive_laplace_variational_completion20261011",
+          "source": "IGSIII34/Spectral/ActualPositiveParameterResolvent20261011.lean",
+          "sha256": "3f24c7e9cb2b3a172b99f622ae3237179d814a56f9db8694fd9bc922d754812d",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.actual_positive_variational_supremum_nonzero_completion20261011",
+          "source": "IGSIII34/Spectral/PositiveResolventNonzeroSupremum20261011.lean",
+          "sha256": "a71ab7c5f46c093ad626d34c98d81b6c672e540486e97dc90327dbeac2eb5dd4",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.actual_positive_laplace_variational_nonzero_completion20261011",
+          "source": "IGSIII34/Spectral/PositiveResolventNonzeroSupremum20261011.lean",
+          "sha256": "a71ab7c5f46c093ad626d34c98d81b6c672e540486e97dc90327dbeac2eb5dd4",
+          "clause": ""
+        }
+      ],
+      "semanticFinding": "Actual spectral-kernel Laplace identity is proved for every s>0 with the literal nonzero-potential supremum, using the compiled nonzero cofinality bridge."
+    },
+    {
+      "label": "eq:resolvent-variational",
+      "section": "AppendixB",
+      "manuscriptLines": [
+        2089,
+        2095
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "Actual spectral-kernel Laplace identity is proved for every s>0 with the literal nonzero-potential supremum, using the compiled nonzero cofinality bridge.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Spectral.actualSpectralData_positive_laplace_variational_completion20261011",
+          "source": "IGSIII34/Spectral/ActualPositiveParameterResolvent20261011.lean",
+          "sha256": "3f24c7e9cb2b3a172b99f622ae3237179d814a56f9db8694fd9bc922d754812d",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.actual_positive_variational_supremum_nonzero_completion20261011",
+          "source": "IGSIII34/Spectral/PositiveResolventNonzeroSupremum20261011.lean",
+          "sha256": "a71ab7c5f46c093ad626d34c98d81b6c672e540486e97dc90327dbeac2eb5dd4",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.actual_positive_laplace_variational_nonzero_completion20261011",
+          "source": "IGSIII34/Spectral/PositiveResolventNonzeroSupremum20261011.lean",
+          "sha256": "a71ab7c5f46c093ad626d34c98d81b6c672e540486e97dc90327dbeac2eb5dd4",
+          "clause": ""
+        }
+      ]
+    },
+    {
+      "label": "lem:resolvent-component-bound",
+      "section": "AppendixB",
+      "manuscriptLines": [
+        2102,
+        2108
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Spectral.actual_completion_diagonal_local_upper_positive_completion20261011",
+          "source": "IGSIII34/Spectral/ActualPositiveParameterResolvent20261011.lean",
+          "sha256": "3f24c7e9cb2b3a172b99f622ae3237179d814a56f9db8694fd9bc922d754812d",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.actual_boundary_diagonal_local_upper_completion20261011",
+          "source": "IGSIII34/Spectral/BoundaryLocalEvaluationCompletion20261011.lean",
+          "sha256": "c786041ea41e76f38f2a3db7faa37b84fc2917fe0550a6c114c724d9448f845f",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.actual_positive_selected_component_intrinsic_resolvent_bound20261011",
+          "source": "IGSIII34/Spectral/ActualIntrinsicComponentResolvent20261011.lean",
+          "sha256": "38ad5dc7429f17f7215a531e7fb690f786cc4ee8688e0d2383d0043a96dab030",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.actual_positive_whole_cluster_intrinsic_resolvent_bound20261011",
+          "source": "IGSIII34/Spectral/ActualIntrinsicComponentResolvent20261011.lean",
+          "sha256": "38ad5dc7429f17f7215a531e7fb690f786cc4ee8688e0d2383d0043a96dab030",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.actualElectricalComponentCompletionInclusion_lipschitz",
+          "source": "IGSIII34/Diffusion/ActualElectricalComponentInclusion.lean",
+          "sha256": "3c8610aa4e022f4c8f7631fc6692bf64210b94e8aafce22dd2b4348318fe0967",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.actualElectricalComponentCompletionInclusion_closed_range",
+          "source": "IGSIII34/Diffusion/ActualElectricalComponentInjectivity.lean",
+          "sha256": "b0053a7cacee91d4ed8b332ab7b4bbb9d49444371aee03068294002c7be93255",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.actualElectricalComponentCompletionInclusion_isClosedEmbedding",
+          "source": "IGSIII34/Diffusion/ActualElectricalComponentInjectivity.lean",
+          "sha256": "b0053a7cacee91d4ed8b332ab7b4bbb9d49444371aee03068294002c7be93255",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.actualRetainedComponentEnergy_eq_intrinsic_restriction",
+          "source": "IGSIII34/ResistanceLimit/ActualComponentIntrinsicEnergyBridge.lean",
+          "sha256": "7e50e28db1cb12ad26512d20be21f54299fe32b3f85550c4d2e801c2cb94f2f9",
+          "clause": ""
+        }
+      ],
+      "semanticFinding": "The explicit compiled selected-component corollary uses the true inclusion range and exact scaled intrinsic diameter, deriving measurability and compactness rather than accepting a diameter bound. The separate whole-cluster corollary covers generation zero."
+    },
+    {
+      "label": "eq:resolvent-component",
+      "section": "AppendixB",
+      "manuscriptLines": [
+        2102,
+        2108
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "The explicit compiled selected-component corollary uses the true inclusion range and exact scaled intrinsic diameter, deriving measurability and compactness rather than accepting a diameter bound. The separate whole-cluster corollary covers generation zero.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Spectral.actual_completion_diagonal_local_upper_positive_completion20261011",
+          "source": "IGSIII34/Spectral/ActualPositiveParameterResolvent20261011.lean",
+          "sha256": "3f24c7e9cb2b3a172b99f622ae3237179d814a56f9db8694fd9bc922d754812d",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.actual_boundary_diagonal_local_upper_completion20261011",
+          "source": "IGSIII34/Spectral/BoundaryLocalEvaluationCompletion20261011.lean",
+          "sha256": "c786041ea41e76f38f2a3db7faa37b84fc2917fe0550a6c114c724d9448f845f",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.actual_positive_selected_component_intrinsic_resolvent_bound20261011",
+          "source": "IGSIII34/Spectral/ActualIntrinsicComponentResolvent20261011.lean",
+          "sha256": "38ad5dc7429f17f7215a531e7fb690f786cc4ee8688e0d2383d0043a96dab030",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.actual_positive_whole_cluster_intrinsic_resolvent_bound20261011",
+          "source": "IGSIII34/Spectral/ActualIntrinsicComponentResolvent20261011.lean",
+          "sha256": "38ad5dc7429f17f7215a531e7fb690f786cc4ee8688e0d2383d0043a96dab030",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.actualElectricalComponentCompletionInclusion_lipschitz",
+          "source": "IGSIII34/Diffusion/ActualElectricalComponentInclusion.lean",
+          "sha256": "3c8610aa4e022f4c8f7631fc6692bf64210b94e8aafce22dd2b4348318fe0967",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.actualElectricalComponentCompletionInclusion_closed_range",
+          "source": "IGSIII34/Diffusion/ActualElectricalComponentInjectivity.lean",
+          "sha256": "b0053a7cacee91d4ed8b332ab7b4bbb9d49444371aee03068294002c7be93255",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.actualElectricalComponentCompletionInclusion_isClosedEmbedding",
+          "source": "IGSIII34/Diffusion/ActualElectricalComponentInjectivity.lean",
+          "sha256": "b0053a7cacee91d4ed8b332ab7b4bbb9d49444371aee03068294002c7be93255",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.actualRetainedComponentEnergy_eq_intrinsic_restriction",
+          "source": "IGSIII34/ResistanceLimit/ActualComponentIntrinsicEnergyBridge.lean",
+          "sha256": "7e50e28db1cb12ad26512d20be21f54299fe32b3f85550c4d2e801c2cb94f2f9",
+          "clause": ""
+        }
+      ]
+    },
+    {
+      "label": "eq:component-evaluation",
+      "section": "AppendixB",
+      "manuscriptLines": [
+        2112,
+        2112
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "semanticFinding": "The explicit compiled selected-component corollary uses the true inclusion range and exact scaled intrinsic diameter, deriving measurability and compactness rather than accepting a diameter bound. The separate whole-cluster corollary covers generation zero.",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Spectral.actual_completion_diagonal_local_upper_positive_completion20261011",
+          "source": "IGSIII34/Spectral/ActualPositiveParameterResolvent20261011.lean",
+          "sha256": "3f24c7e9cb2b3a172b99f622ae3237179d814a56f9db8694fd9bc922d754812d",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.actual_boundary_diagonal_local_upper_completion20261011",
+          "source": "IGSIII34/Spectral/BoundaryLocalEvaluationCompletion20261011.lean",
+          "sha256": "c786041ea41e76f38f2a3db7faa37b84fc2917fe0550a6c114c724d9448f845f",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.actual_positive_selected_component_intrinsic_resolvent_bound20261011",
+          "source": "IGSIII34/Spectral/ActualIntrinsicComponentResolvent20261011.lean",
+          "sha256": "38ad5dc7429f17f7215a531e7fb690f786cc4ee8688e0d2383d0043a96dab030",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.actual_positive_whole_cluster_intrinsic_resolvent_bound20261011",
+          "source": "IGSIII34/Spectral/ActualIntrinsicComponentResolvent20261011.lean",
+          "sha256": "38ad5dc7429f17f7215a531e7fb690f786cc4ee8688e0d2383d0043a96dab030",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.actualElectricalComponentCompletionInclusion_lipschitz",
+          "source": "IGSIII34/Diffusion/ActualElectricalComponentInclusion.lean",
+          "sha256": "3c8610aa4e022f4c8f7631fc6692bf64210b94e8aafce22dd2b4348318fe0967",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.actualElectricalComponentCompletionInclusion_closed_range",
+          "source": "IGSIII34/Diffusion/ActualElectricalComponentInjectivity.lean",
+          "sha256": "b0053a7cacee91d4ed8b332ab7b4bbb9d49444371aee03068294002c7be93255",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Diffusion.actualElectricalComponentCompletionInclusion_isClosedEmbedding",
+          "source": "IGSIII34/Diffusion/ActualElectricalComponentInjectivity.lean",
+          "sha256": "b0053a7cacee91d4ed8b332ab7b4bbb9d49444371aee03068294002c7be93255",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.ResistanceLimit.actualRetainedComponentEnergy_eq_intrinsic_restriction",
+          "source": "IGSIII34/ResistanceLimit/ActualComponentIntrinsicEnergyBridge.lean",
+          "sha256": "7e50e28db1cb12ad26512d20be21f54299fe32b3f85550c4d2e801c2cb94f2f9",
+          "clause": ""
+        }
+      ]
+    },
+    {
+      "label": "lem:spectral-resolvent",
+      "section": "AppendixB",
+      "manuscriptLines": [
+        2120,
+        2123
+      ],
+      "reviewed": true,
+      "status": "PROVED",
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Spectral.spectral_dimension_of_laplace_exponent_slack",
+          "source": "IGSIII34/Spectral/TauberianSlack.lean",
+          "sha256": "d5a781f805b990c4af87050ed6533faa368410aaa8ff8d066136d81bbc10adb0",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.heat_power_bounds_of_laplace_power_bounds",
+          "source": "IGSIII34/Spectral/TauberianPower.lean",
+          "sha256": "e84ce52066d0008bc956de8efb01ba25228efe0a62c595305eb55b4c58eaeed6",
+          "clause": ""
+        },
+        {
+          "declaration": "IGSIII34.Spectral.spectral_dimension_of_laplace_power_bounds",
+          "source": "IGSIII34/Spectral/TauberianPower.lean",
+          "sha256": "e84ce52066d0008bc956de8efb01ba25228efe0a62c595305eb55b4c58eaeed6",
+          "clause": ""
+        }
+      ],
+      "semanticFinding": "Existing proof entry points retained; section split and line relocation introduce no new premise or conclusion."
+    }
+  ],
+  "sectionNumbering": "Diffusion is now Section4; AO is now Section5. Legacy aggregate and certificate paths are retained."
+}

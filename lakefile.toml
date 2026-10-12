@@ -24,4 +24,7 @@ name = "IGSIII4"
 name = "IGSIIISectionsThreeFour"
 
 [[lean_lib]]
+name = "IGSIIISectionsTwoThreeFour"
+
+[[lean_lib]]
 name = "IGSAlexanderOrbach"

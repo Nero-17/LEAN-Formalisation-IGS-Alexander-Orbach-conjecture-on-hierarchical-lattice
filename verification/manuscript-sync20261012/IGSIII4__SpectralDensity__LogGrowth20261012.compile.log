@@ -1,6 +1,0 @@
-IGSIII4\SpectralDensity\LogGrowth20261012.lean:34:6: warning: this tactic is never executed
-
-Note: This linter can be disabled with `set_option linter.unreachableTactic false`
-IGSIII4\SpectralDensity\LogGrowth20261012.lean:34:6: warning: 'ring' tactic does nothing
-
-Note: This linter can be disabled with `set_option linter.unusedTactic false`

@@ -1,6 +1,36 @@
-import IGSIIILatestManuscript20261012
+import IGSIII34
+import IGSIII4
+import IGSIII4.ActualSectionFour
+import IGSIII4.ActualTypicalPointSectionFour
+import IGSIII.SectionTwo
+import IGSIII.Chemical.EqualLengthScalar
+import IGSIII.Chemical.SmallBall.FiniteDepthPairedBarrier
+import IGSIII34.Spectral.ActualPositiveParameterResolvent20261011
+import IGSIII34.Spectral.PositiveResolventNonzeroSupremum20261011
+import IGSIII34.Diffusion.ActualIntrinsicResistanceDiameter20261011
+import IGSIII34.Spectral.ActualIntrinsicComponentResolvent20261011
+import IGSIII.Chemical.SubstitutionPaths.AllConfigurationBounds20261011
+import IGSIII.Geometry.ExpectedChemicalMassDimension20261011
+import IGSIII.ActualChemicalCellRouteCompletion20261011
+import IGSIII.Chemical.SubstitutionPaths.ActualPrefixVarianceRate20261011
+import IGSIII.Chemical.SubstitutionPaths.PrefixDepthMonotonicity20261011
+import IGSIII.Mass.RetainedStateDefinitions20261011
+import IGSIII.Mass.ActualPopulationNormalization20261012
+import IGSIII34.Diffusion.ActualNormalizedMassClocks20261012
+import IGSIII4.SpectralDensity.Asymptotics20261012
+import IGSIII4.SpectralDensity.LogGrowth20261012
+import IGSIII4.SpectralDensity.CeilingGrowth20261012
+import IGSIII4.SpectralDensity.CoarseMassGrowth20261012
+import IGSIII4.SpectralDensity.EndpointTests20261012
+import IGSIII4.SpectralDensity.EdgeAssociation20261012
+import IGSIII4.SpectralDensity.ActualMassLower20261012
+import IGSIII4.SpectralDensity.BernoulliCircuit20261012
+import IGSIII4.SpectralDensity.ActualFamily20261012
+import IGSIII4.SpectralDensity.ActualCrossing20261012
+import IGSIII4.SpectralDensity.ActualProbability20261012
+import IGSIII4.SpectralDensity.ActualMassBridge20261012
+import IGSIII4.SpectralDensity.ActualSharpMassBounds20261012
+import IGSIII4.SpectralDensity.ActualPhysicalDensity20261012
 
-/-! Unified actual-proof entry point for the reviewed manuscript, including
-the actual critical finite-rule spectral-density theorem and its physical
-typical-point interpretation. Historical section-numbered entries are retained.
-The global AO exclusion remains a conjecture, not a theorem. -/
+/-! Chemical geometry, resistance, diffusion and spectral dimension of
+critical percolation clusters on classical hierarchical lattices. -/

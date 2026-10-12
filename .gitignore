@@ -5,4 +5,3 @@ lean_packages/
 *.trace
 *.hash
 *.o
-verification/*.log

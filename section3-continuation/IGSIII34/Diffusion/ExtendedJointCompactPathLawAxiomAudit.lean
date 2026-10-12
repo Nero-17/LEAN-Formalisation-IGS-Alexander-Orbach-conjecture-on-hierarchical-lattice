@@ -1,7 +1,0 @@
-import IGSIII34.Diffusion.ExtendedJointCompactPathLaw
-
-#print axioms IGSIII34.Diffusion.extendedJointStatePathClass_lipschitz
-#print axioms IGSIII34.Diffusion.extendedJointStatePathClass_isometricTransport
-#print axioms IGSIII34.Diffusion.extendedJointCompactPathLaw_integral
-#print axioms IGSIII34.Diffusion.extendedJointCompactPathLaw_tendsto
-#print axioms IGSIII34.Diffusion.extendedJointCompactPathLaw_isometricTransport

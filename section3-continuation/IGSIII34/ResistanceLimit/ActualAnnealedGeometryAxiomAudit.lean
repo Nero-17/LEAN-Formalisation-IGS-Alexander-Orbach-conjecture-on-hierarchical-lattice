@@ -1,7 +1,0 @@
-import IGSIII34.ResistanceLimit.ActualSameCarrierMeasuredMarkedState
-
-#print axioms IGSIII34.ResistanceLimit.actual_common_chemical_compact_images_tendsto
-#print axioms IGSIII34.ResistanceLimit.actual_common_chemical_born_mark_tendsto
-#print axioms IGSIII34.ResistanceLimit.actual_common_chemical_terminal_tendsto
-#print axioms IGSIII34.ResistanceLimit.actual_common_chemical_measured_marked_state_tendsto
-#print axioms IGSIII34.ResistanceLimit.actual_same_carrier_measured_marked_state

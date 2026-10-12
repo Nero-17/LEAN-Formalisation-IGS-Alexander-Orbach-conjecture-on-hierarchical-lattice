@@ -1,2 +1,0 @@
-Build and axiom audit passed for 12483 declarations.
-Latest Sections2–5 corrected-scope correspondence, actual-interface and aggregate audit complete. Necessary manuscript corrections remain explicit in manifest.json; literal uncorrected text is not certified.

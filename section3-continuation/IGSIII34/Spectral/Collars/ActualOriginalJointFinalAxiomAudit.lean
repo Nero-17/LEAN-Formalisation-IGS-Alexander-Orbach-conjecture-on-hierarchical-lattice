@@ -1,6 +1,0 @@
-import IGSIII34.Spectral.Collars.ActualAllClocksAnnealedOriginalJoint
-
-#print axioms IGSIII34.Spectral.actualFiniteOriginalJointEnvironmentKernel
-#print axioms IGSIII34.ResistanceLimit.exists_ae_actual_natural_original_joint_limit
-#print axioms IGSIII34.ResistanceLimit.exists_ae_actual_all_clocks_original_joint_limits
-#print axioms IGSIII34.ResistanceLimit.exists_actual_all_clocks_annealed_original_joint

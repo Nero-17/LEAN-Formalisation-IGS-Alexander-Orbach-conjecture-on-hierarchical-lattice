@@ -1,2 +1,0 @@
-Build and axiom audit passed for 12037 declarations.
-Section 3 manuscript correspondence and aggregate audit complete. See the exact scope in COVERAGE.md.

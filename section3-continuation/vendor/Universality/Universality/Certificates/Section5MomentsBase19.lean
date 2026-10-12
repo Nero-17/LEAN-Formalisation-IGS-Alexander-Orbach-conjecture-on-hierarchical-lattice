@@ -1,2 +1,0 @@
-import Universality.Certificates.Section5LengthBase19
-import Universality.Certificates.Section5ResponsesBase19

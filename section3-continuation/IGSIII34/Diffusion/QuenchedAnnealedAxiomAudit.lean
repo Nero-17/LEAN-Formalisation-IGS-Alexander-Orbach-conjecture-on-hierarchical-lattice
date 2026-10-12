@@ -1,8 +1,0 @@
-import IGSIII34.Diffusion.QuenchedKernelExistence
-
-#print axioms IGSIII34.Diffusion.weak_probability_to_measure_borel_measurable
-#print axioms IGSIII34.Diffusion.exists_measurable_quenched_probability_limit
-#print axioms IGSIII34.Diffusion.exists_quenched_limit_markov_kernel
-#print axioms IGSIII34.Diffusion.exists_quenched_limit_markov_kernel_of_ae_existence
-#print axioms IGSIII34.Diffusion.annealed_joint_weak_of_quenched
-#print axioms IGSIII34.Diffusion.exists_annealed_joint_limit_of_quenched_existence

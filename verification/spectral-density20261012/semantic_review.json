@@ -1,0 +1,474 @@
+{
+  "disposition": "ACCEPT",
+  "reviewer": "Independent Agent3 density_audit",
+  "mode": "Standard Research",
+  "reviewStartedUtc": "2026-10-12T07:33:36+00:00",
+  "reviewCompletedUtc": "2026-10-12T08:15:16.469790+00:00",
+  "effort": {
+    "target": "max",
+    "requested": "max",
+    "effective": "unverified"
+  },
+  "sourcePaperCommit": "bfb73c0c34450dbb517261655cddda005b870d95",
+  "sourcePaperSha256": "cc53804aafbe60b25a644b829285ac558447ccafed538408a76f736fbf3efa60",
+  "closureManifestSha256": "92d3683a4a0f78538732cb342c15fddc74a0d0a61e850d7539f39c717700972a",
+  "sourceCorrespondenceSha256": "b6478434c49bd837d7bf5e4927fe728715ca2c5af267c1fcf38cf2da13ecbbf5",
+  "semanticReviewSha256": "69219504abe272dcfd1fbfe6fa45e83b59ffcae14816851f2e01bc3e912a00c6",
+  "verifierSha256": "232e787cc792cb525f4b18371f1bb2e70d76f7e8bfecd5696bfdb7f2ac473dc1",
+  "sameWitnessVerdict": "ACCEPT: same actual appendix graph, own interior critical probability, max(length,2) natural completion, physical vertex-limit mass, and actual typical-point heat-kernel exponent.",
+  "finalDensityConclusionPremises": [
+    "lower : real",
+    "upper : real",
+    "1 <= lower",
+    "upper <= 2",
+    "lower < upper"
+  ],
+  "forbiddenConclusionLikePremises": [],
+  "unresolvedLeanObligations": [],
+  "claims": [
+    {
+      "claimId": "LATEST-NORMALIZATION",
+      "disposition": "ACCEPT",
+      "status": "PROVED",
+      "statement": "The same actual statewise vertex limits have expectations h, v dot h = 1, connected population limit W_c v, and vertex limit W_c, with the exact saved-history depth shift and L2 convergence.",
+      "scopeNote": "Saved history level n represents manuscript level n+1; the source population and root counts also have an explicit seed convention. This is a proved rescaling, not equality of arbitrary Perron normalizations.",
+      "smallestRemainingGap": null,
+      "entryPoints": [
+        {
+          "declaration": "Universality.Rule.Classical.actual_expected_mass_L2_population_normalization20261012",
+          "source": "IGSIII/Mass/ActualPopulationNormalization20261012.lean",
+          "sha256": "9f7222dc77974e410d29d7adb21b24d93e92960214a2f87801ef2235260a97fc",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII__Mass__ActualPopulationNormalization20261012.compile.json"
+        }
+      ]
+    },
+    {
+      "claimId": "LATEST-CLOCKS",
+      "disposition": "ACCEPT",
+      "status": "PROVED",
+      "statement": "Actual deterministic/natural clock ratios converge to 1/(2 v_c W_c) and 1/W_c on the same innovation sample and use the same actual vertex-limit mass.",
+      "scopeNote": "Whole-path process and speed-measure identifications are inherited from the audited actual all-clocks theorems; this new module exports the normalization/ratio bridge, not a new path-construction theorem.",
+      "smallestRemainingGap": null,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII34.Diffusion.ae_actual_normalized_vertex_mass_clocks20261012",
+          "source": "IGSIII34/Diffusion/ActualNormalizedMassClocks20261012.lean",
+          "sha256": "149a6590b5263342f36982013b16732a6dcf9752f6d6e226a2e905afbb26e4c2",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII34__Diffusion__ActualNormalizedMassClocks20261012.compile.json"
+        }
+      ]
+    },
+    {
+      "claimId": "DENS-FAMILY",
+      "disposition": "ACCEPT",
+      "status": "PROVED",
+      "statement": "The explicit finite simple canonical terminal-symmetric rule is actually constructed. Terminal distance, both terminal degrees, and minimum separating edge cut equal two.",
+      "scopeNote": "Every admissible index is at least two; final sequence uses max(length,2), changing only a finite prefix.",
+      "smallestRemainingGap": null,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.appendixRule",
+          "source": "IGSIII4/SpectralDensity/ActualFamily20261012.lean",
+          "sha256": "4dbc4d6b111b6d63e6967bdae19ca61edf7ec96263b50572a82a1c6d6eb650c3",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualFamily20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.appendixRule_classical",
+          "source": "IGSIII4/SpectralDensity/ActualFamily20261012.lean",
+          "sha256": "4dbc4d6b111b6d63e6967bdae19ca61edf7ec96263b50572a82a1c6d6eb650c3",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualFamily20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.appendixRule_terminal_parameters20261012",
+          "source": "IGSIII4/SpectralDensity/ActualFamilyParameters20261012.lean",
+          "sha256": "00643ec54c26726ffd1813b3dea0dc54b7a7778283fb190e67d7c6854bea554b",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualFamilyParameters20261012.compile.json"
+        }
+      ]
+    },
+    {
+      "claimId": "DENS-CRITICAL",
+      "disposition": "ACCEPT",
+      "status": "PROVED",
+      "statement": "The graph crossing event equals the circuit event; its Bernoulli reliability and own interior critical equation are exact, and the critical point eventually lies between 7/10 and 4/5.",
+      "scopeNote": "",
+      "smallestRemainingGap": null,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.network_crosses_iff_circuit",
+          "source": "IGSIII4/SpectralDensity/ActualCrossing20261012.lean",
+          "sha256": "b0b562620317a71adc43e6465f84a8545392a0c6fbd98f1f8d0d045c61bc55b7",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualCrossing20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.reliability_formula",
+          "source": "IGSIII4/SpectralDensity/ActualProbability20261012.lean",
+          "sha256": "3aa343062ebc4edd813488a8e1249c5b0d8fc57cf9123c9140218675d6e6e25f",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualProbability20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.actual_critical_equation",
+          "source": "IGSIII4/SpectralDensity/ActualProbability20261012.lean",
+          "sha256": "3aa343062ebc4edd813488a8e1249c5b0d8fc57cf9123c9140218675d6e6e25f",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualProbability20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.appendixCriticalProbability_spec",
+          "source": "IGSIII4/SpectralDensity/ActualMassGrowth20261012.lean",
+          "sha256": "8b2fb5128a4b5e6fef0cc8aed655429150408d315cb1f2e27d732cb30e5f7971",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualMassGrowth20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.appendixCriticalProbability_interval_eventually",
+          "source": "IGSIII4/SpectralDensity/ActualMassGrowth20261012.lean",
+          "sha256": "8b2fb5128a4b5e6fef0cc8aed655429150408d315cb1f2e27d732cb30e5f7971",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualMassGrowth20261012.compile.json"
+        }
+      ]
+    },
+    {
+      "claimId": "DENS-BINOMIAL",
+      "disposition": "ACCEPT",
+      "status": "PROVED",
+      "statement": "The actual number of successful paths has the binomial status law, with block-failure, conditional count, and reciprocal-count estimates at the actual own critical probability.",
+      "scopeNote": "",
+      "smallestRemainingGap": null,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.critical_path_failure_bounds",
+          "source": "IGSIII4/SpectralDensity/ActualBinomialEstimates20261012.lean",
+          "sha256": "4333ffa6442fe93e5224aaadaf8fcfeaa6f2ba7ae43de191822d01d897d92919",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualBinomialEstimates20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.appendix_success_mean_bounds_eventually",
+          "source": "IGSIII4/SpectralDensity/ActualBinomialEstimates20261012.lean",
+          "sha256": "4333ffa6442fe93e5224aaadaf8fcfeaa6f2ba7ae43de191822d01d897d92919",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualBinomialEstimates20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.appendix_conditional_count_and_inverse_bounds_eventually",
+          "source": "IGSIII4/SpectralDensity/ActualBinomialConditional20261012.lean",
+          "sha256": "335c47ffcf93a0ca7d6a00f458d8eed657aff2064ea19afb001e4798559f1b75",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualBinomialConditional20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.binomial_shifted_reciprocal_identity",
+          "source": "IGSIII4/SpectralDensity/ActualBinomialReciprocal20261012.lean",
+          "sha256": "d3d25727a476432edfd3576e46e2258330e47fd0ff08acc781598dccb742df47",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualBinomialReciprocal20261012.compile.json"
+        }
+      ]
+    },
+    {
+      "claimId": "DENS-BLOCK-MOMENTS",
+      "disposition": "ACCEPT",
+      "status": "PROVED",
+      "statement": "Product finite-input laws give the path lower-tail estimate, block mean lower bound, and block second-moment upper bound.",
+      "scopeNote": "Formal inputs are arbitrary finite positive laws with normalized weights. Those cover every actual finite recursive generation; extension of this auxiliary assertion to every non-finitely-supported probability law is not needed or claimed.",
+      "smallestRemainingGap": null,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII4.SpectralDensity.finiteMean_path_lower_tail20261012",
+          "source": "IGSIII4/SpectralDensity/ActualMomentChernoff20261012.lean",
+          "sha256": "1975abb5987ba4a2db2d4310041753b04f5123178c866c0e06863c37db2b2ab6",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualMomentChernoff20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.finiteMean_block_lower20261012",
+          "source": "IGSIII4/SpectralDensity/ActualMomentBlockLaw20261012.lean",
+          "sha256": "45b27d20e7929fc576e2f0816bcb704360a17911518f5534e95205c8a9a76dbf",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualMomentBlockLaw20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.finiteMean_block_second_moment20261012",
+          "source": "IGSIII4/SpectralDensity/ActualMomentBlockLaw20261012.lean",
+          "sha256": "45b27d20e7929fc576e2f0816bcb704360a17911518f5534e95205c8a9a76dbf",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualMomentBlockLaw20261012.compile.json"
+        }
+      ]
+    },
+    {
+      "claimId": "DENS-WHOLE-MOMENTS",
+      "disposition": "ACCEPT",
+      "status": "PROVED",
+      "statement": "The actual long-branch product law gives mean/variance bounds. Exact disintegration over short-crossing and short-failure-plus-long-crossing gives full-cell first and second moments; one cutoff works uniformly over every finite normalized input law with variance at most eight.",
+      "scopeNote": "Line2120 independence is before conditioning on whole-rule crossing. It is false after that conditioning. The exported invariant is variance at most eight (second moment at most nine times mean squared), sufficient for induction; the source proof uses a strict intermediate bound.",
+      "smallestRemainingGap": null,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.actualLong_mean20261012",
+          "source": "IGSIII4/SpectralDensity/ActualMomentLongLaw20261012.lean",
+          "sha256": "3937545bbf4b65d3ba99d848ce713bdf0d69fd46e51fa1a0c7f6fce0e0ddc215",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualMomentLongLaw20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.actualLong_variance_bound20261012",
+          "source": "IGSIII4/SpectralDensity/ActualMomentLongLaw20261012.lean",
+          "sha256": "3937545bbf4b65d3ba99d848ce713bdf0d69fd46e51fa1a0c7f6fce0e0ddc215",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualMomentLongLaw20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.weightedCell_mean_lower_long20261012",
+          "source": "IGSIII4/SpectralDensity/ActualMomentWholeCell20261012.lean",
+          "sha256": "fa13dc503b46d31d00e151ae478e64d1dbd62a41933574df478c149a4b345f6f",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualMomentWholeCell20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.weightedCell_second_upper_long_variance20261012",
+          "source": "IGSIII4/SpectralDensity/ActualMomentWholeCell20261012.lean",
+          "sha256": "fa13dc503b46d31d00e151ae478e64d1dbd62a41933574df478c149a4b345f6f",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualMomentWholeCell20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.appendix_finite_cell_moment_bounds_eventually20261012",
+          "source": "IGSIII4/SpectralDensity/ActualMomentUniformInvariant20261012.lean",
+          "sha256": "f631aca494dc6dd10acaad3d93c82c686476e163b23d278f4c141698080e5dfa",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualMomentUniformInvariant20261012.compile.json"
+        }
+      ]
+    },
+    {
+      "claimId": "DENS-GENERATION",
+      "disposition": "ACCEPT",
+      "status": "PROVED",
+      "statement": "Actual generation laws are finite product laws of the exact graph resistance. Mean normalization preserves the invariant, and actual finite-scale growth transfers to the same selected natural completion.",
+      "scopeNote": "The actual lower-bound theorem has no finite-cell-moment premise; only base>1 remains.",
+      "smallestRemainingGap": null,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.actual_generation_weighted_cell_observable",
+          "source": "IGSIII4/SpectralDensity/ActualGenerationMoments20261012.lean",
+          "sha256": "f0eda10085f4472cf37960cf9ba0de904903f0626a77f8901572ca4004219d76",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualGenerationMoments20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.actual_generation_weighted_cell_mean",
+          "source": "IGSIII4/SpectralDensity/ActualGenerationMoments20261012.lean",
+          "sha256": "f0eda10085f4472cf37960cf9ba0de904903f0626a77f8901572ca4004219d76",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualGenerationMoments20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.actual_generation_weighted_cell_second_moment",
+          "source": "IGSIII4/SpectralDensity/ActualGenerationMoments20261012.lean",
+          "sha256": "f0eda10085f4472cf37960cf9ba0de904903f0626a77f8901572ca4004219d76",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualGenerationMoments20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.actual_generation_bounds_of_uniform_cell_moments",
+          "source": "IGSIII4/SpectralDensity/ActualFiniteIteration20261012.lean",
+          "sha256": "bc9da812ff7b57983d5044437ccdafad71109d5b0f6424217977b8472e79329d",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualFiniteIteration20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.actual_natural_growth_lower_of_uniform_cell_moments",
+          "source": "IGSIII4/SpectralDensity/ActualFiniteIteration20261012.lean",
+          "sha256": "bc9da812ff7b57983d5044437ccdafad71109d5b0f6424217977b8472e79329d",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualFiniteIteration20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.appendix_actual_natural_growth_lower20261012",
+          "source": "IGSIII4/SpectralDensity/ActualDensityCompletion20261012.lean",
+          "sha256": "0601b1ea338798e48839d951c6737380f71497735756d415097646b676463e44",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualDensityCompletion20261012.compile.json"
+        }
+      ]
+    },
+    {
+      "claimId": "DENS-UPPER",
+      "disposition": "ACCEPT",
+      "status": "PROVED",
+      "statement": "The exact unit-input reciprocal calculation and finite resistance concavity bound the natural multiplier above; together with the previous lower bound this gives the stated block-count constant factors.",
+      "scopeNote": "The final two-sided theorem concerns exactly appendixNaturalCompletion base length and assumes only base>1.",
+      "smallestRemainingGap": null,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.appendix_weightedCell_unit_mean_upper20261012",
+          "source": "IGSIII4/SpectralDensity/ActualUnitInputUpper20261012.lean",
+          "sha256": "044e94add1b2f65b4ffcac749d4477fd5b63100c48ddc38ce9b916962d3343cb",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualUnitInputUpper20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.appendix_actual_natural_growth_upper20261012",
+          "source": "IGSIII4/SpectralDensity/ActualUnitNaturalUpper20261012.lean",
+          "sha256": "5a127e890d3c87956638559e3303bf2012bcb3d8d4ce2b0fd86bd11b3dd39b02",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualUnitNaturalUpper20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.appendix_actual_natural_growth_bounds20261012",
+          "source": "IGSIII4/SpectralDensity/ActualDensityCompletion20261012.lean",
+          "sha256": "0601b1ea338798e48839d951c6737380f71497735756d415097646b676463e44",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualDensityCompletion20261012.compile.json"
+        }
+      ]
+    },
+    {
+      "claimId": "DENS-FULL-MASS",
+      "disposition": "ACCEPT",
+      "status": "PROVED",
+      "statement": "The full retained-state Perron radius has the strict one-third lower and 50-times-blocks-times-paths-plus-four upper bound. The actual normalized logarithmic mass growth is proved.",
+      "scopeNote": "Dangling edges remain included; a failed child with both inherited active endpoints is one b child from the same failed configuration. The formal limit used by density is log(radius)/length; the sharper displayed log(length)+O(1) follows from the separately exported constant-factor bounds and ceilings but is not a separately named Big-O theorem.",
+      "smallestRemainingGap": null,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.appendix_actual_mass_sharp_bounds",
+          "source": "IGSIII4/SpectralDensity/ActualSharpMassBounds20261012.lean",
+          "sha256": "4c607932b15b1dcb95d5e382fec0828bce8c44a67060e50192b1e7c2f1360cb3",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualSharpMassBounds20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.appendix_actual_mass_normalized_log_limit",
+          "source": "IGSIII4/SpectralDensity/ActualMassGrowth20261012.lean",
+          "sha256": "8b2fb5128a4b5e6fef0cc8aed655429150408d315cb1f2e27d732cb30e5f7971",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualMassGrowth20261012.compile.json"
+        }
+      ]
+    },
+    {
+      "claimId": "DENS-LIMIT",
+      "disposition": "ACCEPT",
+      "status": "PROVED",
+      "statement": "Natural growth and full-mass logarithmic limits yield the explicit limiting dimension; every interval in (1,2) contains a member of the actual finite family.",
+      "scopeNote": "Lean allows real base>1, a harmless strengthening: only finite integer ceilings enter each graph. It first constructs the natural limit for a fixed finite graph, then varies length.",
+      "smallestRemainingGap": null,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.appendix_actual_natural_dimension_limit20261012",
+          "source": "IGSIII4/SpectralDensity/ActualDensityCompletion20261012.lean",
+          "sha256": "0601b1ea338798e48839d951c6737380f71497735756d415097646b676463e44",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualDensityCompletion20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.appendix_actual_spectral_density20261012",
+          "source": "IGSIII4/SpectralDensity/ActualDensityCompletion20261012.lean",
+          "sha256": "0601b1ea338798e48839d951c6737380f71497735756d415097646b676463e44",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualDensityCompletion20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.actual_spectral_density20261012",
+          "source": "IGSIII4/SpectralDensity/ActualDensityCompletion20261012.lean",
+          "sha256": "0601b1ea338798e48839d951c6737380f71497735756d415097646b676463e44",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualDensityCompletion20261012.compile.json"
+        }
+      ]
+    },
+    {
+      "claimId": "DENS-PHYSICAL",
+      "disposition": "ACCEPT",
+      "status": "PROVED",
+      "statement": "The final density witness includes the actual full-support physical probability mass, compact electrical carrier, actual heat kernel, and physical-mass-almost-everywhere small-time exponent for the very same selected natural completion, together with fixed terminal geometry and the own critical point.",
+      "scopeNote": "This is the strongest public entry point. It has only interval endpoint assumptions and no resistance, moment, spectral formula, or target density premise. Its natural argument is explicit in the physical predicate, preventing a switch to a separately chosen witness.",
+      "smallestRemainingGap": null,
+      "entryPoints": [
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.ActualPhysicalTypicalSpectralDimension20261012",
+          "source": "IGSIII4/SpectralDensity/ActualPhysicalDensity20261012.lean",
+          "sha256": "a11def70fe4bde46b1b4d207792b06f537cf291c84ecd05ce5f5b121087c340b",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualPhysicalDensity20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.actual_natural_physical_typical_dimension20261012",
+          "source": "IGSIII4/SpectralDensity/ActualPhysicalDensity20261012.lean",
+          "sha256": "a11def70fe4bde46b1b4d207792b06f537cf291c84ecd05ce5f5b121087c340b",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualPhysicalDensity20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.appendix_actual_physical_typical_dimension20261012",
+          "source": "IGSIII4/SpectralDensity/ActualPhysicalDensity20261012.lean",
+          "sha256": "a11def70fe4bde46b1b4d207792b06f537cf291c84ecd05ce5f5b121087c340b",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualPhysicalDensity20261012.compile.json"
+        },
+        {
+          "declaration": "IGSIII4.SpectralDensity.ActualFamily.actual_physical_spectral_density_two_terminal_parameters20261012",
+          "source": "IGSIII4/SpectralDensity/ActualPhysicalDensity20261012.lean",
+          "sha256": "a11def70fe4bde46b1b4d207792b06f537cf291c84ecd05ce5f5b121087c340b",
+          "currentCompileReceiptMatches": true,
+          "receipt": "IGSIII4__SpectralDensity__ActualPhysicalDensity20261012.compile.json"
+        }
+      ]
+    }
+  ],
+  "inheritedObligationsChecked": 74,
+  "correspondenceEntriesVerifiedInAuditedClosure": 310,
+  "importedLocalModuleCount": 1893,
+  "auditedDeclarationCount": 16385,
+  "allowedAxioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "coverageLimits": [
+    "Finite-input moment invariant needed for actual finite generations; no separate arbitrary nonfinite input-law theorem claimed.",
+    "Exported normalized variance is <= 8; no literal exported strict inequality claimed.",
+    "Limiting logarithmic rates are certified; not every auxiliary prose big-O formula is separately exported.",
+    "Physical-mass-typical compact-diffusion small-time exponent only; no added microscopic long-time or every-point claim.",
+    "Global Alexander-Orbach exclusion remains OPEN; density does not produce exact four-thirds equality for a finite rule.",
+    "Cached compiler evidence is reused by exact source/object hashes; not a fresh rebuild or kernel-body recheck of every cached declaration.",
+    "Latest prose literature summaries and Chinese companion are outside the mathematical Lean correspondence."
+  ],
+  "strongestSurvivingObjection": "No mathematical closure gap within the stated scope; publication and final archive receipts still need separate verification.",
+  "publicationVerified": false,
+  "finalArchiveVerified": false,
+  "progress": {
+    "scope": "Newest-manuscript Lean synchronization and publication only; not global AO",
+    "milestoneWeights": {
+      "source": 15,
+      "semantic": 30,
+      "repairs": 30,
+      "audit": 15,
+      "publicationArchive": 10
+    },
+    "verifiedCompletion": {
+      "source": 1,
+      "semantic": 1,
+      "repairs": 1,
+      "audit": 1,
+      "publicationArchive": 0
+    },
+    "percent": 90,
+    "plausibleRange": [
+      90,
+      100
+    ],
+    "confidence": "high for verified proof scope; publication not yet credited"
+  }
+}

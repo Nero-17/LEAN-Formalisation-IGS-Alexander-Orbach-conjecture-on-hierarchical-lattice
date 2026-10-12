@@ -1,82 +1,47 @@
 # IGS III Lean formalisation
 
-## Latest manuscript update (12 October 2026): in progress
+This package formalises the reviewed results of **Iterated Graph Systems (III): Alexander–Orbach conjecture on hierarchical lattices**, including the actual critical-cluster spectral-density theorem and its supporting resistance moment estimates.
 
-The manuscript has advanced to `551b8a5` and adds a spectral-density theorem.
-The new [synchronisation status](verification/manuscript-sync20261012/STATUS.md)
-and [exact-source receipts](verification/manuscript-sync20261012/manifest.json)
-cover the saved new proofs. The density theorem is **not yet proved in Lean**.
-Build the partial new entry with `lake build IGSIIILatestManuscript20261012`.
-The default entry and completion numbers below describe the earlier certified
-manuscript72298e5, not the new source. Its proposed theta/AO wording corrections
-have since been applied in Overleaf and are present in the newer source.
+The English manuscript cutoff is `bfb73c0c34450dbb517261655cddda005b870d95` (12 October 2026), with raw `main.tex` SHA256 `cc53804aafbe60b25a644b829285ac558447ccafed538408a76f736fbf3efa60`. The private manuscript and its Chinese companion are not included. The Chinese companion is not a separately audited manuscript.
 
-The default `IGSAlexanderOrbach.lean` imports the latest reviewed Sections2–5
-through the retained aggregate name `IGSIIISectionsTwoThreeFour.lean`.
-The original Sections2–4 task topics now occupy Sections2–5 after the diffusion/AO
-section split. The private Overleaf source audited
-here is commit `72298e5c47d6f5451dd8ed2e91d0b82dcd3777a3`.
+The default entry `IGSAlexanderOrbach.lean` imports `IGSIIILatestManuscript20261012.lean`. It includes the earlier actual-model geometry, mass, resistance, diffusion and typical heat-kernel proofs, the current vertex-mass/Perron/clock normalisation, and the new Appendix C construction. The old section-numbered modules retain their historical names after the manuscript's section split.
 
-The latest correspondence records 60 environments with 61 labels, 75 obligations and 273
-exact Lean entry mappings, including the separate AO equivalence. Final actual
-constructors produce their electrical field, geometry, mass, resistance form,
-process and typical spectral dimension from the stated model hypotheses.
-Former accepted Section3 target certificates are discharged by actual proofs.
+## New density result
 
-The current supporting resolvent identities and component bound cover every
-positive parameter. The literal variational supremum over nonzero functions is
-proved in `PositiveResolventNonzeroSupremum20261011.lean`.
+For every nonempty open subinterval of `(1,2)`, the final theorem constructs an actual classical finite rule at its own interior critical probability whose natural diffusion has physical-mass typical spectral dimension in that interval. Its terminal distance, both terminal degrees, and terminal minimum edge cut are all exactly two.
 
-**Necessary source corrections:** AppendixA's chemical-paths exponential
-estimates must explicitly require `theta > 0`. The literal unrestricted-sign
-statement is false. Lean retains the correct sign; the certificate accordingly
-sets `literalUncorrectedManuscriptComplete` to false and records the correction.
-The latest AO-region statement also dropped its spectral-dimension conditional.
-Its proof and the introduction establish: AO equality forces the dimension pair
-inside the rectangle, so equality is excluded outside it. They do not prove that
-every rule lies outside the rectangle. The correspondence certifies the restored
-conditional result and explicitly rejects the literal stronger statement.
-The global conjecture remains unproved and concerns the natural diffusion at
-physical-mass typical points. A private proposed patch records these corrections;
-the Overleaf project itself has not been changed by this audit.
+The public entry is:
 
-Cell-localisation independence refers to connected cells at distinct socket
-addresses, conditional on ancestor raw innovations. The two sides of one B
-socket retain their joint law. Conditioning on descendant-dependent limiting
-lengths is not covered by that independence statement.
-
-The fresh certificate audits 12,483 imported project
-declarations across 1,554 exact source files. Transitive private/generated
-constants are included; only `propext`, `Classical.choice` and `Quot.sound` are
-allowed. Exact unchanged source/object pairs may be reused during compilation;
-this is not a clean rebuild of every saved draft. Historical certificates retain
-their historical scope and are not the current completion basis.
-
-See [latest coverage](SECTION234_COVERAGE.md),
-[latest proof index](SECTION234_RESULT_INDEX.md),
-[fresh certificate](verification/section234/manifest.json), and
-[reviewed correspondence](verification/section234/latest_correspondence.json).
-
-```sh
-lake update
-lake exe cache get
-lake build Universality
-python scripts/verify_latest_sections.py --imported-only --complete
+```lean
+IGSIII4.SpectralDensity.ActualFamily.actual_physical_spectral_density_two_terminal_parameters20261012
 ```
 
-Lean4.32.1 and mathlib `520045ab14e26149ee970e2e617ca04b09bde5d6` are pinned.
-The optional private `paper/latest-main.tex` is checked against its recorded
-hash when locally present; it is excluded from this public repository.
-`section3-continuation/` preserves saved work outside the aggregate closure,
-with exact scope distinguished in its progress snapshot.
+Its only hypotheses concern the interval endpoints. The conclusion includes the physical mass measure and almost-everywhere diagonal heat-kernel exponent for the same natural resistance completion used in the growth estimates. No cell-moment, resistance-growth, transform, or target-density premise is supplied by the caller.
 
-The spectral result concerns the compact limiting diffusion, small time and
-physical-mass typical points. The all-start quenched and annealed conclusions
-retain their stated marked-GHP and continuous-limit usual-local J1 scope.
-Section5's exclusion of AO equality outside the stated open rectangle and its fivefold diamond
-example are proved; the global AO exclusion remains a conjecture.
+The proof derives the actual weighted circuit response, exact crossing-conditioned finite laws, a uniform normalised second-moment invariant, recursive generation bounds, natural resistance growth bounds, and full-cluster mass asymptotics. The finite-prefix `max length 2` patch preserves the classical graph conditions for every sequence entry.
 
-The finite-dimensional Brouwer foundation is adapted from
-[harfe/fixed-point-theorems-lean4](https://github.com/harfe/fixed-point-theorems-lean4/tree/770940ddf9878cf61952ed53d910b92bca841838)
-under `licenses/Harfe-MIT.txt`. IGS-RWDL provenance is preserved in the saved
-continuation. Private manuscripts and full round archives are stored separately.
+**Global AO non-equality remains a conjecture.** Density near `4/3` neither constructs a finite rule attaining it nor excludes all such rules.
+
+## Verification and scope
+
+See [current manuscript correspondence](LATEST_MANUSCRIPT_COVERAGE.md), the [independent semantic verdict](verification/spectral-density20261012/semantic_review.json), and the [exact import-closure certificate](verification/spectral-density20261012/closure_manifest.json). The latter records every audited source and object hash, compiler-cache provenance, and every declaration enumerated by its originating module, including private and generated declarations. Allowed transitive axioms are only `propext`, `Classical.choice`, and `Quot.sound`.
+
+Historical certificates in `verification/section234` and `verification/manuscript-sync20261012` retain their original cutoffs and scope; their old completion or in-progress labels are historical. Current manuscript changes after the original section certificate are covered by the supplemental correspondence and the new closure gate. In particular, the positive-`theta` and conditional-AO wording corrections are already present in the current manuscript.
+
+The spectral result concerns the compact limiting natural diffusion, short time, and physical-mass typical points. It is not a blanket claim about every starting point or the long-time exponent on an infinite microscopic graph. Conditional localisation retains the joint law of both sides of the same failed socket.
+
+## Build
+
+Lean `4.32.1` and mathlib revision `520045ab14e26149ee970e2e617ca04b09bde5d6` are pinned.
+
+```sh
+lake exe cache get
+lake build IGSAlexanderOrbach
+python scripts/verify_latest_density.py --root . --output verification/local-density-check --required-module IGSIII4.SpectralDensity.ActualPhysicalDensity20261012 --interface IGSIII4.SpectralDensity.ActualFamily.actual_physical_spectral_density_two_terminal_parameters20261012
+```
+
+Keep the published dependency lockfile. The aggregate build compiles the required dependency modules; building every unimported vendor target is outside the certificate's scope. The portable verifier accepts an explicit package root, output directory, aggregate, and required interfaces. It can rebuild missing objects; exact matching historical compilation receipts may be reused. Mathematical statement correspondence remains a separate review from kernel and axiom checks.
+
+`section3-continuation/` preserves earlier work and an updated copy of the imported sources; unimported drafts are outside the current theorem certificate. No PDF, manuscript TeX, or rendered figure is part of the repository.
+
+The finite-dimensional Brouwer foundation is adapted from [harfe/fixed-point-theorems-lean4](https://github.com/harfe/fixed-point-theorems-lean4/tree/770940ddf9878cf61952ed53d910b92bca841838) under `licenses/Harfe-MIT.txt`. Existing IGS-RWDL provenance is retained.

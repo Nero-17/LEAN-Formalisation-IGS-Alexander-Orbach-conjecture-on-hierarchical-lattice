@@ -1,6 +1,6 @@
-import IGSIIISectionsTwoThreeFour
+import IGSIIILatestManuscript20261012
 
-/-! Unified actual-proof entry point for the reviewed Sections 2, 3 and 4.
-Section 4 constructs its natural resistance, sandwiches, pruning and typical
-spectral formula from proved Sections 2 and 3. The global AO exclusion remains
-a conjecture, not a theorem. -/
+/-! Unified actual-proof entry point for the reviewed manuscript, including
+the actual critical finite-rule spectral-density theorem and its physical
+typical-point interpretation. Historical section-numbered entries are retained.
+The global AO exclusion remains a conjecture, not a theorem. -/

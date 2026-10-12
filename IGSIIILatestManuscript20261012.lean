@@ -13,6 +13,11 @@ import IGSIII4.SpectralDensity.ActualFamily20261012
 import IGSIII4.SpectralDensity.ActualCrossing20261012
 import IGSIII4.SpectralDensity.ActualProbability20261012
 import IGSIII4.SpectralDensity.ActualMassBridge20261012
+import IGSIII4.SpectralDensity.ActualSharpMassBounds20261012
+import IGSIII4.SpectralDensity.ActualPhysicalDensity20261012
 
-/-! Partial latest-manuscript synchronisation. The actual spectral-density
-theorem remains OPEN: no completion certificate is asserted by this module. -/
+/-! Latest-manuscript entry: the original actual-model proofs, vertex-mass
+normalisation, and the actual finite-rule spectral-density construction.
+The physical typical-point theorem uses the same natural resistance witness
+as the recursive moment bounds. Global AO non-equality remains a conjecture.
+Exact compilation and semantic scope are recorded separately in verification. -/

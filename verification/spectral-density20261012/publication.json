@@ -1,0 +1,10 @@
+{
+  "sourcePaperCommit": "bfb73c0c34450dbb517261655cddda005b870d95",
+  "sourcePaperSha256": "cc53804aafbe60b25a644b829285ac558447ccafed538408a76f736fbf3efa60",
+  "closureManifestSha256": "92d3683a4a0f78538732cb342c15fddc74a0d0a61e850d7539f39c717700972a",
+  "semanticReviewSha256": "1361b1b5e33abe7d3979670899645a23530aec7a8dfd0970ca3e7655c031232d",
+  "exportedLeanSourceCount": 1893,
+  "allExportedSourceHashesMatch": true,
+  "privateManuscriptIncluded": false,
+  "globalAOConjectureProved": false
+}
